@@ -100,5 +100,6 @@ object Catalog {
     const val MANTRA_MALA_URL = "https://play.google.com/store/apps/details?id=com.sjpixels.mantramala"
     const val MANTRA_MALA_MARKET = "market://details?id=com.sjpixels.mantramala"
     const val DEVELOPER_URL = "https://sjpixels.com/"
+    const val DEVELOPER_NAME = "Sj Pixels"
     const val HELPLINE_URL = "https://findahelpline.com/"
 }

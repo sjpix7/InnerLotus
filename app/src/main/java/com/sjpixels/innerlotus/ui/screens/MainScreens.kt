@@ -38,7 +38,7 @@ private val tiles = Sections.features
 @Composable
 fun HomeScreen() {
     val ctx = LocalContext.current
-    AppScaffold(title = tr("ui.app_name"), showBack = false) { padding ->
+    AppScaffold(title = tr("ui.app_name"), showBack = false, showLogo = true) { padding ->
         PageColumn(padding) {
             val hour = LocalTime.now().hour
             val greet = when (hour) {

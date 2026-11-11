@@ -1,7 +1,7 @@
 # アプリの画面テキスト。{波かっこ} のプレースホルダーはすべての言語で残してください。
 
 ui.app_name = Inner Lotus
-ui.footer.developed_by = 開発
+ui.footer.developed_by = {name} が愛を込めて開発
 
 ui.common.back = 戻る
 ui.common.cancel = キャンセル

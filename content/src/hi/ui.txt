@@ -1,7 +1,7 @@
 # ऐप इंटरफ़ेस के पाठ। {braces} वाले प्लेसहोल्डर हर भाषा में रखने ज़रूरी हैं।
 
 ui.app_name = Inner Lotus
-ui.footer.developed_by = विकसितकर्ता
+ui.footer.developed_by = {name} द्वारा प्यार से विकसित
 
 ui.common.back = वापस
 ui.common.cancel = रद्द करें

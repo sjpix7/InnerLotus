@@ -1,7 +1,7 @@
 # 앱 화면 문구. {중괄호} 자리표시자는 모든 언어에서 그대로 유지해야 합니다.
 
 ui.app_name = Inner Lotus
-ui.footer.developed_by = 개발
+ui.footer.developed_by = 사랑을 담아 개발 · {name}
 
 ui.common.back = 뒤로
 ui.common.cancel = 취소

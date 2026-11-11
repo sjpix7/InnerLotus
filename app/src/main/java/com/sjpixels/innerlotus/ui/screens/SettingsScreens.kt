@@ -298,7 +298,7 @@ fun AboutScreen() {
                     Text(tr("ui.onboard.tagline"), textAlign = TextAlign.Center, color = Lotus.InkSoft)
                     Text(tr("ui.about.version", "v" to BuildConfig.VERSION_NAME), fontSize = 12.sp, color = Lotus.InkSoft)
                     Spacer(Modifier.height(8.dp))
-                    Button(onClick = { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }) { Text(tr("ui.footer.developed_by") + " sjpixels.com") }
+                    Button(onClick = { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }) { Text(tr("ui.footer.developed_by", "name" to Catalog.DEVELOPER_NAME)) }
                 }
             }
             GlassCard {

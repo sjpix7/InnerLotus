@@ -1,7 +1,7 @@
 # 应用界面文字。{花括号} 中的占位符在每种语言中都必须保留。
 
 ui.app_name = Inner Lotus
-ui.footer.developed_by = 开发者
+ui.footer.developed_by = {name} 用爱开发
 
 ui.common.back = 返回
 ui.common.cancel = 取消

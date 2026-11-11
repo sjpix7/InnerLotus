@@ -1,5 +1,5 @@
 ui.app_name = Inner Lotus
-ui.footer.developed_by = Sviluppata da
+ui.footer.developed_by = Sviluppata con amore da {name}
 
 ui.common.back = Indietro
 ui.common.cancel = Annulla

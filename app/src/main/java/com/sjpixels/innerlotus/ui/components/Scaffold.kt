@@ -57,6 +57,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withLink
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -80,6 +86,8 @@ import kotlinx.coroutines.delay
 fun AppScaffold(
     title: String,
     showBack: Boolean = true,
+    /** Show the app logo before the title (used on Home). */
+    showLogo: Boolean = false,
     actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit,
 ) {
@@ -92,7 +100,13 @@ fun AppScaffold(
                 // the developer bar above already takes the status-bar inset
                 windowInsets = WindowInsets(0),
                 title = {
-                    Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.titleLarge, color = Lotus.Ink)
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (showLogo) {
+                            AppLogo(34.dp)
+                            Spacer(Modifier.width(10.dp))
+                        }
+                        Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.titleLarge, color = Lotus.Ink)
+                    }
                 },
                 navigationIcon = {
                     if (showBack && App.nav.canGoBack) {
@@ -156,27 +170,30 @@ fun LanguageMenu() {
     }
 }
 
-/** "Developed by https://sjpixels.com/" bar; [modifier] supplies any system-bar inset padding. */
+/**
+ * "Developed with Love by Sj Pixels" bar; only the name is a link (to sjpixels.com).
+ * [modifier] supplies any system-bar inset padding.
+ */
 @Composable
 fun Footer(modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
+    // Translations place {name} where their grammar needs it (e.g. Hindi/Japanese put it first).
+    val parts = tr("ui.footer.developed_by").split("{name}", limit = 2)
+    val text = buildAnnotatedString {
+        append(parts[0])
+        withLink(
+            LinkAnnotation.Clickable(
+                tag = "developer",
+                styles = TextLinkStyles(
+                    SpanStyle(color = Lotus.Plum, fontWeight = FontWeight.SemiBold, textDecoration = TextDecoration.Underline)
+                ),
+            ) { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }
+        ) { append(Catalog.DEVELOPER_NAME) }
+        append(parts.getOrElse(1) { "" })
+    }
     Surface(color = Color.White.copy(alpha = 0.6f)) {
-        Row(
-            modifier
-                .fillMaxWidth()
-                .clickable { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }
-                .padding(vertical = 7.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(tr("ui.footer.developed_by") + " ", fontSize = 12.sp, color = Lotus.InkSoft)
-            Text(
-                "https://sjpixels.com/",
-                fontSize = 12.sp,
-                color = Lotus.Plum,
-                fontWeight = FontWeight.SemiBold,
-                textDecoration = TextDecoration.Underline,
-            )
+        Box(modifier.fillMaxWidth().padding(vertical = 4.dp), contentAlignment = Alignment.Center) {
+            Text(text, fontSize = 10.sp, color = Lotus.InkSoft, textAlign = TextAlign.Center)
         }
     }
 }

@@ -1,7 +1,7 @@
 # App interface strings. Placeholders in {braces} must be kept in every language.
 
 ui.app_name = Inner Lotus
-ui.footer.developed_by = Developed by
+ui.footer.developed_by = Developed with Love by {name}
 
 ui.common.back = Back
 ui.common.cancel = Cancel
