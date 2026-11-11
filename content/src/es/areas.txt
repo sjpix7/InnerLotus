@@ -1,0 +1,923 @@
+area.wealth.name = Riqueza y dinero
+area.wealth.desc = Abundancia, seguridad financiera, ingresos, ahorro
+area.wealth.lines:
+- El dinero fluye hacia mí con facilidad y frecuencia.
+- Estoy {abierto|abierta} a recibir abundancia en todas sus formas.
+- Soy un imán para la prosperidad.
+- Mis ingresos crecen de forma constante cada mes.
+- Gestiono mi dinero con sabiduría y confianza.
+- Merezco la libertad financiera.
+- Ahorro con facilidad y gasto con alegría.
+- Se abren nuevas fuentes de ingresos para mí.
+- Suelto cada creencia que limita mi riqueza.
+- La riqueza me llega a través de un trabajo honesto y con sentido.
+- Agradezco el dinero que tengo y el que está en camino.
+- Mi cuenta bancaria refleja mi creciente valor propio.
+- Tomo decisiones financieras inteligentes con la mente en calma.
+- Tengo seguridad financiera, hoy y en el futuro.
+- La abundancia es mi estado natural.
+- Doy con generosidad y recibo con gratitud.
+- El dinero que gasto con sabiduría vuelve a mí multiplicado.
+- Merezco una vida próspera y cómoda.
+- Las oportunidades de ganar más me encuentran cada día.
+- Mi relación con el dinero es sana y tranquila.
+- Salgo de mis deudas con facilidad y confianza.
+- Hay más que suficiente para todos, también para mí.
+- Invierto en mi futuro con paciencia y claridad.
+- La prosperidad me rodea dondequiera que voy.
+
+area.health.name = Salud y cuerpo
+area.health.desc = Vitalidad, sanación, forma física, energía
+area.health.lines:
+- Mi cuerpo se sana de forma natural y sencilla.
+- Cada célula de mi cuerpo vibra con salud.
+- Estoy {lleno|llena} de energía y vitalidad.
+- Nutro mi cuerpo con amor y cuidado.
+- Escucho lo que mi cuerpo necesita.
+- Mi sistema inmunitario es fuerte y resistente.
+- Respiro profundamente y me siento {vivo|viva}.
+- Disfruto moviendo mi cuerpo cada día.
+- Mi cuerpo se fortalece día a día.
+- Suelto la tensión y doy la bienvenida a la relajación.
+- Duermo bien y despierto con energía renovada.
+- Agradezco mi corazón y mis pulmones sanos.
+- Mi cuerpo es mi aliado y lo trato con cariño.
+- La energía sanadora fluye por cada parte de mí.
+- Elijo hábitos que apoyan mi bienestar.
+- Bebo agua y me siento {fresco|fresca} y con la mente clara.
+- Mi mente y mi cuerpo trabajan en armonía.
+- Me recupero de forma rápida y sencilla.
+- Respeto la necesidad de descanso de mi cuerpo.
+- Cada día estoy más en forma y más {sano|sana}.
+- El dolor se va de mi cuerpo y vuelve el bienestar.
+- Irradio buena salud.
+- Confío en la sabiduría de mi cuerpo.
+- La salud es mi estado natural.
+
+area.love.name = Amor y romance
+area.love.desc = Atraer pareja, profundizar la intimidad
+area.love.lines:
+- Estoy {listo|lista} para dar y recibir un amor profundo.
+- Atraigo a una pareja que me valora.
+- El amor llega a mí con facilidad y alegría.
+- Merezco una relación amorosa y sana.
+- Mi corazón está abierto al romance.
+- Atraigo un amor que se siente seguro y amable.
+- Mi pareja y yo nos acercamos cada día más.
+- Expreso mi amor con libertad y sinceridad.
+- Suelto los desamores pasados y doy la bienvenida a un nuevo amor.
+- Nuestra relación se basa en la confianza y el respeto.
+- Merezco ser {adorado|adorada} y {apreciado|apreciada}.
+- Soy una persona que ama y es digna de amor.
+- El romance fluye de forma natural en mi vida.
+- Elijo una pareja que comparte mis valores.
+- La intimidad es segura y alegre para mí.
+- Nuestro amor se profundiza con cada año que pasa.
+- Dejo que el amor me encuentre en el momento perfecto.
+- Mi relación es una fuente de paz y alegría.
+- Comunico mis necesidades con amor.
+- Soy un imán para el amor verdadero.
+- Reímos, crecemos y sanamos juntos.
+- Vuelvo a confiar en el amor.
+- Estoy {completo|completa}, y el amor suma a mi alegría.
+- El amor que busco también me está buscando.
+
+area.relationships.name = Relaciones
+area.relationships.desc = Amistades, conexión, límites sanos
+area.relationships.lines:
+- Atraigo relaciones sanas y de apoyo.
+- Pongo límites con amor y claridad.
+- Mis relaciones se basan en el respeto mutuo.
+- Doy y recibo apoyo en equilibrio.
+- Suelto las relaciones que ya no me hacen bien.
+- Conecto con las personas con facilidad y autenticidad.
+- Me rodean personas que me elevan.
+- Escucho con empatía y hablo con amabilidad.
+- Los conflictos se resuelven en paz en mi vida.
+- Merezco respeto en todas mis relaciones.
+- Aporto calidez y sinceridad a cada vínculo.
+- Acepto a los demás tal como son.
+- Mi presencia aporta valor a la vida de los demás.
+- Digo que no sin culpa.
+- Cuido los vínculos que me importan.
+- Perdono los malentendidos con rapidez.
+- Atraigo a personas que comparten mis valores.
+- Mis relaciones son seguras, amables y equilibradas.
+- Estoy {abierto|abierta} a nuevas conexiones con sentido.
+- Respeto mis necesidades y las de los demás.
+- Me comunico con claridad y con amor.
+- La confianza crece de forma natural en mis relaciones.
+- Suelto la necesidad de complacer a todos.
+- Estoy presente para las personas que quiero.
+
+area.family.name = Familia
+area.family.desc = Armonía con padres, hermanos e hijos
+area.family.lines:
+- Mi hogar está lleno de amor y armonía.
+- Agradezco a mi familia.
+- Nos entendemos y nos apoyamos.
+- Honro a mis padres con paciencia y amor.
+- Mis hermanos y yo compartimos un vínculo fuerte.
+- La paz fluye en cada conversación familiar.
+- Suelto las viejas heridas familiares y elijo sanar.
+- Nuestra familia se une más cada día.
+- Pongo límites amorosos con mi familia.
+- Celebramos los logros de cada uno.
+- Mis hijos se sienten seguros y amados.
+- Rompo con amor los patrones familiares que no son sanos.
+- Nos perdonamos con facilidad.
+- La risa llena nuestro hogar.
+- Soy una fuente de consuelo para mi familia.
+- Cada miembro de la familia es respetado y escuchado.
+- Afrontamos los retos juntos, como un equipo.
+- Generaciones de amor fluyen a través de mí.
+- Acepto a mi familia tal como es.
+- Nuestros momentos en familia están llenos de alegría.
+- Bendigo a mis antepasados y a las generaciones futuras.
+- Mi familia está sana, feliz y protegida.
+- Hablo con mi familia con calma y amabilidad.
+- La armonía es la base de nuestra familia.
+
+area.career.name = Carrera y trabajo
+area.career.desc = Crecimiento, reconocimiento, propósito en el trabajo
+area.career.lines:
+- Crezco en mi carrera cada día.
+- Mi trabajo es reconocido y valorado.
+- Atraigo oportunidades a la altura de mis talentos.
+- Encuentro propósito y sentido en mi trabajo.
+- Confío en mis habilidades profesionales.
+- Merezco una buena remuneración por mi trabajo.
+- Mi entorno laboral es positivo y de apoyo.
+- Aprendo rápido y me adapto con facilidad.
+- Afronto los retos del trabajo con calma y claridad.
+- Los ascensos y el crecimiento llegan a mí de forma natural.
+- Trabajo con enfoque y alegría.
+- Mis ideas marcan una verdadera diferencia.
+- Colaboro bien con mis compañeros.
+- Soy la persona adecuada para el trabajo de mis sueños.
+- Equilibro el trabajo y el descanso con sabiduría.
+- Mi camino profesional se despliega con facilidad.
+- Hablo con confianza en las reuniones.
+- Me enorgullece el trabajo que hago.
+- Cada experiencia amplía mi experiencia profesional.
+- Atraigo mentores y líderes que me apoyan.
+- Estoy {abierto|abierta} a nuevos roles y responsabilidades.
+- Mi trabajo está en sintonía con mis valores.
+- Pongo excelencia en todo lo que hago.
+- Mi carrera me trae plenitud y abundancia.
+
+area.business.name = Negocios y emprendimiento
+area.business.desc = Clientes, crecimiento, liderazgo, decisiones valientes
+area.business.lines:
+- Mi negocio crece de forma estable y sostenible.
+- Los clientes ideales me encuentran con facilidad.
+- Tomo decisiones valientes con confianza.
+- Mis productos y servicios ayudan de verdad a las personas.
+- Lidero a mi equipo con visión y amabilidad.
+- Los beneficios entran en mi negocio de forma constante.
+- Soy una persona emprendedora, capaz y creativa.
+- Convierto los retos en oportunidades.
+- Mi negocio se basa en la confianza y la integridad.
+- Atraigo a los socios e inversores adecuados.
+- A mis clientes les encanta lo que ofrezco.
+- Actúo con inspiración cada día.
+- Confío en mi instinto para los negocios.
+- Mi negocio sirve al mundo y me recompensa bien.
+- Aprendo de cada contratiempo y me hago más fuerte.
+- Pongo precio a mi trabajo con confianza.
+- Mi marca brilla con autenticidad.
+- Las ventas llegan a mí de forma natural.
+- Gestiono mi tiempo y mis recursos con sabiduría.
+- Soy resiliente, {ingenioso|ingeniosa} y perseverante.
+- Celebro cada logro, grande o pequeño.
+- Mi visión se hace realidad paso a paso.
+- Creo sistemas que impulsan el crecimiento y la libertad.
+- El éxito en los negocios es natural para mí.
+
+area.selflove.name = Amor propio y autoestima
+area.selflove.desc = Aceptación, sentirse digno, tratarse con amabilidad
+area.selflove.lines:
+- Me amo y me acepto por completo.
+- Valgo tal como soy.
+- Me trato con amabilidad y paciencia.
+- Soy suficiente.
+- Respeto mis necesidades y mis sentimientos.
+- Me perdono por los errores del pasado.
+- Me hablo con amor.
+- Mi valor no depende de la opinión de los demás.
+- Celebro la persona en la que me estoy convirtiendo.
+- Merezco descanso, alegría y cuidado.
+- Me siento {orgulloso|orgullosa} de todo lo que he avanzado.
+- Abrazo mis fortalezas y mis imperfecciones.
+- Soy mi {mejor amigo|mejor amiga}.
+- Me doy permiso para brillar.
+- Suelto la necesidad de ser {perfecto|perfecta}.
+- Mi corazón es un hogar seguro para mí.
+- Merezco cosas buenas.
+- Me elijo sin culpa.
+- Aprecio mis dones únicos.
+- Soy amable conmigo en los días difíciles.
+- Valoro mi tiempo y mi energía.
+- Soy {bello|bella} por dentro y por fuera.
+- Amarme me resulta natural.
+- Estoy {entero|entera} y {completo|completa}.
+
+area.confidence.name = Confianza
+area.confidence.desc = Valentía, hablar claro, creer en tus capacidades
+area.confidence.lines:
+- Creo en mí y en mis capacidades.
+- Hablo con valentía.
+- Confío en quien soy.
+- Confío en que puedo afrontar lo que venga.
+- Salgo de mi zona de confort con facilidad.
+- Mi voz merece ser escuchada.
+- Entro en cada lugar con una confianza serena.
+- Soy capaz de alcanzar mis metas.
+- El miedo no controla mis decisiones.
+- Me mantengo firme y con la cabeza alta.
+- Acepto nuevos retos con entusiasmo.
+- Tengo audacia, valor y estoy {preparado|preparada}.
+- Cada paso que doy fortalece mi confianza.
+- Confío en mis decisiones.
+- Me siento {cómodo|cómoda} cuando me ven.
+- Mi confianza crece cada día.
+- Recibo las críticas con elegancia.
+- Creo que puedo, y por eso lo hago.
+- Suelto la duda sobre mí.
+- Me siento {orgulloso|orgullosa} de mis logros.
+- Conozco gente nueva con facilidad.
+- Merezco ocupar mi espacio.
+- Enfrento mis miedos y me hago más fuerte.
+- La confianza es mi estado natural.
+
+area.mental.name = Salud mental y bienestar emocional
+area.mental.desc = Calma, resiliencia, soltar la ansiedad
+area.mental.lines:
+- Siento calma, equilibrio y paz.
+- Suelto lo que no puedo controlar.
+- Mi mente está clara y serena.
+- Permito mis emociones sin juzgarlas.
+- Soy resiliente y me recupero de los momentos difíciles.
+- Este sentimiento pasará, y estoy a salvo.
+- Inspiro calma y espiro tensión.
+- Merezco tener paz mental.
+- Soy amable con mis pensamientos.
+- Elijo pensamientos que me apoyan.
+- Suelto la preocupación y doy la bienvenida a la confianza.
+- Soy más fuerte que mi ansiedad.
+- Está bien pedir ayuda.
+- Estoy aprendiendo a ser amable con mi mente.
+- La paz comienza con mi próxima respiración.
+- Mis emociones son mensajeras, no dueñas.
+- Gestiono el estrés con serenidad.
+- Me doy tiempo para sanar.
+- Estoy en el momento presente, con los pies en la tierra.
+- Cada día me siento un poco más {ligero|ligera}.
+- No soy mis pensamientos; soy quien los observa.
+- Doy la bienvenida al descanso sin culpa.
+- Estoy a salvo en mi cuerpo y en mi mente.
+- Mi mundo interior se vuelve sereno y luminoso.
+
+area.spirituality.name = Espiritualidad
+area.spirituality.desc = Fe, paz interior, conexión con algo más grande
+area.spirituality.lines:
+- Estoy {conectado|conectada} con algo más grande que yo.
+- Confío en el plan divino para mi vida.
+- La paz interior es mi verdadera naturaleza.
+- Estoy {guiado|guiada} y {protegido|protegida}.
+- Mi fe se fortalece cada día.
+- Veo lo sagrado en la vida cotidiana.
+- Soy un ser espiritual viviendo una experiencia humana.
+- El amor divino fluye a través de mí.
+- Entrego lo que no puedo controlar.
+- El silencio me acerca a mi alma.
+- Soy {uno|una} con toda la vida.
+- Mis oraciones son escuchadas y respondidas.
+- Recorro mi camino espiritual con devoción.
+- La gracia me rodea siempre.
+- Escucho la voz serena de mi interior.
+- Mi espíritu es ligero, libre y eterno.
+- Honro lo divino en mí y en los demás.
+- Soy un canal de paz y amor.
+- Cada respiración me conecta con la fuente.
+- Todo se despliega para mi mayor bien.
+- Mi meditación se profundiza cada día.
+- Nunca estoy {solo|sola}; me sostienen.
+- La gratitud abre la puerta a lo sagrado.
+- Despierto a mi ser superior.
+
+area.success.name = Éxito y logros
+area.success.desc = Metas, disciplina, impulso
+area.success.lines:
+- Alcanzo mis metas paso a paso.
+- El éxito llega a mí de forma natural.
+- Tengo disciplina y enfoque.
+- Gano impulso cada día.
+- Merezco el éxito y lo acepto.
+- Cada esfuerzo que hago suma.
+- Convierto mis sueños en planes y mis planes en acción.
+- Aprendo de los tropiezos y sigo adelante.
+- Mi perseverancia da frutos.
+- Celebro cada hito.
+- Estoy {comprometido|comprometida} con mi visión.
+- Cumplo las promesas que me hago.
+- Atraigo los recursos que necesito.
+- Supero los obstáculos con facilidad.
+- Llevo las cosas hasta el final.
+- El éxito me resulta natural y cómodo.
+- Me pongo metas claras y las alcanzo.
+- Mis hábitos crean mi éxito.
+- Me convierto en la persona que hace realidad mis sueños.
+- Doy la bienvenida a retos mayores y a mayores recompensas.
+- Soy constante, incluso en los días lentos.
+- Mido el progreso, no la perfección.
+- Mi éxito inspira a los demás.
+- Nada me detiene en la búsqueda de mi propósito.
+
+area.creativity.name = Creatividad
+area.creativity.desc = Inspiración, autoexpresión, flujo artístico
+area.creativity.lines:
+- La creatividad fluye libremente a través de mí.
+- Soy un canal para nuevas ideas.
+- La inspiración me encuentra en todas partes.
+- Me expreso con audacia y belleza.
+- Mi imaginación no tiene límites.
+- Me doy permiso para crear.
+- Creo por la alegría de crear.
+- Mi arte tiene valor.
+- Las ideas llegan a mí con facilidad.
+- Confío en mi voz creativa.
+- Juego, exploro y experimento.
+- Los bloqueos creativos se disuelven con facilidad.
+- Veo belleza y posibilidades en todas partes.
+- Mi obra es original y auténtica.
+- Dedico tiempo a mi práctica creativa.
+- Suelto la perfección y disfruto del proceso.
+- Soy artista a mi manera.
+- Mi creatividad resuelve problemas.
+- Comparto mis creaciones con confianza.
+- Cada día creo algo.
+- Mi curiosidad me lleva a nuevas ideas.
+- Estoy en estado de flujo.
+- Mi energía creativa se renueva cada día.
+- El mundo necesita mis creaciones únicas.
+
+area.growth.name = Aprendizaje y crecimiento personal
+area.growth.desc = Curiosidad, sabiduría, ser tu mejor versión
+area.growth.lines:
+- Cada día me convierto en una mejor versión de mí.
+- Me encanta aprender cosas nuevas.
+- Cada experiencia me enseña algo valioso.
+- Tengo curiosidad y una mente abierta.
+- Recibo cada comentario como un regalo.
+- Crecer es un viaje alegre para mí.
+- Aprendo de mis errores con amabilidad.
+- La sabiduría crece dentro de mí.
+- Invierto en mi desarrollo personal.
+- Abrazo el cambio como un camino de crecimiento.
+- Tengo paciencia con mi progreso.
+- Afronto nuevos retos con valentía.
+- Mi mente se expande.
+- Leo, reflexiono y crezco.
+- Me comprometo a aprender toda la vida.
+- Cada día me vuelvo más {sabio|sabia}.
+- Suelto los viejos patrones que me frenan.
+- Me siento {orgulloso|orgullosa} de mi crecimiento.
+- Crezco a través de lo que vivo.
+- Busco el conocimiento con el corazón abierto.
+- Mi potencial es ilimitado.
+- Elijo el progreso por encima de la perfección.
+- Soy {el autor|la autora} de mi propio crecimiento.
+- Evoluciono con gracia.
+
+area.gratitude.name = Gratitud
+area.gratitude.desc = Apreciar el presente, notar las bendiciones
+area.gratitude.lines:
+- Agradezco este momento.
+- Noto las bendiciones a mi alrededor.
+- Gracias por este nuevo día.
+- Mi corazón rebosa de gratitud.
+- Aprecio las cosas sencillas de la vida.
+- Agradezco a las personas que me quieren.
+- La gratitud convierte lo que tengo en suficiente.
+- Cada día encuentro algo que agradecer.
+- Agradezco mi cuerpo y todo lo que hace.
+- Aprecio las lecciones de cada reto.
+- Doy gracias por la comida, el agua y el techo.
+- La gratitud me llena de alegría.
+- Veo lo bueno de mi vida.
+- Cada respiración es un regalo.
+- Agradezco mi pasado, mi presente y mi futuro.
+- Expreso mi gratitud libremente.
+- Las pequeñas alegrías enriquecen mi vida.
+- Agradezco el regalo de la vida.
+- Gracias por las bendiciones que están por llegar.
+- La gratitud abre mi corazón.
+- Aprecio la belleza de la naturaleza.
+- Mi vida está llena de bendiciones.
+- Agradezco mi crecimiento.
+- Vivo con un corazón agradecido.
+
+area.joy.name = Felicidad y alegría
+area.joy.desc = Juego, satisfacción, disfrutar de lo pequeño
+area.joy.lines:
+- Hoy elijo la alegría.
+- La felicidad fluye hacia mí con facilidad.
+- Disfruto de las pequeñas cosas.
+- Merezco ser feliz.
+- Mi corazón es ligero y juguetón.
+- Río a menudo y con libertad.
+- La alegría es mi estado natural.
+- Me siento {satisfecho|satisfecha} con lo que tengo.
+- Siembro felicidad allá donde voy.
+- Hoy está lleno de sorpresas felices.
+- Me doy permiso para divertirme.
+- Celebro los pequeños momentos.
+- Mi sonrisa ilumina el mundo.
+- Dejo entrar la alegría.
+- La felicidad es mi elección, y la tomo cada día.
+- Disfruto del momento presente.
+- Estoy {abierto|abierta} al asombro y al juego.
+- Me están pasando cosas buenas.
+- Mi vida está llena de motivos para sonreír.
+- Irradio energía positiva.
+- Suelto lo que apaga mi luz.
+- La alegría brota desde mi interior.
+- Me siento a gusto y feliz.
+- Mi felicidad inspira a los demás.
+
+area.sleep.name = Sueño y descanso
+area.sleep.desc = Relajación, recuperación, noches tranquilas
+area.sleep.lines:
+- Suelto el día y doy la bienvenida al descanso.
+- Mi cuerpo se relaja profundamente.
+- Me duermo con facilidad y en paz.
+- Mi mente está quieta y en calma.
+- Merezco un sueño profundo y reparador.
+- Suelto las preocupaciones de hoy.
+- Mi cama es un lugar seguro y tranquilo.
+- Cada respiración me lleva más hondo al descanso.
+- Duermo profundamente toda la noche.
+- Despierto con energía renovada.
+- Mi cuerpo se repara y se sana mientras duermo.
+- Estoy a salvo, {abrigado|abrigada} y en calma.
+- El mañana se ocupará de sí mismo.
+- Mis pensamientos se vuelven lentos y suaves.
+- Llegan a mí sueños apacibles.
+- Doy la bienvenida a la quietud.
+- Confío en que mi cuerpo sabe descansar.
+- Cada músculo de mi cuerpo se relaja.
+- Agradezco este día y estoy {listo|lista} para descansar.
+- El sueño me llega de forma natural.
+- Dejo que la noche me sostenga con suavidad.
+- Mi respiración es lenta y suave.
+- Descanso sin culpa.
+- Me deslizo hacia un sueño profundo y sanador.
+
+area.beauty.name = Belleza e imagen corporal
+area.beauty.desc = Sentirse atractivo, aceptar tu aspecto
+area.beauty.lines:
+- Soy {bello|bella} tal como soy.
+- Amo el cuerpo en el que vivo.
+- Mi belleza brilla desde dentro.
+- Acepto y aprecio mi aspecto.
+- Me siento a gusto en mi propia piel.
+- Mi cuerpo merece amor y respeto.
+- Irradio confianza y gracia.
+- Veo belleza cuando me miro al espejo.
+- Mi singularidad es mi belleza.
+- Me visto para expresar mi alegría.
+- Suelto las comparaciones con los demás.
+- Mi cuerpo es un regalo, no un proyecto.
+- Cuido mi piel y mi cuerpo con amor.
+- Brillo de salud y felicidad.
+- Soy {atractivo|atractiva} a mi manera.
+- Mi sonrisa es hermosa.
+- Honro cada curva, cada línea y cada marca.
+- Me siento bien en mi cuerpo.
+- Mi valor no se mide por mi apariencia.
+- Celebro mi belleza natural.
+- Los pensamientos amables me embellecen.
+- Agradezco mis ojos, mis manos y mi corazón.
+- Trato mi reflejo con amabilidad.
+- La belleza fluye a través de mí.
+
+area.forgiveness.name = Perdón y sanar el pasado
+area.forgiveness.desc = Soltar el resentimiento, superar traumas o arrepentimientos
+area.forgiveness.lines:
+- Me perdono y me libero.
+- Suelto el resentimiento y elijo la paz.
+- El pasado ya no tiene poder sobre mí.
+- Suelto el viejo dolor con amor.
+- Perdono a los demás por mi propia paz.
+- Sano un poco más cada día.
+- Suelto el arrepentimiento y abrazo el presente.
+- Mi pasado me dio forma, pero no me define.
+- Elijo seguir adelante.
+- Me libero de lo que una vez me hirió.
+- Honro mi proceso de sanación.
+- El perdón abre mi corazón.
+- Suelto la culpa y acepto mi humanidad.
+- Ahora estoy a salvo.
+- Hago las paces con mi historia.
+- Cada día el peso se siente más ligero.
+- Suelto la ira con compasión.
+- Me doy el cierre que necesito.
+- Aprendo del pasado y vivo en el presente.
+- Mis heridas se convierten en sabiduría.
+- Suelto la necesidad de recibir disculpas.
+- Estoy en paz con lo que fue.
+- Perdono y crezco.
+- Mi futuro está libre del peso del pasado.
+
+area.productivity.name = Productividad y concentración
+area.productivity.desc = Claridad, gestión del tiempo, vencer la procrastinación
+area.productivity.lines:
+- Me concentro con facilidad en lo que más importa.
+- Empiezo las tareas de inmediato.
+- Mi mente está clara y organizada.
+- Uso mi tiempo con sabiduría.
+- Termino mi trabajo con facilidad.
+- Divido las grandes metas en pasos sencillos.
+- Las distracciones pierden su poder sobre mí.
+- Trabajo en sesiones profundas y concentradas.
+- Priorizo con claridad.
+- Venzo la procrastinación dando el primer paso.
+- Soy {productivo|productiva} y tengo energía.
+- Termino una tarea antes de empezar la siguiente.
+- Planifico mi día con intención.
+- Equilibro la productividad con el descanso.
+- Una tarea a la vez, avanzo.
+- Mi energía está enfocada y estable.
+- Digo no a lo que me distrae.
+- Actúo incluso cuando no tengo ganas.
+- Cada hora se usa con propósito.
+- Mi espacio de trabajo apoya mi concentración.
+- Soy {disciplinado|disciplinada} y constante.
+- Disfruto de la satisfacción de terminar las cosas.
+- Soy {dueño|dueña} de mi tiempo.
+- La concentración me resulta natural.
+
+area.home.name = Hogar y entorno
+area.home.desc = Un espacio tranquilo, seguro y abundante
+area.home.lines:
+- Mi hogar es un santuario de paz.
+- Vivo en un espacio seguro y lleno de amor.
+- Mi hogar está lleno de luz y calidez.
+- La abundancia fluye por cada habitación.
+- Mantengo mi espacio limpio y sereno.
+- Mi hogar da la bienvenida a la alegría y la risa.
+- Agradezco el techo que me cobija.
+- Mi barrio es seguro y amable.
+- Mi hogar favorece el descanso y la renovación.
+- Suelto el desorden y hago espacio para la paz.
+- Mi espacio refleja quién soy.
+- La energía positiva llena mi hogar.
+- Atraigo el hogar perfecto para mí.
+- Todos los que entran en mi casa se sienten bienvenidos.
+- Mi hogar está protegido y bendecido.
+- Creo belleza a mi alrededor.
+- Mi entorno nutre mi bienestar.
+- Las plantas y la luz dan vida a mi hogar.
+- Me siento en casa dondequiera que esté.
+- Mi hogar es un lugar de armonía.
+- Cuido mi hogar y mi hogar me cuida.
+- Vivo con comodidad y tranquilidad.
+- Mi hogar está lleno de amor y buenos recuerdos.
+- Agradezco cada rincón de mi hogar.
+
+area.purpose.name = Propósito y rumbo vital
+area.purpose.desc = Conocer tu camino, vivir con sentido
+area.purpose.lines:
+- Conozco mi camino y lo sigo.
+- Mi vida tiene sentido y propósito.
+- Confío en hacia dónde me lleva mi viaje.
+- Me siento {guiado|guiada} hacia mi verdadera vocación.
+- Cada paso revela el siguiente.
+- Vivo en sintonía con mis valores.
+- El mundo necesita mis dones.
+- Escucho la dirección de mi corazón.
+- Tengo claro lo que me importa.
+- Mi propósito se despliega de forma natural.
+- Tomo decisiones que honran mi alma.
+- Estoy justo donde necesito estar.
+- Encuentro sentido en cada día.
+- Aporto algo valioso al mundo.
+- Sigo lo que me ilumina.
+- La claridad llega a mí con facilidad.
+- Confío en los tiempos de mi vida.
+- Mi vida es una historia con sentido.
+- Vivo con intención.
+- Mi pasión guía mi propósito.
+- Suelto la confusión y doy la bienvenida a la claridad.
+- Tengo el valor de seguir mi camino.
+- El universo apoya mi misión.
+- Vivo una vida de la que me siento {orgulloso|orgullosa}.
+
+area.parenting.name = Crianza
+area.parenting.desc = Paciencia, estar presente, criar con amor
+area.parenting.lines:
+- Soy {un padre paciente y amoroso|una madre paciente y amorosa}.
+- Estoy plenamente presente con mis hijos.
+- Crío a mis hijos con amor y sabiduría.
+- Mis hijos se sienten seguros, vistos y escuchados.
+- Hago lo mejor que puedo, y eso es suficiente.
+- Respondo con calma en lugar de reaccionar con enfado.
+- Disfruto de los momentos preciosos con mis hijos.
+- Confío en mi instinto como {padre|madre}.
+- Mis hijos crecen como personas amables.
+- Me perdono por los días imperfectos.
+- Escucho a mis hijos con el corazón abierto.
+- Nuestro hogar está lleno de amor y risas.
+- Pongo límites amorosos y coherentes.
+- Enseño con el ejemplo.
+- Celebro los dones únicos de mis hijos.
+- Me cuido para poder cuidarlos.
+- Mis hijos y yo aprendemos unos de otros.
+- Dejo que mis hijos crezcan a su propio ritmo.
+- Agradezco ser {padre|madre}.
+- Mi amor da a mis hijos raíces fuertes y alas.
+- Mantengo la calma en los momentos difíciles.
+- Apoyo los sueños de mis hijos.
+- La paciencia crece en mí cada día.
+- Mis hijos saben que son amados.
+
+area.friendship.name = Amistad y vida social
+area.friendship.desc = Pertenencia, atraer personas que te apoyan
+area.friendship.lines:
+- Atraigo amistades leales y que me apoyan.
+- Pertenezco.
+- Mis amistades son alegres y sinceras.
+- Hago nuevos amigos con facilidad.
+- Soy una buena amistad.
+- A la gente le gusta mi compañía.
+- Me siento a gusto en situaciones sociales.
+- Mis amigos y yo apoyamos nuestros sueños.
+- Me rodean personas positivas.
+- Comparto risas y amor con mis amigos.
+- Estoy {abierto|abierta} a conocer gente nueva.
+- Mantengo el contacto con las personas que quiero.
+- Atraigo amistades que comparten mis valores.
+- Mis amigos me valoran y me aprecian.
+- Las reuniones sociales me resultan fáciles y divertidas.
+- Soy libre de ser {yo mismo|yo misma} con mis amigos.
+- Mi círculo crece con personas amables.
+- Suelto las amistades que me agotan.
+- Celebro los logros de mis amigos.
+- Nunca estoy realmente {solo|sola}.
+- Mis amistades se profundizan con el tiempo.
+- Doy y recibo apoyo libremente.
+- Encuentro a mi tribu dondequiera que voy.
+- La conexión me resulta natural.
+
+area.travel.name = Viajes y aventura
+area.travel.desc = Explorar, apertura a nuevas experiencias
+area.travel.lines:
+- Estoy {abierto|abierta} a nuevas aventuras.
+- El mundo me da la bienvenida.
+- Viajo con seguridad y alegría.
+- Los lugares nuevos me inspiran.
+- Abrazo nuevas culturas con el corazón abierto.
+- La aventura me llama y respondo.
+- Tengo los recursos para viajar por el mundo.
+- Cada viaje expande mi alma.
+- Estoy {protegido|protegida} dondequiera que voy.
+- Digo sí a nuevas experiencias.
+- Conozco a personas maravillosas en mis viajes.
+- Mis viajes transcurren con fluidez y facilidad.
+- Exploro con curiosidad y valentía.
+- Me siento en casa en cualquier lugar del mundo.
+- Creo recuerdos hermosos en cada viaje.
+- Cada viaje me enseña algo nuevo.
+- Soy valiente, libre y {curioso|curiosa}.
+- Me llegan oportunidades de viaje perfectas.
+- Disfruto del camino tanto como del destino.
+- La belleza de la naturaleza me llena de asombro.
+- Viajo ligero y vivo plenamente.
+- Vuelvo a casa {renovado e inspirado|renovada e inspirada}.
+- La vida es una gran aventura.
+- El mundo está lleno de maravillas por descubrir.
+
+area.fertility.name = Fertilidad y embarazo
+area.fertility.desc = Confiar en tu cuerpo, un embarazo sano
+area.fertility.lines:
+- Confío en el ritmo natural de mi cuerpo.
+- Mi cuerpo está preparado para crear vida.
+- Doy la bienvenida a mi bebé con amor.
+- Mi cuerpo es sano y fértil.
+- Suelto el miedo y abrazo la esperanza.
+- Mi embarazo es sano y alegre.
+- Mi bebé crece fuerte y sano.
+- Siento calma y conexión con mi bebé.
+- Confío en el tiempo divino.
+- Mi vientre es un hogar seguro y amoroso.
+- Nutro mi cuerpo y a mi bebé con amor.
+- Me rodea el apoyo que necesito.
+- Mi cuerpo sabe cómo dar a luz.
+- Estoy {listo|lista} para ser {un padre amoroso|una madre amorosa}.
+- Cada día me acerca a tener a mi bebé en brazos.
+- Tengo paciencia y esperanza.
+- Mis hormonas están en equilibrio.
+- Me relajo y dejo que mi cuerpo haga su trabajo.
+- Agradezco este milagro.
+- El amor nos rodea a mi bebé y a mí.
+- Escucho a mi cuerpo con amabilidad.
+- Soy fuerte, capaz y {sereno|serena}.
+- Mi familia crece en el momento perfecto.
+- Confío en el camino que me lleva a mi bebé.
+
+area.eating.name = Peso y alimentación sana
+area.eating.desc = Elecciones nutritivas, relación equilibrada con la comida
+area.eating.lines:
+- Nutro mi cuerpo con elecciones sanas.
+- Como con atención y gratitud.
+- Escucho el hambre y la saciedad de mi cuerpo.
+- Disfruto de alimentos frescos y nutritivos.
+- Tengo una relación equilibrada con la comida.
+- Mi cuerpo encuentra su peso saludable de forma natural.
+- Como para sentirme bien.
+- Elijo alimentos que me dan energía.
+- Soy amable conmigo en lo que respecta a la comida.
+- El agua me refresca y me purifica.
+- Disfruto de los caprichos con equilibrio y sin culpa.
+- Suelto el comer emocional.
+- Mi cuerpo está cada día más sano.
+- Me encanta mover mi cuerpo.
+- Las elecciones sanas me salen con facilidad.
+- Como despacio y saboreo cada bocado.
+- Mis antojos se desvanecen.
+- Respeto mi cuerpo en cualquier talla.
+- Nutro mi cuerpo en lugar de castigarlo.
+- Elijo mis alimentos de forma consciente.
+- La comida es energía y alegría, no premio ni castigo.
+- Me siento {orgulloso|orgullosa} de mis hábitos saludables.
+- Me siento {ligero|ligera} y con energía.
+- Mi cuerpo me agradece que lo cuide.
+
+area.recovery.name = Recuperación de adicciones y hábitos
+area.recovery.desc = Fortaleza, sobriedad, romper viejos patrones
+area.recovery.lines:
+- Soy más fuerte que cualquier antojo.
+- Cada día sobrio es una victoria.
+- Elijo la libertad por encima de los viejos hábitos.
+- Rompo los viejos patrones con valentía.
+- Merezco una vida sana.
+- Pido ayuda cuando la necesito.
+- Día a día, estoy sanando.
+- Mis antojos pasan, y yo sigo firme.
+- Reconstruyo mi vida con amor.
+- Me perdono y sigo adelante.
+- Encuentro formas sanas de afrontar las cosas.
+- Me siento {orgulloso|orgullosa} de mi progreso.
+- Mi mente está clara y libre.
+- Merezco recuperarme.
+- Sustituyo los viejos hábitos por otros que me nutren.
+- Me rodeo de apoyo.
+- Escucho a mi ser superior, no a mis antojos.
+- Celebro cada día limpio y claro.
+- Mi futuro es luminoso y libre.
+- Puedo sentir mis emociones sin huir de ellas.
+- Cada elección sana me fortalece.
+- Me convierto en quien estaba {destinado|destinada} a ser.
+- Vuelvo a confiar en mí.
+- La libertad se siente maravillosa.
+
+area.communication.name = Comunicación
+area.communication.desc = Expresarte con claridad, escuchar bien
+area.communication.lines:
+- Me expreso con claridad y calma.
+- Escucho para comprender, no solo para responder.
+- Mis palabras son amables y sinceras.
+- Digo mi verdad con confianza.
+- La gente me entiende con facilidad.
+- Comunico mis necesidades abiertamente.
+- Afronto las conversaciones difíciles con elegancia.
+- Mi voz es tranquila y clara.
+- Elijo mis palabras con cuidado.
+- Sé escuchar.
+- Hago preguntas con curiosidad.
+- Expreso mi desacuerdo con respeto.
+- Mi comunicación tiende puentes.
+- Hablo con confianza delante de los demás.
+- Comparto mis ideas con comodidad.
+- Escucho lo que se dice y lo que se siente.
+- Escribo y hablo con claridad.
+- Mantengo la calma cuando las emociones suben.
+- Mis palabras inspiran y animan.
+- Digo lo que pienso y pienso lo que digo.
+- Tengo paciencia cuando los demás hablan.
+- Mi silencio también es sabio.
+- La comprensión fluye entre los demás y yo.
+- La comunicación clara me resulta natural.
+
+area.leadership.name = Liderazgo e influencia
+area.leadership.desc = Inspirar a otros, decidir con integridad
+area.leadership.lines:
+- Lidero con integridad.
+- Inspiro a los demás con mi ejemplo.
+- Tomo decisiones con claridad y valor.
+- La gente confía en mi liderazgo.
+- Escucho profundamente a mi equipo.
+- Ayudo a los demás a crecer.
+- Asumo responsabilidades con elegancia.
+- Mi visión inspira a la acción.
+- Lidero con fuerza y compasión.
+- Soy una influencia positiva para los demás.
+- Comunico mi visión con claridad.
+- Saco lo mejor de las personas.
+- Me mantengo firme bajo presión.
+- Lidero sirviendo a los demás.
+- Doy la bienvenida a ideas diversas.
+- Soy {un líder seguro|una líder segura} y capaz.
+- Reconozco el mérito ajeno con generosidad.
+- Aprendo de cada reto de liderazgo.
+- Mi influencia crece con mi integridad.
+- Creo una cultura de confianza.
+- Tomo decisiones difíciles con justicia.
+- La gente se siente valorada a mi lado.
+- Lidero el cambio con confianza.
+- El liderazgo me resulta natural.
+
+area.studies.name = Estudios y exámenes
+area.studies.desc = Memoria, concentración, calma bajo presión
+area.studies.lines:
+- Aprendo rápido y recuerdo con facilidad.
+- Mi mente está despierta y concentrada.
+- Siento calma y confianza en los exámenes.
+- Comprendo los conceptos nuevos con facilidad.
+- Estudio con alegría y disciplina.
+- Mi memoria es fuerte y clara.
+- Recuerdo la información con facilidad cuando la necesito.
+- Estoy bien {preparado|preparada}.
+- Organizo mi tiempo de estudio con sabiduría.
+- Cada sesión de estudio me hace más inteligente.
+- Me mantengo {relajado y lúcido|relajada y lúcida} en los exámenes.
+- Soy capaz de obtener resultados excelentes.
+- Busco apoyo cuando lo necesito.
+- Disfruto aprendiendo.
+- Mi concentración mejora cada día.
+- Confío en lo que he aprendido.
+- Respondo a las preguntas con claridad.
+- Suelto la ansiedad ante los exámenes.
+- Me siento {orgulloso|orgullosa} de mi esfuerzo.
+- Aprendo de mis errores.
+- Mi cerebro está listo para absorber conocimiento.
+- Equilibro el estudio con el descanso.
+- El éxito en mis estudios está a mi alcance.
+- Aprender es natural para mí.
+
+area.aging.name = Envejecer con gracia
+area.aging.desc = Abrazar cada etapa de la vida, mantener la vitalidad
+area.aging.lines:
+- Abrazo cada etapa de la vida.
+- Me vuelvo más {sabio|sabia} con cada año.
+- Tengo vitalidad a cualquier edad.
+- Mi cuerpo es fuerte y capaz.
+- Envejezco con gracia y alegría.
+- Mi experiencia es un tesoro.
+- Mantengo la curiosidad y un corazón joven.
+- Cada edad tiene su propia belleza.
+- Mi mente se mantiene ágil y activa.
+- Agradezco los años que he vivido.
+- Espero con ilusión los años que vienen.
+- Cuido bien de mi cuerpo y de mi mente.
+- Mi energía se renueva cada día.
+- Comparto mi sabiduría con generosidad.
+- Soy {valorado|valorada} y {respetado|respetada}.
+- La vida se enriquece con el tiempo.
+- Doy la bienvenida al cambio con el corazón abierto.
+- Mis arrugas de risa cuentan historias felices.
+- Me mantengo {activo y comprometido|activa y comprometida}.
+- Estoy en paz con el tiempo.
+- Mi espíritu no tiene edad.
+- Cada día es un nuevo comienzo.
+- Estoy {sano|sana}, feliz y {completo|completa}.
+- Celebro mi camino.
+
+area.luck.name = Suerte y oportunidades
+area.luck.desc = Estar en el lugar adecuado, decir sí a las puertas que se abren
+area.luck.lines:
+- Siempre estoy en el lugar adecuado en el momento adecuado.
+- La suerte fluye hacia mí de forma natural.
+- Digo sí a las puertas que se abren.
+- Las oportunidades aparecen para mí cada día.
+- La buena fortuna me acompaña.
+- Noto las oportunidades con facilidad.
+- La vida trabaja a mi favor.
+- Me suceden coincidencias asombrosas.
+- Tengo suerte de muchas maneras.
+- Atraigo bendiciones inesperadas.
+- Cada día trae nuevas posibilidades.
+- Confío en el fluir de la vida.
+- Las cosas me salen bien.
+- Estoy {abierto|abierta} a los milagros.
+- Estoy {listo|lista} para recibir buenas noticias.
+- Las personas adecuadas aparecen en el momento justo.
+- Me arriesgo con confianza.
+- La fortuna favorece mi valentía.
+- Espero cosas buenas.
+- Mi intuición me lleva hacia las oportunidades.
+- La serendipia forma parte de mi vida.
+- Agradezco mi buena suerte.
+- Se abren puertas nuevas para mí con facilidad.
+- Soy un imán para las oportunidades.

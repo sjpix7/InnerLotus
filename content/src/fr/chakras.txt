@@ -1,0 +1,125 @@
+chakra.root.name = Racine
+chakra.root.sanskrit = Muladhara
+chakra.root.core = JE SUIS
+chakra.root.location = Base de la colonne vertébrale
+chakra.root.element = Terre
+chakra.root.bija = LAM
+chakra.root.theme = Sécurité, ancrage, stabilité, appartenance
+chakra.root.balanced = Se sentir en sécurité, ancré, stable et présent dans son corps.
+chakra.root.imbalanced = Peur, anxiété, soucis d'argent, agitation, sentiment de déconnexion.
+chakra.root.practice = Marchez pieds nus sur la terre, mangez des légumes racines, prenez la posture de la montagne et chantez LAM.
+chakra.root.seeds:
+- Je suis en sécurité, {centré|centrée} et {ancré|ancrée}.
+- Je suis {enraciné|enracinée} comme un arbre ancien.
+- La terre me soutient à chaque pas.
+- J'ai confiance que tous mes besoins sont comblés.
+- J'ai ma place ici, dans ce corps et dans cet instant.
+- Je me tiens stable et {fort|forte}.
+
+chakra.sacral.name = Sacré
+chakra.sacral.sanskrit = Svadhisthana
+chakra.sacral.core = JE RESSENS
+chakra.sacral.location = Bas-ventre, sous le nombril
+chakra.sacral.element = Eau
+chakra.sacral.bija = VAM
+chakra.sacral.theme = Émotions, créativité, plaisir, fluidité
+chakra.sacral.balanced = Fluidité émotionnelle, créativité, plaisir sain et intimité.
+chakra.sacral.imbalanced = Engourdissement émotionnel, culpabilité, blocages créatifs, sautes d'humeur.
+chakra.sacral.practice = Dansez, nagez, pratiquez des postures d'ouverture des hanches, exprimez-vous de façon créative et chantez VAM.
+chakra.sacral.seeds:
+- Je suis à l'écoute de mes émotions.
+- Mes émotions coulent librement comme l'eau.
+- J'accueille la joie et le plaisir dans ma vie.
+- Ma créativité coule avec aisance.
+- J'honore mes désirs et mon corps.
+- J'accueille le changement avec grâce.
+
+chakra.solar.name = Plexus solaire
+chakra.solar.sanskrit = Manipura
+chakra.solar.core = JE FAIS
+chakra.solar.location = Haut du ventre, au-dessus du nombril
+chakra.solar.element = Feu
+chakra.solar.bija = RAM
+chakra.solar.theme = Volonté, confiance, action, estime de soi
+chakra.solar.balanced = Confiance, motivation, décisions claires et limites saines.
+chakra.solar.imbalanced = Faible estime de soi, procrastination, besoin de contrôle, tensions à l'estomac.
+chakra.solar.practice = Renforcez votre centre, profitez du soleil du matin, mangez chaud et chantez RAM.
+chakra.solar.seeds:
+- Je suis {puissant|puissante}, {fort|forte} et {confiant|confiante}.
+- J'agis avec courage et clarté.
+- Mon feu intérieur nourrit ma mission.
+- Je prends des décisions avec aisance.
+- Je suis digne de mes rêves.
+- J'honore mon propre pouvoir.
+
+chakra.heart.name = Cœur
+chakra.heart.sanskrit = Anahata
+chakra.heart.core = J'AIME
+chakra.heart.location = Centre de la poitrine
+chakra.heart.element = Air
+chakra.heart.bija = YAM
+chakra.heart.theme = Amour, compassion, pardon, lien
+chakra.heart.balanced = Bonté, pardon, lien à cœur ouvert et amour de soi.
+chakra.heart.imbalanced = Chagrin, rancune, solitude, difficulté à faire confiance.
+chakra.heart.practice = Pratiquez la gratitude et le Ho'oponopono, ouvrez la poitrine par de douces extensions, passez du temps dans la nature et chantez YAM.
+chakra.heart.seeds:
+- Je suis digne d'amour.
+- Mon cœur est ouvert pour donner et recevoir.
+- Je me pardonne et je pardonne aux autres avec aisance.
+- L'amour circule en moi et autour de moi.
+- Je me traite avec bonté et compassion.
+- Je suis {relié|reliée} à tous les êtres par l'amour.
+
+chakra.throat.name = Gorge
+chakra.throat.sanskrit = Vishuddha
+chakra.throat.core = JE PARLE
+chakra.throat.location = Gorge et cou
+chakra.throat.element = Éther (espace)
+chakra.throat.bija = HAM
+chakra.throat.theme = Communication, vérité, expression de soi
+chakra.throat.balanced = Parler avec sincérité, bien écouter, s'exprimer avec créativité.
+chakra.throat.imbalanced = Peur de prendre la parole, trop parler, gorge ou mâchoire serrée.
+chakra.throat.practice = Chantez, fredonnez, écrivez, dites votre vérité avec douceur et chantez HAM.
+chakra.throat.seeds:
+- J'entends et je dis ma vérité.
+- Ma voix est claire et douce.
+- Je m'exprime librement et sincèrement.
+- J'écoute en profondeur et je parle avec sagesse.
+- Mes mots créent de la beauté et de la paix.
+- Je peux me faire entendre en toute sécurité.
+
+chakra.thirdeye.name = Troisième œil
+chakra.thirdeye.sanskrit = Ajna
+chakra.thirdeye.core = JE VOIS
+chakra.thirdeye.location = Entre les sourcils
+chakra.thirdeye.element = Lumière
+chakra.thirdeye.bija = OM
+chakra.thirdeye.theme = Intuition, clairvoyance, imagination, clarté
+chakra.thirdeye.balanced = Pensée claire, confiance en son intuition, imagination vivante.
+chakra.thirdeye.imbalanced = Confusion, ruminations, manque de concentration, coupure avec sa guidance intérieure.
+chakra.thirdeye.practice = Méditez, visualisez, tenez un journal de rêves, pratiquez la respiration alternée et chantez OM.
+chakra.thirdeye.seeds:
+- J'ai confiance en mon intuition.
+- Je vois clairement, au-delà des apparences.
+- Ma sagesse intérieure me guide.
+- Je suis {ouvert|ouverte} à la compréhension et à la vision.
+- Mon esprit est calme et clair.
+- J'ai confiance en ce que mon œil intérieur révèle.
+
+chakra.crown.name = Couronne
+chakra.crown.sanskrit = Sahasrara
+chakra.crown.core = JE SAIS
+chakra.crown.location = Sommet de la tête
+chakra.crown.element = Pensée et conscience pure
+chakra.crown.bija = Silence (ou OM)
+chakra.crown.theme = Esprit, lien, paix, sagesse
+chakra.crown.balanced = Paix intérieure, sens à la vie, lien avec le Divin.
+chakra.crown.imbalanced = Se sentir perdu, cynisme, déconnexion spirituelle.
+chakra.crown.practice = Méditez en silence, priez, pratiquez la gratitude et reposez-vous dans le calme.
+chakra.crown.seeds:
+- Je suis {divin|divine}.
+- Je suis {relié|reliée} à la source infinie.
+- Je ne fais qu'un avec l'univers.
+- La lumière divine circule à travers moi.
+- J'ai confiance en la sagesse de la vie.
+- Je suis en paix avec tout ce qui est.

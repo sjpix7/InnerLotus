@@ -1,0 +1,246 @@
+# ホ・オポノポノ、日記、習慣、サウンドヒーリング、呼吸法、今すぐ落ち着く（SOS）、法的文書。
+
+hoopono.opening = 神聖なる創造主よ、私は今経験しているすべてに完全な責任を持ちます。
+hoopono.p1 = ごめんなさい。
+hoopono.p2 = 許してください。
+hoopono.p3 = ありがとう。
+hoopono.p4 = 愛しています。
+hoopono.closing = 私はこれらの記憶を神聖なる存在にゆだね、クリーニングされ、癒やされ、解き放たれるよう願います。私に平和がありますように。
+hoopono.default_name = 大切なあなた
+
+hoopono.topic.self.name = 自分自身
+hoopono.topic.self.intro = 私はありのままの自分を、心の中に迎え入れます。
+hoopono.topic.self.focus = 自己批判、疑い、痛みを生み出した私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.partner.name = パートナー
+hoopono.topic.partner.intro = 私はパートナーと私たちの関係を、心の中に迎え入れます。
+hoopono.topic.partner.focus = 私たちの間に距離、傷つき、争いを生む私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.parents.name = 両親
+hoopono.topic.parents.intro = 私は母と父を、心の中に迎え入れます。
+hoopono.topic.parents.focus = 家族の古い痛みを抱えている私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.children.name = 子どもたち
+hoopono.topic.children.intro = 私はやさしさを込めて子どもたちを、心の中に迎え入れます。
+hoopono.topic.children.focus = 子どもたちとの間に心配、いらだち、距離を生む私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.friend.name = ある友情
+hoopono.topic.friend.intro = 私はこの友情を、心の中に迎え入れます。
+hoopono.topic.friend.focus = 私たちの間に誤解を生んだ私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.work.name = 仕事とキャリア
+hoopono.topic.work.intro = 私は仕事、同僚、そしてキャリアを、心の中に迎え入れます。
+hoopono.topic.work.focus = 職場でストレス、争い、停滞を生む私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.money.name = お金と豊かさ
+hoopono.topic.money.intro = 私はお金との関係を、心の中に迎え入れます。
+hoopono.topic.money.focus = 恐れ、欠乏、借金を抱えている私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.health.name = 健康と癒やし
+hoopono.topic.health.intro = 私は自分の健康と体の癒やしを、心の中に迎え入れます。
+hoopono.topic.health.focus = 病気や痛みとして現れている私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.body.name = 自分の体
+hoopono.topic.body.intro = 私は感謝を込めて自分の体を、心の中に迎え入れます。
+hoopono.topic.body.focus = 自分の体を裁き、拒み、おろそかにする私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.home.name = 我が家
+hoopono.topic.home.intro = 私は我が家と、そこに暮らすすべての人を、心の中に迎え入れます。
+hoopono.topic.home.focus = この家の平和を乱す私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.past.name = 過去
+hoopono.topic.past.intro = 私は自分の過去と、今もそこから抱えているすべてを、心の中に迎え入れます。
+hoopono.topic.past.focus = 古い傷を生かし続けている私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.ancestors.name = ご先祖さま
+hoopono.topic.ancestors.intro = 私はご先祖さまと家系のすべてを、心の中に迎え入れます。
+hoopono.topic.ancestors.focus = 痛みや制限を抱えたまま私に受け継がれたすべての記憶に、私は責任を持ちます。
+hoopono.topic.earth.name = 母なる地球
+hoopono.topic.earth.intro = 私は母なる地球とすべての生きものを、心の中に迎え入れます。
+hoopono.topic.earth.focus = この世界の痛みに加担している私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.anxiety.name = 恐れと不安
+hoopono.topic.anxiety.intro = 私は自分の恐れと不安を、心の中に迎え入れます。
+hoopono.topic.anxiety.focus = 恐れとして表れている私の中のすべての記憶に、私は責任を持ちます。
+hoopono.topic.person.name = 特定の人
+hoopono.topic.person.intro = {name}さん、私はあなたを心の中に迎え入れます。
+hoopono.topic.person.focus = 私たちの間に痛みを生んだ私の中のすべての記憶に、私は責任を持ちます。
+
+journal.prompts:
+- 今日、私は何に感謝していますか？
+- 今、何が心に重くのしかかっていますか？
+- 今日、何が私を笑顔にしましたか？
+- 本当はどんな気持ちですか？体のどこでそれを感じますか？
+- 幼いころの自分に、何と声をかけたいですか？
+- 人生にもっと必要なもの、減らしたいものは何ですか？
+- 今日手放せることをひとつ挙げるとしたら？
+- 今日、穏やかさを感じた瞬間を書いてみましょう。
+- 向き合う準備ができている恐れは何ですか？
+- 今週、自分について何を学びましたか？
+- 誰に刺激を受けますか？それはなぜですか？
+- 理想の一日はどんな日ですか？
+- どんな境界線を引く必要がありますか？
+- 自分のどんなところを誇りに思いますか？
+- 心は私に何を伝えようとしていますか？
+- 許す必要がある人に手紙を書いてみましょう。
+- 自分の好きなところを3つ挙げると？
+- 何がエネルギーを奪い、何がそれを回復させますか？
+- 絶対に失敗しないとわかっていたら、何をしますか？
+- 今日の私にとって、自分を愛するとはどういうことですか？
+- 今日バランスが崩れていると感じるチャクラはどれですか？なぜですか？
+- 自分に語っている物語の中で、本当ではないかもしれないものは？
+- 最後に心から生きていると感じたのはいつですか？
+- 今月、何を実現したいですか？
+- 今日、どんな感情を避けていましたか？
+- 明日、どうすればもっと自分にやさしくなれますか？
+- 今日祝える小さな成功は何ですか？
+- 今の困難は私に何を教えてくれていますか？
+- 未来の自分が手紙をくれるとしたら、何と書いてあるでしょう？
+- 明日に向けて決める意図をひとつ挙げるとしたら？
+
+journal.mood.joyful = うれしい
+journal.mood.calm = 穏やか
+journal.mood.okay = まあまあ
+journal.mood.sad = 悲しい
+journal.mood.anxious = 不安
+journal.mood.angry = 怒り
+
+habit.defaults:
+- 瞑想
+- 水をコップ8杯飲む
+- 運動
+- 本を10ページ読む
+- 日記を書く
+- アファメーションを唱える
+- 感謝の習慣
+- 外を歩く
+- 夜11時までに布団に入る
+- 早起き
+- 果物と野菜を食べる
+- 砂糖を加えない
+- 1時間画面を見ない
+- ヨガ
+- 呼吸法
+- EFTタッピング
+- サウンドヒーリング
+- 祈り
+- 禁煙
+- 大切な人に電話する
+
+sound.freq.f174.name = 174 Hz · 土台
+sound.freq.f174.desc = ソルフェジオでもっとも低い音。伝統的に緊張を和らげ、安心とグラウンディングの感覚をもたらすために使われます。
+sound.freq.f285.name = 285 Hz · 再生
+sound.freq.f285.desc = 体の回復と新たになる感覚に結びつけられています。
+sound.freq.f396.name = 396 Hz · ルート
+sound.freq.f396.desc = ルートチャクラと結びついています。伝統的に恐れや罪悪感を手放すために使われます。
+sound.freq.f417.name = 417 Hz · セイクラル
+sound.freq.f417.desc = セイクラルチャクラと結びついています。古いパターンを手放し、変化を迎えることと関連づけられています。
+sound.freq.f432.name = 432 Hz · 自然な調律
+sound.freq.f432.desc = もうひとつのコンサートピッチで、多くの人がより温かく落ち着くと感じます。2019年の小規模な研究では、440Hzより心拍数がわずかに低くなりました。
+sound.freq.f528.name = 528 Hz · 愛
+sound.freq.f528.desc = ソーラープレクサスと結びつき、「愛の周波数」と呼ばれます。2018年の小規模な研究では、聴いたあとにストレス指標が下がったと報告されています。
+sound.freq.f639.name = 639 Hz · ハート
+sound.freq.f639.desc = ハートチャクラと結びついています。人間関係の調和とつながりに関連づけられています。
+sound.freq.f741.name = 741 Hz · スロート
+sound.freq.f741.desc = スロートチャクラと結びついています。明晰さ、表現、問題解決に関連づけられています。
+sound.freq.f852.name = 852 Hz · サードアイ
+sound.freq.f852.desc = サードアイと結びついています。直感と内なるバランスへの回帰に関連づけられています。
+sound.freq.f963.name = 963 Hz · クラウン
+sound.freq.f963.desc = クラウンチャクラと結びついています。霊的なつながりとワンネスに関連づけられています。
+sound.freq.om.name = 136.1 Hz · オーム
+sound.freq.om.desc = 「オーム」または地球の公転周期の音。瞑想用のタンプーラやシンギングボウルの調律に使われます。
+sound.freq.schumann.name = 7.83 Hz · シューマン（バイノーラル）
+sound.freq.schumann.desc = 地球の大気の自然な共振を、やさしいバイノーラルビートで届けます。グラウンディングと落ち着きに。ヘッドホンを使ってください。
+sound.freq.delta.name = デルタ 2 Hz（バイノーラル）
+sound.freq.delta.desc = 深い睡眠の脳波の帯域。寝る前のリラックスに。ヘッドホンを使ってください。
+sound.freq.theta.name = シータ 6 Hz（バイノーラル）
+sound.freq.theta.desc = 瞑想と深いリラクゼーションの帯域で、創造性や夢見心地と結びついています。ヘッドホンを使ってください。
+sound.freq.alpha.name = アルファ 10 Hz（バイノーラル）
+sound.freq.alpha.desc = リラックスしつつ冴えている帯域。ストレス解消、軽い瞑想、穏やかな集中に。ヘッドホンを使ってください。
+sound.freq.beta.name = ベータ 18 Hz（バイノーラル）
+sound.freq.beta.desc = 活発に考える帯域。勉強や覚醒に。ヘッドホンを使ってください。
+sound.freq.gamma.name = ガンマ 40 Hz（バイノーラル）
+sound.freq.gamma.desc = 記憶と脳の健康のために研究が進む、高い集中の帯域。ヘッドホンを使ってください。
+
+sound.lib.rain.name = 雨
+sound.lib.rain.desc = やさしく降り続く雨。
+sound.lib.thunder.name = 雷雨
+sound.lib.thunder.desc = やさしい雨の向こうで遠くに響く雷。
+sound.lib.ocean.name = 波の音
+sound.lib.ocean.desc = ゆっくりと岸に寄せる波。
+sound.lib.stream.name = 森の小川
+sound.lib.stream.desc = 石の上をさらさらと流れる小川。
+sound.lib.wind.name = 風
+sound.lib.wind.desc = 開けた丘を吹き抜ける風。
+sound.lib.fire.name = たき火
+sound.lib.fire.desc = ぱちぱちとはぜる温かな火。
+sound.lib.birds.name = 鳥のさえずり
+sound.lib.birds.desc = 朝の木々でさえずる鳥たち。
+sound.lib.crickets.name = 夏の夜
+sound.lib.crickets.desc = 暖かな夜に鳴く虫の声。
+sound.lib.flute.name = 竹笛
+sound.lib.flute.desc = バーンスリー風の竹笛が奏でる穏やかな即興の旋律。
+sound.lib.bamboo.name = 竹のチャイム
+sound.lib.bamboo.desc = そよ風にやさしく触れ合う竹のチャイム。
+sound.lib.chimes.name = ウィンドチャイム
+sound.lib.chimes.desc = やさしい風に揺れる明るい金属のチャイム。
+sound.lib.bell.name = お寺の鐘
+sound.lib.bell.desc = 長くきらめく余韻を持つ深い鐘の音。
+sound.lib.bowl.name = シンギングボウル
+sound.lib.bowl.desc = 打たれて歌い出すヒマラヤのシンギングボウル。
+sound.lib.crystal.name = クリスタルボウル
+sound.lib.crystal.desc = クリスタルボウルの澄んだ、長く続く音色。
+sound.lib.tanpura.name = タンプーラのドローン
+sound.lib.tanpura.desc = インド古典音楽の Pa と Sa のドローン。
+sound.lib.kalimba.name = カリンバ
+sound.lib.kalimba.desc = やさしくはじくカリンバの音。
+sound.lib.om.name = オームのドローン
+sound.lib.om.desc = 低く響くオームの響き。
+sound.lib.drum.name = フレームドラム
+sound.lib.drum.desc = ゆっくりと地に足をつけるフレームドラムのリズム。
+sound.lib.heartbeat.name = 心臓の鼓動
+sound.lib.heartbeat.desc = 穏やかで安定した鼓動。
+sound.lib.white.name = ホワイトノイズ
+sound.lib.white.desc = 気が散る音を覆い隠す、均一な全帯域のノイズ。
+sound.lib.pink.name = ピンクノイズ
+sound.lib.pink.desc = 降り続く雨のような、やわらかくバランスのとれたノイズ。
+sound.lib.brown.name = ブラウンノイズ
+sound.lib.brown.desc = 遠くの滝のような、深く低いノイズ。
+
+breath.box.name = ボックス呼吸
+breath.box.desc = 4秒吸って、4秒止めて、4秒吐いて、4秒止めます。アスリートや救急隊員が冷静さと集中を保つために使っています。
+breath.478.name = 4-7-8呼吸
+breath.478.desc = 4秒吸って、7秒止めて、8秒吐きます。深くリラックスできる呼吸で、寝る前に最適です。
+breath.coherent.name = コヒーレント呼吸
+breath.coherent.desc = 1分間に約6回のゆっくりした呼吸。神経系を整え、心拍変動を高めます。
+breath.sigh.name = サイクリック・サイ
+breath.sigh.desc = 深く吸い、少しだけ吸い足し、長くゆっくり吐きます。2023年のスタンフォード大学の研究で気分を高めることが示されました。
+breath.nadi.name = ナーディ・ショーダナ
+breath.nadi.desc = ヨガの片鼻呼吸。親指か薬指で片方の鼻を押さえ、左右を交互に替えます。心を落ち着かせ、整えます。
+breath.bhramari.name = ブラーマリー · ハチの呼吸
+breath.bhramari.desc = 息を吸い、ハチのようにハミングしながらゆっくり吐きます。やさしい振動が心を落ち着かせます。
+breath.calm.name = 落ち着きの呼吸
+breath.calm.desc = 4秒吸って、6秒吐きます。長く吐くことでリラックス反応が働きます。
+breath.cue.inhale = 吸って
+breath.cue.hold = 止めて
+breath.cue.exhale = 吐いて
+breath.cue.topup = もう少しだけ吸って
+breath.cue.hum = ハミング
+breath.cue.in_left = 左の鼻から吸って
+breath.cue.out_right = 右の鼻から吐いて
+breath.cue.in_right = 右の鼻から吸って
+breath.cue.out_left = 左の鼻から吐いて
+
+sos.intro = あなたは今、安全です。一緒にゆっくりしましょう。
+sos.breathe = 円に合わせて、4秒吸って、6秒吐きましょう。
+sos.ground.title = 5-4-3-2-1 グラウンディング
+sos.ground:
+- 見えるものを5つ挙げましょう。
+- 感じたり触れたりできるものを4つ意識しましょう。
+- 聞こえる音を3つ探しましょう。
+- においを感じるものを2つ見つけましょう。
+- 味わえるものを1つ意識しましょう。
+sos.heart = 胸に手を当てて言いましょう。「私は安全です。この気持ちは過ぎていきます。」
+sos.crisis = 危険な状態にある、または自分を傷つけることを考えている場合は、すぐに地域の緊急通報番号か相談窓口に連絡してください。インドでは Tele-MANAS（14416）が無料・24時間対応です。そのほかの国では、findahelpline.com にお住まいの国の無料相談窓口が掲載されています。
+
+legal.disclaimer = Inner Lotus はセルフケアとウェルネスのためのアプリです。医療、心理、金融に関する助言は行わず、専門家のケアに代わるものではありません。危機的な状況にある場合は、地域の緊急サービスに連絡してください。
+legal.privacy <<
+あなたのデータは、あなたのもとにとどまります。
+
+Inner Lotus は完全にオフラインで動作します。サーバー、アカウント、広告、解析は一切ありません。日記、習慣、アファメーション、ミックス、設定は、この端末のアプリ内にだけ保存されます。
+
+あなたが自分でファイルを書き出したり、カードを共有したりしない限り、何もアップロードや共有はされません。
+
+習慣トラッカーのアプリ使用状況は、あなたがアクセスを許可したあとにのみ Android 自身の使用統計から読み取られ、アプリの外に保存されたり、どこかへ送信されたりすることはありません。
+
+アプリをアンインストールするとデータは削除されるので、残したい場合は先にバックアップを書き出してください。
+>>
+mantramala.text = 108珠のカウンターでマントラ詠唱やジャパを行うなら、Mantra Mala アプリをお試しください。

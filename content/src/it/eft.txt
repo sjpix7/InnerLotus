@@ -1,0 +1,328 @@
+eft.point.kc.name = Punto karate
+eft.point.kc.where = Il bordo esterno e carnoso della mano, tra il polso e il mignolo.
+eft.point.th.name = Sommità del capo
+eft.point.th.where = Al centro della parte più alta della testa.
+eft.point.eb.name = Sopracciglio
+eft.point.eb.where = Dove inizia il sopracciglio, appena sopra e di lato al naso.
+eft.point.se.name = Lato dell'occhio
+eft.point.se.where = Sull'osso, all'angolo esterno dell'occhio.
+eft.point.ue.name = Sotto l'occhio
+eft.point.ue.where = Sull'osso sotto l'occhio, in linea con la pupilla.
+eft.point.un.name = Sotto il naso
+eft.point.un.where = La piccola zona tra il naso e il labbro superiore.
+eft.point.ch.name = Mento
+eft.point.ch.where = Nella piega a metà tra il labbro inferiore e il mento.
+eft.point.cb.name = Clavicola
+eft.point.cb.where = Appena sotto le estremità interne delle clavicole, a circa due centimetri dal centro.
+eft.point.ua.name = Sotto il braccio
+eft.point.ua.where = Sul fianco, circa dieci centimetri sotto l'ascella.
+eft.point.gp.name = Punto gamma
+eft.point.gp.where = Sul dorso della mano, nel solco tra le nocche dell'anulare e del mignolo.
+
+eft.tech.basic.name = Ricetta di base
+eft.tech.basic.desc = Il metodo classico: preparazione sul punto karate, un giro che riconosce la sensazione e poi un giro positivo. Ideale ogni giorno.
+eft.tech.full.name = Ricetta completa con le 9 gamme
+eft.tech.full.desc = Aggiunge la procedura delle 9 gamme di Gary Craig tra i due giri: movimenti degli occhi, canticchiare e contare per coinvolgere entrambi gli emisferi.
+eft.tech.gentle.name = Tocco e respiro delicati
+eft.tech.gentle.desc = Invece di picchiettare, appoggia la punta delle dita su ogni punto e fai un respiro lento e completo. Ideale di sera, in pubblico o quando ti senti molto sensibile.
+eft.tech.positive.name = Giro positivo
+eft.tech.positive.desc = Percorri i punti usando solo frasi positive, per consolidare calma e fiducia quando già ti senti meglio.
+
+eft.gamut:
+- Chiudi gli occhi.
+- Apri gli occhi.
+- Tenendo ferma la testa, guarda decisamente in basso a destra.
+- Ora guarda decisamente in basso a sinistra.
+- Ruota gli occhi in un cerchio completo.
+- Ruota gli occhi in cerchio nell'altro senso.
+- Canticchia per qualche secondo una melodia allegra.
+- Conta velocemente da uno a cinque.
+- Canticchia di nuovo la melodia.
+
+eft.topic.anxiety.name = Ansia
+eft.topic.anxiety.setup:
+- Anche se sento quest'ansia nel corpo, mi accetto profondamente e completamente.
+- Anche se la mia mente continua a correre tra le preoccupazioni, scelgo di essere gentile con me.
+- Anche se ora mi sento {ansioso|ansiosa} e {insicuro|insicura}, accetto me e ciò che provo.
+eft.topic.anxiety.round1:
+- Quest'ansia.
+- Questo peso sul petto.
+- Tutte queste preoccupazioni.
+- I miei pensieri che corrono.
+- Questa sensazione di disagio.
+- Mi sento così {ansioso|ansiosa}.
+- Quest'ansia nel corpo.
+- Tutta questa preoccupazione.
+eft.topic.anxiety.round2:
+- In questo momento sono al sicuro.
+- Ora posso respirare lentamente.
+- Lascio andare ciò che non posso controllare.
+- Il mio corpo si sta calmando.
+- Scelgo la pace.
+- Mi fido di poterlo affrontare.
+- Lascio che le spalle si ammorbidiscano.
+- La calma ritorna in me.
+
+eft.topic.stress.name = Stress e sovraccarico
+eft.topic.stress.setup:
+- Anche se mi sento {stressato|stressata} e {sopraffatto|sopraffatta}, mi accetto profondamente e completamente.
+- Anche se ho troppe cose da fare, mi accetto e sto facendo del mio meglio.
+- Anche se questo stress pesa nel mio corpo, scelgo di rilassarmi e di accettarmi.
+eft.topic.stress.round1:
+- Tutto questo stress.
+- Troppe cose da fare.
+- Questa pressione.
+- Mi sento {sommerso|sommersa}.
+- Questa tensione nelle spalle.
+- Non abbastanza tempo.
+- Tutto lo stress nel corpo.
+- Questa pesantezza.
+eft.topic.stress.round2:
+- Una cosa alla volta.
+- Posso lasciar andare una parte di tutto questo.
+- Sto facendo abbastanza.
+- Mi do il permesso di riposare.
+- Il mio corpo si rilassa.
+- Gestisco le cose con facilità.
+- Espiro la pressione.
+- Ora mi sento più {leggero|leggera}.
+
+eft.topic.anger.name = Rabbia e frustrazione
+eft.topic.anger.setup:
+- Anche se provo così tanta rabbia, mi accetto profondamente e completamente.
+- Anche se sono {furioso|furiosa} per ciò che è successo, accetto me e i miei sentimenti.
+- Anche se questa rabbia brucia dentro di me, scelgo di onorarla e di lasciarla andare.
+eft.topic.anger.round1:
+- Questa rabbia.
+- Questo calore.
+- Sono così {frustrato|frustrata}.
+- Quello che è successo.
+- Questa furia dentro di me.
+- Non era giusto.
+- Tutta questa rabbia.
+- Questo bruciore nel corpo.
+eft.topic.anger.round2:
+- La mia rabbia è legittima.
+- Posso lasciarla andare in sicurezza.
+- Scelgo la mia pace.
+- Mi calmo a ogni respiro.
+- Non devo portare questo peso.
+- Metto confini con calma.
+- Lascio che il calore esca dal mio corpo.
+- Sono {calmo|calma} e {padrone|padrona} di me.
+
+eft.topic.sadness.name = Tristezza
+eft.topic.sadness.setup:
+- Anche se mi sento triste e {appesantito|appesantita}, mi accetto profondamente e completamente.
+- Anche se il mio cuore soffre, sono gentile con me.
+- Anche se mi sento giù e {solo|sola}, accetto me e tutti i miei sentimenti.
+eft.topic.sadness.round1:
+- Questa tristezza.
+- Questo peso sul cuore.
+- Mi sento così giù.
+- Queste lacrime.
+- Questo vuoto.
+- Mi manca ciò che era.
+- Tutta questa tristezza.
+- Questo dolore dentro.
+eft.topic.sadness.round2:
+- Va bene sentirsi tristi.
+- Lascio che i miei sentimenti scorrano.
+- Non sono {solo|sola}.
+- Il mio cuore sta guarendo.
+- Lascio entrare un po' di luce.
+- Sono gentile con me.
+- Ogni respiro mi conforta.
+- La speranza ritorna.
+
+eft.topic.fear.name = Paure e fobie
+eft.topic.fear.setup:
+- Anche se ho paura, mi accetto profondamente e completamente.
+- Anche se questa paura sembra così reale, scelgo di sentirmi al sicuro e di accettarmi.
+- Anche se mi spaventa ciò che potrebbe succedere, accetto me e la mia paura.
+eft.topic.fear.round1:
+- Questa paura.
+- Ho così tanta paura.
+- E se andasse male.
+- Questa paura nello stomaco.
+- Non mi sento al sicuro.
+- Questa paura dell'ignoto.
+- Tutta questa paura.
+- Il mio cuore che batte forte.
+eft.topic.fear.round2:
+- In questo momento sono al sicuro.
+- Posso affrontarlo.
+- Il coraggio cresce in me.
+- Mi fido di me.
+- Sono più forte della mia paura.
+- Faccio un piccolo passo coraggioso.
+- Sento i piedi per terra.
+- Sono al sicuro e {sostenuto|sostenuta}.
+
+eft.topic.selfworth.name = Non sono abbastanza
+eft.topic.selfworth.setup:
+- Anche se sento di non essere abbastanza, mi accetto profondamente e completamente.
+- Anche se continuo a criticarmi, scelgo di essere gentile con me.
+- Anche se non mi sento {degno|degna}, mi accetto esattamente come sono.
+eft.topic.selfworth.round1:
+- Non abbastanza.
+- Questo critico interiore.
+- Sbaglio sempre tutto.
+- Non me lo merito.
+- Questa sensazione di non bastare.
+- Confrontarmi con gli altri.
+- Tutto questo dubbio su di me.
+- Questa vecchia convinzione.
+eft.topic.selfworth.round2:
+- Sono abbastanza.
+- Valgo così come sono.
+- Scelgo la gentilezza verso di me.
+- Il mio valore non è in discussione.
+- Apprezzo chi sono.
+- Sto imparando ad amarmi.
+- Merito cose belle.
+- Mi accetto completamente.
+
+eft.topic.money.name = Preoccupazioni economiche
+eft.topic.money.setup:
+- Anche se mi preoccupo per i soldi, mi accetto profondamente e completamente.
+- Anche se credo che non ci sia mai abbastanza, mi accetto e mi apro al cambiamento.
+- Anche se il denaro mi sembra difficile, scelgo di sentirmi al sicuro e di accettarmi.
+eft.topic.money.round1:
+- Questa preoccupazione per i soldi.
+- Mai abbastanza.
+- I soldi sono difficili.
+- Questa paura delle bollette.
+- Non me lo posso permettere.
+- Questa sensazione di scarsità.
+- Tutto questo stress economico.
+- Queste vecchie convinzioni sul denaro.
+eft.topic.money.round2:
+- Mi apro all'abbondanza.
+- Il denaro può arrivare con facilità.
+- Sono al sicuro con il denaro.
+- Faccio scelte sagge.
+- Nuove opportunità stanno arrivando.
+- Merito serenità economica.
+- Lascio andare la scarsità.
+- Accolgo la prosperità.
+
+eft.topic.sleep.name = Non riesco a dormire
+eft.topic.sleep.setup:
+- Anche se non riesco ad addormentarmi, mi accetto profondamente e completamente.
+- Anche se la mia mente non si spegne, scelgo di rilassarmi e di accettarmi.
+- Anche se stanotte sono {irrequieto|irrequieta}, mi accetto e mi permetto di riposare.
+eft.topic.sleep.round1:
+- Non riesco a dormire.
+- La mia mente indaffarata.
+- Tutti questi pensieri.
+- Questa irrequietezza.
+- Preoccuparmi per domani.
+- Così {stanco|stanca}, eppure {sveglio|sveglia}.
+- Questa tensione nel corpo.
+- Questa mente che corre.
+eft.topic.sleep.round2:
+- Lascio andare la giornata.
+- La mia mente sta rallentando.
+- Il mio corpo si fa pesante e rilassato.
+- Posso riposare al sicuro.
+- Il sonno sta arrivando.
+- Lascio andare le preoccupazioni di domani.
+- Ogni respiro è più lento.
+- Scivolo in un sonno sereno.
+
+eft.topic.cravings.name = Voglie
+eft.topic.cravings.setup:
+- Anche se ho questa voglia così forte, mi accetto profondamente e completamente.
+- Anche se lo desidero tanto in questo momento, mi accetto e scelgo ciò che mi fa bene.
+- Anche se questo impulso è potente, io sono più forte e mi accetto.
+eft.topic.cravings.round1:
+- Questa voglia.
+- Lo voglio adesso.
+- Questo impulso forte.
+- Sento di averne bisogno.
+- Questa voglia nel corpo.
+- È così difficile resistere.
+- Questa vecchia abitudine.
+- Tutto questo desiderio.
+eft.topic.cravings.round2:
+- Questa voglia passerà.
+- Ho il controllo.
+- Scelgo ciò che mi nutre.
+- Posso sentirlo e restare forte.
+- Ho alternative più sane.
+- Il mio corpo mi ringrazia.
+- L'impulso sta svanendo.
+- Sono {libero|libera}.
+
+eft.topic.procrastination.name = Procrastinazione
+eft.topic.procrastination.setup:
+- Anche se continuo a rimandare, mi accetto profondamente e completamente.
+- Anche se mi sento {bloccato|bloccata} e senza motivazione, mi accetto e scelgo di iniziare.
+- Anche se iniziare mi sembra così difficile, mi accetto e faccio un piccolo passo.
+eft.topic.procrastination.round1:
+- Continuo a evitarlo.
+- Non ne ho voglia.
+- È troppo.
+- Questa resistenza.
+- Lo farò dopo.
+- Questa sensazione di blocco.
+- La paura di sbagliare.
+- Tutto questo evitare.
+eft.topic.procrastination.round2:
+- Posso iniziare in piccolo.
+- Solo cinque minuti.
+- Iniziare è facile.
+- Ora mi sento {motivato|motivata}.
+- Fatto è meglio che perfetto.
+- Faccio il primo passo.
+- La mia energia sale.
+- È bello portarlo a termine.
+
+eft.topic.pain.name = Dolore fisico
+eft.topic.pain.setup:
+- Anche se ho questo dolore nel corpo, mi accetto profondamente e completamente.
+- Anche se questo fastidio mi disturba, accetto me e il mio corpo.
+- Anche se fa male, scelgo di rilassarmi intorno al dolore e di accettarmi.
+eft.topic.pain.round1:
+- Questo dolore.
+- Questo fastidio.
+- Questa fitta.
+- Questa tensione intorno al dolore.
+- Fa male.
+- Sono {stanco|stanca} di questo dolore.
+- Questo dolore nel corpo.
+- Tutto questo disagio.
+eft.topic.pain.round2:
+- Mi rilasso intorno a questa sensazione.
+- Il mio corpo sa come guarire.
+- Mando amore a questa zona.
+- La tensione si ammorbidisce.
+- Respiro dentro il dolore.
+- Il benessere ritorna.
+- Il mio corpo sta guarendo.
+- Sono in pace.
+
+eft.topic.hurt.name = Ferite nelle relazioni
+eft.topic.hurt.setup:
+- Anche se mi sento {ferito|ferita} da ciò che è stato detto o fatto, mi accetto profondamente e completamente.
+- Anche se mi sento {tradito|tradita} e {deluso|delusa}, accetto me e i miei sentimenti.
+- Anche se non riesco a smettere di pensare a questo conflitto, scelgo la pace e mi accetto.
+eft.topic.hurt.round1:
+- Questa ferita.
+- Quelle parole.
+- Mi sento così {deluso|delusa}.
+- Questa delusione.
+- Non mi sento {visto|vista}.
+- Questo rancore.
+- Tutto questo dolore.
+- Questo male al cuore.
+eft.topic.hurt.round2:
+- I miei sentimenti contano.
+- Posso guarire da questo.
+- Scelgo di lasciar andare questa ferita.
+- Esprimo i miei bisogni con amore.
+- Perdono per la mia pace.
+- Merito rispetto.
+- Il mio cuore si addolcisce.
+- Sono in pace.

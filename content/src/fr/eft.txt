@@ -1,0 +1,328 @@
+eft.point.kc.name = Point karaté
+eft.point.kc.where = Le bord extérieur charnu de la main, entre le poignet et l'auriculaire.
+eft.point.th.name = Sommet de la tête
+eft.point.th.where = Au centre du sommet du crâne.
+eft.point.eb.name = Sourcil
+eft.point.eb.where = Au début du sourcil, juste au-dessus et à côté du nez.
+eft.point.se.name = Coin de l'œil
+eft.point.se.where = Sur l'os, au coin extérieur de l'œil.
+eft.point.ue.name = Sous l'œil
+eft.point.ue.where = Sur l'os sous l'œil, dans l'alignement de la pupille.
+eft.point.un.name = Sous le nez
+eft.point.un.where = La petite zone entre le nez et la lèvre supérieure.
+eft.point.ch.name = Menton
+eft.point.ch.where = Dans le creux entre la lèvre inférieure et le menton.
+eft.point.cb.name = Clavicule
+eft.point.cb.where = Juste sous l'extrémité intérieure des clavicules, à environ deux centimètres du centre.
+eft.point.ua.name = Sous le bras
+eft.point.ua.where = Sur le côté du corps, environ dix centimètres sous l'aisselle.
+eft.point.gp.name = Point gamme
+eft.point.gp.where = Sur le dos de la main, dans le creux entre les jointures de l'annulaire et de l'auriculaire.
+
+eft.tech.basic.name = Recette de base
+eft.tech.basic.desc = La méthode classique : préparation sur le point karaté, une ronde qui reconnaît le ressenti, puis une ronde positive. Idéale au quotidien.
+eft.tech.full.name = Recette complète avec les 9 gammes
+eft.tech.full.desc = Ajoute la procédure des 9 gammes de Gary Craig entre les deux rondes : mouvements des yeux, fredonnement et comptage qui sollicitent les deux hémisphères.
+eft.tech.gentle.name = Toucher et respirer en douceur
+eft.tech.gentle.desc = Au lieu de tapoter, posez le bout des doigts sur chaque point et prenez une respiration lente et complète. Idéal le soir, en public ou quand vous vous sentez très sensible.
+eft.tech.positive.name = Ronde positive
+eft.tech.positive.desc = Parcourez les points avec uniquement des phrases positives, pour ancrer le calme et la confiance une fois que vous allez mieux.
+
+eft.gamut:
+- Fermez les yeux.
+- Ouvrez les yeux.
+- Sans bouger la tête, regardez fermement en bas à droite.
+- Puis regardez fermement en bas à gauche.
+- Faites tourner vos yeux en un cercle complet.
+- Faites tourner vos yeux dans l'autre sens.
+- Fredonnez quelques secondes d'un air joyeux.
+- Comptez rapidement de un à cinq.
+- Fredonnez l'air à nouveau.
+
+eft.topic.anxiety.name = Anxiété
+eft.topic.anxiety.setup:
+- Même si je ressens cette anxiété dans mon corps, je m'accepte profondément et complètement.
+- Même si mon esprit tourne en boucle avec mes soucis, je choisis d'être {bienveillant|bienveillante} envers moi.
+- Même si je me sens {anxieux|anxieuse} et en insécurité en ce moment, je m'accepte avec ce que je ressens.
+eft.topic.anxiety.round1:
+- Cette anxiété.
+- Cette oppression dans ma poitrine.
+- Tous ces soucis.
+- Mes pensées qui s'emballent.
+- Ce malaise.
+- Je me sens tellement {anxieux|anxieuse}.
+- Cette anxiété dans mon corps.
+- Toute cette inquiétude.
+eft.topic.anxiety.round2:
+- Je suis en sécurité en ce moment.
+- Je peux respirer lentement maintenant.
+- Je lâche ce que je ne peux pas contrôler.
+- Mon corps se calme.
+- Je choisis la paix.
+- J'ai confiance en ma capacité à y faire face.
+- Je laisse mes épaules se détendre.
+- Le calme revient en moi.
+
+eft.topic.stress.name = Stress et surcharge
+eft.topic.stress.setup:
+- Même si je me sens {stressé|stressée} et {débordé|débordée}, je m'accepte profondément et complètement.
+- Même si j'ai trop de choses à gérer, je m'accepte et je fais de mon mieux.
+- Même si ce stress pèse dans mon corps, je choisis de me détendre et de m'accepter.
+eft.topic.stress.round1:
+- Tout ce stress.
+- Trop de choses à faire.
+- Cette pression.
+- Je me sens {submergé|submergée}.
+- Cette tension dans les épaules.
+- Pas assez de temps.
+- Tout ce stress dans mon corps.
+- Cette lourdeur.
+eft.topic.stress.round2:
+- Une chose à la fois.
+- Je peux lâcher une partie de tout ça.
+- J'en fais assez.
+- Je m'autorise à me reposer.
+- Mon corps se détend.
+- Je gère les choses avec aisance.
+- J'expire la pression.
+- Je me sens plus {léger|légère} maintenant.
+
+eft.topic.anger.name = Colère et frustration
+eft.topic.anger.setup:
+- Même si je ressens tant de colère, je m'accepte profondément et complètement.
+- Même si je suis {furieux|furieuse} de ce qui s'est passé, je m'accepte avec mes émotions.
+- Même si cette colère brûle en moi, je choisis de l'honorer et de la libérer.
+eft.topic.anger.round1:
+- Cette colère.
+- Cette chaleur.
+- Je suis tellement {frustré|frustrée}.
+- Ce qui s'est passé.
+- Cette rage en moi.
+- Ce n'était pas juste.
+- Toute cette colère.
+- Cette brûlure dans mon corps.
+eft.topic.anger.round2:
+- Ma colère est légitime.
+- Je peux la libérer en toute sécurité.
+- Je choisis ma paix.
+- Je me calme à chaque respiration.
+- Je n'ai pas à porter cela.
+- Je pose mes limites avec calme.
+- Je laisse la chaleur quitter mon corps.
+- Je suis calme et {maître|maîtresse} de moi.
+
+eft.topic.sadness.name = Tristesse
+eft.topic.sadness.setup:
+- Même si je me sens triste et {lourd|lourde}, je m'accepte profondément et complètement.
+- Même si mon cœur a mal, je suis {doux|douce} avec moi.
+- Même si je me sens au plus bas et {seul|seule}, je m'accepte avec toutes mes émotions.
+eft.topic.sadness.round1:
+- Cette tristesse.
+- Ce poids sur le cœur.
+- Je me sens si {bas|basse}.
+- Ces larmes.
+- Ce vide.
+- Ce qui me manque.
+- Toute cette tristesse.
+- Cette douleur à l'intérieur.
+eft.topic.sadness.round2:
+- J'ai le droit d'être triste.
+- Je laisse mes émotions circuler.
+- Je ne suis pas {seul|seule}.
+- Mon cœur guérit.
+- Je laisse entrer un peu de lumière.
+- Je suis {doux|douce} avec moi.
+- Chaque respiration m'apaise.
+- L'espoir revient.
+
+eft.topic.fear.name = Peurs et phobies
+eft.topic.fear.setup:
+- Même si j'ai peur, je m'accepte profondément et complètement.
+- Même si cette peur paraît si réelle, je choisis de me sentir en sécurité et de m'accepter.
+- Même si ce qui pourrait arriver m'effraie, je m'accepte avec ma peur.
+eft.topic.fear.round1:
+- Cette peur.
+- J'ai tellement peur.
+- Et si ça tournait mal.
+- Cette peur dans le ventre.
+- Je ne me sens pas en sécurité.
+- Cette peur de l'inconnu.
+- Toute cette peur.
+- Mon cœur qui s'emballe.
+eft.topic.fear.round2:
+- Je suis en sécurité maintenant.
+- Je peux y faire face.
+- Le courage grandit en moi.
+- J'ai confiance en moi.
+- Je suis {plus fort|plus forte} que ma peur.
+- Je fais un petit pas courageux.
+- Je sens mes pieds sur le sol.
+- Je suis en sécurité et {soutenu|soutenue}.
+
+eft.topic.selfworth.name = Pas assez bien
+eft.topic.selfworth.setup:
+- Même si je sens que je ne suis pas assez bien, je m'accepte profondément et complètement.
+- Même si je ne cesse de me critiquer, je choisis d'être {bienveillant|bienveillante} envers moi.
+- Même si je ne me sens pas digne, je m'accepte exactement tel{|le} que je suis.
+eft.topic.selfworth.round1:
+- Pas assez bien.
+- Ce critique intérieur.
+- Je rate toujours tout.
+- Je ne le mérite pas.
+- Ce sentiment de ne pas suffire.
+- Me comparer aux autres.
+- Tout ce doute de moi.
+- Cette vieille croyance.
+eft.topic.selfworth.round2:
+- Je suis {suffisant|suffisante}.
+- J'ai de la valeur tel{|le} que je suis.
+- Je choisis la bienveillance envers moi.
+- Ma valeur n'est pas à débattre.
+- J'apprécie qui je suis.
+- J'apprends à m'aimer.
+- Je mérite de belles choses.
+- Je m'accepte complètement.
+
+eft.topic.money.name = Soucis d'argent
+eft.topic.money.setup:
+- Même si je m'inquiète pour l'argent, je m'accepte profondément et complètement.
+- Même si je crois qu'il n'y en a jamais assez, je m'accepte et je m'ouvre au changement.
+- Même si l'argent me semble difficile, je choisis de me sentir en sécurité et de m'accepter.
+eft.topic.money.round1:
+- Ce souci d'argent.
+- Jamais assez.
+- L'argent, c'est difficile.
+- Cette peur des factures.
+- Je n'en ai pas les moyens.
+- Ce sentiment de manque.
+- Tout ce stress financier.
+- Ces vieilles croyances sur l'argent.
+eft.topic.money.round2:
+- Je m'ouvre à l'abondance.
+- L'argent peut venir facilement.
+- Je suis en sécurité avec l'argent.
+- Je fais des choix avisés.
+- De nouvelles opportunités arrivent.
+- Je mérite l'aisance financière.
+- Je laisse partir le manque.
+- J'accueille la prospérité.
+
+eft.topic.sleep.name = Insomnie
+eft.topic.sleep.setup:
+- Même si je n'arrive pas à m'endormir, je m'accepte profondément et complètement.
+- Même si mon esprit ne s'éteint pas, je choisis de me détendre et de m'accepter.
+- Même si je suis {agité|agitée} ce soir, je m'accepte et je m'autorise à me reposer.
+eft.topic.sleep.round1:
+- Je n'arrive pas à dormir.
+- Mon esprit occupé.
+- Toutes ces pensées.
+- Cette agitation.
+- M'inquiéter pour demain.
+- Si {fatigué|fatiguée}, et pourtant {éveillé|éveillée}.
+- Cette tension dans mon corps.
+- Cet esprit qui s'emballe.
+eft.topic.sleep.round2:
+- Je laisse partir la journée.
+- Mon esprit ralentit.
+- Mon corps devient lourd et détendu.
+- Je peux me reposer en sécurité.
+- Le sommeil arrive.
+- Je laisse partir les soucis de demain.
+- Chaque respiration est plus lente.
+- Je glisse dans un sommeil paisible.
+
+eft.topic.cravings.name = Envies compulsives
+eft.topic.cravings.setup:
+- Même si j'ai cette forte envie, je m'accepte profondément et complètement.
+- Même si j'en ai tellement envie maintenant, je m'accepte et je choisis ce qui est bon pour moi.
+- Même si cette pulsion est puissante, je suis {plus fort|plus forte} et je m'accepte.
+eft.topic.cravings.round1:
+- Cette envie.
+- Je le veux maintenant.
+- Cette forte pulsion.
+- J'ai l'impression d'en avoir besoin.
+- Cette envie dans mon corps.
+- C'est si dur de résister.
+- Cette vieille habitude.
+- Tout ce désir.
+eft.topic.cravings.round2:
+- Cette envie va passer.
+- Je garde le contrôle.
+- Je choisis ce qui me nourrit.
+- Je peux ressentir cela et rester {fort|forte}.
+- J'ai des options plus saines.
+- Mon corps me remercie.
+- La pulsion s'estompe.
+- Je suis libre.
+
+eft.topic.procrastination.name = Procrastination
+eft.topic.procrastination.setup:
+- Même si je repousse sans cesse cette tâche, je m'accepte profondément et complètement.
+- Même si je me sens {bloqué|bloquée} et sans motivation, je m'accepte et je choisis de commencer.
+- Même si commencer me semble si difficile, je m'accepte et je fais un petit pas.
+eft.topic.procrastination.round1:
+- Je l'évite encore.
+- Je n'en ai pas envie.
+- C'est trop.
+- Cette résistance.
+- Je le ferai plus tard.
+- Ce sentiment d'être {bloqué|bloquée}.
+- La peur de mal faire.
+- Tout cet évitement.
+eft.topic.procrastination.round2:
+- Je peux commencer petit.
+- Juste cinq minutes.
+- Commencer, c'est facile.
+- Je me sens {motivé|motivée} maintenant.
+- Fait vaut mieux que parfait.
+- Je fais le premier pas.
+- Mon énergie monte.
+- Ça fait du bien de le terminer.
+
+eft.topic.pain.name = Douleur physique
+eft.topic.pain.setup:
+- Même si j'ai cette douleur dans le corps, je m'accepte profondément et complètement.
+- Même si cette gêne me dérange, je m'accepte avec mon corps.
+- Même si ça fait mal, je choisis de me détendre autour de la douleur et de m'accepter.
+eft.topic.pain.round1:
+- Cette douleur.
+- Cette gêne.
+- Ce mal.
+- Cette tension autour de la douleur.
+- Ça fait mal.
+- Je suis {fatigué|fatiguée} de cette douleur.
+- Cette douleur dans mon corps.
+- Tout cet inconfort.
+eft.topic.pain.round2:
+- Je me détends autour de cette sensation.
+- Mon corps sait guérir.
+- J'envoie de l'amour à cette zone.
+- La tension s'adoucit.
+- Je respire dans la douleur.
+- Le bien-être revient.
+- Mon corps guérit.
+- Je suis {apaisé|apaisée}.
+
+eft.topic.hurt.name = Blessure relationnelle
+eft.topic.hurt.setup:
+- Même si je suis {blessé|blessée} par ce qui a été dit ou fait, je m'accepte profondément et complètement.
+- Même si je me sens {trahi|trahie} et {déçu|déçue}, je m'accepte avec mes émotions.
+- Même si je n'arrête pas de penser à ce conflit, je choisis la paix et je m'accepte.
+eft.topic.hurt.round1:
+- Cette blessure.
+- Ces mots.
+- Je me sens tellement {déçu|déçue}.
+- Cette déception.
+- Je ne me sens pas {vu|vue}.
+- Cette rancune.
+- Toute cette peine.
+- Cette douleur dans mon cœur.
+eft.topic.hurt.round2:
+- Mes émotions comptent.
+- Je peux guérir de cela.
+- Je choisis de libérer cette blessure.
+- J'exprime mes besoins avec amour.
+- Je pardonne pour ma propre paix.
+- Je mérite le respect.
+- Mon cœur s'adoucit.
+- Je suis en paix.

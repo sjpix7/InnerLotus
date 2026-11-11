@@ -1,0 +1,331 @@
+# EFT tapping: points, techniques, 9-gamut steps and 12 guided topics.
+# Each topic: setup (3, said on Karate Chop), round1 (8 reminder phrases, TH..UA), round2 (8 positive phrases)
+
+eft.point.kc.name = Karate Chop
+eft.point.kc.where = The fleshy outer edge of the hand, between the wrist and the little finger.
+eft.point.th.name = Top of Head
+eft.point.th.where = The crown, at the centre top of your head.
+eft.point.eb.name = Eyebrow
+eft.point.eb.where = Where the eyebrow begins, just above and to the side of the nose.
+eft.point.se.name = Side of Eye
+eft.point.se.where = On the bone at the outer corner of the eye.
+eft.point.ue.name = Under Eye
+eft.point.ue.where = On the bone under the eye, in line with the pupil.
+eft.point.un.name = Under Nose
+eft.point.un.where = The small area between the nose and the upper lip.
+eft.point.ch.name = Chin
+eft.point.ch.where = In the crease halfway between the lower lip and the chin.
+eft.point.cb.name = Collarbone
+eft.point.cb.where = Just below the inner ends of the collarbones, about an inch from the centre.
+eft.point.ua.name = Under Arm
+eft.point.ua.where = On the side of the body, about four inches below the armpit.
+eft.point.gp.name = Gamut Point
+eft.point.gp.where = On the back of the hand, in the groove between the ring and little finger knuckles.
+
+eft.tech.basic.name = Basic Recipe
+eft.tech.basic.desc = The classic method: set-up on the Karate Chop point, a round that acknowledges the feeling, then a positive round. Best for everyday use.
+eft.tech.full.name = Full Recipe with 9 Gamut
+eft.tech.full.desc = Adds Gary Craig's 9 Gamut procedure between the two rounds — eye movements, humming and counting that engage both sides of the brain.
+eft.tech.gentle.name = Gentle Touch & Breathe
+eft.tech.gentle.desc = Instead of tapping, rest your fingertips on each point and take one slow, full breath. Ideal at night, in public, or when you feel very sensitive.
+eft.tech.positive.name = Positive Round
+eft.tech.positive.desc = Tap through the points using only positive statements, to anchor calm and confidence after you already feel better.
+
+eft.gamut:
+- Close your eyes.
+- Open your eyes.
+- Keeping your head still, look hard down to the right.
+- Now look hard down to the left.
+- Roll your eyes in a full circle.
+- Roll your eyes in a circle the other way.
+- Hum a few seconds of a happy tune.
+- Count quickly from one to five.
+- Hum the tune again.
+
+eft.topic.anxiety.name = Anxiety
+eft.topic.anxiety.setup:
+- Even though I feel this anxiety in my body, I deeply and completely accept myself.
+- Even though my mind keeps racing with worries, I choose to be kind to myself.
+- Even though I feel anxious and unsafe right now, I accept myself and how I feel.
+eft.topic.anxiety.round1:
+- This anxiety.
+- This tightness in my chest.
+- All these worries.
+- My racing thoughts.
+- This feeling of unease.
+- I feel so anxious.
+- This anxiety in my body.
+- All this worry.
+eft.topic.anxiety.round2:
+- I am safe in this moment.
+- I can breathe slowly now.
+- I release what I cannot control.
+- My body is calming down.
+- I choose peace.
+- I trust myself to handle this.
+- I let my shoulders soften.
+- Calm is returning to me.
+
+eft.topic.stress.name = Stress & Overwhelm
+eft.topic.stress.setup:
+- Even though I feel stressed and overwhelmed, I deeply and completely accept myself.
+- Even though there is too much on my plate, I accept myself and I am doing my best.
+- Even though this stress feels heavy in my body, I choose to relax and accept myself.
+eft.topic.stress.round1:
+- All this stress.
+- Too much to do.
+- This pressure.
+- I feel overwhelmed.
+- This tension in my shoulders.
+- Not enough time.
+- All this stress in my body.
+- This heavy feeling.
+eft.topic.stress.round2:
+- One thing at a time.
+- I can let go of some of this.
+- I am doing enough.
+- I give myself permission to rest.
+- My body is relaxing.
+- I handle things with ease.
+- I breathe out the pressure.
+- I feel lighter now.
+
+eft.topic.anger.name = Anger & Frustration
+eft.topic.anger.setup:
+- Even though I feel so angry, I deeply and completely accept myself.
+- Even though I'm furious about what happened, I accept myself and my feelings.
+- Even though this anger is burning inside me, I choose to honour it and release it.
+eft.topic.anger.round1:
+- This anger.
+- This hot feeling.
+- I'm so frustrated.
+- What happened.
+- This rage inside me.
+- It wasn't fair.
+- All this anger.
+- This burning in my body.
+eft.topic.anger.round2:
+- My anger is valid.
+- I can release it safely.
+- I choose my peace.
+- I cool down with every breath.
+- I don't have to carry this.
+- I set boundaries calmly.
+- I let the heat leave my body.
+- I am calm and in control.
+
+eft.topic.sadness.name = Sadness
+eft.topic.sadness.setup:
+- Even though I feel sad and heavy, I deeply and completely accept myself.
+- Even though my heart hurts, I am gentle with myself.
+- Even though I feel low and alone, I accept myself and all my feelings.
+eft.topic.sadness.round1:
+- This sadness.
+- This heaviness in my heart.
+- I feel so low.
+- These tears.
+- This emptiness.
+- I miss what was.
+- All this sadness.
+- This ache inside.
+eft.topic.sadness.round2:
+- It's okay to feel sad.
+- I allow my feelings to move.
+- I am not alone.
+- My heart is healing.
+- I let a little light in.
+- I am gentle with myself.
+- Each breath brings comfort.
+- Hope is returning.
+
+eft.topic.fear.name = Fear & Phobias
+eft.topic.fear.setup:
+- Even though I feel afraid, I deeply and completely accept myself.
+- Even though this fear feels so real, I choose to feel safe and accept myself.
+- Even though I'm scared of what might happen, I accept myself and my fear.
+eft.topic.fear.round1:
+- This fear.
+- I'm so scared.
+- What if it goes wrong.
+- This fear in my stomach.
+- I don't feel safe.
+- This fear of the unknown.
+- All this fear.
+- My heart is racing.
+eft.topic.fear.round2:
+- I am safe right now.
+- I can face this.
+- Courage is growing in me.
+- I trust myself.
+- I am stronger than my fear.
+- I take one small, brave step.
+- I feel my feet on the ground.
+- I am safe and supported.
+
+eft.topic.selfworth.name = Not Good Enough
+eft.topic.selfworth.setup:
+- Even though I feel I'm not good enough, I deeply and completely accept myself.
+- Even though I keep criticising myself, I choose to be kind to myself.
+- Even though I don't feel worthy, I accept myself exactly as I am.
+eft.topic.selfworth.round1:
+- Not good enough.
+- This inner critic.
+- I always get it wrong.
+- I don't deserve it.
+- This feeling of not enough.
+- Comparing myself to others.
+- All this self-doubt.
+- This old belief.
+eft.topic.selfworth.round2:
+- I am enough.
+- I am worthy as I am.
+- I choose kindness for myself.
+- My worth is not up for debate.
+- I appreciate who I am.
+- I am learning to love myself.
+- I deserve good things.
+- I accept myself completely.
+
+eft.topic.money.name = Money Worries
+eft.topic.money.setup:
+- Even though I worry about money, I deeply and completely accept myself.
+- Even though I believe there is never enough, I accept myself and I'm open to change.
+- Even though money feels hard for me, I choose to feel safe and accept myself.
+eft.topic.money.round1:
+- This money worry.
+- Never enough.
+- Money is hard.
+- This fear about bills.
+- I can't afford it.
+- This feeling of scarcity.
+- All this money stress.
+- These old money beliefs.
+eft.topic.money.round2:
+- I am open to abundance.
+- Money can come easily.
+- I am safe with money.
+- I make wise choices.
+- New opportunities are coming.
+- I deserve financial ease.
+- I release scarcity.
+- I welcome prosperity.
+
+eft.topic.sleep.name = Can't Sleep
+eft.topic.sleep.setup:
+- Even though I can't fall asleep, I deeply and completely accept myself.
+- Even though my mind won't switch off, I choose to relax and accept myself.
+- Even though I feel restless tonight, I accept myself and allow rest.
+eft.topic.sleep.round1:
+- I can't sleep.
+- My busy mind.
+- All these thoughts.
+- This restlessness.
+- Worrying about tomorrow.
+- So tired, yet awake.
+- This tension in my body.
+- This racing mind.
+eft.topic.sleep.round2:
+- I let go of today.
+- My mind is slowing down.
+- My body feels heavy and relaxed.
+- I am safe to rest.
+- Sleep is coming.
+- I release tomorrow's worries.
+- Every breath is slower.
+- I drift into peaceful sleep.
+
+eft.topic.cravings.name = Cravings
+eft.topic.cravings.setup:
+- Even though I have this strong craving, I deeply and completely accept myself.
+- Even though I want it so badly right now, I accept myself and choose what is good for me.
+- Even though this urge feels powerful, I am stronger and I accept myself.
+eft.topic.cravings.round1:
+- This craving.
+- I want it now.
+- This strong urge.
+- I feel I need it.
+- This craving in my body.
+- It's so hard to resist.
+- This old habit.
+- All this wanting.
+eft.topic.cravings.round2:
+- This craving will pass.
+- I am in control.
+- I choose what nourishes me.
+- I can feel this and stay strong.
+- I have healthier options.
+- My body thanks me.
+- The urge is fading.
+- I am free.
+
+eft.topic.procrastination.name = Procrastination
+eft.topic.procrastination.setup:
+- Even though I keep putting this off, I deeply and completely accept myself.
+- Even though I feel stuck and unmotivated, I accept myself and choose to begin.
+- Even though starting feels so hard, I accept myself and take one small step.
+eft.topic.procrastination.round1:
+- I keep avoiding it.
+- I don't feel like it.
+- It's too much.
+- This resistance.
+- I'll do it later.
+- This stuck feeling.
+- Fear of doing it wrong.
+- All this avoidance.
+eft.topic.procrastination.round2:
+- I can start small.
+- Just five minutes.
+- Starting is easy.
+- I feel motivated now.
+- Done is better than perfect.
+- I take the first step.
+- My energy is rising.
+- It feels good to get it done.
+
+eft.topic.pain.name = Physical Pain
+eft.topic.pain.setup:
+- Even though I have this pain in my body, I deeply and completely accept myself.
+- Even though this discomfort is bothering me, I accept myself and my body.
+- Even though it hurts, I choose to relax around the pain and accept myself.
+eft.topic.pain.round1:
+- This pain.
+- This discomfort.
+- This ache.
+- This tension around the pain.
+- It hurts.
+- I'm tired of this pain.
+- This pain in my body.
+- All this discomfort.
+eft.topic.pain.round2:
+- I relax around this feeling.
+- My body knows how to heal.
+- I send love to this area.
+- The tension is softening.
+- I breathe into the pain.
+- Comfort is returning.
+- My body is healing.
+- I am at ease.
+
+eft.topic.hurt.name = Relationship Hurt
+eft.topic.hurt.setup:
+- Even though I feel hurt by what was said or done, I deeply and completely accept myself.
+- Even though I feel betrayed and disappointed, I accept myself and my feelings.
+- Even though I can't stop thinking about this conflict, I choose peace and accept myself.
+eft.topic.hurt.round1:
+- This hurt.
+- Those words.
+- I feel so let down.
+- This disappointment.
+- I feel unseen.
+- This resentment.
+- All this hurt.
+- This pain in my heart.
+eft.topic.hurt.round2:
+- My feelings matter.
+- I can heal from this.
+- I choose to release this hurt.
+- I speak my needs with love.
+- I forgive for my own peace.
+- I deserve respect.
+- My heart is softening.
+- I am at peace.

@@ -1,0 +1,923 @@
+area.wealth.name = Richesse et argent
+area.wealth.desc = Abondance, sécurité financière, revenus, épargne
+area.wealth.lines:
+- L'argent vient à moi facilement et souvent.
+- Je suis {ouvert|ouverte} à recevoir l'abondance sous toutes ses formes.
+- J'attire la prospérité comme un aimant.
+- Mes revenus augmentent régulièrement chaque mois.
+- Je gère mon argent avec sagesse et confiance.
+- Je mérite la liberté financière.
+- J'épargne avec aisance et je dépense avec joie.
+- De nouvelles sources de revenus s'ouvrent à moi.
+- Je libère chaque croyance qui limite ma richesse.
+- La richesse me vient d'un travail honnête et porteur de sens.
+- Je suis {reconnaissant|reconnaissante} pour l'argent que j'ai et celui qui arrive.
+- Mon compte en banque reflète ma valeur grandissante.
+- Je prends des décisions financières avisées, l'esprit calme.
+- Je suis en sécurité financière, aujourd'hui et demain.
+- L'abondance est mon état naturel.
+- Je donne avec générosité et je reçois avec grâce.
+- L'argent que je dépense avec sagesse me revient multiplié.
+- Je mérite une vie riche et confortable.
+- Les occasions de gagner davantage me trouvent chaque jour.
+- Ma relation à l'argent est saine et paisible.
+- Je rembourse mes dettes avec aisance et confiance.
+- Il y en a plus qu'assez pour tout le monde, moi y compris.
+- J'investis dans mon avenir avec patience et clarté.
+- La prospérité m'entoure où que j'aille.
+
+area.health.name = Santé et corps
+area.health.desc = Vitalité, guérison, forme, énergie
+area.health.lines:
+- Mon corps guérit naturellement et facilement.
+- Chaque cellule de mon corps vibre de santé.
+- Je suis {plein|pleine} d'énergie et de vitalité.
+- Je nourris mon corps avec amour et soin.
+- J'écoute ce dont mon corps a besoin.
+- Mon système immunitaire est fort et résistant.
+- Je respire profondément et je me sens {vivant|vivante}.
+- J'aime bouger mon corps chaque jour.
+- Mon corps se renforce de jour en jour.
+- Je relâche les tensions et j'accueille la détente.
+- Je dors bien et je me réveille {reposé|reposée}.
+- Je suis {reconnaissant|reconnaissante} pour mon cœur et mes poumons en bonne santé.
+- Mon corps est mon allié et je le traite avec douceur.
+- L'énergie de guérison circule dans chaque partie de moi.
+- Je choisis des habitudes qui soutiennent mon bien-être.
+- Je bois de l'eau et je me sens {frais|fraîche} et {clair|claire} d'esprit.
+- Mon esprit et mon corps travaillent en harmonie.
+- Je récupère vite et facilement.
+- Je respecte le besoin de repos de mon corps.
+- Je suis chaque jour plus en forme et en meilleure santé.
+- La douleur quitte mon corps et le bien-être revient.
+- Je rayonne de santé.
+- J'ai confiance en la sagesse de mon corps.
+- La santé est mon état naturel.
+
+area.love.name = Amour et romance
+area.love.desc = Attirer un partenaire, approfondir l'intimité
+area.love.lines:
+- Je suis {prêt|prête} à donner et à recevoir un amour profond.
+- J'attire un partenaire qui me chérit.
+- L'amour vient à moi facilement et joyeusement.
+- Je mérite une relation aimante et saine.
+- Mon cœur est ouvert à la romance.
+- J'attire un amour qui me fait me sentir en sécurité.
+- Mon partenaire et moi nous rapprochons chaque jour.
+- J'exprime mon amour librement et sincèrement.
+- Je laisse partir les chagrins passés et j'accueille un nouvel amour.
+- Notre relation repose sur la confiance et le respect.
+- Je mérite d'être {adoré|adorée} et {apprécié|appréciée}.
+- Je suis une personne aimante et digne d'amour.
+- La romance entre naturellement dans ma vie.
+- Je choisis un partenaire qui partage mes valeurs.
+- L'intimité est sûre et joyeuse pour moi.
+- Notre amour s'approfondit chaque année.
+- Je laisse l'amour me trouver au moment parfait.
+- Ma relation est une source de paix et de joie.
+- J'exprime mes besoins avec amour.
+- J'attire l'amour sincère.
+- Nous rions, grandissons et guérissons ensemble.
+- Je fais de nouveau confiance à l'amour.
+- Je suis {complet|complète}, et l'amour ajoute à ma joie.
+- L'amour que je cherche me cherche aussi.
+
+area.relationships.name = Relations
+area.relationships.desc = Amitiés, lien, limites saines
+area.relationships.lines:
+- J'attire des relations saines et bienveillantes.
+- Je pose mes limites avec amour et clarté.
+- Mes relations reposent sur le respect mutuel.
+- Je donne et reçois du soutien avec équilibre.
+- Je laisse partir les relations qui ne me nourrissent plus.
+- Je crée des liens facilement et authentiquement.
+- Je suis {entouré|entourée} de personnes qui m'élèvent.
+- J'écoute avec empathie et je parle avec bienveillance.
+- Les conflits se résolvent en paix dans ma vie.
+- Je mérite le respect dans toutes mes relations.
+- J'apporte chaleur et sincérité à chaque lien.
+- J'accepte les autres tels qu'ils sont.
+- Ma présence apporte de la valeur à la vie des autres.
+- Je dis non sans culpabilité.
+- Je prends soin des liens qui comptent pour moi.
+- Je pardonne vite les malentendus.
+- J'attire des personnes qui partagent mes valeurs.
+- Mes relations sont sûres, douces et équilibrées.
+- Je suis {ouvert|ouverte} à de nouveaux liens qui ont du sens.
+- Je respecte mes besoins et ceux des autres.
+- Je communique clairement et avec amour.
+- La confiance grandit naturellement dans mes relations.
+- Je renonce au besoin de plaire à tout le monde.
+- Je suis {présent|présente} pour les personnes que j'aime.
+
+area.family.name = Famille
+area.family.desc = Harmonie avec les parents, frères, sœurs et enfants
+area.family.lines:
+- Mon foyer est rempli d'amour et d'harmonie.
+- Je suis {reconnaissant|reconnaissante} pour ma famille.
+- Nous nous comprenons et nous nous soutenons.
+- J'honore mes parents avec patience et amour.
+- Mes frères, mes sœurs et moi partageons un lien fort.
+- La paix circule dans chaque conversation familiale.
+- Je laisse partir les vieilles blessures familiales et je choisis la guérison.
+- Notre famille se rapproche chaque jour.
+- Je pose des limites aimantes avec ma famille.
+- Nous célébrons les réussites de chacun.
+- Mes enfants se sentent en sécurité et aimés.
+- Je romps avec amour les schémas familiaux malsains.
+- Nous nous pardonnons facilement.
+- Les rires remplissent notre maison.
+- Je suis une source de réconfort pour ma famille.
+- Chaque membre de la famille est respecté et écouté.
+- Nous affrontons les défis ensemble, comme une équipe.
+- Des générations d'amour circulent à travers moi.
+- J'accepte ma famille telle qu'elle est.
+- Nos moments en famille sont remplis de joie.
+- Je bénis mes ancêtres et les générations à venir.
+- Ma famille est en bonne santé, heureuse et protégée.
+- Je parle à ma famille avec calme et douceur.
+- L'harmonie est le fondement de notre famille.
+
+area.career.name = Carrière et travail
+area.career.desc = Évolution, reconnaissance, trouver du sens à son travail
+area.career.lines:
+- J'évolue dans ma carrière chaque jour.
+- Mon travail est reconnu et apprécié.
+- J'attire des opportunités à la hauteur de mes talents.
+- Je trouve du sens et un but dans mon travail.
+- J'ai confiance en mes compétences professionnelles.
+- Je mérite d'être bien {payé|payée} pour mon travail.
+- Mon environnement de travail est positif et bienveillant.
+- J'apprends vite et je m'adapte facilement.
+- J'aborde les défis professionnels avec calme et clarté.
+- Les promotions et l'évolution viennent à moi naturellement.
+- Je travaille avec concentration et joie.
+- Mes idées font une vraie différence.
+- Je collabore bien avec mes collègues.
+- Je suis la bonne personne pour le travail de mes rêves.
+- J'équilibre travail et repos avec sagesse.
+- Mon parcours professionnel se déploie avec aisance.
+- Je prends la parole avec assurance en réunion.
+- Je suis {fier|fière} du travail que j'accomplis.
+- Chaque expérience enrichit mon expertise.
+- J'attire des mentors et des responsables bienveillants.
+- Je suis {ouvert|ouverte} à de nouveaux rôles et responsabilités.
+- Mon travail est aligné avec mes valeurs.
+- J'apporte l'excellence à tout ce que je fais.
+- Ma carrière m'apporte épanouissement et abondance.
+
+area.business.name = Entreprise et entrepreneuriat
+area.business.desc = Clients, croissance, leadership, décisions audacieuses
+area.business.lines:
+- Mon entreprise grandit de façon stable et durable.
+- Mes clients idéaux me trouvent facilement.
+- Je prends des décisions audacieuses avec confiance.
+- Mes produits et services aident vraiment les gens.
+- Je dirige mon équipe avec vision et bienveillance.
+- Les bénéfices entrent régulièrement dans mon entreprise.
+- Je suis {un entrepreneur capable et créatif|une entrepreneuse capable et créative}.
+- Je transforme les défis en opportunités.
+- Mon entreprise repose sur la confiance et l'intégrité.
+- J'attire les bons partenaires et investisseurs.
+- Mes clients adorent ce que je propose.
+- J'agis avec inspiration chaque jour.
+- Je fais confiance à mon instinct en affaires.
+- Mon entreprise sert le monde et me récompense bien.
+- J'apprends de chaque revers et je deviens {plus fort|plus forte}.
+- Je fixe mes prix avec confiance.
+- Ma marque rayonne d'authenticité.
+- Les ventes viennent à moi naturellement.
+- Je gère mon temps et mes ressources avec sagesse.
+- Je suis {résilient, ingénieux et persévérant|résiliente, ingénieuse et persévérante}.
+- Je célèbre chaque victoire, petite ou grande.
+- Ma vision devient réalité pas à pas.
+- Je crée des systèmes qui favorisent la croissance et la liberté.
+- La réussite en affaires est naturelle pour moi.
+
+area.selflove.name = Amour de soi et estime de soi
+area.selflove.desc = Acceptation, se sentir digne, être doux avec soi
+area.selflove.lines:
+- Je m'aime et je m'accepte pleinement.
+- J'ai de la valeur tel{|le} que je suis.
+- Je me traite avec douceur et patience.
+- Je suis {suffisant|suffisante}.
+- J'honore mes besoins et mes émotions.
+- Je me pardonne mes erreurs passées.
+- Je me parle avec amour.
+- Ma valeur ne dépend pas de l'opinion des autres.
+- Je célèbre la personne que je deviens.
+- Je mérite le repos, la joie et la douceur.
+- Je suis {fier|fière} du chemin parcouru.
+- J'accueille mes forces et mes imperfections.
+- Je suis {mon meilleur ami|ma meilleure amie}.
+- Je me donne la permission de briller.
+- Je renonce au besoin d'être {parfait|parfaite}.
+- Mon cœur est un refuge sûr pour moi.
+- Je mérite les bonnes choses.
+- Je me choisis sans culpabilité.
+- J'apprécie mes dons uniques.
+- Je suis {doux|douce} avec moi les jours difficiles.
+- Je respecte mon temps et mon énergie.
+- Je suis {beau|belle} à l'intérieur comme à l'extérieur.
+- M'aimer m'est naturel.
+- Je suis {entier|entière} et {complet|complète}.
+
+area.confidence.name = Confiance en soi
+area.confidence.desc = Courage, oser parler, croire en ses capacités
+area.confidence.lines:
+- Je crois en moi et en mes capacités.
+- J'ose m'exprimer avec courage.
+- J'ai confiance en qui je suis.
+- J'ai confiance en ma capacité à faire face à tout.
+- Je sors de ma zone de confort avec aisance.
+- Ma voix mérite d'être entendue.
+- J'entre dans chaque pièce avec une confiance sereine.
+- Je suis capable d'atteindre mes objectifs.
+- La peur ne contrôle pas mes choix.
+- Je me tiens {droit et fier|droite et fière}.
+- J'accueille les nouveaux défis avec enthousiasme.
+- Je suis {audacieux|audacieuse}, {courageux|courageuse} et {prêt|prête}.
+- Chaque pas que je fais renforce ma confiance.
+- J'ai confiance en mes décisions.
+- Je suis à l'aise d'être {vu|vue}.
+- Ma confiance grandit chaque jour.
+- J'accueille les critiques avec élégance.
+- Je crois que je peux, alors je le fais.
+- Je laisse partir le doute de moi.
+- Je suis {fier|fière} de mes réussites.
+- Je rencontre de nouvelles personnes avec aisance.
+- Je mérite de prendre ma place.
+- J'affronte mes peurs et je deviens {plus fort|plus forte}.
+- La confiance est mon état naturel.
+
+area.mental.name = Santé mentale et bien-être émotionnel
+area.mental.desc = Calme, résilience, lâcher l'anxiété
+area.mental.lines:
+- Je suis calme, {centré|centrée} et en paix.
+- Je lâche ce que je ne peux pas contrôler.
+- Mon esprit est clair et stable.
+- J'accueille mes émotions sans jugement.
+- Je suis {résilient|résiliente} et je me relève des moments difficiles.
+- Ce sentiment passera, et je suis en sécurité.
+- J'inspire le calme et j'expire la tension.
+- Je mérite la paix de l'esprit.
+- Je suis {doux|douce} avec mes pensées.
+- Je choisis des pensées qui me soutiennent.
+- Je relâche l'inquiétude et j'accueille la confiance.
+- Je suis {plus fort|plus forte} que mon anxiété.
+- Il est normal de demander de l'aide.
+- J'apprends à être {bienveillant|bienveillante} avec mon esprit.
+- La paix commence avec ma prochaine respiration.
+- Mes émotions sont des messagères, pas des maîtres.
+- Je gère le stress avec sérénité.
+- Je me donne le temps de guérir.
+- Je suis {ancré|ancrée} dans l'instant présent.
+- Chaque jour, je me sens un peu plus {léger|légère}.
+- Je ne suis pas mes pensées ; je suis {celui|celle} qui les observe.
+- J'accueille le repos sans culpabilité.
+- Je suis en sécurité dans mon corps et mon esprit.
+- Mon monde intérieur devient calme et lumineux.
+
+area.spirituality.name = Spiritualité
+area.spirituality.desc = Foi, paix intérieure, lien avec plus grand que soi
+area.spirituality.lines:
+- Je suis {relié|reliée} à quelque chose de plus grand que moi.
+- J'ai confiance dans le plan divin pour ma vie.
+- La paix intérieure est ma vraie nature.
+- Je suis {guidé|guidée} et {protégé|protégée}.
+- Ma foi grandit chaque jour.
+- Je vois le sacré dans la vie quotidienne.
+- Je suis un être spirituel qui vit une expérience humaine.
+- L'amour divin circule à travers moi.
+- Je m'abandonne à ce que je ne peux pas contrôler.
+- Le silence me rapproche de mon âme.
+- Je ne fais qu'un avec toute vie.
+- Mes prières sont entendues et exaucées.
+- Je suis mon chemin spirituel avec dévotion.
+- La grâce m'entoure toujours.
+- J'écoute la voix tranquille en moi.
+- Mon esprit est léger, libre et éternel.
+- J'honore le divin en moi et dans les autres.
+- Je suis un canal de paix et d'amour.
+- Chaque respiration me relie à la source.
+- Tout se déploie pour mon plus grand bien.
+- Ma méditation s'approfondit chaque jour.
+- Je ne suis jamais {seul|seule} ; je suis {soutenu|soutenue}.
+- La gratitude ouvre la porte du sacré.
+- Je m'éveille à mon moi supérieur.
+
+area.success.name = Réussite et accomplissement
+area.success.desc = Objectifs, discipline, élan
+area.success.lines:
+- J'atteins mes objectifs pas à pas.
+- La réussite vient à moi naturellement.
+- Je suis {discipliné|disciplinée} et {concentré|concentrée}.
+- Je prends de l'élan chaque jour.
+- Je mérite la réussite et je l'accepte.
+- Chaque effort que je fais compte.
+- Je transforme mes rêves en plans et mes plans en actions.
+- J'apprends des revers et je continue.
+- Ma persévérance porte ses fruits.
+- Je célèbre chaque étape.
+- Je suis {engagé|engagée} envers ma vision.
+- Je tiens les promesses que je me fais.
+- J'attire les ressources dont j'ai besoin.
+- Je surmonte les obstacles avec aisance.
+- Je mène les choses jusqu'au bout.
+- La réussite me semble naturelle et confortable.
+- Je fixe des objectifs clairs et je les atteins.
+- Mes habitudes créent ma réussite.
+- Je deviens la personne qui réalise ses rêves.
+- J'accueille de plus grands défis et de plus belles récompenses.
+- Je reste {constant|constante}, même les jours plus lents.
+- Je mesure le progrès, pas la perfection.
+- Ma réussite inspire les autres.
+- Rien ne m'arrête dans la poursuite de ma mission.
+
+area.creativity.name = Créativité
+area.creativity.desc = Inspiration, expression de soi, élan artistique
+area.creativity.lines:
+- La créativité coule librement en moi.
+- Je suis un canal pour de nouvelles idées.
+- L'inspiration me trouve partout.
+- Je m'exprime avec audace et beauté.
+- Mon imagination est sans limites.
+- Je me donne la permission de créer.
+- Je crée pour la joie de créer.
+- Mon art a de la valeur.
+- Les idées me viennent facilement.
+- J'ai confiance en ma voix créative.
+- Je joue, j'explore et j'expérimente.
+- Les blocages créatifs se dissolvent facilement.
+- Je vois de la beauté et des possibilités partout.
+- Mon œuvre est originale et authentique.
+- Je prends du temps pour ma pratique créative.
+- Je lâche la perfection et je savoure le processus.
+- Je suis {un artiste|une artiste} à ma façon.
+- Ma créativité résout les problèmes.
+- Je partage mes créations avec confiance.
+- Chaque jour, je crée quelque chose.
+- Ma curiosité me mène vers de nouvelles idées.
+- Je suis dans le flow.
+- Mon énergie créative se renouvelle chaque jour.
+- Le monde a besoin de mes créations uniques.
+
+area.growth.name = Apprentissage et développement personnel
+area.growth.desc = Curiosité, sagesse, devenir la meilleure version de soi
+area.growth.lines:
+- Je deviens chaque jour une meilleure version de moi-même.
+- J'adore apprendre de nouvelles choses.
+- Chaque expérience m'apprend quelque chose de précieux.
+- Je suis {curieux|curieuse} et {ouvert|ouverte} d'esprit.
+- J'accueille les retours comme un cadeau.
+- Grandir est un voyage joyeux pour moi.
+- J'apprends de mes erreurs avec bienveillance.
+- La sagesse grandit en moi.
+- J'investis dans mon développement personnel.
+- J'accueille le changement comme un chemin de croissance.
+- Je suis {patient|patiente} avec mes progrès.
+- J'aborde les nouveaux défis avec courage.
+- Mon esprit s'élargit.
+- Je lis, je réfléchis et je grandis.
+- Je m'engage à apprendre toute ma vie.
+- Chaque jour, je deviens plus sage.
+- Je laisse partir les vieux schémas qui me freinent.
+- Je suis {fier|fière} de ma croissance.
+- Je grandis à travers ce que je vis.
+- Je cherche la connaissance avec un cœur ouvert.
+- Mon potentiel est illimité.
+- Je choisis le progrès plutôt que la perfection.
+- Je suis {l'auteur|l'autrice} de ma propre croissance.
+- J'évolue avec grâce.
+
+area.gratitude.name = Gratitude
+area.gratitude.desc = Apprécier le présent, remarquer les bienfaits
+area.gratitude.lines:
+- Je suis {reconnaissant|reconnaissante} pour ce moment.
+- Je remarque les bienfaits tout autour de moi.
+- Merci pour ce nouveau jour.
+- Mon cœur déborde de gratitude.
+- J'apprécie les choses simples de la vie.
+- Je remercie les personnes qui m'aiment.
+- La gratitude transforme ce que j'ai en assez.
+- Chaque jour, je trouve une raison de dire merci.
+- Je suis {reconnaissant|reconnaissante} pour mon corps et tout ce qu'il fait.
+- J'apprécie les leçons de chaque épreuve.
+- Je rends grâce pour la nourriture, l'eau et le toit.
+- La gratitude me remplit de joie.
+- Je vois le bon dans ma vie.
+- Chaque respiration est un cadeau.
+- Je suis {reconnaissant|reconnaissante} pour mon passé, mon présent et mon avenir.
+- J'exprime ma gratitude librement.
+- Les petites joies enrichissent ma vie.
+- Je suis {reconnaissant|reconnaissante} pour le cadeau de la vie.
+- Merci pour les bienfaits encore à venir.
+- La gratitude ouvre mon cœur.
+- J'apprécie la beauté de la nature.
+- Ma vie est remplie de bienfaits.
+- Je suis {reconnaissant|reconnaissante} pour ma croissance.
+- Je vis avec un cœur reconnaissant.
+
+area.joy.name = Bonheur et joie
+area.joy.desc = Légèreté, contentement, plaisir des petites choses
+area.joy.lines:
+- Aujourd'hui, je choisis la joie.
+- Le bonheur vient à moi facilement.
+- Je savoure les petites choses.
+- Je mérite d'être {heureux|heureuse}.
+- Mon cœur est léger et joueur.
+- Je ris souvent et librement.
+- La joie est mon état naturel.
+- Je suis {content|contente} de ce que j'ai.
+- Je répands le bonheur où que j'aille.
+- Aujourd'hui est rempli d'heureuses surprises.
+- Je me donne la permission de m'amuser.
+- Je célèbre les petits moments.
+- Mon sourire illumine le monde.
+- Je laisse entrer la joie.
+- Le bonheur est mon choix, et je le fais chaque jour.
+- Je savoure l'instant présent.
+- Je suis {ouvert|ouverte} à l'émerveillement et au jeu.
+- De belles choses m'arrivent.
+- Ma vie est pleine de raisons de sourire.
+- Je rayonne d'énergie positive.
+- Je laisse partir ce qui ternit ma lumière.
+- La joie jaillit du fond de moi.
+- Je suis {serein|sereine} et {heureux|heureuse}.
+- Mon bonheur inspire les autres.
+
+area.sleep.name = Sommeil et repos
+area.sleep.desc = Détente, récupération, nuits paisibles
+area.sleep.lines:
+- Je laisse partir la journée et j'accueille le repos.
+- Mon corps se détend profondément.
+- Je m'endors facilement et paisiblement.
+- Mon esprit est calme et silencieux.
+- Je mérite un sommeil profond et réparateur.
+- Je laisse partir les soucis d'aujourd'hui.
+- Mon lit est un lieu sûr et paisible.
+- Chaque respiration m'emmène plus loin dans le repos.
+- Je dors profondément toute la nuit.
+- Je me réveille {reposé|reposée} et {renouvelé|renouvelée}.
+- Mon corps se répare et guérit pendant que je dors.
+- Je suis en sécurité, au chaud et à l'aise.
+- Demain prendra soin de lui-même.
+- Mes pensées ralentissent et s'adoucissent.
+- Des rêves paisibles viennent à moi.
+- J'accueille le calme.
+- J'ai confiance en mon corps pour se reposer.
+- Chaque muscle de mon corps se détend.
+- Je suis {reconnaissant|reconnaissante} pour cette journée et {prêt|prête} à me reposer.
+- Le sommeil vient à moi naturellement.
+- Je laisse la nuit me bercer doucement.
+- Ma respiration est lente et douce.
+- Je me repose sans culpabilité.
+- Je glisse dans un sommeil profond et réparateur.
+
+area.beauty.name = Beauté et image corporelle
+area.beauty.desc = Se sentir attirant, accepter son apparence
+area.beauty.lines:
+- Je suis {beau|belle} tel{|le} que je suis.
+- J'aime le corps dans lequel je vis.
+- Ma beauté rayonne de l'intérieur.
+- J'accepte et j'apprécie mon apparence.
+- Je suis bien dans ma peau.
+- Mon corps mérite amour et respect.
+- Je rayonne de confiance et de grâce.
+- Je vois de la beauté quand je me regarde dans le miroir.
+- Ma singularité est ma beauté.
+- Je m'habille pour exprimer ma joie.
+- Je renonce à me comparer aux autres.
+- Mon corps est un cadeau, pas un projet.
+- Je prends soin de ma peau et de mon corps avec amour.
+- Je rayonne de santé et de bonheur.
+- Je suis {séduisant|séduisante} à ma manière.
+- Mon sourire est beau.
+- J'honore chaque courbe, chaque ride et chaque marque.
+- Je me sens bien dans mon corps.
+- Ma valeur ne se mesure pas à mon apparence.
+- Je célèbre ma beauté naturelle.
+- Les pensées bienveillantes me rendent {beau|belle}.
+- Je suis {reconnaissant|reconnaissante} pour mes yeux, mes mains et mon cœur.
+- Je regarde mon reflet avec bienveillance.
+- La beauté circule à travers moi.
+
+area.forgiveness.name = Pardon et guérison du passé
+area.forgiveness.desc = Lâcher la rancune, dépasser un trauma ou un regret
+area.forgiveness.lines:
+- Je me pardonne et je me libère.
+- Je lâche la rancune et je choisis la paix.
+- Le passé n'a plus de pouvoir sur moi.
+- Je laisse partir l'ancienne douleur avec amour.
+- Je pardonne aux autres pour ma propre paix.
+- Je guéris un peu plus chaque jour.
+- Je laisse partir les regrets et j'embrasse le présent.
+- Mon passé m'a {façonné|façonnée}, mais il ne me définit pas.
+- Je choisis d'avancer.
+- Je suis {libéré|libérée} de ce qui m'a {blessé|blessée} autrefois.
+- J'honore mon chemin de guérison.
+- Le pardon ouvre mon cœur.
+- Je laisse partir la culpabilité et j'accepte mon humanité.
+- Je suis en sécurité maintenant.
+- Je fais la paix avec mon histoire.
+- Chaque jour, le poids se fait plus léger.
+- Je laisse partir la colère avec compassion.
+- Je m'offre la clôture dont j'ai besoin.
+- J'apprends du passé et je vis dans le présent.
+- Mes blessures se transforment en sagesse.
+- Je renonce au besoin d'excuses.
+- Je suis en paix avec ce qui a été.
+- Je pardonne, et je grandis.
+- Mon avenir est libéré du poids du passé.
+
+area.productivity.name = Productivité et concentration
+area.productivity.desc = Clarté, gestion du temps, vaincre la procrastination
+area.productivity.lines:
+- Je me concentre facilement sur l'essentiel.
+- Je commence mes tâches tout de suite.
+- Mon esprit est clair et organisé.
+- J'utilise mon temps avec sagesse.
+- J'accomplis mon travail avec aisance.
+- Je découpe les grands objectifs en étapes simples.
+- Les distractions perdent leur emprise sur moi.
+- Je travaille en sessions profondes et concentrées.
+- Je fixe mes priorités avec clarté.
+- Je vaincs la procrastination en faisant le premier pas.
+- Je suis {productif|productive} et plein{|e} d'énergie.
+- Je termine une tâche avant de commencer la suivante.
+- Je planifie ma journée avec intention.
+- J'équilibre productivité et repos.
+- Une tâche à la fois, j'avance.
+- Mon énergie est concentrée et stable.
+- Je dis non à ce qui me distrait.
+- J'agis même quand je n'en ai pas envie.
+- Chaque heure est utilisée avec intention.
+- Mon espace de travail soutient ma concentration.
+- Je suis {discipliné|disciplinée} et {régulier|régulière}.
+- J'aime la satisfaction de terminer les choses.
+- Je suis {maître|maîtresse} de mon temps.
+- La concentration m'est naturelle.
+
+area.home.name = Maison et environnement
+area.home.desc = Un lieu de vie paisible, sûr et abondant
+area.home.lines:
+- Ma maison est un sanctuaire de paix.
+- Je vis dans un espace sûr et aimant.
+- Ma maison est remplie de lumière et de chaleur.
+- L'abondance circule dans chaque pièce.
+- Je garde mon espace propre et serein.
+- Ma maison accueille la joie et les rires.
+- Je suis {reconnaissant|reconnaissante} pour le toit au-dessus de ma tête.
+- Mon quartier est sûr et accueillant.
+- Ma maison favorise le repos et le renouveau.
+- Je laisse partir le désordre et je fais place à la paix.
+- Mon espace reflète qui je suis.
+- L'énergie positive remplit ma maison.
+- J'attire la maison parfaite pour moi.
+- Tous ceux qui entrent chez moi se sentent bienvenus.
+- Ma maison est protégée et bénie.
+- Je crée de la beauté autour de moi.
+- Mon environnement nourrit mon bien-être.
+- Les plantes et la lumière donnent vie à ma maison.
+- Je me sens chez moi où que je sois.
+- Ma maison est un lieu d'harmonie.
+- Je prends soin de ma maison et elle prend soin de moi.
+- Je vis dans le confort et l'aisance.
+- Ma maison est remplie d'amour et de beaux souvenirs.
+- Je suis {reconnaissant|reconnaissante} pour chaque recoin de ma maison.
+
+area.purpose.name = Raison d'être et direction de vie
+area.purpose.desc = Connaître son chemin, vivre avec du sens
+area.purpose.lines:
+- Je connais mon chemin et je le suis.
+- Ma vie a du sens et un but.
+- J'ai confiance en la direction de mon voyage.
+- Je suis {guidé|guidée} vers ma véritable vocation.
+- Chaque pas révèle le suivant.
+- Je vis en accord avec mes valeurs.
+- Le monde a besoin de mes dons.
+- J'écoute la direction de mon cœur.
+- Je sais clairement ce qui compte pour moi.
+- Ma raison d'être se déploie naturellement.
+- Je fais des choix qui honorent mon âme.
+- Je suis exactement là où je dois être.
+- Je trouve du sens dans chaque journée.
+- J'apporte quelque chose de précieux au monde.
+- Je suis ce qui m'illumine.
+- La clarté vient à moi avec aisance.
+- J'ai confiance dans le rythme de ma vie.
+- Ma vie est une histoire pleine de sens.
+- Je vis avec intention.
+- Ma passion guide ma mission.
+- Je laisse partir la confusion et j'accueille la clarté.
+- J'ai le courage de suivre mon chemin.
+- L'univers soutient ma mission.
+- Je vis une vie dont je suis {fier|fière}.
+
+area.parenting.name = Parentalité
+area.parenting.desc = Patience, présence, élever ses enfants avec amour
+area.parenting.lines:
+- Je suis {un père patient et aimant|une mère patiente et aimante}.
+- Je suis pleinement {présent|présente} avec mes enfants.
+- J'élève mes enfants avec amour et sagesse.
+- Mes enfants se sentent en sécurité, vus et entendus.
+- Je fais de mon mieux, et c'est suffisant.
+- Je réponds avec calme au lieu de réagir avec colère.
+- Je savoure les précieux moments avec mes enfants.
+- Je fais confiance à mon instinct de {père|mère}.
+- Mes enfants deviennent des personnes bienveillantes.
+- Je me pardonne les journées imparfaites.
+- J'écoute mes enfants avec un cœur ouvert.
+- Notre maison est remplie d'amour et de rires.
+- Je pose des limites aimantes et cohérentes.
+- J'enseigne par l'exemple.
+- Je célèbre les dons uniques de mes enfants.
+- Je prends soin de moi pour pouvoir prendre soin d'eux.
+- Mes enfants et moi apprenons les uns des autres.
+- Je laisse mes enfants grandir à leur rythme.
+- Je suis {reconnaissant|reconnaissante} d'être {père|mère}.
+- Mon amour donne à mes enfants des racines solides et des ailes.
+- Je reste calme dans les moments difficiles.
+- Je soutiens les rêves de mes enfants.
+- La patience grandit en moi chaque jour.
+- Mes enfants savent qu'ils sont aimés.
+
+area.friendship.name = Amitié et vie sociale
+area.friendship.desc = Appartenance, attirer des personnes bienveillantes
+area.friendship.lines:
+- J'attire des amis fidèles et bienveillants.
+- J'ai ma place.
+- Mes amitiés sont joyeuses et sincères.
+- Je me fais facilement de nouveaux amis.
+- Je suis {un bon ami|une bonne amie}.
+- Les gens apprécient ma compagnie.
+- Je suis à l'aise en société.
+- Mes amis et moi soutenons nos rêves.
+- Je suis {entouré|entourée} de personnes positives.
+- Je partage rires et amour avec mes amis.
+- Je suis {ouvert|ouverte} aux nouvelles rencontres.
+- Je garde le contact avec les personnes que j'aime.
+- J'attire des amis qui partagent mes valeurs.
+- Mes amis me valorisent et m'apprécient.
+- Les réunions sociales sont faciles et amusantes.
+- Je suis libre d'être moi-même avec mes amis.
+- Mon cercle s'agrandit de personnes bienveillantes.
+- Je laisse partir les amitiés qui m'épuisent.
+- Je célèbre les réussites de mes amis.
+- Je ne suis jamais vraiment {seul|seule}.
+- Mes amitiés s'approfondissent avec le temps.
+- Je donne et reçois du soutien librement.
+- Je trouve ma tribu où que j'aille.
+- Le lien avec les autres m'est naturel.
+
+area.travel.name = Voyages et aventure
+area.travel.desc = Explorer, s'ouvrir à de nouvelles expériences
+area.travel.lines:
+- Je suis {ouvert|ouverte} à de nouvelles aventures.
+- Le monde m'accueille.
+- Je voyage en sécurité et avec joie.
+- Les nouveaux lieux m'inspirent.
+- J'accueille les nouvelles cultures avec un cœur ouvert.
+- L'aventure m'appelle et je réponds.
+- J'ai les moyens de voyager à travers le monde.
+- Chaque voyage élargit mon âme.
+- Je suis {protégé|protégée} où que j'aille.
+- Je dis oui aux nouvelles expériences.
+- Je rencontre des personnes merveilleuses en voyage.
+- Mes voyages se déroulent avec fluidité et facilité.
+- J'explore avec curiosité et courage.
+- Je me sens chez moi partout dans le monde.
+- Je crée de beaux souvenirs à chaque voyage.
+- Chaque voyage m'apprend quelque chose de nouveau.
+- Je suis {courageux|courageuse}, libre et {curieux|curieuse}.
+- Des occasions de voyage parfaites viennent à moi.
+- Je savoure le chemin autant que la destination.
+- La beauté de la nature me remplit d'émerveillement.
+- Je voyage léger et je vis pleinement.
+- Je rentre chez moi {ressourcé|ressourcée} et {inspiré|inspirée}.
+- La vie est une grande aventure.
+- Le monde est rempli de merveilles à découvrir.
+
+area.fertility.name = Fertilité et grossesse
+area.fertility.desc = Confiance en son corps, une grossesse sereine
+area.fertility.lines:
+- J'ai confiance dans le rythme naturel de mon corps.
+- Mon corps est prêt à créer la vie.
+- J'accueille mon bébé avec amour.
+- Mon corps est sain et fertile.
+- Je laisse partir la peur et j'accueille l'espoir.
+- Ma grossesse est saine et joyeuse.
+- Mon bébé grandit fort et en bonne santé.
+- Je suis calme et en lien avec mon bébé.
+- J'ai confiance dans le temps divin.
+- Mon ventre est un foyer sûr et aimant.
+- Je nourris mon corps et mon bébé avec amour.
+- Je suis {entouré|entourée} de soutien.
+- Mon corps sait comment donner naissance.
+- Je suis {prêt à être un père aimant|prête à être une mère aimante}.
+- Chaque jour me rapproche du moment où je tiendrai mon bébé.
+- Je suis {patient|patiente} et plein{|e} d'espoir.
+- Mes hormones sont équilibrées.
+- Je me détends et je laisse mon corps faire son travail.
+- Je suis {reconnaissant|reconnaissante} pour ce miracle.
+- L'amour nous entoure, mon bébé et moi.
+- J'écoute mon corps avec bienveillance.
+- Je suis {fort|forte}, capable et {serein|sereine}.
+- Ma famille s'agrandit au moment parfait.
+- J'ai confiance dans le chemin qui me mène à mon bébé.
+
+area.eating.name = Poids et alimentation saine
+area.eating.desc = Choix nourrissants, relation équilibrée à la nourriture
+area.eating.lines:
+- Je nourris mon corps avec des choix sains.
+- Je mange en pleine conscience et avec gratitude.
+- J'écoute la faim et la satiété de mon corps.
+- J'aime les aliments frais et sains.
+- J'ai une relation équilibrée avec la nourriture.
+- Mon corps trouve naturellement son poids de forme.
+- Je mange pour me sentir bien.
+- Je choisis des aliments qui me donnent de l'énergie.
+- Je suis {bienveillant|bienveillante} envers moi-même avec la nourriture.
+- L'eau me rafraîchit et me purifie.
+- Je savoure les douceurs avec équilibre et sans culpabilité.
+- Je laisse partir les fringales émotionnelles.
+- Mon corps est chaque jour en meilleure santé.
+- J'aime bouger mon corps.
+- Les choix sains me viennent facilement.
+- Je mange lentement et je savoure chaque bouchée.
+- Mes envies s'estompent.
+- Je respecte mon corps à chaque taille.
+- Je nourris mon corps au lieu de le punir.
+- Je fais des choix alimentaires conscients.
+- La nourriture est énergie et plaisir, ni récompense ni punition.
+- Je suis {fier|fière} de mes bonnes habitudes.
+- Je me sens {léger|légère} et plein{|e} d'énergie.
+- Mon corps me remercie de prendre soin de lui.
+
+area.recovery.name = Addictions et habitudes
+area.recovery.desc = Force, sobriété, briser les anciens schémas
+area.recovery.lines:
+- Je suis {plus fort|plus forte} que n'importe quelle envie.
+- Chaque jour de sobriété est une victoire.
+- Je choisis la liberté plutôt que les vieilles habitudes.
+- Je brise les anciens schémas avec courage.
+- Je mérite une vie saine.
+- Je demande de l'aide quand j'en ai besoin.
+- Un jour à la fois, je guéris.
+- Mes envies passent, et je reste {fort|forte}.
+- Je reconstruis ma vie avec amour.
+- Je me pardonne et j'avance.
+- Je trouve des façons saines de faire face.
+- Je suis {fier|fière} de mes progrès.
+- Mon esprit est clair et libre.
+- Je mérite de guérir.
+- Je remplace les vieilles habitudes par des habitudes qui me nourrissent.
+- Je m'entoure de soutien.
+- J'écoute mon moi supérieur, pas mes envies.
+- Je célèbre chaque jour sobre et lucide.
+- Mon avenir est lumineux et libre.
+- Je peux ressentir mes émotions sans les fuir.
+- Chaque choix sain me rend {plus fort|plus forte}.
+- Je deviens la personne que je suis {destiné|destinée} à être.
+- J'ai de nouveau confiance en moi.
+- La liberté est merveilleuse.
+
+area.communication.name = Communication
+area.communication.desc = S'exprimer clairement, bien écouter
+area.communication.lines:
+- Je m'exprime clairement et calmement.
+- J'écoute pour comprendre, pas seulement pour répondre.
+- Mes mots sont doux et sincères.
+- Je dis ma vérité avec confiance.
+- Les gens me comprennent facilement.
+- J'exprime ouvertement mes besoins.
+- J'aborde les conversations difficiles avec élégance.
+- Ma voix est calme et claire.
+- Je choisis mes mots avec soin.
+- Je sais écouter.
+- Je pose des questions avec curiosité.
+- J'exprime mon désaccord avec respect.
+- Ma communication crée des ponts.
+- Je parle avec assurance devant les autres.
+- Je suis à l'aise pour partager mes idées.
+- J'entends ce qui est dit et ce qui est ressenti.
+- J'écris et je parle avec clarté.
+- Je reste calme quand les émotions montent.
+- Mes mots inspirent et encouragent.
+- Je dis ce que je pense et je pense ce que je dis.
+- Je suis {patient|patiente} quand les autres parlent.
+- Mon silence est sage, lui aussi.
+- La compréhension circule entre les autres et moi.
+- Une communication claire m'est naturelle.
+
+area.leadership.name = Leadership et influence
+area.leadership.desc = Inspirer les autres, décider avec intégrité
+area.leadership.lines:
+- Je dirige avec intégrité.
+- J'inspire les autres par l'exemple.
+- Je prends mes décisions avec clarté et courage.
+- Les gens font confiance à mon leadership.
+- J'écoute profondément mon équipe.
+- J'aide les autres à grandir.
+- J'assume mes responsabilités avec grâce.
+- Ma vision inspire l'action.
+- Je dirige avec force et compassion.
+- J'ai une influence positive sur les autres.
+- Je communique clairement ma vision.
+- Je fais ressortir le meilleur des gens.
+- Je reste stable sous la pression.
+- Je dirige en servant les autres.
+- J'accueille la diversité des idées.
+- Je suis {un leader confiant et compétent|une leader confiante et compétente}.
+- Je reconnais généreusement le mérite des autres.
+- J'apprends de chaque défi de leadership.
+- Mon influence grandit avec mon intégrité.
+- Je crée une culture de confiance.
+- Je prends les décisions difficiles avec équité.
+- Les gens se sentent valorisés à mes côtés.
+- Je conduis le changement avec confiance.
+- Le leadership m'est naturel.
+
+area.studies.name = Études et examens
+area.studies.desc = Mémoire, concentration, calme sous pression
+area.studies.lines:
+- J'apprends vite et je retiens facilement.
+- Mon esprit est vif et concentré.
+- Je suis calme et {confiant|confiante} pendant les examens.
+- Je comprends facilement les nouvelles notions.
+- J'étudie avec joie et discipline.
+- Ma mémoire est forte et claire.
+- Je me souviens facilement des informations quand j'en ai besoin.
+- Je suis bien {préparé|préparée}.
+- Je gère mon temps d'étude avec sagesse.
+- Chaque séance d'étude me rend plus {intelligent|intelligente}.
+- Je reste {détendu|détendue} et lucide pendant les épreuves.
+- Je suis capable d'obtenir d'excellents résultats.
+- Je cherche du soutien quand j'en ai besoin.
+- J'aime apprendre.
+- Ma concentration s'améliore chaque jour.
+- J'ai confiance en ce que j'ai appris.
+- Je réponds aux questions avec clarté.
+- Je laisse partir l'anxiété des examens.
+- Je suis {fier|fière} de mes efforts.
+- J'apprends de mes erreurs.
+- Mon cerveau est prêt à absorber le savoir.
+- J'équilibre études et repos.
+- La réussite de mes études est à ma portée.
+- Apprendre m'est naturel.
+
+area.aging.name = Bien vieillir
+area.aging.desc = Accueillir chaque âge de la vie, rester vibrant
+area.aging.lines:
+- J'accueille chaque étape de la vie.
+- Je deviens plus sage chaque année.
+- Je suis plein{|e} de vie à tout âge.
+- Mon corps est fort et capable.
+- Je vieillis avec grâce et joie.
+- Mon expérience est un trésor.
+- Je reste {curieux|curieuse} et jeune de cœur.
+- Chaque âge a sa propre beauté.
+- Mon esprit reste vif et actif.
+- Je suis {reconnaissant|reconnaissante} pour les années vécues.
+- J'attends avec joie les années à venir.
+- Je prends bien soin de mon corps et de mon esprit.
+- Mon énergie se renouvelle chaque jour.
+- Je partage ma sagesse avec générosité.
+- Je suis {estimé|estimée} et {respecté|respectée}.
+- La vie s'enrichit avec le temps.
+- J'accueille le changement avec un cœur ouvert.
+- Mes rides de rire racontent des histoires heureuses.
+- Je reste {actif|active} et {engagé|engagée}.
+- Je suis en paix avec le temps.
+- Mon esprit n'a pas d'âge.
+- Chaque jour est un nouveau départ.
+- Je suis en bonne santé, {heureux|heureuse} et {entier|entière}.
+- Je célèbre mon chemin.
+
+area.luck.name = Chance et opportunités
+area.luck.desc = Être au bon endroit, dire oui aux portes qui s'ouvrent
+area.luck.lines:
+- Je suis toujours au bon endroit au bon moment.
+- La chance vient à moi naturellement.
+- Je dis oui aux portes qui s'ouvrent.
+- Les opportunités se présentent à moi chaque jour.
+- La bonne fortune m'accompagne.
+- Je remarque facilement les opportunités.
+- La vie travaille en ma faveur.
+- De merveilleuses coïncidences m'arrivent.
+- J'ai de la chance de bien des façons.
+- J'attire des bénédictions inattendues.
+- Chaque jour apporte de nouvelles possibilités.
+- J'ai confiance dans le courant de la vie.
+- Les choses s'arrangent pour moi.
+- Je suis {ouvert|ouverte} aux miracles.
+- Je suis {prêt|prête} à recevoir de bonnes nouvelles.
+- Les bonnes personnes apparaissent au bon moment.
+- Je saisis ma chance avec confiance.
+- La fortune sourit à mon courage.
+- J'attends de bonnes choses.
+- Mon intuition me guide vers les opportunités.
+- La sérendipité fait partie de ma vie.
+- Je suis {reconnaissant|reconnaissante} pour ma chance.
+- De nouvelles portes s'ouvrent facilement à moi.
+- J'attire les opportunités comme un aimant.

@@ -1,0 +1,246 @@
+# Ho'oponopono, journaling, habits, sound healing, breathwork, calm-now (SOS), legal texts.
+
+hoopono.opening = Divine Creator, I take full responsibility for everything I am experiencing now.
+hoopono.p1 = I'm sorry.
+hoopono.p2 = Please forgive me.
+hoopono.p3 = Thank you.
+hoopono.p4 = I love you.
+hoopono.closing = I release these memories to the Divine, to be cleaned, healed and set free. Peace be with me.
+hoopono.default_name = Dear one
+
+hoopono.topic.self.name = Myself
+hoopono.topic.self.intro = I bring myself into my heart, just as I am.
+hoopono.topic.self.focus = I take responsibility for every memory in me that created self-criticism, doubt or pain.
+hoopono.topic.partner.name = My partner
+hoopono.topic.partner.intro = I bring my partner and our relationship into my heart.
+hoopono.topic.partner.focus = I take responsibility for every memory in me that creates distance, hurt or conflict between us.
+hoopono.topic.parents.name = My parents
+hoopono.topic.parents.intro = I bring my mother and my father into my heart.
+hoopono.topic.parents.focus = I take responsibility for every memory in me that carries old family pain.
+hoopono.topic.children.name = My children
+hoopono.topic.children.intro = I bring my children into my heart with tenderness.
+hoopono.topic.children.focus = I take responsibility for every memory in me that creates worry, impatience or distance with my children.
+hoopono.topic.friend.name = A friendship
+hoopono.topic.friend.intro = I bring this friendship into my heart.
+hoopono.topic.friend.focus = I take responsibility for every memory in me that created misunderstanding between us.
+hoopono.topic.work.name = Work & career
+hoopono.topic.work.intro = I bring my work, my colleagues and my career into my heart.
+hoopono.topic.work.focus = I take responsibility for every memory in me that creates stress, conflict or stagnation at work.
+hoopono.topic.money.name = Money & abundance
+hoopono.topic.money.intro = I bring my relationship with money into my heart.
+hoopono.topic.money.focus = I take responsibility for every memory in me that holds fear, lack or debt.
+hoopono.topic.health.name = Health & healing
+hoopono.topic.health.intro = I bring my health and my body's healing into my heart.
+hoopono.topic.health.focus = I take responsibility for every memory in me that is expressed as illness or pain.
+hoopono.topic.body.name = My body
+hoopono.topic.body.intro = I bring my body into my heart with gratitude.
+hoopono.topic.body.focus = I take responsibility for every memory in me that judges, rejects or neglects my body.
+hoopono.topic.home.name = My home
+hoopono.topic.home.intro = I bring my home and everyone in it into my heart.
+hoopono.topic.home.focus = I take responsibility for every memory in me that disturbs the peace of this home.
+hoopono.topic.past.name = The past
+hoopono.topic.past.intro = I bring my past, and everything I still carry from it, into my heart.
+hoopono.topic.past.focus = I take responsibility for every memory in me that keeps old wounds alive.
+hoopono.topic.ancestors.name = Ancestors
+hoopono.topic.ancestors.intro = I bring my ancestors and my whole family line into my heart.
+hoopono.topic.ancestors.focus = I take responsibility for every memory passed down to me that carries pain or limitation.
+hoopono.topic.earth.name = Mother Earth
+hoopono.topic.earth.intro = I bring Mother Earth and all living beings into my heart.
+hoopono.topic.earth.focus = I take responsibility for every memory in me that adds to the harm in this world.
+hoopono.topic.anxiety.name = Fear & anxiety
+hoopono.topic.anxiety.intro = I bring my fears and anxieties into my heart.
+hoopono.topic.anxiety.focus = I take responsibility for every memory in me that is playing out as fear.
+hoopono.topic.person.name = A specific person
+hoopono.topic.person.intro = {name}, I bring you into my heart.
+hoopono.topic.person.focus = I take responsibility for every memory in me that created pain between us.
+
+journal.prompts:
+- What am I grateful for today?
+- What is weighing on my mind right now?
+- What made me smile today?
+- How am I really feeling, and where do I feel it in my body?
+- What would I tell my younger self?
+- What do I need more of in my life, and what do I need less of?
+- What is one thing I can let go of today?
+- Describe a moment today when I felt at peace.
+- What is a fear I am ready to face?
+- What did I learn about myself this week?
+- Who inspires me, and why?
+- What does my ideal day look like?
+- What boundaries do I need to set?
+- What am I proud of myself for?
+- What is my heart trying to tell me?
+- Write a letter to someone I need to forgive.
+- What are three things I love about myself?
+- What drains my energy, and what restores it?
+- What would I do if I knew I could not fail?
+- What does self-love look like for me today?
+- Which chakra feels out of balance today, and why?
+- What story am I telling myself that may not be true?
+- When did I last feel truly alive?
+- What do I want to manifest this month?
+- Which emotions did I avoid today?
+- How can I be kinder to myself tomorrow?
+- What small win can I celebrate today?
+- What is a current challenge teaching me?
+- If my future self wrote me a note, what would it say?
+- What is one intention I am setting for tomorrow?
+
+journal.mood.joyful = Joyful
+journal.mood.calm = Calm
+journal.mood.okay = Okay
+journal.mood.sad = Sad
+journal.mood.anxious = Anxious
+journal.mood.angry = Angry
+
+habit.defaults:
+- Meditate
+- Drink 8 glasses of water
+- Exercise
+- Read 10 pages
+- Write in my journal
+- Say my affirmations
+- Gratitude practice
+- Walk outdoors
+- In bed by 11 pm
+- Wake up early
+- Eat fruit and vegetables
+- No added sugar
+- One hour without screens
+- Yoga
+- Breathwork
+- EFT tapping
+- Sound healing
+- Prayer
+- No smoking
+- Call a loved one
+
+sound.freq.f174.name = 174 Hz · Foundation
+sound.freq.f174.desc = The lowest Solfeggio tone. Traditionally used to ease tension and bring a feeling of safety and grounding.
+sound.freq.f285.name = 285 Hz · Renewal
+sound.freq.f285.desc = Associated with restoring the body and a sense of renewal.
+sound.freq.f396.name = 396 Hz · Root
+sound.freq.f396.desc = Linked with the root chakra. Traditionally used for releasing fear and guilt.
+sound.freq.f417.name = 417 Hz · Sacral
+sound.freq.f417.desc = Linked with the sacral chakra. Associated with clearing old patterns and welcoming change.
+sound.freq.f432.name = 432 Hz · Natural tuning
+sound.freq.f432.desc = An alternative concert tuning many listeners find warmer and more relaxing. A small 2019 study found a slightly lower heart rate than with 440 Hz.
+sound.freq.f528.name = 528 Hz · Love
+sound.freq.f528.desc = Linked with the solar plexus and called the "love frequency". A small 2018 study reported lower stress markers after listening.
+sound.freq.f639.name = 639 Hz · Heart
+sound.freq.f639.desc = Linked with the heart chakra. Associated with harmony in relationships and connection.
+sound.freq.f741.name = 741 Hz · Throat
+sound.freq.f741.desc = Linked with the throat chakra. Associated with clarity, expression and problem-solving.
+sound.freq.f852.name = 852 Hz · Third Eye
+sound.freq.f852.desc = Linked with the third eye. Associated with intuition and returning to inner balance.
+sound.freq.f963.name = 963 Hz · Crown
+sound.freq.f963.desc = Linked with the crown chakra. Associated with spiritual connection and oneness.
+sound.freq.om.name = 136.1 Hz · OM
+sound.freq.om.desc = The "OM" or Earth-year tone, used for tuning tanpuras and singing bowls for meditation.
+sound.freq.schumann.name = 7.83 Hz · Schumann (binaural)
+sound.freq.schumann.desc = The natural resonance of the Earth's atmosphere, delivered as a gentle binaural beat. Grounding and calming. Use headphones.
+sound.freq.delta.name = Delta 2 Hz (binaural)
+sound.freq.delta.desc = The brainwave range of deep sleep. For winding down before bed. Use headphones.
+sound.freq.theta.name = Theta 6 Hz (binaural)
+sound.freq.theta.desc = The range of meditation and deep relaxation, linked with creativity and dreaminess. Use headphones.
+sound.freq.alpha.name = Alpha 10 Hz (binaural)
+sound.freq.alpha.desc = The relaxed-but-alert range. For stress relief, light meditation and calm focus. Use headphones.
+sound.freq.beta.name = Beta 18 Hz (binaural)
+sound.freq.beta.desc = The range of active thinking. For study and alertness. Use headphones.
+sound.freq.gamma.name = Gamma 40 Hz (binaural)
+sound.freq.gamma.desc = A high-focus range being studied for memory and brain health. Use headphones.
+
+sound.lib.rain.name = Rain
+sound.lib.rain.desc = Soft, steady rain.
+sound.lib.thunder.name = Thunderstorm
+sound.lib.thunder.desc = Distant thunder rolling over gentle rain.
+sound.lib.ocean.name = Ocean waves
+sound.lib.ocean.desc = Slow waves washing onto the shore.
+sound.lib.stream.name = Forest stream
+sound.lib.stream.desc = A bubbling stream over stones.
+sound.lib.wind.name = Wind
+sound.lib.wind.desc = Wind sweeping through open hills.
+sound.lib.fire.name = Campfire
+sound.lib.fire.desc = A warm, crackling fire.
+sound.lib.birds.name = Birdsong
+sound.lib.birds.desc = Morning birds calling in the trees.
+sound.lib.crickets.name = Summer night
+sound.lib.crickets.desc = Crickets singing on a warm night.
+sound.lib.flute.name = Bamboo flute
+sound.lib.flute.desc = A gentle bansuri-style flute improvising a calm melody.
+sound.lib.bamboo.name = Bamboo chimes
+sound.lib.bamboo.desc = Hollow bamboo chimes knocking softly in the breeze.
+sound.lib.chimes.name = Wind chimes
+sound.lib.chimes.desc = Bright metal chimes in a gentle wind.
+sound.lib.bell.name = Temple bell
+sound.lib.bell.desc = A deep temple bell with a long, shimmering echo.
+sound.lib.bowl.name = Singing bowl
+sound.lib.bowl.desc = A Himalayan singing bowl, struck and singing.
+sound.lib.crystal.name = Crystal bowl
+sound.lib.crystal.desc = The pure, sustained tone of a crystal bowl.
+sound.lib.tanpura.name = Tanpura drone
+sound.lib.tanpura.desc = The classical Indian drone of Pa and Sa.
+sound.lib.kalimba.name = Kalimba
+sound.lib.kalimba.desc = Soft plucked kalimba notes.
+sound.lib.om.name = OM drone
+sound.lib.om.desc = A low, resonant OM hum.
+sound.lib.drum.name = Frame drum
+sound.lib.drum.desc = A slow, grounding frame-drum beat.
+sound.lib.heartbeat.name = Heartbeat
+sound.lib.heartbeat.desc = A calm, steady heartbeat.
+sound.lib.white.name = White noise
+sound.lib.white.desc = Even, full-spectrum noise that masks distractions.
+sound.lib.pink.name = Pink noise
+sound.lib.pink.desc = Softer, balanced noise, like steady rainfall.
+sound.lib.brown.name = Brown noise
+sound.lib.brown.desc = Deep, rumbling noise, like a distant waterfall.
+
+breath.box.name = Box Breathing
+breath.box.desc = Breathe in for 4, hold for 4, breathe out for 4, hold for 4. Used by athletes and first responders to stay calm and focused.
+breath.478.name = 4-7-8 Breathing
+breath.478.desc = Breathe in for 4, hold for 7, breathe out for 8. A deeply relaxing breath, lovely before sleep.
+breath.coherent.name = Coherent Breathing
+breath.coherent.desc = About six slow breaths a minute. Balances the nervous system and raises heart-rate variability.
+breath.sigh.name = Cyclic Sighing
+breath.sigh.desc = A deep inhale, a short top-up inhale, then a long, slow exhale. Shown in a 2023 Stanford study to lift mood.
+breath.nadi.name = Nadi Shodhana
+breath.nadi.desc = Alternate-nostril breathing from yoga. Close one nostril with your thumb or ring finger and switch sides. Calms and balances the mind.
+breath.bhramari.name = Bhramari · Bee Breath
+breath.bhramari.desc = Breathe in, then breathe out slowly while humming like a bee. The gentle vibration soothes the mind.
+breath.calm.name = Calming Breath
+breath.calm.desc = Breathe in for 4, breathe out for 6. A longer exhale switches on your relaxation response.
+breath.cue.inhale = Breathe in
+breath.cue.hold = Hold
+breath.cue.exhale = Breathe out
+breath.cue.topup = Sip a little more air
+breath.cue.hum = Hum
+breath.cue.in_left = In through the left nostril
+breath.cue.out_right = Out through the right nostril
+breath.cue.in_right = In through the right nostril
+breath.cue.out_left = Out through the left nostril
+
+sos.intro = You are safe right now. Let's slow down together.
+sos.breathe = Follow the circle: breathe in for 4, breathe out for 6.
+sos.ground.title = 5-4-3-2-1 grounding
+sos.ground:
+- Name five things you can see.
+- Notice four things you can feel or touch.
+- Listen for three things you can hear.
+- Find two things you can smell.
+- Notice one thing you can taste.
+sos.heart = Place a hand on your heart and say: I am safe. This feeling will pass.
+sos.crisis = If you are in danger or thinking about harming yourself, please contact your local emergency number or a crisis helpline right away. In India, Tele-MANAS is free and available 24/7 at 14416. Elsewhere, findahelpline.com lists free helplines in your country.
+
+legal.disclaimer = Inner Lotus is a self-care and wellness companion. It does not provide medical, psychological or financial advice and is not a substitute for professional care. If you are in crisis, please contact your local emergency services.
+legal.privacy <<
+Your data stays with you.
+
+Inner Lotus works completely offline. It has no servers, no accounts, no ads and no analytics. Your journals, habits, affirmations, mixes and settings are stored only inside the app on this device.
+
+Nothing is uploaded or shared unless you choose to export a file or share a card yourself.
+
+App-usage insights in the Habit Tracker are read from Android's own usage statistics, only after you allow access, and are never stored outside the app or sent anywhere.
+
+Uninstalling the app deletes your data, so export a backup first if you want to keep it.
+>>
+mantramala.text = For mantra chanting and japa with a 108-bead counter, try our Mantra Mala app.

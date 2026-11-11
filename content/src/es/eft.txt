@@ -1,0 +1,328 @@
+eft.point.kc.name = Punto Kárate
+eft.point.kc.where = El borde exterior y carnoso de la mano, entre la muñeca y el meñique.
+eft.point.th.name = Coronilla
+eft.point.th.where = En el centro de la parte superior de la cabeza.
+eft.point.eb.name = Ceja
+eft.point.eb.where = Donde empieza la ceja, justo encima y al lado de la nariz.
+eft.point.se.name = Lado del ojo
+eft.point.se.where = Sobre el hueso, en el rabillo exterior del ojo.
+eft.point.ue.name = Debajo del ojo
+eft.point.ue.where = Sobre el hueso, debajo del ojo, en línea con la pupila.
+eft.point.un.name = Debajo de la nariz
+eft.point.un.where = La pequeña zona entre la nariz y el labio superior.
+eft.point.ch.name = Barbilla
+eft.point.ch.where = En el pliegue entre el labio inferior y la barbilla.
+eft.point.cb.name = Clavícula
+eft.point.cb.where = Justo debajo de los extremos internos de las clavículas, a unos dos centímetros del centro.
+eft.point.ua.name = Debajo del brazo
+eft.point.ua.where = En el costado, unos diez centímetros por debajo de la axila.
+eft.point.gp.name = Punto Gama
+eft.point.gp.where = En el dorso de la mano, en el surco entre los nudillos del anular y del meñique.
+
+eft.tech.basic.name = Receta básica
+eft.tech.basic.desc = El método clásico: preparación en el punto Kárate, una ronda que reconoce el sentimiento y después una ronda positiva. Ideal para el día a día.
+eft.tech.full.name = Receta completa con 9 Gama
+eft.tech.full.desc = Añade el procedimiento 9 Gama de Gary Craig entre las dos rondas: movimientos de ojos, tarareo y conteo que activan ambos hemisferios del cerebro.
+eft.tech.gentle.name = Toque y respiración suave
+eft.tech.gentle.desc = En lugar de golpear, apoya las yemas de los dedos en cada punto y haz una respiración lenta y completa. Ideal de noche, en público o cuando te sientes muy sensible.
+eft.tech.positive.name = Ronda positiva
+eft.tech.positive.desc = Recorre los puntos usando solo frases positivas, para afianzar la calma y la confianza cuando ya te sientes mejor.
+
+eft.gamut:
+- Cierra los ojos.
+- Abre los ojos.
+- Sin mover la cabeza, mira con fuerza hacia abajo a la derecha.
+- Ahora mira con fuerza hacia abajo a la izquierda.
+- Gira los ojos en un círculo completo.
+- Gira los ojos en círculo hacia el otro lado.
+- Tararea unos segundos de una melodía alegre.
+- Cuenta rápido del uno al cinco.
+- Vuelve a tararear la melodía.
+
+eft.topic.anxiety.name = Ansiedad
+eft.topic.anxiety.setup:
+- Aunque siento esta ansiedad en mi cuerpo, me acepto profunda y completamente.
+- Aunque mi mente no para de dar vueltas a las preocupaciones, elijo ser amable conmigo.
+- Aunque ahora me siento {ansioso|ansiosa} e {inseguro|insegura}, me acepto a mí y a lo que siento.
+eft.topic.anxiety.round1:
+- Esta ansiedad.
+- Esta opresión en el pecho.
+- Todas estas preocupaciones.
+- Mis pensamientos acelerados.
+- Esta sensación de inquietud.
+- Me siento tan {ansioso|ansiosa}.
+- Esta ansiedad en mi cuerpo.
+- Toda esta preocupación.
+eft.topic.anxiety.round2:
+- Estoy a salvo en este momento.
+- Ahora puedo respirar despacio.
+- Suelto lo que no puedo controlar.
+- Mi cuerpo se está calmando.
+- Elijo la paz.
+- Confío en que puedo con esto.
+- Dejo que mis hombros se suavicen.
+- La calma vuelve a mí.
+
+eft.topic.stress.name = Estrés y agobio
+eft.topic.stress.setup:
+- Aunque me siento {estresado|estresada} y {agobiado|agobiada}, me acepto profunda y completamente.
+- Aunque tengo demasiadas cosas encima, me acepto y estoy haciendo lo mejor que puedo.
+- Aunque este estrés pesa en mi cuerpo, elijo relajarme y aceptarme.
+eft.topic.stress.round1:
+- Todo este estrés.
+- Demasiado que hacer.
+- Esta presión.
+- Me siento {desbordado|desbordada}.
+- Esta tensión en los hombros.
+- No me alcanza el tiempo.
+- Todo este estrés en mi cuerpo.
+- Esta sensación de peso.
+eft.topic.stress.round2:
+- Una cosa cada vez.
+- Puedo soltar parte de esto.
+- Ya hago suficiente.
+- Me doy permiso para descansar.
+- Mi cuerpo se relaja.
+- Gestiono las cosas con facilidad.
+- Exhalo la presión.
+- Ahora me siento más {ligero|ligera}.
+
+eft.topic.anger.name = Ira y frustración
+eft.topic.anger.setup:
+- Aunque siento tanta ira, me acepto profunda y completamente.
+- Aunque estoy {furioso|furiosa} por lo que pasó, me acepto a mí y a mis sentimientos.
+- Aunque esta ira me quema por dentro, elijo honrarla y soltarla.
+eft.topic.anger.round1:
+- Esta ira.
+- Este calor.
+- Estoy tan {frustrado|frustrada}.
+- Lo que pasó.
+- Esta rabia dentro de mí.
+- No fue justo.
+- Toda esta ira.
+- Este ardor en mi cuerpo.
+eft.topic.anger.round2:
+- Mi ira es válida.
+- Puedo soltarla de forma segura.
+- Elijo mi paz.
+- Me calmo con cada respiración.
+- No tengo que cargar con esto.
+- Pongo límites con calma.
+- Dejo que el calor salga de mi cuerpo.
+- Estoy en calma y en control.
+
+eft.topic.sadness.name = Tristeza
+eft.topic.sadness.setup:
+- Aunque me siento triste y {pesado|pesada}, me acepto profunda y completamente.
+- Aunque me duele el corazón, soy amable conmigo.
+- Aunque me siento {decaído|decaída} y {solo|sola}, me acepto a mí y a todos mis sentimientos.
+eft.topic.sadness.round1:
+- Esta tristeza.
+- Este peso en el corazón.
+- Me siento tan {decaído|decaída}.
+- Estas lágrimas.
+- Este vacío.
+- Echo de menos lo que fue.
+- Toda esta tristeza.
+- Este dolor por dentro.
+eft.topic.sadness.round2:
+- Está bien sentirse triste.
+- Dejo que mis sentimientos se muevan.
+- No estoy {solo|sola}.
+- Mi corazón está sanando.
+- Dejo entrar un poco de luz.
+- Soy amable conmigo.
+- Cada respiración me reconforta.
+- La esperanza vuelve.
+
+eft.topic.fear.name = Miedo y fobias
+eft.topic.fear.setup:
+- Aunque siento miedo, me acepto profunda y completamente.
+- Aunque este miedo parece tan real, elijo sentirme a salvo y aceptarme.
+- Aunque me asusta lo que pueda pasar, me acepto a mí y a mi miedo.
+eft.topic.fear.round1:
+- Este miedo.
+- Estoy tan {asustado|asustada}.
+- ¿Y si sale mal?
+- Este miedo en el estómago.
+- No me siento a salvo.
+- Este miedo a lo desconocido.
+- Todo este miedo.
+- Mi corazón acelerado.
+eft.topic.fear.round2:
+- Ahora mismo estoy a salvo.
+- Puedo afrontar esto.
+- El valor crece en mí.
+- Confío en mí.
+- Soy más fuerte que mi miedo.
+- Doy un pequeño paso valiente.
+- Siento mis pies en el suelo.
+- Estoy a salvo y {acompañado|acompañada}.
+
+eft.topic.selfworth.name = No soy suficiente
+eft.topic.selfworth.setup:
+- Aunque siento que no soy suficiente, me acepto profunda y completamente.
+- Aunque no dejo de criticarme, elijo ser amable conmigo.
+- Aunque no me siento {digno|digna}, me acepto tal como soy.
+eft.topic.selfworth.round1:
+- No soy suficiente.
+- Este crítico interior.
+- Siempre lo hago mal.
+- No lo merezco.
+- Esta sensación de no bastar.
+- Compararme con los demás.
+- Toda esta duda sobre mí.
+- Esta vieja creencia.
+eft.topic.selfworth.round2:
+- Soy suficiente.
+- Valgo tal como soy.
+- Elijo la bondad hacia mí.
+- Mi valor no está en discusión.
+- Aprecio quien soy.
+- Estoy aprendiendo a quererme.
+- Merezco cosas buenas.
+- Me acepto por completo.
+
+eft.topic.money.name = Preocupaciones de dinero
+eft.topic.money.setup:
+- Aunque me preocupa el dinero, me acepto profunda y completamente.
+- Aunque creo que nunca hay suficiente, me acepto y me abro al cambio.
+- Aunque el dinero me resulta difícil, elijo sentirme a salvo y aceptarme.
+eft.topic.money.round1:
+- Esta preocupación por el dinero.
+- Nunca es suficiente.
+- El dinero es difícil.
+- Este miedo a las facturas.
+- No me lo puedo permitir.
+- Esta sensación de escasez.
+- Todo este estrés por el dinero.
+- Estas viejas creencias sobre el dinero.
+eft.topic.money.round2:
+- Me abro a la abundancia.
+- El dinero puede llegar con facilidad.
+- Me siento a salvo con el dinero.
+- Tomo decisiones sabias.
+- Llegan nuevas oportunidades.
+- Merezco tranquilidad económica.
+- Suelto la escasez.
+- Doy la bienvenida a la prosperidad.
+
+eft.topic.sleep.name = No puedo dormir
+eft.topic.sleep.setup:
+- Aunque no consigo dormirme, me acepto profunda y completamente.
+- Aunque mi mente no se apaga, elijo relajarme y aceptarme.
+- Aunque esta noche estoy {inquieto|inquieta}, me acepto y me permito descansar.
+eft.topic.sleep.round1:
+- No puedo dormir.
+- Mi mente ocupada.
+- Todos estos pensamientos.
+- Esta inquietud.
+- Preocuparme por mañana.
+- Tan {cansado|cansada} y despierto.
+- Esta tensión en el cuerpo.
+- Esta mente acelerada.
+eft.topic.sleep.round2:
+- Suelto el día de hoy.
+- Mi mente se va calmando.
+- Mi cuerpo se siente {pesado|pesada} y relajado.
+- Puedo descansar con seguridad.
+- El sueño está llegando.
+- Suelto las preocupaciones de mañana.
+- Cada respiración es más lenta.
+- Me deslizo hacia un sueño tranquilo.
+
+eft.topic.cravings.name = Antojos
+eft.topic.cravings.setup:
+- Aunque tengo este antojo tan fuerte, me acepto profunda y completamente.
+- Aunque ahora lo deseo muchísimo, me acepto y elijo lo que es bueno para mí.
+- Aunque este impulso es poderoso, yo soy más fuerte y me acepto.
+eft.topic.cravings.round1:
+- Este antojo.
+- Lo quiero ya.
+- Este impulso tan fuerte.
+- Siento que lo necesito.
+- Este antojo en mi cuerpo.
+- Cuesta tanto resistirse.
+- Este viejo hábito.
+- Todo este deseo.
+eft.topic.cravings.round2:
+- Este antojo pasará.
+- Tengo el control.
+- Elijo lo que me nutre.
+- Puedo sentir esto y seguir firme.
+- Tengo opciones más sanas.
+- Mi cuerpo me lo agradece.
+- El impulso se desvanece.
+- Soy libre.
+
+eft.topic.procrastination.name = Procrastinación
+eft.topic.procrastination.setup:
+- Aunque sigo posponiendo esto, me acepto profunda y completamente.
+- Aunque me siento {atascado|atascada} y sin motivación, me acepto y elijo empezar.
+- Aunque empezar me cuesta tanto, me acepto y doy un pequeño paso.
+eft.topic.procrastination.round1:
+- Sigo evitándolo.
+- No me apetece.
+- Es demasiado.
+- Esta resistencia.
+- Lo haré luego.
+- Esta sensación de bloqueo.
+- Miedo a hacerlo mal.
+- Toda esta evitación.
+eft.topic.procrastination.round2:
+- Puedo empezar poco a poco.
+- Solo cinco minutos.
+- Empezar es fácil.
+- Ahora me siento con ganas.
+- Hecho es mejor que perfecto.
+- Doy el primer paso.
+- Mi energía aumenta.
+- Qué bien sienta terminarlo.
+
+eft.topic.pain.name = Dolor físico
+eft.topic.pain.setup:
+- Aunque tengo este dolor en el cuerpo, me acepto profunda y completamente.
+- Aunque esta molestia me incomoda, me acepto a mí y a mi cuerpo.
+- Aunque duele, elijo relajarme alrededor del dolor y aceptarme.
+eft.topic.pain.round1:
+- Este dolor.
+- Esta molestia.
+- Esta punzada.
+- Esta tensión alrededor del dolor.
+- Duele.
+- Estoy {cansado|cansada} de este dolor.
+- Este dolor en mi cuerpo.
+- Toda esta incomodidad.
+eft.topic.pain.round2:
+- Me relajo alrededor de esta sensación.
+- Mi cuerpo sabe sanar.
+- Envío amor a esta zona.
+- La tensión se suaviza.
+- Respiro hacia el dolor.
+- El bienestar vuelve.
+- Mi cuerpo está sanando.
+- Estoy en calma.
+
+eft.topic.hurt.name = Heridas en las relaciones
+eft.topic.hurt.setup:
+- Aunque me duele lo que se dijo o se hizo, me acepto profunda y completamente.
+- Aunque me siento {traicionado|traicionada} y {decepcionado|decepcionada}, me acepto a mí y a mis sentimientos.
+- Aunque no puedo dejar de pensar en este conflicto, elijo la paz y me acepto.
+eft.topic.hurt.round1:
+- Esta herida.
+- Esas palabras.
+- Me siento tan {defraudado|defraudada}.
+- Esta decepción.
+- No me siento {visto|vista}.
+- Este resentimiento.
+- Todo este dolor.
+- Este dolor en el corazón.
+eft.topic.hurt.round2:
+- Mis sentimientos importan.
+- Puedo sanar de esto.
+- Elijo soltar esta herida.
+- Expreso mis necesidades con amor.
+- Perdono por mi propia paz.
+- Merezco respeto.
+- Mi corazón se ablanda.
+- Estoy en paz.

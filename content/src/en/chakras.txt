@@ -1,0 +1,127 @@
+# Seven chakras, root to crown. seeds[0] is the classic poster affirmation.
+
+chakra.root.name = Root
+chakra.root.sanskrit = Muladhara
+chakra.root.core = I AM
+chakra.root.location = Base of the spine
+chakra.root.element = Earth
+chakra.root.bija = LAM
+chakra.root.theme = Safety, grounding, stability, belonging
+chakra.root.balanced = Feeling safe, grounded, secure and present in your body.
+chakra.root.imbalanced = Fear, anxiety, money worries, restlessness, feeling disconnected.
+chakra.root.practice = Walk barefoot on the earth, eat root vegetables, stand in mountain pose and chant LAM.
+chakra.root.seeds:
+- I am safe, centred and grounded.
+- I am rooted like an ancient tree.
+- The earth supports me with every step.
+- I trust that all my needs are met.
+- I belong here, in this body and this moment.
+- I stand steady and strong.
+
+chakra.sacral.name = Sacral
+chakra.sacral.sanskrit = Svadhisthana
+chakra.sacral.core = I FEEL
+chakra.sacral.location = Lower belly, below the navel
+chakra.sacral.element = Water
+chakra.sacral.bija = VAM
+chakra.sacral.theme = Emotions, creativity, pleasure, flow
+chakra.sacral.balanced = Emotional flow, creativity, healthy pleasure and intimacy.
+chakra.sacral.imbalanced = Numbness, guilt, creative blocks, mood swings.
+chakra.sacral.practice = Dance, swim, try hip-opening yoga, express yourself creatively and chant VAM.
+chakra.sacral.seeds:
+- I am in touch with my feelings.
+- My emotions flow freely like water.
+- I welcome joy and pleasure into my life.
+- My creativity flows with ease.
+- I honour my desires and my body.
+- I embrace change with grace.
+
+chakra.solar.name = Solar Plexus
+chakra.solar.sanskrit = Manipura
+chakra.solar.core = I DO
+chakra.solar.location = Upper belly, above the navel
+chakra.solar.element = Fire
+chakra.solar.bija = RAM
+chakra.solar.theme = Willpower, confidence, action, self-worth
+chakra.solar.balanced = Confidence, motivation, clear decisions and healthy boundaries.
+chakra.solar.imbalanced = Low self-esteem, procrastination, need for control, tension in the stomach.
+chakra.solar.practice = Strengthen your core, enjoy morning sunlight, eat warm foods and chant RAM.
+chakra.solar.seeds:
+- I am powerful, strong and confident.
+- I act with courage and clarity.
+- My inner fire fuels my purpose.
+- I make decisions with ease.
+- I am worthy of my dreams.
+- I honour my own power.
+
+chakra.heart.name = Heart
+chakra.heart.sanskrit = Anahata
+chakra.heart.core = I LOVE
+chakra.heart.location = Centre of the chest
+chakra.heart.element = Air
+chakra.heart.bija = YAM
+chakra.heart.theme = Love, compassion, forgiveness, connection
+chakra.heart.balanced = Kindness, forgiveness, open-hearted connection and self-love.
+chakra.heart.imbalanced = Grief, resentment, loneliness, difficulty trusting.
+chakra.heart.practice = Practise gratitude and Ho'oponopono, open the chest with gentle backbends, spend time in nature and chant YAM.
+chakra.heart.seeds:
+- I am worthy of love.
+- My heart is open to give and receive.
+- I forgive myself and others with ease.
+- Love flows through me and around me.
+- I treat myself with kindness and compassion.
+- I am connected to all beings through love.
+
+chakra.throat.name = Throat
+chakra.throat.sanskrit = Vishuddha
+chakra.throat.core = I SPEAK
+chakra.throat.location = Throat and neck
+chakra.throat.element = Ether (space)
+chakra.throat.bija = HAM
+chakra.throat.theme = Communication, truth, self-expression
+chakra.throat.balanced = Speaking honestly, listening well, creative expression.
+chakra.throat.imbalanced = Fear of speaking up, over-talking, a tight throat or jaw.
+chakra.throat.practice = Sing, hum, journal, speak your truth kindly and chant HAM.
+chakra.throat.seeds:
+- I hear and speak my truth.
+- My voice is clear and kind.
+- I express myself freely and honestly.
+- I listen deeply and speak wisely.
+- My words create beauty and peace.
+- It is safe for me to be heard.
+
+chakra.thirdeye.name = Third Eye
+chakra.thirdeye.sanskrit = Ajna
+chakra.thirdeye.core = I SEE
+chakra.thirdeye.location = Between the eyebrows
+chakra.thirdeye.element = Light
+chakra.thirdeye.bija = OM
+chakra.thirdeye.theme = Intuition, insight, imagination, clarity
+chakra.thirdeye.balanced = Clear thinking, trust in your intuition, vivid imagination.
+chakra.thirdeye.imbalanced = Confusion, overthinking, poor focus, feeling cut off from inner guidance.
+chakra.thirdeye.practice = Meditate, visualise, keep a dream journal, practise alternate-nostril breathing and chant OM.
+chakra.thirdeye.seeds:
+- I trust my intuition.
+- I see clearly, beyond the surface.
+- My inner wisdom guides me.
+- I am open to insight and vision.
+- My mind is calm and clear.
+- I trust what my inner eye reveals.
+
+chakra.crown.name = Crown
+chakra.crown.sanskrit = Sahasrara
+chakra.crown.core = I KNOW
+chakra.crown.location = Top of the head
+chakra.crown.element = Thought and pure consciousness
+chakra.crown.bija = Silence (or OM)
+chakra.crown.theme = Spirit, connection, peace, wisdom
+chakra.crown.balanced = Inner peace, a sense of meaning, connection to the Divine.
+chakra.crown.imbalanced = Feeling lost, cynicism, spiritual disconnection.
+chakra.crown.practice = Sit in silent meditation, pray, practise gratitude and rest in stillness.
+chakra.crown.seeds:
+- I am divine.
+- I am connected to the infinite source.
+- I am one with the universe.
+- Divine light flows through me.
+- I trust the wisdom of life.
+- I am at peace with all that is.

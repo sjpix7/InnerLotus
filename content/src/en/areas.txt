@@ -1,0 +1,925 @@
+# Affirmation areas. Each area: name, desc, 24 lines (combined with 6 seeds x 7 chakras = 1008 cards)
+
+area.wealth.name = Wealth & Money
+area.wealth.desc = Abundance, financial security, earning, saving
+area.wealth.lines:
+- Money flows to me easily and often.
+- I am open to receiving abundance in all its forms.
+- I am a magnet for prosperity.
+- My income grows steadily every month.
+- I manage my money with wisdom and confidence.
+- I deserve financial freedom.
+- I save with ease and spend with joy.
+- New streams of income are opening for me.
+- I release every belief that limits my wealth.
+- Wealth comes to me through honest, meaningful work.
+- I am grateful for the money I have and the money on its way.
+- My bank balance reflects my growing self-worth.
+- I make smart financial decisions with a calm mind.
+- I am financially secure, today and in the future.
+- Abundance is my natural state.
+- I give generously and receive gracefully.
+- Money I spend wisely returns to me multiplied.
+- I am worthy of a rich and comfortable life.
+- Opportunities to earn more find me every day.
+- My relationship with money is healthy and peaceful.
+- I clear my debts with ease and confidence.
+- There is more than enough for everyone, including me.
+- I invest in my future with patience and clarity.
+- Prosperity surrounds me wherever I go.
+
+area.health.name = Health & Body
+area.health.desc = Vitality, healing, fitness, energy
+area.health.lines:
+- My body heals itself naturally and easily.
+- Every cell in my body vibrates with health.
+- I am full of energy and vitality.
+- I nourish my body with love and care.
+- I listen to what my body needs.
+- My immune system is strong and resilient.
+- I breathe deeply and feel alive.
+- I enjoy moving my body every day.
+- My body grows stronger each day.
+- I release tension and welcome relaxation.
+- I sleep well and wake up refreshed.
+- I am grateful for my healthy heart and lungs.
+- My body is my partner, and I treat it kindly.
+- Healing energy flows through every part of me.
+- I choose habits that support my wellbeing.
+- I drink water and feel refreshed and clear.
+- My mind and body work together in harmony.
+- I recover quickly and easily.
+- I honour my body's need for rest.
+- I am becoming fitter and healthier every day.
+- Pain is leaving my body, and comfort is returning.
+- I radiate good health.
+- I trust the wisdom of my body.
+- Health is my natural state.
+
+area.love.name = Love & Romance
+area.love.desc = Attracting a partner, deepening intimacy
+area.love.lines:
+- I am ready to give and receive deep love.
+- I attract a partner who cherishes me.
+- Love comes to me easily and joyfully.
+- I am worthy of a loving, healthy relationship.
+- My heart is open to romance.
+- I attract love that feels safe and kind.
+- My partner and I grow closer every day.
+- I express my love freely and honestly.
+- I release past heartbreak and welcome new love.
+- Our relationship is built on trust and respect.
+- I deserve to be adored and appreciated.
+- I am a loving and lovable person.
+- Romance flows naturally into my life.
+- I choose a partner who shares my values.
+- Intimacy feels safe and joyful for me.
+- Our love deepens with every passing year.
+- I let love find me in perfect timing.
+- My relationship is a source of peace and joy.
+- I communicate my needs with love.
+- I am magnetic to genuine love.
+- We laugh, grow and heal together.
+- I trust love again.
+- I am complete, and love adds to my joy.
+- The love I seek is also seeking me.
+
+area.relationships.name = Relationships
+area.relationships.desc = Friendships, connection, healthy boundaries
+area.relationships.lines:
+- I attract healthy, supportive relationships.
+- I set boundaries with love and clarity.
+- My relationships are built on mutual respect.
+- I give and receive support in balance.
+- I let go of relationships that no longer serve me.
+- I connect with people easily and authentically.
+- I am surrounded by people who uplift me.
+- I listen with empathy and speak with kindness.
+- Conflicts resolve peacefully in my life.
+- I am worthy of respect in all my relationships.
+- I bring warmth and honesty to every connection.
+- I accept others as they are.
+- My presence adds value to the lives of others.
+- I say no without guilt.
+- I nurture the connections that matter to me.
+- I forgive misunderstandings quickly.
+- I attract people who share my values.
+- My relationships feel safe, kind and balanced.
+- I am open to new and meaningful connections.
+- I honour my needs and the needs of others.
+- I communicate clearly and lovingly.
+- Trust grows naturally in my relationships.
+- I release the need to please everyone.
+- I show up for the people I care about.
+
+area.family.name = Family
+area.family.desc = Harmony with parents, siblings, children
+area.family.lines:
+- My home is filled with love and harmony.
+- I am grateful for my family.
+- We understand and support one another.
+- I honour my parents with patience and love.
+- My siblings and I share a strong bond.
+- Peace flows through every family conversation.
+- I release old family hurts and choose healing.
+- Our family grows closer every day.
+- I set loving boundaries with my family.
+- We celebrate each other's successes.
+- My children feel safe and loved.
+- I break unhealthy family patterns with love.
+- We forgive each other easily.
+- Laughter fills our home.
+- I am a source of comfort for my family.
+- Each family member is respected and heard.
+- We face challenges together as a team.
+- Generations of love flow through me.
+- I accept my family as they are.
+- Our family moments are full of joy.
+- I bless my ancestors and the generations to come.
+- My family is healthy, happy and protected.
+- I speak with my family calmly and kindly.
+- Harmony is the foundation of our family.
+
+area.career.name = Career & Work
+area.career.desc = Growth, recognition, finding purpose in your work
+area.career.lines:
+- I am growing in my career every day.
+- My work is recognised and valued.
+- I attract opportunities that match my talents.
+- I find purpose and meaning in my work.
+- I am confident in my professional skills.
+- I deserve to be well paid for my work.
+- My workplace is positive and supportive.
+- I learn quickly and adapt easily.
+- I handle challenges at work with calm and clarity.
+- Promotions and growth come to me naturally.
+- I work with focus and joy.
+- My ideas make a real difference.
+- I collaborate well with my colleagues.
+- I am the right person for my dream job.
+- I balance work and rest with wisdom.
+- My career path unfolds with ease.
+- I speak up confidently in meetings.
+- I am proud of the work I do.
+- Every experience builds my expertise.
+- I attract mentors and supportive leaders.
+- I am open to new roles and responsibilities.
+- My work aligns with my values.
+- I bring excellence to everything I do.
+- My career brings me fulfilment and abundance.
+
+area.business.name = Business & Entrepreneurship
+area.business.desc = Clients, growth, leadership, bold decisions
+area.business.lines:
+- My business grows steadily and sustainably.
+- Ideal clients find me easily.
+- I make bold decisions with confidence.
+- My products and services truly help people.
+- I lead my team with vision and kindness.
+- Profit flows into my business consistently.
+- I am a capable and creative entrepreneur.
+- I turn challenges into opportunities.
+- My business is built on trust and integrity.
+- I attract the right partners and investors.
+- My customers love what I offer.
+- I take inspired action every day.
+- I trust my instincts in business.
+- My business serves the world and rewards me well.
+- I learn from every setback and grow stronger.
+- I price my work with confidence.
+- My brand shines with authenticity.
+- Sales come to me naturally.
+- I manage my time and resources wisely.
+- I am resilient, resourceful and persistent.
+- I celebrate every win, big and small.
+- My vision becomes reality step by step.
+- I build systems that support growth and freedom.
+- Success in business is natural for me.
+
+area.selflove.name = Self-Love & Self-Worth
+area.selflove.desc = Acceptance, feeling worthy, being kind to yourself
+area.selflove.lines:
+- I love and accept myself fully.
+- I am worthy just as I am.
+- I treat myself with kindness and patience.
+- I am enough.
+- I honour my needs and feelings.
+- I forgive myself for past mistakes.
+- I speak to myself with love.
+- My worth does not depend on the opinions of others.
+- I celebrate who I am becoming.
+- I deserve rest, joy and care.
+- I am proud of how far I have come.
+- I embrace my strengths and my imperfections.
+- I am my own best friend.
+- I give myself permission to shine.
+- I release the need to be perfect.
+- My heart is a safe home for me.
+- I am deserving of good things.
+- I choose myself without guilt.
+- I appreciate my unique gifts.
+- I am gentle with myself on hard days.
+- I value my time and energy.
+- I am beautiful inside and out.
+- Loving myself comes naturally to me.
+- I am whole and complete.
+
+area.confidence.name = Confidence
+area.confidence.desc = Courage, speaking up, believing in your abilities
+area.confidence.lines:
+- I believe in myself and my abilities.
+- I speak up with courage.
+- I am confident in who I am.
+- I trust myself to handle whatever comes.
+- I step outside my comfort zone with ease.
+- My voice deserves to be heard.
+- I walk into every room with calm confidence.
+- I am capable of achieving my goals.
+- Fear does not control my choices.
+- I stand tall and proud.
+- I take on new challenges with excitement.
+- I am bold, brave and ready.
+- Every step I take builds my confidence.
+- I trust my decisions.
+- I am comfortable being seen.
+- My confidence grows every day.
+- I handle criticism with grace.
+- I believe I can, and so I do.
+- I let go of self-doubt.
+- I am proud of my achievements.
+- I meet new people with ease.
+- I deserve to take up space.
+- I face my fears and grow stronger.
+- Confidence is my natural state.
+
+area.mental.name = Mental Health & Emotional Wellbeing
+area.mental.desc = Calm, resilience, letting go of anxiety
+area.mental.lines:
+- I am calm, centred and at peace.
+- I let go of what I cannot control.
+- My mind is clear and steady.
+- I allow my feelings without judgement.
+- I am resilient and I recover from hard times.
+- This feeling will pass, and I am safe.
+- I breathe in calm and breathe out tension.
+- I deserve peace of mind.
+- I am gentle with my thoughts.
+- I choose thoughts that support me.
+- I release worry and welcome trust.
+- I am stronger than my anxiety.
+- It is okay to ask for help.
+- I am learning to be kind to my mind.
+- Peace begins with my next breath.
+- My emotions are messengers, not masters.
+- I handle stress with grace.
+- I give myself time to heal.
+- I am grounded in the present moment.
+- Every day, I feel a little lighter.
+- I am not my thoughts; I am the one who observes them.
+- I welcome rest without guilt.
+- I am safe in my body and mind.
+- My inner world is becoming calm and bright.
+
+area.spirituality.name = Spirituality
+area.spirituality.desc = Faith, inner peace, connection to something greater
+area.spirituality.lines:
+- I am connected to something greater than myself.
+- I trust the divine plan for my life.
+- Inner peace is my true nature.
+- I am guided and protected.
+- My faith grows stronger every day.
+- I see the sacred in everyday life.
+- I am a spiritual being having a human experience.
+- Divine love flows through me.
+- I surrender what I cannot control.
+- Silence brings me closer to my soul.
+- I am one with all of life.
+- My prayers are heard and answered.
+- I walk my spiritual path with devotion.
+- Grace surrounds me always.
+- I listen to the quiet voice within.
+- My spirit is light, free and eternal.
+- I honour the divine in myself and others.
+- I am a channel of peace and love.
+- Every breath connects me to the source.
+- Everything is unfolding for my highest good.
+- My meditation deepens every day.
+- I am never alone; I am held.
+- Gratitude opens the door to the sacred.
+- I awaken to my higher self.
+
+area.success.name = Success & Achievement
+area.success.desc = Goals, discipline, momentum
+area.success.lines:
+- I am achieving my goals step by step.
+- Success comes to me naturally.
+- I am disciplined and focused.
+- I build momentum every day.
+- I deserve success and I accept it.
+- Every effort I make adds up.
+- I turn my dreams into plans and my plans into action.
+- I learn from setbacks and keep going.
+- My persistence pays off.
+- I celebrate each milestone.
+- I am committed to my vision.
+- I keep the promises I make to myself.
+- I attract the resources I need.
+- I rise above obstacles with ease.
+- I see things through to the end.
+- Success feels natural and comfortable to me.
+- I set clear goals and achieve them.
+- My habits create my success.
+- I am becoming the person who achieves my dreams.
+- I welcome bigger challenges and greater rewards.
+- I stay consistent, even on slow days.
+- I measure progress, not perfection.
+- My success inspires others.
+- I am unstoppable in pursuit of my purpose.
+
+area.creativity.name = Creativity
+area.creativity.desc = Inspiration, self-expression, artistic flow
+area.creativity.lines:
+- Creativity flows through me freely.
+- I am a channel for new ideas.
+- Inspiration finds me everywhere.
+- I express myself boldly and beautifully.
+- My imagination is limitless.
+- I give myself permission to create.
+- I create for the joy of creating.
+- My art has value.
+- Ideas come to me easily.
+- I trust my creative voice.
+- I play, explore and experiment.
+- Creative blocks dissolve easily.
+- I see beauty and possibility everywhere.
+- My work is original and authentic.
+- I make time for my creative practice.
+- I let go of perfection and enjoy the process.
+- I am an artist in my own way.
+- My creativity solves problems.
+- I share my creations with confidence.
+- Every day I create something.
+- My curiosity leads me to new ideas.
+- I am in the flow.
+- My creative energy is renewed every day.
+- The world needs my unique creations.
+
+area.growth.name = Learning & Personal Growth
+area.growth.desc = Curiosity, wisdom, becoming a better version of yourself
+area.growth.lines:
+- I am becoming a better version of myself every day.
+- I love learning new things.
+- Every experience teaches me something valuable.
+- I am curious and open-minded.
+- I welcome feedback as a gift.
+- Growth is a joyful journey for me.
+- I learn from my mistakes with kindness.
+- Wisdom grows within me.
+- I invest in my personal development.
+- I embrace change as a path to growth.
+- I am patient with my progress.
+- I step into new challenges with courage.
+- My mind is expanding.
+- I read, reflect and grow.
+- I am committed to lifelong learning.
+- Each day I become wiser.
+- I release old patterns that hold me back.
+- I am proud of my growth.
+- I grow through what I go through.
+- I seek knowledge with an open heart.
+- My potential is unlimited.
+- I choose progress over perfection.
+- I am the author of my own growth.
+- I evolve with grace.
+
+area.gratitude.name = Gratitude
+area.gratitude.desc = Appreciating the present, noticing blessings
+area.gratitude.lines:
+- I am grateful for this moment.
+- I notice blessings all around me.
+- Thank you for this new day.
+- My heart overflows with gratitude.
+- I appreciate the simple things in life.
+- I am thankful for the people who love me.
+- Gratitude turns what I have into enough.
+- I find something to be thankful for every day.
+- I am grateful for my body and all it does.
+- I appreciate the lessons in every challenge.
+- I give thanks for food, water and shelter.
+- Gratitude fills me with joy.
+- I see the good in my life.
+- Every breath is a gift.
+- I am thankful for my past, present and future.
+- I express my gratitude freely.
+- Small joys make my life rich.
+- I am grateful for the gift of life.
+- Thank you for the blessings yet to come.
+- Gratitude opens my heart.
+- I appreciate the beauty of nature.
+- My life is full of blessings.
+- I am thankful for my growth.
+- I live with a grateful heart.
+
+area.joy.name = Happiness & Joy
+area.joy.desc = Playfulness, contentment, delight in small things
+area.joy.lines:
+- I choose joy today.
+- Happiness flows to me easily.
+- I find delight in small things.
+- I deserve to be happy.
+- My heart is light and playful.
+- I laugh often and freely.
+- Joy is my natural state.
+- I am content with what I have.
+- I spread happiness wherever I go.
+- Today is full of happy surprises.
+- I give myself permission to have fun.
+- I celebrate the little moments.
+- My smile brightens the world.
+- I let joy in.
+- Happiness is my choice, and I make it every day.
+- I enjoy the present moment.
+- I am open to wonder and play.
+- Good things are happening for me.
+- My life is full of reasons to smile.
+- I radiate positive energy.
+- I let go of what dims my light.
+- Joy bubbles up from within me.
+- I am at ease and happy.
+- My happiness inspires others.
+
+area.sleep.name = Sleep & Rest
+area.sleep.desc = Relaxation, recovery, peaceful nights
+area.sleep.lines:
+- I release the day and welcome rest.
+- My body relaxes deeply.
+- I fall asleep easily and peacefully.
+- My mind is quiet and calm.
+- I deserve deep, restful sleep.
+- I let go of today's worries.
+- My bed is a safe and peaceful place.
+- Each breath carries me deeper into rest.
+- I sleep soundly through the night.
+- I wake up refreshed and renewed.
+- My body repairs and heals while I sleep.
+- I am safe, warm and at ease.
+- Tomorrow will take care of itself.
+- My thoughts slow down and soften.
+- Peaceful dreams come to me.
+- I welcome stillness.
+- I trust my body to rest.
+- Every muscle in my body is relaxing.
+- I am grateful for this day and ready for rest.
+- Sleep comes naturally to me.
+- I let the night hold me gently.
+- My breathing is slow and soft.
+- I rest without guilt.
+- I drift into deep and healing sleep.
+
+area.beauty.name = Beauty & Body Image
+area.beauty.desc = Feeling attractive, accepting how you look
+area.beauty.lines:
+- I am beautiful just as I am.
+- I love the body I live in.
+- My beauty shines from within.
+- I accept and appreciate how I look.
+- I am comfortable in my own skin.
+- My body deserves love and respect.
+- I radiate confidence and grace.
+- I see beauty when I look in the mirror.
+- My uniqueness is my beauty.
+- I dress to express my joy.
+- I release comparison with others.
+- My body is a gift, not a project.
+- I care for my skin and body with love.
+- I glow with health and happiness.
+- I am attractive in my own way.
+- My smile is beautiful.
+- I honour every curve, line and mark.
+- I feel good in my body.
+- My worth is not measured by appearance.
+- I celebrate my natural beauty.
+- Kind thoughts make me beautiful.
+- I am grateful for my eyes, hands and heart.
+- I treat my reflection with kindness.
+- Beauty flows through me.
+
+area.forgiveness.name = Forgiveness & Healing the Past
+area.forgiveness.desc = Releasing resentment, moving on from trauma or regret
+area.forgiveness.lines:
+- I forgive myself and set myself free.
+- I release resentment and choose peace.
+- The past has no power over me now.
+- I let go of old pain with love.
+- I forgive others for my own peace.
+- I am healing a little more every day.
+- I release regret and embrace the present.
+- My past shaped me, but it does not define me.
+- I choose to move forward.
+- I am free of what once hurt me.
+- I honour my healing process.
+- Forgiveness opens my heart.
+- I release guilt and accept my humanity.
+- I am safe now.
+- I make peace with my story.
+- Every day the weight feels lighter.
+- I let go of anger with compassion.
+- I give myself the closure I need.
+- I learn from the past and live in the present.
+- My wounds are turning into wisdom.
+- I release the need for apologies.
+- I am at peace with what was.
+- I forgive, and I grow.
+- My future is free from the weight of the past.
+
+area.productivity.name = Productivity & Focus
+area.productivity.desc = Clarity, time management, beating procrastination
+area.productivity.lines:
+- I focus easily on what matters most.
+- I start tasks right away.
+- My mind is clear and organised.
+- I use my time wisely.
+- I complete my work with ease.
+- I break big goals into simple steps.
+- Distractions lose their grip on me.
+- I work in deep, focused sessions.
+- I prioritise with clarity.
+- I beat procrastination by taking the first step.
+- I am productive and energised.
+- I complete one task before starting the next.
+- I plan my day with intention.
+- I balance productivity with rest.
+- One task at a time, I make progress.
+- My energy is focused and steady.
+- I say no to what distracts me.
+- I take action even when I don't feel like it.
+- Each hour is used with purpose.
+- My workspace supports my focus.
+- I am disciplined and consistent.
+- I enjoy the satisfaction of getting things done.
+- I am in charge of my time.
+- Focus comes naturally to me.
+
+area.home.name = Home & Environment
+area.home.desc = A peaceful, safe, abundant living space
+area.home.lines:
+- My home is a sanctuary of peace.
+- I live in a safe and loving space.
+- My home is filled with light and warmth.
+- Abundance flows through every room.
+- I keep my space clean and calm.
+- My home welcomes joy and laughter.
+- I am grateful for the roof over my head.
+- My neighbourhood is safe and friendly.
+- My home supports rest and renewal.
+- I release clutter and make room for peace.
+- My space reflects who I am.
+- Positive energy fills my home.
+- I attract the perfect home for me.
+- Everyone who enters my home feels welcome.
+- My home is protected and blessed.
+- I create beauty in my surroundings.
+- My environment nourishes my wellbeing.
+- Plants and light bring life to my home.
+- I feel at home wherever I am.
+- My home is a place of harmony.
+- I care for my home and it cares for me.
+- I live in comfort and ease.
+- My home is filled with love and good memories.
+- I am grateful for every corner of my home.
+
+area.purpose.name = Purpose & Life Direction
+area.purpose.desc = Knowing your path, living with meaning
+area.purpose.lines:
+- I know my path and I follow it.
+- My life has meaning and purpose.
+- I trust where my journey is leading me.
+- I am guided toward my true calling.
+- Each step reveals my next step.
+- I live in alignment with my values.
+- My gifts are needed in the world.
+- I listen to my heart's direction.
+- I am clear about what matters to me.
+- My purpose unfolds naturally.
+- I make choices that honour my soul.
+- I am exactly where I need to be.
+- I find meaning in each day.
+- I contribute something valuable to the world.
+- I follow what lights me up.
+- Clarity comes to me with ease.
+- I trust the timing of my life.
+- My life is a meaningful story.
+- I am living with intention.
+- My passion guides my purpose.
+- I release confusion and welcome clarity.
+- I am brave enough to follow my path.
+- The universe supports my mission.
+- I live a life I am proud of.
+
+area.parenting.name = Parenting
+area.parenting.desc = Patience, being present, raising kids with love
+area.parenting.lines:
+- I am a patient and loving parent.
+- I am fully present with my children.
+- I raise my children with love and wisdom.
+- My children feel safe, seen and heard.
+- I am doing my best, and that is enough.
+- I respond with calm instead of reacting in anger.
+- I enjoy the precious moments with my children.
+- I trust my parenting instincts.
+- My children are growing into kind people.
+- I forgive myself for imperfect days.
+- I listen to my children with an open heart.
+- Our home is full of love and laughter.
+- I set loving and consistent boundaries.
+- I teach by example.
+- I celebrate my children's unique gifts.
+- I take care of myself so I can care for them.
+- My children and I learn from each other.
+- I let my children grow at their own pace.
+- I am grateful to be a parent.
+- My love gives my children strong roots and wings.
+- I stay calm in challenging moments.
+- I support my children's dreams.
+- Patience grows in me every day.
+- My children know they are loved.
+
+area.friendship.name = Friendship & Social Life
+area.friendship.desc = Belonging, attracting supportive people
+area.friendship.lines:
+- I attract supportive and loyal friends.
+- I belong.
+- My friendships are joyful and genuine.
+- I make new friends easily.
+- I am a good friend.
+- People enjoy my company.
+- I feel comfortable in social situations.
+- My friends and I support each other's dreams.
+- I am surrounded by positive people.
+- I share laughter and love with my friends.
+- I am open to meeting new people.
+- I keep in touch with the people I care about.
+- I attract friends who share my values.
+- My friends value and appreciate me.
+- Social gatherings feel easy and fun.
+- I am free to be myself with my friends.
+- My circle grows with kind people.
+- I let go of friendships that drain me.
+- I celebrate my friends' successes.
+- I am never truly alone.
+- My friendships deepen with time.
+- I give and receive support freely.
+- I find my tribe wherever I go.
+- Connection comes naturally to me.
+
+area.travel.name = Travel & Adventure
+area.travel.desc = Exploring, openness to new experiences
+area.travel.lines:
+- I am open to new adventures.
+- The world welcomes me.
+- I travel safely and joyfully.
+- New places inspire me.
+- I embrace new cultures with an open heart.
+- Adventure is calling and I answer.
+- I have the resources to travel the world.
+- Every journey expands my soul.
+- I am protected wherever I go.
+- I say yes to new experiences.
+- I meet wonderful people on my travels.
+- My travels go smoothly and easily.
+- I explore with curiosity and courage.
+- I feel at home anywhere in the world.
+- I create beautiful memories on every trip.
+- Each journey teaches me something new.
+- I am brave, free and curious.
+- Perfect travel opportunities come to me.
+- I enjoy the journey as much as the destination.
+- The beauty of nature fills me with wonder.
+- I travel light and live fully.
+- I return home renewed and inspired.
+- Life is a grand adventure.
+- The world is full of wonders for me to discover.
+
+area.fertility.name = Fertility & Pregnancy
+area.fertility.desc = Trust in your body, a healthy pregnancy
+area.fertility.lines:
+- I trust my body's natural rhythm.
+- My body is ready to create new life.
+- I welcome my baby with love.
+- My body is healthy and fertile.
+- I release fear and embrace hope.
+- My pregnancy is healthy and joyful.
+- My baby is growing strong and healthy.
+- I am calm and connected to my baby.
+- I trust divine timing.
+- My womb is a safe and loving home.
+- I nourish my body and my baby with love.
+- I am surrounded by support.
+- My body knows how to give birth.
+- I am ready to be a loving parent.
+- Each day brings me closer to holding my baby.
+- I am patient and hopeful.
+- My hormones are balanced.
+- I relax and let my body do its work.
+- I am grateful for this miracle.
+- Love surrounds my baby and me.
+- I listen to my body with kindness.
+- I am strong, capable and calm.
+- My family is growing in perfect time.
+- I trust the journey to my baby.
+
+area.eating.name = Weight & Healthy Eating
+area.eating.desc = Nourishing choices, a balanced relationship with food
+area.eating.lines:
+- I nourish my body with healthy choices.
+- I eat mindfully and with gratitude.
+- I listen to my body's hunger and fullness.
+- I enjoy fresh, wholesome food.
+- I have a balanced relationship with food.
+- My body finds its healthy weight naturally.
+- I eat to feel good.
+- I choose foods that give me energy.
+- I am kind to myself about food.
+- Water refreshes and cleanses me.
+- I enjoy treats in balance and without guilt.
+- I release emotional eating.
+- My body is getting healthier every day.
+- I love moving my body.
+- Healthy choices come easily to me.
+- I eat slowly and savour each bite.
+- My cravings are fading.
+- I respect my body at every size.
+- I nourish my body rather than punish it.
+- I make conscious food choices.
+- Food is fuel and joy, not a reward or a punishment.
+- I am proud of my healthy habits.
+- I feel light and energised.
+- My body thanks me for caring for it.
+
+area.recovery.name = Addiction Recovery & Habits
+area.recovery.desc = Strength, sobriety, breaking old patterns
+area.recovery.lines:
+- I am stronger than any craving.
+- Every sober day is a victory.
+- I choose freedom over old habits.
+- I am breaking old patterns with courage.
+- I deserve a healthy life.
+- I ask for help when I need it.
+- One day at a time, I am healing.
+- My cravings pass, and I remain strong.
+- I am rebuilding my life with love.
+- I forgive myself and move forward.
+- I find healthy ways to cope.
+- I am proud of my progress.
+- My mind is clear and free.
+- I am worthy of recovery.
+- I replace old habits with nourishing ones.
+- I surround myself with support.
+- I listen to my higher self, not my cravings.
+- I celebrate every clean and clear day.
+- My future is bright and free.
+- I can feel my feelings without escaping them.
+- Each healthy choice strengthens me.
+- I am becoming who I was meant to be.
+- I trust myself again.
+- Freedom feels wonderful.
+
+area.communication.name = Communication
+area.communication.desc = Expressing yourself clearly, listening well
+area.communication.lines:
+- I express myself clearly and calmly.
+- I listen to understand, not just to reply.
+- My words are kind and honest.
+- I speak my truth with confidence.
+- People understand me easily.
+- I communicate my needs openly.
+- I handle difficult conversations with grace.
+- My voice is calm and clear.
+- I choose my words with care.
+- I am a good listener.
+- I ask questions with curiosity.
+- I express disagreement with respect.
+- My communication builds bridges.
+- I speak with confidence in front of others.
+- I am comfortable sharing my ideas.
+- I hear what is said and what is felt.
+- I write and speak with clarity.
+- I stay calm when emotions run high.
+- My words inspire and encourage.
+- I say what I mean and mean what I say.
+- I am patient when others speak.
+- My silence is also wise.
+- Understanding flows between me and others.
+- Clear communication comes naturally to me.
+
+area.leadership.name = Leadership & Influence
+area.leadership.desc = Inspiring others, making decisions with integrity
+area.leadership.lines:
+- I lead with integrity.
+- I inspire others by example.
+- I make decisions with clarity and courage.
+- People trust my leadership.
+- I listen deeply to my team.
+- I empower others to grow.
+- I take responsibility with grace.
+- My vision inspires action.
+- I lead with both strength and compassion.
+- I am a positive influence on others.
+- I communicate my vision clearly.
+- I bring out the best in people.
+- I remain steady under pressure.
+- I lead by serving others.
+- I welcome diverse ideas.
+- I am a confident and capable leader.
+- I give credit generously.
+- I learn from every leadership challenge.
+- My influence grows with my integrity.
+- I create a culture of trust.
+- I make tough decisions with fairness.
+- People feel valued around me.
+- I lead change with confidence.
+- Leadership comes naturally to me.
+
+area.studies.name = Studies & Exams
+area.studies.desc = Memory, concentration, calm under pressure
+area.studies.lines:
+- I learn quickly and remember easily.
+- My mind is sharp and focused.
+- I am calm and confident in exams.
+- I understand new concepts with ease.
+- I study with joy and discipline.
+- My memory is strong and clear.
+- I recall information easily when I need it.
+- I am well prepared.
+- I manage my study time wisely.
+- Every study session makes me smarter.
+- I stay relaxed and clear during tests.
+- I am capable of excellent results.
+- I reach out for support when I need it.
+- I enjoy learning.
+- My concentration improves every day.
+- I trust what I have learned.
+- I answer questions with clarity.
+- I release exam anxiety.
+- I am proud of my effort.
+- I learn from my mistakes.
+- My brain is ready to absorb knowledge.
+- I balance study with rest.
+- Success in my studies is within reach.
+- I am a natural learner.
+
+area.aging.name = Aging Gracefully
+area.aging.desc = Embracing each stage of life, staying vibrant
+area.aging.lines:
+- I embrace every stage of life.
+- I grow wiser with every year.
+- I am vibrant at every age.
+- My body is strong and capable.
+- I age with grace and joy.
+- My experience is a treasure.
+- I stay curious and young at heart.
+- Every age has its own beauty.
+- My mind stays sharp and active.
+- I am grateful for the years I have lived.
+- I look forward to the years ahead.
+- I take good care of my body and mind.
+- My energy is renewed every day.
+- I share my wisdom generously.
+- I am valued and respected.
+- Life gets richer with time.
+- I welcome change with an open heart.
+- My laughter lines tell happy stories.
+- I stay active and engaged.
+- I am at peace with time.
+- My spirit is ageless.
+- Each day is a new beginning.
+- I am healthy, happy and whole.
+- I celebrate my journey.
+
+area.luck.name = Luck & Opportunities
+area.luck.desc = Right place, right time, saying yes to open doors
+area.luck.lines:
+- I am always in the right place at the right time.
+- Luck flows to me naturally.
+- I say yes to doors that open.
+- Opportunities appear for me every day.
+- Good fortune follows me.
+- I notice opportunities easily.
+- Life is working in my favour.
+- Amazing coincidences happen to me.
+- I am lucky in many ways.
+- I attract unexpected blessings.
+- Every day brings new possibilities.
+- I trust the flow of life.
+- Things work out for me.
+- I am open to miracles.
+- I am ready to receive good news.
+- The right people appear at the right time.
+- I take chances with confidence.
+- Fortune favours my courage.
+- I expect good things.
+- My intuition leads me to opportunity.
+- Serendipity is part of my life.
+- I am grateful for my good luck.
+- New doors open for me easily.
+- I am a magnet for opportunity.

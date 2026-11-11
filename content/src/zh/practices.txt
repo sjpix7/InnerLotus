@@ -1,0 +1,246 @@
+# 荷欧波诺波诺、日记、习惯、声音疗愈、呼吸练习、立即平静（SOS）、法律文本。
+
+hoopono.opening = 神圣的创造者，我为此刻所经历的一切承担全部责任。
+hoopono.p1 = 对不起。
+hoopono.p2 = 请原谅我。
+hoopono.p3 = 谢谢你。
+hoopono.p4 = 我爱你。
+hoopono.closing = 我把这些记忆交给神圣，让它们被清理、被疗愈、被释放。愿平静与我同在。
+hoopono.default_name = 亲爱的
+
+hoopono.topic.self.name = 我自己
+hoopono.topic.self.intro = 我把本来的自己带进我的心里。
+hoopono.topic.self.focus = 我为内在每一段造成自我批评、怀疑或痛苦的记忆承担责任。
+hoopono.topic.partner.name = 我的伴侣
+hoopono.topic.partner.intro = 我把我的伴侣和我们的关系带进我的心里。
+hoopono.topic.partner.focus = 我为内在每一段在我们之间造成距离、伤害或冲突的记忆承担责任。
+hoopono.topic.parents.name = 我的父母
+hoopono.topic.parents.intro = 我把我的母亲和父亲带进我的心里。
+hoopono.topic.parents.focus = 我为内在每一段承载着旧日家庭伤痛的记忆承担责任。
+hoopono.topic.children.name = 我的孩子
+hoopono.topic.children.intro = 我温柔地把我的孩子带进我的心里。
+hoopono.topic.children.focus = 我为内在每一段让我对孩子产生担忧、不耐烦或疏离的记忆承担责任。
+hoopono.topic.friend.name = 一段友谊
+hoopono.topic.friend.intro = 我把这段友谊带进我的心里。
+hoopono.topic.friend.focus = 我为内在每一段在我们之间造成误会的记忆承担责任。
+hoopono.topic.work.name = 工作与事业
+hoopono.topic.work.intro = 我把我的工作、同事和事业带进我的心里。
+hoopono.topic.work.focus = 我为内在每一段在工作中造成压力、冲突或停滞的记忆承担责任。
+hoopono.topic.money.name = 金钱与丰盛
+hoopono.topic.money.intro = 我把我与金钱的关系带进我的心里。
+hoopono.topic.money.focus = 我为内在每一段带着恐惧、匮乏或债务的记忆承担责任。
+hoopono.topic.health.name = 健康与疗愈
+hoopono.topic.health.intro = 我把我的健康和身体的疗愈带进我的心里。
+hoopono.topic.health.focus = 我为内在每一段以疾病或疼痛形式显现的记忆承担责任。
+hoopono.topic.body.name = 我的身体
+hoopono.topic.body.intro = 我怀着感恩把我的身体带进我的心里。
+hoopono.topic.body.focus = 我为内在每一段评判、排斥或忽视我身体的记忆承担责任。
+hoopono.topic.home.name = 我的家
+hoopono.topic.home.intro = 我把我的家和家中的每一个人带进我的心里。
+hoopono.topic.home.focus = 我为内在每一段扰乱这个家平静的记忆承担责任。
+hoopono.topic.past.name = 过去
+hoopono.topic.past.intro = 我把我的过去，以及至今仍背负着的一切，带进我的心里。
+hoopono.topic.past.focus = 我为内在每一段让旧伤持续存在的记忆承担责任。
+hoopono.topic.ancestors.name = 祖先
+hoopono.topic.ancestors.intro = 我把我的祖先和整个家族血脉带进我的心里。
+hoopono.topic.ancestors.focus = 我为传给我的每一段带着痛苦或局限的记忆承担责任。
+hoopono.topic.earth.name = 地球母亲
+hoopono.topic.earth.intro = 我把地球母亲和一切众生带进我的心里。
+hoopono.topic.earth.focus = 我为内在每一段加重这个世界伤害的记忆承担责任。
+hoopono.topic.anxiety.name = 恐惧与焦虑
+hoopono.topic.anxiety.intro = 我把我的恐惧和焦虑带进我的心里。
+hoopono.topic.anxiety.focus = 我为内在每一段正以恐惧形式上演的记忆承担责任。
+hoopono.topic.person.name = 某个特定的人
+hoopono.topic.person.intro = {name}，我把你带进我的心里。
+hoopono.topic.person.focus = 我为内在每一段在我们之间造成痛苦的记忆承担责任。
+
+journal.prompts:
+- 今天我感恩什么？
+- 此刻什么事压在我心上？
+- 今天什么让我微笑了？
+- 我真正的感受是什么？我在身体的哪里感受到它？
+- 我会对小时候的自己说什么？
+- 我的生活中需要更多什么，更少什么？
+- 今天我可以放下的一件事是什么？
+- 描述今天我感到平静的一个时刻。
+- 我准备好面对的恐惧是什么？
+- 这周我对自己有了什么新的了解？
+- 谁激励着我？为什么？
+- 我理想的一天是什么样子？
+- 我需要设定哪些界限？
+- 我为自己的什么感到骄傲？
+- 我的心想告诉我什么？
+- 给一个我需要原谅的人写一封信。
+- 我喜欢自己的三件事是什么？
+- 什么消耗我的能量？什么又能让它恢复？
+- 如果我知道自己不会失败，我会做什么？
+- 今天对我来说，自爱是什么样子？
+- 今天哪个脉轮感觉失衡？为什么？
+- 我在对自己讲的哪个故事可能并不真实？
+- 我上一次真正感到活着是什么时候？
+- 这个月我想显化什么？
+- 今天我回避了哪些情绪？
+- 明天我可以怎样更善待自己？
+- 今天我可以庆祝哪个小小的胜利？
+- 眼前的挑战在教我什么？
+- 如果未来的我给我写一张便条，上面会写什么？
+- 我为明天设定的一个意图是什么？
+
+journal.mood.joyful = 喜悦
+journal.mood.calm = 平静
+journal.mood.okay = 还好
+journal.mood.sad = 难过
+journal.mood.anxious = 焦虑
+journal.mood.angry = 生气
+
+habit.defaults:
+- 冥想
+- 喝 8 杯水
+- 运动
+- 读 10 页书
+- 写日记
+- 念肯定语
+- 感恩练习
+- 户外散步
+- 晚上 11 点前上床
+- 早起
+- 吃水果和蔬菜
+- 不吃添加糖
+- 一小时不看屏幕
+- 瑜伽
+- 呼吸练习
+- EFT 敲击
+- 声音疗愈
+- 祈祷
+- 不吸烟
+- 给所爱的人打电话
+
+sound.freq.f174.name = 174 Hz · 根基
+sound.freq.f174.desc = 最低的索尔费吉奥音。传统上用于缓解紧张，带来安全感和扎根感。
+sound.freq.f285.name = 285 Hz · 更新
+sound.freq.f285.desc = 与身体修复和焕然一新的感觉相关。
+sound.freq.f396.name = 396 Hz · 海底轮
+sound.freq.f396.desc = 与海底轮相关。传统上用于释放恐惧和内疚。
+sound.freq.f417.name = 417 Hz · 脐轮
+sound.freq.f417.desc = 与脐轮相关。与清除旧模式、迎接改变有关。
+sound.freq.f432.name = 432 Hz · 自然调音
+sound.freq.f432.desc = 一种替代的音乐调音，许多听众觉得更温暖、更放松。2019 年一项小型研究发现，与 440 Hz 相比心率略低。
+sound.freq.f528.name = 528 Hz · 爱
+sound.freq.f528.desc = 与太阳神经丛轮相关，被称为"爱的频率"。2018 年一项小型研究报告聆听后压力指标降低。
+sound.freq.f639.name = 639 Hz · 心轮
+sound.freq.f639.desc = 与心轮相关。与关系中的和谐与连结有关。
+sound.freq.f741.name = 741 Hz · 喉轮
+sound.freq.f741.desc = 与喉轮相关。与清晰、表达和解决问题有关。
+sound.freq.f852.name = 852 Hz · 眉心轮
+sound.freq.f852.desc = 与眉心轮相关。与直觉和回归内在平衡有关。
+sound.freq.f963.name = 963 Hz · 顶轮
+sound.freq.f963.desc = 与顶轮相关。与灵性连结和合一有关。
+sound.freq.om.name = 136.1 Hz · 嗡（OM）
+sound.freq.om.desc = "嗡"音或地球年音，用于为冥想调准坦普拉琴和颂钵。
+sound.freq.schumann.name = 7.83 Hz · 舒曼共振（双耳）
+sound.freq.schumann.desc = 地球大气层的自然共振，以柔和的双耳节拍呈现。扎根、使人平静。请佩戴耳机。
+sound.freq.delta.name = Delta 2 Hz（双耳）
+sound.freq.delta.desc = 深度睡眠的脑波范围。适合睡前放松。请佩戴耳机。
+sound.freq.theta.name = Theta 6 Hz（双耳）
+sound.freq.theta.desc = 冥想和深度放松的范围，与创造力和梦幻感相关。请佩戴耳机。
+sound.freq.alpha.name = Alpha 10 Hz（双耳）
+sound.freq.alpha.desc = 放松而警觉的范围。适合缓解压力、轻度冥想和平静专注。请佩戴耳机。
+sound.freq.beta.name = Beta 18 Hz（双耳）
+sound.freq.beta.desc = 活跃思考的范围。适合学习和保持警觉。请佩戴耳机。
+sound.freq.gamma.name = Gamma 40 Hz（双耳）
+sound.freq.gamma.desc = 高度专注的范围，正被研究用于记忆和大脑健康。请佩戴耳机。
+
+sound.lib.rain.name = 雨声
+sound.lib.rain.desc = 轻柔而持续的雨。
+sound.lib.thunder.name = 雷雨
+sound.lib.thunder.desc = 远处的雷声滚过绵绵细雨。
+sound.lib.ocean.name = 海浪
+sound.lib.ocean.desc = 缓缓拍打海岸的波浪。
+sound.lib.stream.name = 林间溪流
+sound.lib.stream.desc = 在石头上潺潺流过的小溪。
+sound.lib.wind.name = 风声
+sound.lib.wind.desc = 吹过开阔山丘的风。
+sound.lib.fire.name = 篝火
+sound.lib.fire.desc = 温暖、噼啪作响的火。
+sound.lib.birds.name = 鸟鸣
+sound.lib.birds.desc = 清晨林间的鸟儿在歌唱。
+sound.lib.crickets.name = 夏夜
+sound.lib.crickets.desc = 温暖夜晚里蟋蟀的鸣唱。
+sound.lib.flute.name = 竹笛
+sound.lib.flute.desc = 班苏里风格的竹笛，即兴吹奏平静的旋律。
+sound.lib.bamboo.name = 竹风铃
+sound.lib.bamboo.desc = 空心竹管在微风中轻轻相碰。
+sound.lib.chimes.name = 风铃
+sound.lib.chimes.desc = 明亮的金属风铃在微风中叮咚。
+sound.lib.bell.name = 寺庙钟声
+sound.lib.bell.desc = 深沉的寺钟，带着悠长而闪烁的回响。
+sound.lib.bowl.name = 颂钵
+sound.lib.bowl.desc = 被敲响、持续吟唱的喜马拉雅颂钵。
+sound.lib.crystal.name = 水晶钵
+sound.lib.crystal.desc = 水晶钵纯净而绵长的音色。
+sound.lib.tanpura.name = 坦普拉持续音
+sound.lib.tanpura.desc = 印度古典音乐中 Pa 与 Sa 的持续音。
+sound.lib.kalimba.name = 卡林巴琴
+sound.lib.kalimba.desc = 轻柔拨动的卡林巴琴音。
+sound.lib.om.name = 嗡音
+sound.lib.om.desc = 低沉而共鸣的"嗡"声。
+sound.lib.drum.name = 手鼓
+sound.lib.drum.desc = 缓慢而扎根的手鼓节拍。
+sound.lib.heartbeat.name = 心跳
+sound.lib.heartbeat.desc = 平静而稳定的心跳。
+sound.lib.white.name = 白噪音
+sound.lib.white.desc = 均匀的全频噪音，可以掩盖干扰。
+sound.lib.pink.name = 粉红噪音
+sound.lib.pink.desc = 更柔和、平衡的噪音，像持续的降雨。
+sound.lib.brown.name = 棕色噪音
+sound.lib.brown.desc = 低沉、隆隆的噪音，像远处的瀑布。
+
+breath.box.name = 箱式呼吸
+breath.box.desc = 吸气 4 拍，屏息 4 拍，呼气 4 拍，屏息 4 拍。运动员和急救人员用它保持冷静和专注。
+breath.478.name = 4-7-8 呼吸法
+breath.478.desc = 吸气 4 拍，屏息 7 拍，呼气 8 拍。一种深度放松的呼吸，非常适合睡前。
+breath.coherent.name = 共振呼吸
+breath.coherent.desc = 每分钟约六次缓慢呼吸。平衡神经系统，提高心率变异性。
+breath.sigh.name = 循环叹息
+breath.sigh.desc = 深吸一口气，短短补吸一口，然后长长地慢慢呼气。2023 年斯坦福研究显示它能改善情绪。
+breath.nadi.name = 经络清洁呼吸
+breath.nadi.desc = 瑜伽中的交替鼻孔呼吸。用拇指或无名指按住一侧鼻孔，轮流交换。让心平静而平衡。
+breath.bhramari.name = 蜂鸣呼吸
+breath.bhramari.desc = 吸气，然后像蜜蜂一样一边哼鸣一边慢慢呼气。轻柔的振动能抚慰心灵。
+breath.calm.name = 平静呼吸
+breath.calm.desc = 吸气 4 拍，呼气 6 拍。更长的呼气会启动你的放松反应。
+breath.cue.inhale = 吸气
+breath.cue.hold = 屏息
+breath.cue.exhale = 呼气
+breath.cue.topup = 再补吸一点
+breath.cue.hum = 哼鸣
+breath.cue.in_left = 从左鼻孔吸气
+breath.cue.out_right = 从右鼻孔呼气
+breath.cue.in_right = 从右鼻孔吸气
+breath.cue.out_left = 从左鼻孔呼气
+
+sos.intro = 你此刻是安全的。让我们一起慢下来。
+sos.breathe = 跟随圆圈：吸气 4 拍，呼气 6 拍。
+sos.ground.title = 5-4-3-2-1 扎根练习
+sos.ground:
+- 说出你能看到的五样东西。
+- 留意你能感觉到或触摸到的四样东西。
+- 聆听你能听到的三种声音。
+- 找出你能闻到的两种气味。
+- 留意你能尝到的一种味道。
+sos.heart = 把一只手放在心口，说：我是安全的。这种感觉会过去。
+sos.crisis = 如果你身处危险或有伤害自己的念头，请立即拨打当地紧急电话或心理危机热线。在印度，Tele-MANAS 免费且全天候服务，电话 14416。在其他地区，findahelpline.com 列出了你所在国家的免费热线。
+
+legal.disclaimer = Inner Lotus 是一款自我关怀与身心健康的陪伴应用。它不提供医疗、心理或财务建议，也不能替代专业照护。如果你正处于危机中，请联系当地紧急服务。
+legal.privacy <<
+你的数据属于你。
+
+Inner Lotus 完全离线运行。没有服务器、没有账户、没有广告，也没有数据分析。你的日记、习惯、肯定语、混音和设置只保存在这台设备上的应用内。
+
+除非你自己选择导出文件或分享卡片，否则不会上传或分享任何内容。
+
+习惯追踪中的应用使用情况，只有在你允许访问后才会从 Android 自身的使用统计中读取，绝不会保存在应用之外或发送到任何地方。
+
+卸载应用会删除你的数据，所以如果你想保留，请先导出备份。
+>>
+mantramala.text = 想要使用 108 颗念珠计数器念诵咒语和持咒，请试试我们的 Mantra Mala 应用。

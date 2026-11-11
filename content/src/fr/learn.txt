@@ -1,0 +1,137 @@
+learn.affirmations.title = Comment les affirmations atteignent l'inconscient
+learn.affirmations.body <<
+Les affirmations sont de courtes phrases positives au présent que l'on répète jusqu'à ce qu'elles commencent à sonner vrai. Elles agissent grâce à trois choses : la répétition, l'émotion et l'attention.
+
+Votre inconscient dirige la plus grande partie de votre journée : vos habitudes, vos réactions automatiques et la petite voix intérieure qui commente tout ce que vous faites. Il apprend moins par la logique que par la répétition et le ressenti. Quand une même pensée est répétée souvent, surtout avec émotion, le cerveau renforce les connexions neuronales qui la portent. C'est la neuroplasticité : ce que vous pratiquez, vous le devenez.
+
+La recherche confirme une version de ce principe. Dans les études sur l'auto-affirmation, les personnes qui réfléchissent à leurs valeurs essentielles gèrent mieux le stress et s'ouvrent davantage au changement. Une étude d'imagerie cérébrale (Cascio et ses collègues, 2016) a montré que l'auto-affirmation active les zones du cerveau liées à la récompense et à la perception de soi. Les affirmations entraînent aussi l'attention : le cerveau filtre ce que vous remarquez, et vous commencez à repérer les occasions qui correspondent à ce que vous répétez.
+
+Une précaution compte. Une phrase qui semble totalement fausse peut avoir l'effet inverse, surtout lorsque l'estime de soi est basse (Wood et ses collègues, 2009). Choisissez des affirmations crédibles pour vous, ou adoucissez-les : « J'apprends à… », « Je m'ouvre à… », « Chaque jour un peu plus… ».
+
+Comment pratiquer :
+• Choisissez trois à cinq affirmations pour le domaine que vous voulez guérir.
+• Dites-les lentement, à voix haute ou intérieurement, le matin et avant de dormir, quand l'esprit est le plus réceptif.
+• Ressentez-les. Imaginez le moment où elles sont déjà vraies.
+• Associez-les à une respiration lente, à un chakra, ou écrivez-les dans votre journal.
+• Soyez régulier. Un peu chaque jour vaut mieux que beaucoup de temps en temps.
+
+Chaque carte de cette application commence par la phrase clé d'un chakra : JE SUIS, JE RESSENS, JE FAIS, J'AIME, JE PARLE, JE VOIS, JE SAIS. Commencez par la racine et montez jusqu'à la couronne, ou choisissez le centre d'énergie que vous voulez équilibrer aujourd'hui.
+>>
+
+learn.eft.title = Qu'est-ce que l'EFT ?
+learn.eft.body <<
+Les techniques de libération émotionnelle, ou EFT, souvent appelées tapping, associent de légers tapotements du bout des doigts sur des points d'acupression à des mots qui nomment ce que vous ressentez. Elles ont été popularisées par Gary Craig dans les années 1990, à partir de la Thought Field Therapy du docteur Roger Callahan.
+
+Pourquoi on le fait : pendant que vous vous concentrez sur un ressenti stressant, les tapotements envoient des signaux apaisants au corps. Les chercheurs pensent que cela diminue la réaction d'alarme de l'amygdale, le détecteur de menace du cerveau, si bien qu'un souvenir ou une émotion perd de sa charge pendant que vous restez avec.
+
+Ce que dit la recherche : plus de cent essais cliniques ont étudié l'EFT. Des méta-analyses rapportent des baisses significatives de l'anxiété (Clond, 2016), de la dépression (Nelms et Castel, 2016) et des symptômes de stress post-traumatique (Sebastian et Nelms, 2017). Dans un essai randomisé, le cortisol, l'hormone du stress, a baissé d'environ 24 pour cent après une seule heure d'EFT, nettement plus que dans les groupes de thérapie par la parole et de repos (Church et ses collègues, 2012).
+
+Bienfaits décrits :
+• Un esprit plus calme et moins d'anxiété
+• Un soulagement du stress, des envies et des tensions
+• Un endormissement plus facile
+• Lâcher d'anciennes blessures, peurs et croyances limitantes
+• Plus de confiance avant un examen, un entretien ou une prestation
+
+La recette de base :
+1. Nommez le problème et évaluez son intensité de 0 à 10.
+2. Préparation : tapotez le point karaté sur le côté de la main en disant trois fois votre phrase de préparation : « Même si je ressens…, je m'accepte profondément et complètement. »
+3. Séquence : tapotez chaque point cinq à sept fois en disant une courte phrase de rappel : sommet de la tête, sourcil, coin de l'œil, sous l'œil, sous le nez, menton, clavicule et sous le bras.
+4. Respirez profondément et évaluez de nouveau l'intensité. Recommencez jusqu'à vous sentir plus léger.
+
+Tapotez doucement avec deux doigts. L'EFT est une pratique d'auto-assistance qui ne remplace pas un suivi médical ou psychologique. Pour un traumatisme, faites-vous accompagner par un praticien formé.
+>>
+
+learn.hooponopono.title = Qu'est-ce que le Ho'oponopono ?
+learn.hooponopono.body <<
+Le Ho'oponopono, prononcé ho-o-po-no-po-no, est une pratique hawaïenne de réconciliation et de pardon. Le mot signifie « rendre juste » ou « corriger une erreur ». Traditionnellement, une famille se réunissait avec un ancien pour parler d'un conflit, prendre ses responsabilités, se pardonner, se libérer mutuellement et ainsi restaurer l'harmonie.
+
+Dans les années 1970, la guérisseuse hawaïenne Morrnah Simeona l'a adapté en une pratique que chacun peut faire seul. Son élève, le docteur Ihaleakalā Hew Len, enseignait que nous pouvons prendre l'entière responsabilité de ce qui apparaît dans notre vie, en nettoyant les mémoires en nous plutôt qu'en essayant de changer les autres. Le livre Zéro limite, écrit avec Joe Vitale, a rendu célèbres dans le monde entier quatre phrases simples :
+
+Je suis désolé : je reconnais que quelque chose en moi a contribué à créer cela.
+Pardonne-moi : je demande pardon, à moi-même, aux autres et au Divin.
+Merci : je remercie pour la guérison et pour la leçon.
+Je t'aime : l'amour est l'énergie qui transforme et qui guérit.
+
+Ce que cela aide à faire :
+• Lâcher la rancune, la culpabilité et les anciennes blessures
+• Apaiser les conflits dans le couple et la famille
+• Calmer l'esprit et faire taire les pensées répétitives
+• Apporter de la compassion à l'argent, à la santé et aux épreuves de la vie
+• Se sentir relié à soi-même et au Divin
+
+Comment pratiquer : pensez à une personne, une situation ou un ressenti. Respirez lentement. Répétez les quatre phrases avec sincérité, à voix haute, intérieurement ou par écrit, pendant quelques minutes ou aussi longtemps que vous le souhaitez. Personne d'autre n'a besoin d'y participer ; le nettoyage se fait en vous.
+
+Le Ho'oponopono est une pratique spirituelle. Ses formes traditionnelle et moderne diffèrent, et il ne remplace pas une aide professionnelle.
+>>
+
+learn.journal.title = Pourquoi écrire un journal fait du bien
+learn.journal.body <<
+Tenir un journal, c'est la simple pratique d'écrire ses pensées et ses émotions. Cela transforme le bruit dans votre tête en mots que vous pouvez voir, comprendre et laisser partir.
+
+Pourquoi cela aide : dans les années 1980, le psychologue James Pennebaker a demandé à des personnes d'écrire sur leurs pensées et leurs émotions les plus profondes, quinze à vingt minutes, trois ou quatre jours de suite. Dans les mois suivants, elles sont allées moins souvent chez le médecin et ont rapporté une meilleure humeur. Depuis, des centaines d'études ont relié l'écriture expressive à moins de stress, un meilleur sommeil, une immunité renforcée et une pensée plus claire. Il a été démontré que le journal de gratitude, noter ce pour quoi on est reconnaissant, augmente l'optimisme et le bien-être (Emmons et McCullough, 2003).
+
+Ce que l'écriture aide à faire :
+• Traverser ses émotions au lieu de les refouler
+• Repérer des schémas dans ses humeurs, ses déclencheurs et ses habitudes
+• Apaiser les pensées qui tournent en boucle avant de dormir
+• Poser des intentions et suivre sa progression
+• Développer la conscience de soi et l'auto-compassion
+
+Comment écrire ici :
+• Écrivez librement, sans vous corriger. L'orthographe n'a pas d'importance.
+• Utilisez une question d'inspiration si vous ne savez pas par où commencer.
+• Essayez le mode Gratitude : trois belles choses de la journée.
+• Indiquez votre humeur pour voir votre parcours émotionnel au fil du temps.
+• Vos textes sont enregistrés uniquement sur ce téléphone, classés par jour, semaine et mois. Vous pouvez les exporter, les importer ou les supprimer à tout moment.
+
+Cinq minutes par jour suffisent. Soyez honnête et bienveillant avec vous-même : c'est votre espace sûr.
+>>
+
+learn.sound.title = Comment le son guérit
+learn.sound.body <<
+La guérison par le son utilise des tons, des rythmes et des sons naturels pour aider le corps à se détendre et l'esprit à s'apaiser. Quand nous écoutons un son régulier et doux, la respiration ralentit, le cœur s'apaise et l'attention s'éloigne des soucis.
+
+Ce que suggère la recherche :
+• Les sons de la nature, comme la pluie, l'eau et le chant des oiseaux, aident le corps à récupérer du stress plus vite que le bruit de la circulation (Alvarsson et ses collègues, 2010).
+• Les battements binauraux, deux tons légèrement différents dans chaque oreille perçus comme une douce pulsation, ont montré des effets faibles à modérés sur l'anxiété, l'attention et la douleur dans une méta-analyse de 2019 (Garcia-Argibay et ses collègues). Utilisez un casque pour les écouter.
+• La stimulation gamma à quarante hertz est étudiée pour la mémoire et la santé du cerveau.
+• La méditation aux bols chantants a réduit la tension, la colère et la fatigue dans une étude d'observation (Goldsby et ses collègues, 2017).
+• Les fréquences Solfège, comme 528 Hz, et des accords comme 432 Hz viennent de traditions spirituelles et musicales. Les études sont encore petites : profitez-en comme d'une pratique de détente plutôt que comme d'un remède.
+
+Comment utiliser cette section :
+1. Choisissez une fréquence de guérison, ou mélangez sons de la nature et instruments pour créer votre paysage sonore.
+2. Réglez le volume de chaque couche et enregistrez vos mélanges préférés.
+3. Programmez une minuterie et laissez le son jouer en continu en arrière-plan.
+4. Respirez lentement et contentez-vous d'écouter.
+
+Gardez un volume bas et agréable. Si vous souffrez d'épilepsie, portez un stimulateur cardiaque ou avez un trouble de l'audition, demandez l'avis de votre médecin avant d'utiliser des sons rythmiques ou binauraux. Tous les sons de cette application sont générés en direct sur votre appareil : rien à télécharger.
+>>
+
+learn.breath.title = La science du souffle
+learn.breath.body <<
+Le travail du souffle consiste à utiliser consciemment la respiration pour changer ce que l'on ressent. Le souffle est la seule partie de votre système nerveux que vous pouvez diriger directement : de longues expirations lentes activent le système parasympathique apaisant, tandis que des inspirations rapides donnent de l'énergie.
+
+Dans une étude de Stanford de 2023 (Balban et ses collègues), cinq minutes par jour de soupir cyclique, une inspiration profonde par le nez, une courte seconde inspiration puis une longue expiration, ont amélioré l'humeur et ralenti la respiration davantage que la méditation de pleine conscience. Respirer lentement, environ six fois par minute, augmente la variabilité de la fréquence cardiaque, un marqueur de résilience. Le pranayama yogique, comme la respiration alternée et la respiration Bhramari bourdonnante, est pratiqué depuis des siècles pour apaiser l'esprit.
+
+Conseils :
+• Respirez par le nez quand vous le pouvez.
+• Restez doux, sans jamais forcer.
+• Si la tête vous tourne, arrêtez et respirez normalement.
+• Pratiquez chaque jour. Même trois minutes aident.
+>>
+
+learn.chakra.title = Les sept chakras
+learn.chakra.body <<
+Chakra est un mot sanskrit qui signifie « roue ». Les traditions du yoga et du tantra décrivent sept centres d'énergie le long de la colonne, de sa base jusqu'au sommet de la tête. Chacun est associé à une couleur, un élément, un son-semence appelé mantra bija et certains domaines de la vie.
+
+1. Racine, Muladhara : JE SUIS. Sécurité et ancrage.
+2. Sacré, Svadhisthana : JE RESSENS. Émotions, créativité et plaisir.
+3. Plexus solaire, Manipura : JE FAIS. Volonté, confiance et action.
+4. Cœur, Anahata : J'AIME. Amour, compassion et pardon.
+5. Gorge, Vishuddha : JE PARLE. Vérité et expression.
+6. Troisième œil, Ajna : JE VOIS. Intuition et clairvoyance.
+7. Couronne, Sahasrara : JE SAIS. Lien et esprit.
+
+Travailler avec les chakras par le souffle, le son, la couleur et les affirmations est une façon d'apporter de la conscience à différentes parties de sa vie. Commencez par la racine et montez jusqu'à la couronne, ou concentrez-vous sur le centre dont vous avez le plus besoin aujourd'hui. Le système des chakras est une carte spirituelle et contemplative, non anatomique.
+>>

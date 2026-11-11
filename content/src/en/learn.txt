@@ -1,0 +1,139 @@
+# Knowledge-base texts (read aloud with the device's text-to-speech). Keep bullets as "• ".
+
+learn.affirmations.title = How affirmations reach the subconscious mind
+learn.affirmations.body <<
+Affirmations are short, positive statements in the present tense that you repeat until they begin to feel true. They work through three things: repetition, emotion and attention.
+
+Your subconscious mind runs most of your day — your habits, automatic reactions and the inner voice that comments on everything you do. It learns less through logic and more through repetition and feeling. When the same thought is repeated often, especially with emotion, the brain strengthens the neural pathways behind it. This is neuroplasticity: what you practise, you become.
+
+Research supports a version of this. In self-affirmation studies, people who reflect on their core values cope better with stress and become more open to change. A brain-imaging study (Cascio and colleagues, 2016) found that self-affirmation activates the brain's reward and self-related processing areas. Affirmations also train attention: the brain filters what you notice, so you begin to spot opportunities that match what you repeat.
+
+One caution matters. A statement that feels completely untrue can backfire, especially when self-esteem is low (Wood and colleagues, 2009). Choose affirmations that feel believable, or soften them: "I am learning to…", "I am open to…", "Every day, a little more…".
+
+How to practise:
+• Choose three to five affirmations for the area you want to heal.
+• Say them slowly, aloud or silently, in the morning and before sleep, when the mind is most receptive.
+• Feel them. Imagine the moment they are already true.
+• Pair them with slow breathing, a chakra focus, or writing them in your journal.
+• Be consistent. A little every day works better than a lot once in a while.
+
+Every card in this app opens with a chakra's core statement — I AM, I FEEL, I DO, I LOVE, I SPEAK, I SEE, I KNOW. Begin at the root and rise to the crown, or choose the energy centre you want to balance today.
+>>
+
+learn.eft.title = What is EFT tapping?
+learn.eft.body <<
+Emotional Freedom Techniques, or EFT, often called tapping, combines gentle fingertip tapping on acupressure points with words that name what you are feeling. It was popularised by Gary Craig in the 1990s, building on Dr Roger Callahan's Thought Field Therapy.
+
+Why it is done: while you focus on a stressful feeling, tapping sends calming signals to the body. Researchers believe this lowers the alarm response of the amygdala, the brain's threat detector, so a memory or emotion can lose its charge while you stay with it.
+
+What research says: more than one hundred clinical trials have studied EFT. Meta-analyses report meaningful reductions in anxiety (Clond, 2016), depression (Nelms and Castel, 2016) and PTSD symptoms (Sebastian and Nelms, 2017). In a randomised trial, cortisol, the stress hormone, fell by about 24 percent after a single hour of EFT — significantly more than in the talk-therapy and rest groups (Church and colleagues, 2012).
+
+Benefits people report:
+• A calmer mind and less anxiety
+• Relief from stress, cravings and tension
+• Easier sleep
+• Letting go of old hurts, fears and limiting beliefs
+• More confidence before exams, interviews and performances
+
+The Basic Recipe:
+1. Name the issue and rate its intensity from 0 to 10.
+2. Set-up: tap the Karate Chop point on the side of your hand while saying your set-up statement three times: "Even though I feel…, I deeply and completely accept myself."
+3. Sequence: tap each point five to seven times while saying a short reminder phrase — top of the head, eyebrow, side of the eye, under the eye, under the nose, chin, collarbone and under the arm.
+4. Take a deep breath and rate the intensity again. Repeat until it feels lighter.
+
+Tap gently with two fingertips. EFT is a self-help practice and not a substitute for medical or psychological care. For trauma, please work with a trained practitioner.
+>>
+
+learn.hooponopono.title = What is Ho'oponopono?
+learn.hooponopono.body <<
+Ho'oponopono, pronounced ho-oh-po-no-po-no, is a Hawaiian practice of reconciliation and forgiveness. The word means "to make right" or "to correct an error". Traditionally, a family gathered with an elder to talk through a conflict, take responsibility, forgive and release one another, and so restore harmony.
+
+In the 1970s the Hawaiian healer Morrnah Simeona adapted it into a practice that anyone can do alone. Her student, Dr Ihaleakalā Hew Len, taught that we can take full responsibility for what appears in our life, cleaning the memories within us instead of trying to change other people. The book Zero Limits, written with Joe Vitale, made four simple phrases famous around the world:
+
+I'm sorry — I acknowledge that something in me helped create this.
+Please forgive me — I ask for forgiveness, from myself, from others and from the Divine.
+Thank you — I give thanks for the healing and the lesson.
+I love you — love is the energy that transforms and heals.
+
+What it helps with:
+• Releasing resentment, guilt and old hurts
+• Softening conflicts in relationships and families
+• Calming the mind and quieting repetitive thoughts
+• Bringing compassion to money, health and life challenges
+• Feeling connected to yourself and to the Divine
+
+How to practise: bring a person, situation or feeling to mind. Breathe slowly. Repeat the four phrases with sincerity — aloud, silently or in writing — for a few minutes, or for as long as you wish. No one else needs to take part; the cleaning happens within you.
+
+Ho'oponopono is a spiritual practice. Its traditional and modern forms differ, and it does not replace professional help.
+>>
+
+learn.journal.title = Why journaling heals
+learn.journal.body <<
+Journaling is the simple practice of writing down your thoughts and feelings. It turns the noise in your head into words you can see, understand and release.
+
+Why it helps: in the 1980s the psychologist James Pennebaker asked people to write about their deepest thoughts and feelings for fifteen to twenty minutes on three or four days. In the following months they visited the doctor less often and reported better mood. Since then, hundreds of studies have linked expressive writing with lower stress, better sleep, stronger immune function and clearer thinking. Gratitude journaling — noting what you are thankful for — has been shown to increase optimism and wellbeing (Emmons and McCullough, 2003).
+
+What journaling helps with:
+• Processing emotions instead of bottling them up
+• Seeing patterns in your moods, triggers and habits
+• Calming racing thoughts before sleep
+• Setting intentions and tracking your growth
+• Building self-awareness and self-compassion
+
+How to journal here:
+• Write freely, without editing. Spelling does not matter.
+• Use a prompt when you don't know where to begin.
+• Try Gratitude mode: three good things from today.
+• Tag your mood so you can see your emotional journey over time.
+• Entries are saved only on this device, sorted by day, week and month. You can export, import or delete them at any time.
+
+Even five minutes a day is enough. Be honest and kind with yourself — this is your safe space.
+>>
+
+learn.sound.title = How sound heals
+learn.sound.body <<
+Sound healing uses tones, rhythms and natural sounds to help the body relax and the mind settle. When we listen to steady, soothing sound, breathing slows, the heart rate eases and attention moves away from worry.
+
+What research suggests:
+• Nature sounds such as rain, water and birdsong help the body recover from stress faster than traffic noise (Alvarsson and colleagues, 2010).
+• Binaural beats — two slightly different tones in each ear, heard as a soft pulse — showed small to moderate effects on anxiety, attention and pain in a 2019 meta-analysis (Garcia-Argibay and colleagues). Use headphones for these.
+• Forty-hertz gamma stimulation is being studied for memory and brain health.
+• Singing-bowl meditation reduced tension, anger and fatigue in an observational study (Goldsby and colleagues, 2017).
+• Solfeggio frequencies such as 528 Hz, and tunings such as 432 Hz, come from spiritual and musical traditions. The studies so far are small, so enjoy them as a relaxation practice rather than a cure.
+
+How to use this section:
+1. Choose a healing frequency, or mix nature sounds and instruments into your own soundscape.
+2. Adjust the volume of each layer and save your favourite mixes.
+3. Set a sleep timer and let the sound play continuously in the background.
+4. Breathe slowly and simply listen.
+
+Keep the volume low and comfortable. If you have epilepsy, a pacemaker or a hearing condition, ask your doctor before using rhythmic or binaural sounds. Every sound in this app is generated live on your device, so nothing needs to be downloaded.
+>>
+
+learn.breath.title = The science of breath
+learn.breath.body <<
+Breathwork is the conscious use of the breath to change how you feel. The breath is the one part of your nervous system you can steer directly: long, slow exhales switch on the calming parasympathetic system, while quick inhales energise.
+
+In a 2023 Stanford study (Balban and colleagues), five minutes a day of cyclic sighing — a deep inhale through the nose, a short second inhale, then a long exhale — improved mood and lowered breathing rate more than mindfulness meditation did. Slow breathing at about six breaths per minute raises heart-rate variability, a marker of resilience. Yogic pranayama, such as alternate-nostril breathing and the humming Bhramari breath, has been practised for centuries to steady the mind.
+
+Tips:
+• Breathe through the nose when you can.
+• Keep it gentle and never strain.
+• If you feel dizzy, stop and breathe normally.
+• Practise daily. Even three minutes helps.
+>>
+
+learn.chakra.title = The seven chakras
+learn.chakra.body <<
+Chakra is a Sanskrit word meaning "wheel". Yogic and tantric traditions describe seven energy centres along the spine, from its base to the crown of the head. Each one is linked with a colour, an element, a seed sound called a bija mantra, and certain areas of life.
+
+1. Root, Muladhara: I AM. Safety and grounding.
+2. Sacral, Svadhisthana: I FEEL. Emotions, creativity and pleasure.
+3. Solar Plexus, Manipura: I DO. Willpower, confidence and action.
+4. Heart, Anahata: I LOVE. Love, compassion and forgiveness.
+5. Throat, Vishuddha: I SPEAK. Truth and expression.
+6. Third Eye, Ajna: I SEE. Intuition and insight.
+7. Crown, Sahasrara: I KNOW. Connection and spirit.
+
+Working with the chakras through breath, sound, colour and affirmation is a way of bringing awareness to different parts of your life. Begin at the root and rise to the crown, or focus on the centre you need most today. The chakra system is a spiritual and contemplative map rather than an anatomical one.
+>>

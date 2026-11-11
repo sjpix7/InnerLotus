@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lotus_bg">#FFF6F1FA</color>
+    <color name="lotus_primary">#FF6B4BA1</color>
+    <color name="lotus_launcher_bg">#FFF3E8F7</color>
+
+    <style name="Theme.InnerLotus" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/lotus_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorAccent">@color/lotus_primary</item>
+    </style>
+</resources>

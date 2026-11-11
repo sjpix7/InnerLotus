@@ -1,0 +1,127 @@
+# 七个脉轮，从海底轮到顶轮。seeds[0] 是海报上的经典肯定语。
+
+chakra.root.name = 海底轮
+chakra.root.sanskrit = Muladhara
+chakra.root.core = 我存在
+chakra.root.location = 脊柱底部
+chakra.root.element = 土
+chakra.root.bija = LAM（朗）
+chakra.root.theme = 安全、扎根、稳定、归属
+chakra.root.balanced = 在身体里感到安全、扎根、踏实并活在当下。
+chakra.root.imbalanced = 恐惧、焦虑、金钱忧虑、坐立不安、感到疏离。
+chakra.root.practice = 赤脚走在大地上，吃根茎类蔬菜，练习山式站立，并念诵 LAM。
+chakra.root.seeds:
+- 我安全、平衡、扎根大地。
+- 我像古老的大树一样扎根。
+- 大地支持我的每一步。
+- 我相信我的一切需要都会被满足。
+- 我属于这里，属于这个身体和这一刻。
+- 我站得稳定而坚强。
+
+chakra.sacral.name = 脐轮
+chakra.sacral.sanskrit = Svadhisthana
+chakra.sacral.core = 我感受
+chakra.sacral.location = 下腹部，肚脐下方
+chakra.sacral.element = 水
+chakra.sacral.bija = VAM（旺）
+chakra.sacral.theme = 情绪、创造力、愉悦、流动
+chakra.sacral.balanced = 情绪流动、富有创造力、健康的愉悦与亲密。
+chakra.sacral.imbalanced = 麻木、内疚、创作受阻、情绪起伏。
+chakra.sacral.practice = 跳舞、游泳、练习开髋瑜伽、用创作表达自己，并念诵 VAM。
+chakra.sacral.seeds:
+- 我与自己的感受相连。
+- 我的情绪像水一样自由流动。
+- 我欢迎喜悦与愉悦进入我的生活。
+- 我的创造力轻松流淌。
+- 我尊重自己的渴望和身体。
+- 我优雅地拥抱改变。
+
+chakra.solar.name = 太阳神经丛轮
+chakra.solar.sanskrit = Manipura
+chakra.solar.core = 我行动
+chakra.solar.location = 上腹部，肚脐上方
+chakra.solar.element = 火
+chakra.solar.bija = RAM（让）
+chakra.solar.theme = 意志力、自信、行动、自我价值
+chakra.solar.balanced = 自信、有动力、决策清晰、界限健康。
+chakra.solar.imbalanced = 自尊心低、拖延、控制欲强、胃部紧张。
+chakra.solar.practice = 锻炼核心力量，享受清晨阳光，吃温热的食物，并念诵 RAM。
+chakra.solar.seeds:
+- 我有力量、强大而自信。
+- 我以勇气和清晰行动。
+- 内在之火点燃我的使命。
+- 我轻松地做出决定。
+- 我配得上我的梦想。
+- 我尊重自己的力量。
+
+chakra.heart.name = 心轮
+chakra.heart.sanskrit = Anahata
+chakra.heart.core = 我爱
+chakra.heart.location = 胸口中央
+chakra.heart.element = 风
+chakra.heart.bija = YAM（样）
+chakra.heart.theme = 爱、慈悲、宽恕、连结
+chakra.heart.balanced = 善良、宽恕、敞开心扉的连结与自爱。
+chakra.heart.imbalanced = 悲伤、怨恨、孤独、难以信任。
+chakra.heart.practice = 练习感恩和荷欧波诺波诺，用温和的后弯打开胸腔，多亲近大自然，并念诵 YAM。
+chakra.heart.seeds:
+- 我值得被爱。
+- 我的心敞开着去给予和接受。
+- 我轻松地原谅自己和他人。
+- 爱在我之内、在我周围流动。
+- 我以善良和慈悲对待自己。
+- 我通过爱与一切众生相连。
+
+chakra.throat.name = 喉轮
+chakra.throat.sanskrit = Vishuddha
+chakra.throat.core = 我表达
+chakra.throat.location = 喉咙和颈部
+chakra.throat.element = 以太（空）
+chakra.throat.bija = HAM（杭）
+chakra.throat.theme = 沟通、真相、自我表达
+chakra.throat.balanced = 诚实表达、用心倾听、富有创意的表达。
+chakra.throat.imbalanced = 不敢开口、说得过多、喉咙或下巴紧绷。
+chakra.throat.practice = 唱歌、哼鸣、写日记、温和地说出真相，并念诵 HAM。
+chakra.throat.seeds:
+- 我听见并说出我的真相。
+- 我的声音清晰而温和。
+- 我自由而诚实地表达自己。
+- 我深深倾听，智慧发言。
+- 我的话语创造美与平和。
+- 被听见对我来说是安全的。
+
+chakra.thirdeye.name = 眉心轮
+chakra.thirdeye.sanskrit = Ajna
+chakra.thirdeye.core = 我看见
+chakra.thirdeye.location = 两眉之间
+chakra.thirdeye.element = 光
+chakra.thirdeye.bija = OM（嗡）
+chakra.thirdeye.theme = 直觉、洞察、想象、清明
+chakra.thirdeye.balanced = 思维清晰、信任直觉、想象力丰富。
+chakra.thirdeye.imbalanced = 困惑、想得太多、注意力差、感觉与内在指引断开。
+chakra.thirdeye.practice = 冥想、观想、写梦境日记、练习交替鼻孔呼吸，并念诵 OM。
+chakra.thirdeye.seeds:
+- 我信任我的直觉。
+- 我看得清楚，超越表象。
+- 我的内在智慧指引着我。
+- 我对洞见和远见保持开放。
+- 我的心平静而清明。
+- 我信任内在之眼所揭示的一切。
+
+chakra.crown.name = 顶轮
+chakra.crown.sanskrit = Sahasrara
+chakra.crown.core = 我知晓
+chakra.crown.location = 头顶
+chakra.crown.element = 思想与纯粹意识
+chakra.crown.bija = 静默（或 OM）
+chakra.crown.theme = 灵性、连结、平和、智慧
+chakra.crown.balanced = 内心平和、感到人生有意义、与神圣相连。
+chakra.crown.imbalanced = 迷失感、愤世嫉俗、灵性上的疏离。
+chakra.crown.practice = 静坐冥想、祈祷、练习感恩，在静止中休息。
+chakra.crown.seeds:
+- 我是神圣的。
+- 我与无限的源头相连。
+- 我与宇宙合而为一。
+- 神圣之光流过我。
+- 我信任生命的智慧。
+- 我与一切存在和平共处。

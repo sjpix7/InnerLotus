@@ -1,0 +1,127 @@
+# 7つのチャクラ（ルートからクラウンまで）。seeds[0] はポスターの基本アファメーション。
+
+chakra.root.name = ルート
+chakra.root.sanskrit = Muladhara
+chakra.root.core = 私は在る
+chakra.root.location = 背骨の付け根
+chakra.root.element = 地
+chakra.root.bija = LAM（ラム）
+chakra.root.theme = 安心、グラウンディング、安定、居場所
+chakra.root.balanced = 体の中で安心し、地に足がつき、今ここにいる感覚。
+chakra.root.imbalanced = 恐れ、不安、お金の心配、落ち着かなさ、つながりを失った感覚。
+chakra.root.practice = 裸足で大地を歩き、根菜を食べ、山のポーズで立ち、LAM を唱えましょう。
+chakra.root.seeds:
+- 私は安全で、中心が定まり、地に足がついています。
+- 私は古い大樹のように根を張っています。
+- 大地は一歩一歩私を支えてくれます。
+- 私に必要なものはすべて満たされると信じています。
+- 私はこの体とこの瞬間に属しています。
+- 私はしっかりと、力強く立っています。
+
+chakra.sacral.name = セイクラル
+chakra.sacral.sanskrit = Svadhisthana
+chakra.sacral.core = 私は感じる
+chakra.sacral.location = 下腹部、おへその下
+chakra.sacral.element = 水
+chakra.sacral.bija = VAM（ヴァム）
+chakra.sacral.theme = 感情、創造性、喜び、流れ
+chakra.sacral.balanced = 感情の流れ、創造性、健やかな喜びと親密さ。
+chakra.sacral.imbalanced = 無感覚、罪悪感、創作の行き詰まり、気分の浮き沈み。
+chakra.sacral.practice = 踊る、泳ぐ、股関節をほぐすヨガ、創造的な自己表現をして、VAM を唱えましょう。
+chakra.sacral.seeds:
+- 私は自分の気持ちとつながっています。
+- 私の感情は水のように自由に流れます。
+- 私は喜びと楽しみを人生に迎え入れます。
+- 私の創造性はのびのびと流れます。
+- 私は自分の望みと体を大切にします。
+- 私はしなやかに変化を受け入れます。
+
+chakra.solar.name = ソーラープレクサス
+chakra.solar.sanskrit = Manipura
+chakra.solar.core = 私は行う
+chakra.solar.location = 上腹部、おへその上
+chakra.solar.element = 火
+chakra.solar.bija = RAM（ラム）
+chakra.solar.theme = 意志の力、自信、行動、自己価値
+chakra.solar.balanced = 自信、やる気、はっきりした決断、健やかな境界線。
+chakra.solar.imbalanced = 自己評価の低さ、先延ばし、支配したい気持ち、胃の緊張。
+chakra.solar.practice = 体幹を鍛え、朝日を浴び、温かい食事をとり、RAM を唱えましょう。
+chakra.solar.seeds:
+- 私はパワフルで、強く、自信に満ちています。
+- 私は勇気と明晰さを持って行動します。
+- 内なる炎が私の目的を燃え立たせます。
+- 私は楽に決断します。
+- 私は自分の夢にふさわしい人です。
+- 私は自分の力を大切にします。
+
+chakra.heart.name = ハート
+chakra.heart.sanskrit = Anahata
+chakra.heart.core = 私は愛する
+chakra.heart.location = 胸の中央
+chakra.heart.element = 風
+chakra.heart.bija = YAM（ヤム）
+chakra.heart.theme = 愛、思いやり、許し、つながり
+chakra.heart.balanced = やさしさ、許し、心を開いたつながり、自己愛。
+chakra.heart.imbalanced = 悲しみ、恨み、孤独、人を信じることの難しさ。
+chakra.heart.practice = 感謝とホ・オポノポノを実践し、やさしい後屈で胸を開き、自然の中で過ごし、YAM を唱えましょう。
+chakra.heart.seeds:
+- 私は愛されるにふさわしい人です。
+- 私の心は与え、受け取るために開かれています。
+- 私は楽に自分と人を許します。
+- 愛が私の中と周りを流れています。
+- 私はやさしさと思いやりで自分に接します。
+- 私は愛を通してすべての存在とつながっています。
+
+chakra.throat.name = スロート
+chakra.throat.sanskrit = Vishuddha
+chakra.throat.core = 私は語る
+chakra.throat.location = 喉と首
+chakra.throat.element = 空（エーテル）
+chakra.throat.bija = HAM（ハム）
+chakra.throat.theme = コミュニケーション、真実、自己表現
+chakra.throat.balanced = 正直に話す、よく聴く、創造的な表現。
+chakra.throat.imbalanced = 声を上げることへの恐れ、話しすぎ、喉やあごのこわばり。
+chakra.throat.practice = 歌う、ハミングする、日記を書く、やさしく本当のことを話す、そして HAM を唱えましょう。
+chakra.throat.seeds:
+- 私は自分の真実を聴き、語ります。
+- 私の声は澄んでいて、やさしいです。
+- 私は自由に、正直に自分を表現します。
+- 私は深く聴き、賢く話します。
+- 私の言葉は美しさと平和を生み出します。
+- 私の声が聴かれることは安全です。
+
+chakra.thirdeye.name = サードアイ
+chakra.thirdeye.sanskrit = Ajna
+chakra.thirdeye.core = 私は見る
+chakra.thirdeye.location = 眉間
+chakra.thirdeye.element = 光
+chakra.thirdeye.bija = OM（オーム）
+chakra.thirdeye.theme = 直感、洞察、想像力、明晰さ
+chakra.thirdeye.balanced = 澄んだ思考、直感への信頼、豊かな想像力。
+chakra.thirdeye.imbalanced = 混乱、考えすぎ、集中力の低下、内なる導きから切り離された感覚。
+chakra.thirdeye.practice = 瞑想し、イメージを描き、夢日記をつけ、片鼻呼吸を行い、OM を唱えましょう。
+chakra.thirdeye.seeds:
+- 私は自分の直感を信頼します。
+- 私は表面の奥まではっきりと見通します。
+- 内なる知恵が私を導きます。
+- 私は洞察とビジョンに心を開いています。
+- 私の心は穏やかで澄んでいます。
+- 私は内なる目が示すものを信頼します。
+
+chakra.crown.name = クラウン
+chakra.crown.sanskrit = Sahasrara
+chakra.crown.core = 私は知る
+chakra.crown.location = 頭頂
+chakra.crown.element = 思考と純粋な意識
+chakra.crown.bija = 沈黙（または OM）
+chakra.crown.theme = 霊性、つながり、平和、知恵
+chakra.crown.balanced = 内なる平和、生きる意味の感覚、神聖なものとのつながり。
+chakra.crown.imbalanced = 迷っている感覚、冷笑的な気持ち、霊的な断絶。
+chakra.crown.practice = 静かに瞑想し、祈り、感謝を実践し、静けさの中で休みましょう。
+chakra.crown.seeds:
+- 私は神聖な存在です。
+- 私は無限の源とつながっています。
+- 私は宇宙とひとつです。
+- 神聖な光が私の中を流れています。
+- 私は人生の知恵を信頼します。
+- 私はあるがままのすべてと調和しています。

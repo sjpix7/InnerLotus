@@ -1,0 +1,244 @@
+hoopono.opening = Créateur Divin, je prends l'entière responsabilité de tout ce que je vis en ce moment.
+hoopono.p1 = Je suis {désolé|désolée}.
+hoopono.p2 = Pardonne-moi.
+hoopono.p3 = Merci.
+hoopono.p4 = Je t'aime.
+hoopono.closing = Je remets ces mémoires au Divin pour qu'elles soient nettoyées, guéries et libérées. Que la paix soit avec moi.
+hoopono.default_name = Être cher
+
+hoopono.topic.self.name = Moi-même
+hoopono.topic.self.intro = Je me place dans mon cœur, tel{|le} que je suis.
+hoopono.topic.self.focus = Je prends la responsabilité de chaque mémoire en moi qui a créé l'autocritique, le doute ou la douleur.
+hoopono.topic.partner.name = Mon partenaire
+hoopono.topic.partner.intro = Je place mon partenaire et notre relation dans mon cœur.
+hoopono.topic.partner.focus = Je prends la responsabilité de chaque mémoire en moi qui crée de la distance, de la blessure ou du conflit entre nous.
+hoopono.topic.parents.name = Mes parents
+hoopono.topic.parents.intro = Je place ma mère et mon père dans mon cœur.
+hoopono.topic.parents.focus = Je prends la responsabilité de chaque mémoire en moi qui porte une ancienne douleur familiale.
+hoopono.topic.children.name = Mes enfants
+hoopono.topic.children.intro = Je place mes enfants dans mon cœur avec tendresse.
+hoopono.topic.children.focus = Je prends la responsabilité de chaque mémoire en moi qui crée de l'inquiétude, de l'impatience ou de la distance avec mes enfants.
+hoopono.topic.friend.name = Une amitié
+hoopono.topic.friend.intro = Je place cette amitié dans mon cœur.
+hoopono.topic.friend.focus = Je prends la responsabilité de chaque mémoire en moi qui a créé un malentendu entre nous.
+hoopono.topic.work.name = Travail et carrière
+hoopono.topic.work.intro = Je place mon travail, mes collègues et ma carrière dans mon cœur.
+hoopono.topic.work.focus = Je prends la responsabilité de chaque mémoire en moi qui crée du stress, du conflit ou de la stagnation au travail.
+hoopono.topic.money.name = Argent et abondance
+hoopono.topic.money.intro = Je place ma relation à l'argent dans mon cœur.
+hoopono.topic.money.focus = Je prends la responsabilité de chaque mémoire en moi qui porte la peur, le manque ou les dettes.
+hoopono.topic.health.name = Santé et guérison
+hoopono.topic.health.intro = Je place ma santé et la guérison de mon corps dans mon cœur.
+hoopono.topic.health.focus = Je prends la responsabilité de chaque mémoire en moi qui s'exprime en maladie ou en douleur.
+hoopono.topic.body.name = Mon corps
+hoopono.topic.body.intro = Je place mon corps dans mon cœur avec gratitude.
+hoopono.topic.body.focus = Je prends la responsabilité de chaque mémoire en moi qui juge, rejette ou néglige mon corps.
+hoopono.topic.home.name = Ma maison
+hoopono.topic.home.intro = Je place ma maison et tous ceux qui y vivent dans mon cœur.
+hoopono.topic.home.focus = Je prends la responsabilité de chaque mémoire en moi qui trouble la paix de cette maison.
+hoopono.topic.past.name = Le passé
+hoopono.topic.past.intro = Je place mon passé, et tout ce que j'en porte encore, dans mon cœur.
+hoopono.topic.past.focus = Je prends la responsabilité de chaque mémoire en moi qui garde vivantes d'anciennes blessures.
+hoopono.topic.ancestors.name = Ancêtres
+hoopono.topic.ancestors.intro = Je place mes ancêtres et toute ma lignée dans mon cœur.
+hoopono.topic.ancestors.focus = Je prends la responsabilité de chaque mémoire transmise qui porte de la douleur ou des limites.
+hoopono.topic.earth.name = Terre Mère
+hoopono.topic.earth.intro = Je place la Terre Mère et tous les êtres vivants dans mon cœur.
+hoopono.topic.earth.focus = Je prends la responsabilité de chaque mémoire en moi qui contribue aux souffrances de ce monde.
+hoopono.topic.anxiety.name = Peur et anxiété
+hoopono.topic.anxiety.intro = Je place mes peurs et mes angoisses dans mon cœur.
+hoopono.topic.anxiety.focus = Je prends la responsabilité de chaque mémoire en moi qui se manifeste sous forme de peur.
+hoopono.topic.person.name = Une personne précise
+hoopono.topic.person.intro = {name}, je te place dans mon cœur.
+hoopono.topic.person.focus = Je prends la responsabilité de chaque mémoire en moi qui a créé de la douleur entre nous.
+
+journal.prompts:
+- Pour quoi suis-je {reconnaissant|reconnaissante} aujourd'hui ?
+- Qu'est-ce qui pèse sur mon esprit en ce moment ?
+- Qu'est-ce qui m'a fait sourire aujourd'hui ?
+- Comment est-ce que je me sens vraiment, et où le ressens-je dans mon corps ?
+- Que dirais-je à la personne que j'étais enfant ?
+- De quoi ai-je besoin davantage dans ma vie, et de quoi moins ?
+- Qu'est-ce que je peux laisser partir aujourd'hui ?
+- Décris un moment d'aujourd'hui où je me suis {senti|sentie} en paix.
+- Quelle peur suis-je {prêt|prête} à affronter ?
+- Qu'ai-je appris sur moi cette semaine ?
+- Qui m'inspire, et pourquoi ?
+- À quoi ressemble ma journée idéale ?
+- Quelles limites dois-je poser ?
+- De quoi suis-je {fier|fière} ?
+- Qu'est-ce que mon cœur essaie de me dire ?
+- Écris une lettre à quelqu'un à qui j'ai besoin de pardonner.
+- Quelles sont trois choses que j'aime chez moi ?
+- Qu'est-ce qui me vide de mon énergie, et qu'est-ce qui la restaure ?
+- Que ferais-je si je savais que je ne pouvais pas échouer ?
+- À quoi ressemble l'amour de soi pour moi aujourd'hui ?
+- Quel chakra semble déséquilibré aujourd'hui, et pourquoi ?
+- Quelle histoire est-ce que je me raconte qui n'est peut-être pas vraie ?
+- Quand me suis-je {senti|sentie} pleinement {vivant|vivante} pour la dernière fois ?
+- Que veux-je manifester ce mois-ci ?
+- Quelles émotions ai-je évitées aujourd'hui ?
+- Comment puis-je être plus {doux|douce} avec moi demain ?
+- Quelle petite victoire puis-je célébrer aujourd'hui ?
+- Qu'est-ce qu'une difficulté actuelle m'apprend ?
+- Si mon moi futur m'écrivait un mot, que dirait-il ?
+- Quelle intention est-ce que je pose pour demain ?
+
+journal.mood.joyful = {Joyeux|Joyeuse}
+journal.mood.calm = Calme
+journal.mood.okay = Ça va
+journal.mood.sad = Triste
+journal.mood.anxious = {Anxieux|Anxieuse}
+journal.mood.angry = En colère
+
+habit.defaults:
+- Méditer
+- Boire 8 verres d'eau
+- Faire du sport
+- Lire 10 pages
+- Écrire dans mon journal
+- Dire mes affirmations
+- Pratiquer la gratitude
+- Marcher dehors
+- Au lit avant 23 h
+- Me lever tôt
+- Manger des fruits et des légumes
+- Pas de sucre ajouté
+- Une heure sans écrans
+- Yoga
+- Respiration consciente
+- Tapping EFT
+- Guérison par le son
+- Prière
+- Ne pas fumer
+- Appeler un proche
+
+sound.freq.f174.name = 174 Hz · Fondation
+sound.freq.f174.desc = La plus grave des fréquences Solfège. Traditionnellement utilisée pour apaiser les tensions et apporter un sentiment de sécurité et d'ancrage.
+sound.freq.f285.name = 285 Hz · Renouveau
+sound.freq.f285.desc = Associée à la régénération du corps et à un sentiment de renouveau.
+sound.freq.f396.name = 396 Hz · Racine
+sound.freq.f396.desc = Liée au chakra racine. Traditionnellement utilisée pour libérer la peur et la culpabilité.
+sound.freq.f417.name = 417 Hz · Sacré
+sound.freq.f417.desc = Liée au chakra sacré. Associée au nettoyage des anciens schémas et à l'accueil du changement.
+sound.freq.f432.name = 432 Hz · Accord naturel
+sound.freq.f432.desc = Un accord alternatif que beaucoup trouvent plus chaleureux et apaisant. Une petite étude de 2019 a relevé un rythme cardiaque un peu plus bas qu'avec 440 Hz.
+sound.freq.f528.name = 528 Hz · Amour
+sound.freq.f528.desc = Liée au plexus solaire et appelée « fréquence de l'amour ». Une petite étude de 2018 a observé des marqueurs de stress plus bas après l'écoute.
+sound.freq.f639.name = 639 Hz · Cœur
+sound.freq.f639.desc = Liée au chakra du cœur. Associée à l'harmonie dans les relations et au lien.
+sound.freq.f741.name = 741 Hz · Gorge
+sound.freq.f741.desc = Liée au chakra de la gorge. Associée à la clarté, à l'expression et à la résolution de problèmes.
+sound.freq.f852.name = 852 Hz · Troisième œil
+sound.freq.f852.desc = Liée au troisième œil. Associée à l'intuition et au retour à l'équilibre intérieur.
+sound.freq.f963.name = 963 Hz · Couronne
+sound.freq.f963.desc = Liée au chakra couronne. Associée au lien spirituel et à l'unité.
+sound.freq.om.name = 136,1 Hz · OM
+sound.freq.om.desc = Le ton « OM » ou de l'année terrestre, utilisé pour accorder tanpuras et bols de méditation.
+sound.freq.schumann.name = 7,83 Hz · Schumann (binaural)
+sound.freq.schumann.desc = La résonance naturelle de l'atmosphère terrestre, sous forme de doux battement binaural. Ancrant et apaisant. Utilisez un casque.
+sound.freq.delta.name = Delta 2 Hz (binaural)
+sound.freq.delta.desc = Les ondes cérébrales du sommeil profond. Pour se détendre avant de dormir. Utilisez un casque.
+sound.freq.theta.name = Thêta 6 Hz (binaural)
+sound.freq.theta.desc = La gamme de la méditation et de la relaxation profonde, liée à la créativité et à la rêverie. Utilisez un casque.
+sound.freq.alpha.name = Alpha 10 Hz (binaural)
+sound.freq.alpha.desc = L'état détendu et éveillé. Pour soulager le stress, méditer légèrement et se concentrer sereinement. Utilisez un casque.
+sound.freq.beta.name = Bêta 18 Hz (binaural)
+sound.freq.beta.desc = La gamme de la pensée active. Pour étudier et rester alerte. Utilisez un casque.
+sound.freq.gamma.name = Gamma 40 Hz (binaural)
+sound.freq.gamma.desc = Une gamme de forte concentration étudiée pour la mémoire et la santé du cerveau. Utilisez un casque.
+
+sound.lib.rain.name = Pluie
+sound.lib.rain.desc = Une pluie douce et régulière.
+sound.lib.thunder.name = Orage
+sound.lib.thunder.desc = Un tonnerre lointain sur une pluie douce.
+sound.lib.ocean.name = Vagues
+sound.lib.ocean.desc = Des vagues lentes qui viennent mourir sur le rivage.
+sound.lib.stream.name = Ruisseau
+sound.lib.stream.desc = Un ruisseau qui murmure entre les pierres.
+sound.lib.wind.name = Vent
+sound.lib.wind.desc = Le vent qui balaie les collines.
+sound.lib.fire.name = Feu de camp
+sound.lib.fire.desc = Un feu chaleureux qui crépite.
+sound.lib.birds.name = Chants d'oiseaux
+sound.lib.birds.desc = Des oiseaux qui chantent dans les arbres au matin.
+sound.lib.crickets.name = Nuit d'été
+sound.lib.crickets.desc = Des grillons qui chantent par une nuit chaude.
+sound.lib.flute.name = Flûte de bambou
+sound.lib.flute.desc = Une douce flûte de style bansuri qui improvise une mélodie apaisante.
+sound.lib.bamboo.name = Carillon de bambou
+sound.lib.bamboo.desc = Des tubes de bambou creux qui s'entrechoquent doucement dans la brise.
+sound.lib.chimes.name = Carillon à vent
+sound.lib.chimes.desc = Des tubes métalliques lumineux dans une brise légère.
+sound.lib.bell.name = Cloche de temple
+sound.lib.bell.desc = Une cloche de temple grave à la longue résonance.
+sound.lib.bowl.name = Bol chantant
+sound.lib.bowl.desc = Un bol himalayen, frappé puis chantant.
+sound.lib.crystal.name = Bol de cristal
+sound.lib.crystal.desc = Le son pur et tenu d'un bol de cristal.
+sound.lib.tanpura.name = Bourdon de tanpura
+sound.lib.tanpura.desc = Le bourdon classique indien, Pa et Sa.
+sound.lib.kalimba.name = Kalimba
+sound.lib.kalimba.desc = De douces notes pincées de kalimba.
+sound.lib.om.name = Bourdon OM
+sound.lib.om.desc = Un OM grave et résonnant.
+sound.lib.drum.name = Tambour sur cadre
+sound.lib.drum.desc = Un battement de tambour lent et ancrant.
+sound.lib.heartbeat.name = Battements de cœur
+sound.lib.heartbeat.desc = Un cœur calme et régulier.
+sound.lib.white.name = Bruit blanc
+sound.lib.white.desc = Un bruit uniforme sur tout le spectre qui masque les distractions.
+sound.lib.pink.name = Bruit rose
+sound.lib.pink.desc = Un bruit plus doux et équilibré, comme une pluie régulière.
+sound.lib.brown.name = Bruit brun
+sound.lib.brown.desc = Un bruit grave et profond, comme une cascade lointaine.
+
+breath.box.name = Respiration carrée
+breath.box.desc = Inspirez 4, retenez 4, expirez 4, retenez 4. Utilisée par les sportifs et les secouristes pour rester calmes et concentrés.
+breath.478.name = Respiration 4-7-8
+breath.478.desc = Inspirez 4, retenez 7, expirez 8. Une respiration très relaxante, idéale avant de dormir.
+breath.coherent.name = Cohérence cardiaque
+breath.coherent.desc = Environ six respirations lentes par minute. Équilibre le système nerveux et augmente la variabilité cardiaque.
+breath.sigh.name = Soupir cyclique
+breath.sigh.desc = Une inspiration profonde, une courte inspiration complémentaire, puis une longue expiration lente. Une étude de Stanford de 2023 a montré qu'il améliore l'humeur.
+breath.nadi.name = Nadi Shodhana
+breath.nadi.desc = La respiration alternée du yoga. Fermez une narine avec le pouce ou l'annulaire et alternez. Apaise et équilibre l'esprit.
+breath.bhramari.name = Bhramari · Respiration de l'abeille
+breath.bhramari.desc = Inspirez, puis expirez lentement en bourdonnant comme une abeille. La douce vibration apaise l'esprit.
+breath.calm.name = Respiration apaisante
+breath.calm.desc = Inspirez 4, expirez 6. Une expiration plus longue active votre réponse de relaxation.
+breath.cue.inhale = Inspirez
+breath.cue.hold = Retenez
+breath.cue.exhale = Expirez
+breath.cue.topup = Encore un peu d'air
+breath.cue.hum = Bourdonnez
+breath.cue.in_left = Inspirez par la narine gauche
+breath.cue.out_right = Expirez par la narine droite
+breath.cue.in_right = Inspirez par la narine droite
+breath.cue.out_left = Expirez par la narine gauche
+
+sos.intro = En ce moment, vous êtes en sécurité. Ralentissons ensemble.
+sos.breathe = Suivez le cercle : inspirez sur 4, expirez sur 6.
+sos.ground.title = Ancrage 5-4-3-2-1
+sos.ground:
+- Nommez cinq choses que vous voyez.
+- Remarquez quatre choses que vous sentez ou touchez.
+- Écoutez trois choses que vous entendez.
+- Trouvez deux choses que vous sentez par l'odorat.
+- Remarquez une chose que vous goûtez.
+sos.heart = Posez une main sur votre cœur et dites : je suis en sécurité. Ce sentiment va passer.
+sos.crisis = Si vous êtes en danger ou pensez à vous faire du mal, contactez immédiatement le numéro d'urgence local ou une ligne d'écoute. En Inde, Tele-MANAS est gratuit et disponible 24 h/24 au 14416. Ailleurs, findahelpline.com recense les lignes d'écoute gratuites de votre pays.
+
+legal.disclaimer = Inner Lotus est une application de bien-être et de soin de soi. Elle ne fournit aucun conseil médical, psychologique ou financier et ne remplace pas un accompagnement professionnel. En cas de crise, contactez les services d'urgence de votre région.
+legal.privacy <<
+Vos données restent avec vous.
+
+Inner Lotus fonctionne entièrement hors ligne. Pas de serveurs, pas de comptes, pas de publicité ni de statistiques. Vos journaux, habitudes, affirmations, mélanges et réglages sont enregistrés uniquement dans l'application, sur cet appareil.
+
+Rien n'est envoyé ni partagé, sauf si vous choisissez vous-même d'exporter un fichier ou de partager une carte.
+
+Les données d'utilisation des applis du suivi d'habitudes sont lues dans les statistiques d'Android uniquement après votre autorisation, et ne sont jamais stockées hors de l'application ni envoyées nulle part.
+
+Désinstaller l'application supprime vos données : exportez une sauvegarde avant si vous souhaitez les conserver.
+>>
+mantramala.text = Pour chanter des mantras et faire le japa avec un compteur de 108 perles, essayez notre application Mantra Mala.

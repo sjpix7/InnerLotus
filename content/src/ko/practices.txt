@@ -1,0 +1,246 @@
+# 호오포노포노, 일기, 습관, 사운드 힐링, 호흡 수련, 지금 진정하기(SOS), 법적 고지.
+
+hoopono.opening = 신성한 창조주시여, 나는 지금 겪고 있는 모든 일에 온전히 책임을 집니다.
+hoopono.p1 = 미안합니다.
+hoopono.p2 = 용서해 주세요.
+hoopono.p3 = 고맙습니다.
+hoopono.p4 = 사랑합니다.
+hoopono.closing = 나는 이 기억들을 신성한 존재에게 맡겨, 정화되고 치유되고 자유로워지기를 바랍니다. 내게 평화가 함께하기를.
+hoopono.default_name = 소중한 당신
+
+hoopono.topic.self.name = 나 자신
+hoopono.topic.self.intro = 나는 있는 그대로의 나를 내 마음에 품습니다.
+hoopono.topic.self.focus = 자기 비난, 의심, 아픔을 만든 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.partner.name = 나의 연인
+hoopono.topic.partner.intro = 나는 나의 연인과 우리의 관계를 내 마음에 품습니다.
+hoopono.topic.partner.focus = 우리 사이에 거리, 상처, 갈등을 만드는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.parents.name = 나의 부모님
+hoopono.topic.parents.intro = 나는 어머니와 아버지를 내 마음에 품습니다.
+hoopono.topic.parents.focus = 오래된 가족의 아픔을 지니고 있는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.children.name = 나의 아이들
+hoopono.topic.children.intro = 나는 다정한 마음으로 아이들을 내 마음에 품습니다.
+hoopono.topic.children.focus = 아이들과의 사이에 걱정, 조급함, 거리를 만드는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.friend.name = 한 우정
+hoopono.topic.friend.intro = 나는 이 우정을 내 마음에 품습니다.
+hoopono.topic.friend.focus = 우리 사이에 오해를 만든 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.work.name = 일과 커리어
+hoopono.topic.work.intro = 나는 나의 일과 동료와 커리어를 내 마음에 품습니다.
+hoopono.topic.work.focus = 일터에서 스트레스, 갈등, 정체를 만드는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.money.name = 돈과 풍요
+hoopono.topic.money.intro = 나는 돈과 나의 관계를 내 마음에 품습니다.
+hoopono.topic.money.focus = 두려움, 결핍, 빚을 지니고 있는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.health.name = 건강과 치유
+hoopono.topic.health.intro = 나는 나의 건강과 몸의 치유를 내 마음에 품습니다.
+hoopono.topic.health.focus = 병이나 통증으로 드러나는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.body.name = 나의 몸
+hoopono.topic.body.intro = 나는 감사하는 마음으로 내 몸을 내 마음에 품습니다.
+hoopono.topic.body.focus = 내 몸을 판단하고, 거부하고, 소홀히 하는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.home.name = 나의 집
+hoopono.topic.home.intro = 나는 우리 집과 그곳에 사는 모든 이를 내 마음에 품습니다.
+hoopono.topic.home.focus = 이 집의 평화를 흔드는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.past.name = 과거
+hoopono.topic.past.intro = 나는 나의 과거와, 지금도 그곳에서 지고 있는 모든 것을 내 마음에 품습니다.
+hoopono.topic.past.focus = 오래된 상처를 계속 살아 있게 하는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.ancestors.name = 조상
+hoopono.topic.ancestors.intro = 나는 조상들과 우리 가문의 모든 핏줄을 내 마음에 품습니다.
+hoopono.topic.ancestors.focus = 아픔이나 한계를 지닌 채 나에게 전해진 모든 기억에 책임을 집니다.
+hoopono.topic.earth.name = 어머니 지구
+hoopono.topic.earth.intro = 나는 어머니 지구와 모든 생명을 내 마음에 품습니다.
+hoopono.topic.earth.focus = 이 세상의 아픔을 더하는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.anxiety.name = 두려움과 불안
+hoopono.topic.anxiety.intro = 나는 나의 두려움과 불안을 내 마음에 품습니다.
+hoopono.topic.anxiety.focus = 두려움으로 드러나고 있는 내 안의 모든 기억에 책임을 집니다.
+hoopono.topic.person.name = 특정한 사람
+hoopono.topic.person.intro = {name} 님, 나는 당신을 내 마음에 품습니다.
+hoopono.topic.person.focus = 우리 사이에 아픔을 만든 내 안의 모든 기억에 책임을 집니다.
+
+journal.prompts:
+- 오늘 나는 무엇에 감사한가요?
+- 지금 내 마음을 무겁게 하는 것은 무엇인가요?
+- 오늘 나를 웃게 한 것은 무엇인가요?
+- 나는 지금 정말 어떤 기분이고, 몸의 어디에서 그것을 느끼나요?
+- 어린 시절의 나에게 무슨 말을 해 주고 싶나요?
+- 내 삶에 더 필요한 것과 덜 필요한 것은 무엇인가요?
+- 오늘 내려놓을 수 있는 한 가지는 무엇인가요?
+- 오늘 평화로움을 느꼈던 순간을 적어 보세요.
+- 마주할 준비가 된 두려움은 무엇인가요?
+- 이번 주에 나에 대해 무엇을 알게 되었나요?
+- 누가 나에게 영감을 주나요? 그 이유는요?
+- 나의 이상적인 하루는 어떤 모습인가요?
+- 나는 어떤 경계를 세워야 할까요?
+- 나는 나의 어떤 점이 자랑스럽나요?
+- 내 마음은 나에게 무엇을 말하려 하나요?
+- 용서해야 할 사람에게 편지를 써 보세요.
+- 내가 좋아하는 나의 세 가지 모습은 무엇인가요?
+- 무엇이 내 에너지를 빼앗고, 무엇이 다시 채워 주나요?
+- 절대 실패하지 않는다면 나는 무엇을 할까요?
+- 오늘 나에게 자기 사랑이란 어떤 모습인가요?
+- 오늘 균형이 깨진 듯한 차크라는 무엇이고, 왜 그런가요?
+- 내가 나에게 들려주는 이야기 중 사실이 아닐 수도 있는 것은 무엇인가요?
+- 마지막으로 정말 살아 있다고 느낀 때는 언제인가요?
+- 이번 달에 무엇을 이루고 싶나요?
+- 오늘 어떤 감정을 피했나요?
+- 내일 나는 어떻게 나에게 더 다정할 수 있을까요?
+- 오늘 축하할 수 있는 작은 성공은 무엇인가요?
+- 지금의 어려움은 나에게 무엇을 가르쳐 주고 있나요?
+- 미래의 내가 쪽지를 써 준다면 뭐라고 적혀 있을까요?
+- 내일을 위해 세우는 한 가지 의도는 무엇인가요?
+
+journal.mood.joyful = 기쁨
+journal.mood.calm = 평온
+journal.mood.okay = 그럭저럭
+journal.mood.sad = 슬픔
+journal.mood.anxious = 불안
+journal.mood.angry = 화남
+
+habit.defaults:
+- 명상
+- 물 8잔 마시기
+- 운동
+- 책 10쪽 읽기
+- 일기 쓰기
+- 확언 말하기
+- 감사 연습
+- 바깥 산책
+- 밤 11시 전에 잠자리에 들기
+- 일찍 일어나기
+- 과일과 채소 먹기
+- 설탕 추가하지 않기
+- 1시간 화면 끄기
+- 요가
+- 호흡 수련
+- EFT 태핑
+- 사운드 힐링
+- 기도
+- 금연
+- 사랑하는 사람에게 전화하기
+
+sound.freq.f174.name = 174 Hz · 토대
+sound.freq.f174.desc = 가장 낮은 솔페지오 음. 전통적으로 긴장을 풀고 안전함과 그라운딩의 느낌을 주는 데 쓰입니다.
+sound.freq.f285.name = 285 Hz · 새로움
+sound.freq.f285.desc = 몸의 회복과 새로워지는 느낌과 연관됩니다.
+sound.freq.f396.name = 396 Hz · 뿌리
+sound.freq.f396.desc = 뿌리 차크라와 연결됩니다. 전통적으로 두려움과 죄책감을 내려놓는 데 쓰입니다.
+sound.freq.f417.name = 417 Hz · 천골
+sound.freq.f417.desc = 천골 차크라와 연결됩니다. 오래된 패턴을 정리하고 변화를 맞이하는 것과 연관됩니다.
+sound.freq.f432.name = 432 Hz · 자연 조율
+sound.freq.f432.desc = 많은 사람이 더 따뜻하고 편안하게 느끼는 또 하나의 음악 조율입니다. 2019년의 소규모 연구에서는 440Hz보다 심박수가 약간 낮았습니다.
+sound.freq.f528.name = 528 Hz · 사랑
+sound.freq.f528.desc = 태양신경총과 연결되며 "사랑의 주파수"라 불립니다. 2018년의 소규모 연구는 청취 후 스트레스 지표가 낮아졌다고 보고했습니다.
+sound.freq.f639.name = 639 Hz · 가슴
+sound.freq.f639.desc = 가슴 차크라와 연결됩니다. 관계의 조화와 연결과 연관됩니다.
+sound.freq.f741.name = 741 Hz · 목
+sound.freq.f741.desc = 목 차크라와 연결됩니다. 명료함, 표현, 문제 해결과 연관됩니다.
+sound.freq.f852.name = 852 Hz · 제3의 눈
+sound.freq.f852.desc = 제3의 눈과 연결됩니다. 직관과 내면의 균형으로 돌아가는 것과 연관됩니다.
+sound.freq.f963.name = 963 Hz · 정수리
+sound.freq.f963.desc = 정수리 차크라와 연결됩니다. 영적인 연결과 하나 됨과 연관됩니다.
+sound.freq.om.name = 136.1 Hz · 옴
+sound.freq.om.desc = "옴" 또는 지구의 공전 주기 음으로, 명상용 탄푸라와 싱잉볼을 조율하는 데 쓰입니다.
+sound.freq.schumann.name = 7.83 Hz · 슈만 공명(바이노럴)
+sound.freq.schumann.desc = 지구 대기의 자연 공명을 부드러운 바이노럴 비트로 들려줍니다. 그라운딩과 진정에 좋습니다. 헤드폰을 사용하세요.
+sound.freq.delta.name = 델타 2 Hz(바이노럴)
+sound.freq.delta.desc = 깊은 잠의 뇌파 영역. 잠들기 전 긴장을 풀 때 좋습니다. 헤드폰을 사용하세요.
+sound.freq.theta.name = 세타 6 Hz(바이노럴)
+sound.freq.theta.desc = 명상과 깊은 이완의 영역으로, 창의성과 몽환적인 느낌과 연결됩니다. 헤드폰을 사용하세요.
+sound.freq.alpha.name = 알파 10 Hz(바이노럴)
+sound.freq.alpha.desc = 편안하면서도 깨어 있는 영역. 스트레스 해소, 가벼운 명상, 차분한 집중에 좋습니다. 헤드폰을 사용하세요.
+sound.freq.beta.name = 베타 18 Hz(바이노럴)
+sound.freq.beta.desc = 활발한 사고의 영역. 공부와 각성에 좋습니다. 헤드폰을 사용하세요.
+sound.freq.gamma.name = 감마 40 Hz(바이노럴)
+sound.freq.gamma.desc = 기억력과 뇌 건강을 위해 연구되고 있는 고집중 영역. 헤드폰을 사용하세요.
+
+sound.lib.rain.name = 빗소리
+sound.lib.rain.desc = 부드럽고 꾸준한 비.
+sound.lib.thunder.name = 뇌우
+sound.lib.thunder.desc = 잔잔한 비 너머로 멀리 울리는 천둥.
+sound.lib.ocean.name = 파도
+sound.lib.ocean.desc = 천천히 해변에 밀려오는 파도.
+sound.lib.stream.name = 숲속 시냇물
+sound.lib.stream.desc = 돌 위를 졸졸 흐르는 시냇물.
+sound.lib.wind.name = 바람
+sound.lib.wind.desc = 탁 트인 언덕을 스치는 바람.
+sound.lib.fire.name = 모닥불
+sound.lib.fire.desc = 따뜻하게 타닥거리는 불.
+sound.lib.birds.name = 새소리
+sound.lib.birds.desc = 아침 숲에서 지저귀는 새들.
+sound.lib.crickets.name = 여름밤
+sound.lib.crickets.desc = 따뜻한 밤에 우는 귀뚜라미.
+sound.lib.flute.name = 대나무 피리
+sound.lib.flute.desc = 반수리 스타일의 피리가 들려주는 잔잔한 즉흥 선율.
+sound.lib.bamboo.name = 대나무 풍경
+sound.lib.bamboo.desc = 산들바람에 부드럽게 부딪히는 빈 대나무 풍경.
+sound.lib.chimes.name = 윈드차임
+sound.lib.chimes.desc = 부드러운 바람에 울리는 맑은 금속 차임.
+sound.lib.bell.name = 산사의 종
+sound.lib.bell.desc = 길고 은은한 여운을 남기는 깊은 종소리.
+sound.lib.bowl.name = 싱잉볼
+sound.lib.bowl.desc = 울리고 노래하는 히말라야 싱잉볼.
+sound.lib.crystal.name = 크리스털 볼
+sound.lib.crystal.desc = 크리스털 볼의 맑고 길게 이어지는 소리.
+sound.lib.tanpura.name = 탄푸라 드론
+sound.lib.tanpura.desc = 인도 고전 음악의 Pa와 Sa 드론.
+sound.lib.kalimba.name = 칼림바
+sound.lib.kalimba.desc = 부드럽게 튕기는 칼림바 소리.
+sound.lib.om.name = 옴 드론
+sound.lib.om.desc = 낮고 울림 있는 옴 소리.
+sound.lib.drum.name = 프레임 드럼
+sound.lib.drum.desc = 느리고 안정감 있는 프레임 드럼 박자.
+sound.lib.heartbeat.name = 심장 박동
+sound.lib.heartbeat.desc = 차분하고 일정한 심장 박동.
+sound.lib.white.name = 화이트 노이즈
+sound.lib.white.desc = 방해되는 소리를 덮어 주는 고른 전 대역 소음.
+sound.lib.pink.name = 핑크 노이즈
+sound.lib.pink.desc = 꾸준히 내리는 비처럼 부드럽고 균형 잡힌 소음.
+sound.lib.brown.name = 브라운 노이즈
+sound.lib.brown.desc = 멀리 있는 폭포처럼 깊고 낮게 울리는 소음.
+
+breath.box.name = 박스 호흡
+breath.box.desc = 4초 들이쉬고, 4초 멈추고, 4초 내쉬고, 4초 멈춥니다. 운동선수와 응급 구조대원이 침착함과 집중을 유지하기 위해 씁니다.
+breath.478.name = 4-7-8 호흡
+breath.478.desc = 4초 들이쉬고, 7초 멈추고, 8초 내쉽니다. 깊이 이완되는 호흡으로 잠들기 전에 좋습니다.
+breath.coherent.name = 코히어런트 호흡
+breath.coherent.desc = 1분에 약 여섯 번의 느린 호흡. 신경계의 균형을 잡고 심박 변이도를 높입니다.
+breath.sigh.name = 주기적 한숨
+breath.sigh.desc = 깊이 들이쉬고, 짧게 한 번 더 들이쉰 뒤, 길고 천천히 내쉽니다. 2023년 스탠퍼드 연구에서 기분을 좋게 하는 것으로 나타났습니다.
+breath.nadi.name = 나디 쇼다나
+breath.nadi.desc = 요가의 교호 호흡. 엄지나 약지로 한쪽 콧구멍을 막고 번갈아 바꿉니다. 마음을 진정시키고 균형을 잡아 줍니다.
+breath.bhramari.name = 브라마리 · 벌 호흡
+breath.bhramari.desc = 숨을 들이쉰 뒤, 벌처럼 허밍하며 천천히 내쉽니다. 부드러운 진동이 마음을 달래 줍니다.
+breath.calm.name = 진정 호흡
+breath.calm.desc = 4초 들이쉬고 6초 내쉽니다. 더 긴 날숨이 이완 반응을 깨웁니다.
+breath.cue.inhale = 들이쉬세요
+breath.cue.hold = 멈추세요
+breath.cue.exhale = 내쉬세요
+breath.cue.topup = 조금 더 들이쉬세요
+breath.cue.hum = 허밍하세요
+breath.cue.in_left = 왼쪽 콧구멍으로 들이쉬세요
+breath.cue.out_right = 오른쪽 콧구멍으로 내쉬세요
+breath.cue.in_right = 오른쪽 콧구멍으로 들이쉬세요
+breath.cue.out_left = 왼쪽 콧구멍으로 내쉬세요
+
+sos.intro = 당신은 지금 안전합니다. 함께 천천히 해 봐요.
+sos.breathe = 원을 따라 4초 들이쉬고 6초 내쉬세요.
+sos.ground.title = 5-4-3-2-1 그라운딩
+sos.ground:
+- 보이는 것 다섯 가지를 말해 보세요.
+- 느끼거나 만질 수 있는 것 네 가지를 알아차려 보세요.
+- 들리는 소리 세 가지에 귀 기울여 보세요.
+- 냄새 맡을 수 있는 것 두 가지를 찾아보세요.
+- 맛볼 수 있는 것 한 가지를 알아차려 보세요.
+sos.heart = 가슴에 손을 얹고 말해 보세요. 나는 안전하다. 이 감정은 지나간다.
+sos.crisis = 위험한 상황이거나 스스로를 해칠 생각이 든다면 즉시 지역 응급 번호나 위기 상담 전화에 연락하세요. 인도에서는 Tele-MANAS(14416)가 무료로 24시간 운영됩니다. 그 밖의 지역은 findahelpline.com에서 해당 국가의 무료 상담 전화를 찾을 수 있습니다.
+
+legal.disclaimer = Inner Lotus는 자기 돌봄과 웰니스를 위한 동반자 앱입니다. 의료, 심리, 재정 조언을 제공하지 않으며 전문적인 돌봄을 대신하지 않습니다. 위기 상황이라면 지역 응급 서비스에 연락하세요.
+legal.privacy <<
+당신의 데이터는 당신 곁에 머뭅니다.
+
+Inner Lotus는 완전히 오프라인으로 작동합니다. 서버도, 계정도, 광고도, 분석도 없습니다. 일기, 습관, 확언, 믹스, 설정은 이 기기의 앱 안에만 저장됩니다.
+
+직접 파일을 내보내거나 카드를 공유하지 않는 한, 아무것도 업로드되거나 공유되지 않습니다.
+
+습관 트래커의 앱 사용 정보는 접근을 허용한 뒤에만 Android 자체의 사용 통계에서 읽어 오며, 앱 밖에 저장되거나 어디로도 전송되지 않습니다.
+
+앱을 삭제하면 데이터도 삭제되니, 보관하고 싶다면 먼저 백업을 내보내세요.
+>>
+mantramala.text = 108알 카운터로 만트라 염송과 자파를 하려면 Mantra Mala 앱을 사용해 보세요.

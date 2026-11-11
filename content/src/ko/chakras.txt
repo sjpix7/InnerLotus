@@ -1,0 +1,127 @@
+# 일곱 차크라, 뿌리에서 정수리까지. seeds[0]은 포스터의 기본 확언.
+
+chakra.root.name = 뿌리
+chakra.root.sanskrit = Muladhara
+chakra.root.core = 나는 존재한다
+chakra.root.location = 척추의 맨 아래
+chakra.root.element = 흙
+chakra.root.bija = LAM(람)
+chakra.root.theme = 안전, 그라운딩, 안정, 소속감
+chakra.root.balanced = 몸 안에서 안전하고, 땅에 발을 딛고, 지금 여기에 있는 느낌.
+chakra.root.imbalanced = 두려움, 불안, 돈 걱정, 초조함, 단절된 느낌.
+chakra.root.practice = 맨발로 땅을 걷고, 뿌리채소를 먹고, 산 자세로 서서 LAM을 읊조리세요.
+chakra.root.seeds:
+- 나는 안전하고, 중심이 잡혀 있으며, 땅에 뿌리내리고 있다.
+- 나는 오래된 나무처럼 깊이 뿌리내리고 있다.
+- 땅은 내 모든 걸음을 받쳐 준다.
+- 나는 나의 모든 필요가 채워진다고 믿는다.
+- 나는 이 몸과 이 순간에 속해 있다.
+- 나는 흔들림 없이 굳건히 서 있다.
+
+chakra.sacral.name = 천골
+chakra.sacral.sanskrit = Svadhisthana
+chakra.sacral.core = 나는 느낀다
+chakra.sacral.location = 아랫배, 배꼽 아래
+chakra.sacral.element = 물
+chakra.sacral.bija = VAM(밤)
+chakra.sacral.theme = 감정, 창의성, 즐거움, 흐름
+chakra.sacral.balanced = 감정의 흐름, 창의성, 건강한 즐거움과 친밀감.
+chakra.sacral.imbalanced = 무감각, 죄책감, 창작의 막힘, 감정 기복.
+chakra.sacral.practice = 춤추고, 수영하고, 고관절을 여는 요가를 하고, 창의적으로 나를 표현하며 VAM을 읊조리세요.
+chakra.sacral.seeds:
+- 나는 내 감정과 연결되어 있다.
+- 내 감정은 물처럼 자유롭게 흐른다.
+- 나는 기쁨과 즐거움을 내 삶에 맞이한다.
+- 나의 창의성은 쉽게 흐른다.
+- 나는 나의 바람과 몸을 존중한다.
+- 나는 우아하게 변화를 받아들인다.
+
+chakra.solar.name = 태양신경총
+chakra.solar.sanskrit = Manipura
+chakra.solar.core = 나는 행동한다
+chakra.solar.location = 윗배, 배꼽 위
+chakra.solar.element = 불
+chakra.solar.bija = RAM(람)
+chakra.solar.theme = 의지력, 자신감, 행동, 자존감
+chakra.solar.balanced = 자신감, 동기, 분명한 결정, 건강한 경계.
+chakra.solar.imbalanced = 낮은 자존감, 미루기, 통제하려는 마음, 복부의 긴장.
+chakra.solar.practice = 코어를 강화하고, 아침 햇살을 쬐고, 따뜻한 음식을 먹으며 RAM을 읊조리세요.
+chakra.solar.seeds:
+- 나는 힘 있고, 강하며, 자신감이 넘친다.
+- 나는 용기와 명료함으로 행동한다.
+- 내 안의 불꽃이 나의 목적에 힘을 준다.
+- 나는 쉽게 결정을 내린다.
+- 나는 나의 꿈을 이룰 자격이 있다.
+- 나는 나의 힘을 존중한다.
+
+chakra.heart.name = 가슴
+chakra.heart.sanskrit = Anahata
+chakra.heart.core = 나는 사랑한다
+chakra.heart.location = 가슴 한가운데
+chakra.heart.element = 공기
+chakra.heart.bija = YAM(얌)
+chakra.heart.theme = 사랑, 연민, 용서, 연결
+chakra.heart.balanced = 친절, 용서, 열린 마음의 연결, 자기 사랑.
+chakra.heart.imbalanced = 슬픔, 원망, 외로움, 믿기 어려움.
+chakra.heart.practice = 감사와 호오포노포노를 실천하고, 부드러운 후굴로 가슴을 열고, 자연 속에서 시간을 보내며 YAM을 읊조리세요.
+chakra.heart.seeds:
+- 나는 사랑받을 자격이 있다.
+- 내 마음은 주고받기 위해 열려 있다.
+- 나는 쉽게 나와 다른 사람을 용서한다.
+- 사랑이 내 안과 내 주위에 흐른다.
+- 나는 친절과 연민으로 나를 대한다.
+- 나는 사랑을 통해 모든 존재와 연결되어 있다.
+
+chakra.throat.name = 목
+chakra.throat.sanskrit = Vishuddha
+chakra.throat.core = 나는 말한다
+chakra.throat.location = 목과 목덜미
+chakra.throat.element = 에테르(공간)
+chakra.throat.bija = HAM(함)
+chakra.throat.theme = 소통, 진실, 자기표현
+chakra.throat.balanced = 정직하게 말하기, 잘 듣기, 창의적인 표현.
+chakra.throat.imbalanced = 말하기에 대한 두려움, 지나친 말, 목이나 턱의 긴장.
+chakra.throat.practice = 노래하고, 허밍하고, 일기를 쓰고, 다정하게 진실을 말하며 HAM을 읊조리세요.
+chakra.throat.seeds:
+- 나는 나의 진실을 듣고 말한다.
+- 내 목소리는 분명하고 다정하다.
+- 나는 자유롭고 정직하게 나를 표현한다.
+- 나는 깊이 듣고 지혜롭게 말한다.
+- 나의 말은 아름다움과 평화를 만든다.
+- 내 목소리가 들리는 것은 안전하다.
+
+chakra.thirdeye.name = 제3의 눈
+chakra.thirdeye.sanskrit = Ajna
+chakra.thirdeye.core = 나는 본다
+chakra.thirdeye.location = 눈썹 사이
+chakra.thirdeye.element = 빛
+chakra.thirdeye.bija = OM(옴)
+chakra.thirdeye.theme = 직관, 통찰, 상상력, 명료함
+chakra.thirdeye.balanced = 맑은 생각, 직관에 대한 믿음, 생생한 상상력.
+chakra.thirdeye.imbalanced = 혼란, 과도한 생각, 집중력 저하, 내면의 인도와 단절된 느낌.
+chakra.thirdeye.practice = 명상하고, 시각화하고, 꿈 일기를 쓰고, 교호 호흡을 하며 OM을 읊조리세요.
+chakra.thirdeye.seeds:
+- 나는 나의 직관을 믿는다.
+- 나는 겉모습 너머를 분명하게 본다.
+- 내면의 지혜가 나를 이끈다.
+- 나는 통찰과 비전에 열려 있다.
+- 내 마음은 고요하고 맑다.
+- 나는 내면의 눈이 보여 주는 것을 믿는다.
+
+chakra.crown.name = 정수리
+chakra.crown.sanskrit = Sahasrara
+chakra.crown.core = 나는 안다
+chakra.crown.location = 머리 꼭대기
+chakra.crown.element = 생각과 순수한 의식
+chakra.crown.bija = 침묵(또는 OM)
+chakra.crown.theme = 영성, 연결, 평화, 지혜
+chakra.crown.balanced = 내면의 평화, 삶의 의미에 대한 감각, 신성과의 연결.
+chakra.crown.imbalanced = 길을 잃은 느낌, 냉소, 영적인 단절.
+chakra.crown.practice = 고요히 명상하고, 기도하고, 감사를 실천하며 고요함 속에서 쉬세요.
+chakra.crown.seeds:
+- 나는 신성한 존재다.
+- 나는 무한한 근원과 연결되어 있다.
+- 나는 우주와 하나다.
+- 신성한 빛이 내 안을 흐른다.
+- 나는 삶의 지혜를 믿는다.
+- 나는 존재하는 모든 것과 평화롭다.

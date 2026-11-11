@@ -1,0 +1,29 @@
+# Gradle / Android Studio
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# Signing — never commit keys
+keystore.properties
+*.jks
+*.keystore
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+
+# Python / Node tooling
+__pycache__/
+node_modules/
