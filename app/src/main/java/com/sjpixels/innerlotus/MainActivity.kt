@@ -1,8 +1,18 @@
 package com.sjpixels.innerlotus
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.LaunchedEffect
+import com.sjpixels.innerlotus.audio.SoundEngine
+import com.sjpixels.innerlotus.audio.SoundService
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
+import androidx.compose.runtime.DisposableEffect
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -24,6 +34,12 @@ import com.sjpixels.innerlotus.core.tr
 import com.sjpixels.innerlotus.reminders.Reminders
 import com.sjpixels.innerlotus.tts.Speaker
 import com.sjpixels.innerlotus.ui.components.AppBackground
+import com.sjpixels.innerlotus.ui.components.SectionRail
+import com.sjpixels.innerlotus.ui.components.SectionRailState
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.unit.dp
 import com.sjpixels.innerlotus.ui.screens.AboutScreen
 import com.sjpixels.innerlotus.ui.screens.AffirmDataScreen
 import com.sjpixels.innerlotus.ui.screens.AppUsageScreen
@@ -51,10 +67,15 @@ import com.sjpixels.innerlotus.ui.theme.InnerLotusTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
+        // The app only has a light theme, so keep dark system-bar icons even in system dark mode.
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+        )
         super.onCreate(savedInstanceState)
         App.init(applicationContext)
-        handleIntent(intent)
+        // Only on a fresh start: a recreated activity still carries the original launch intent.
+        if (savedInstanceState == null) handleIntent(intent)
         setContent { InnerLotusRoot() }
     }
 
@@ -84,15 +105,23 @@ fun InnerLotusRoot() {
                 val nav = App.nav
                 BackHandler(enabled = nav.canGoBack) { nav.back() }
                 val holder = rememberSaveableStateHolder()
+                DisposableEffect(holder) {
+                    nav.onPopped = { holder.removeState(it.toString()) }
+                    onDispose { nav.onPopped = null }
+                }
+                val blur by animateDpAsState(if (SectionRailState.open) 16.dp else 0.dp, tween(260), label = "railBlur")
                 AnimatedContent(
                     targetState = nav.current,
+                    modifier = Modifier.blur(blur),
                     transitionSpec = { fadeIn(tween(220)) togetherWith fadeOut(tween(160)) },
                     label = "screen",
                 ) { screen ->
                     holder.SaveableStateProvider(screen.toString()) { ScreenHost(screen) }
                 }
+                SectionRail()
             }
             TtsMissingDialog()
+            SoundNotificationPermission()
         }
     }
 }
@@ -122,6 +151,27 @@ private fun ScreenHost(screen: Screen) {
         Screen.CalmNow -> CalmNowScreen()
         Screen.Settings -> SettingsScreen()
         Screen.About -> AboutScreen()
+    }
+}
+
+/**
+ * Android 13+ hides a foreground service's notification until POST_NOTIFICATIONS is granted, which
+ * would leave Sound Healing without its "Stop" control on the lock screen. Ask once, the first time
+ * sound starts playing.
+ */
+@Composable
+private fun SoundNotificationPermission() {
+    if (Build.VERSION.SDK_INT < 33) return
+    val ctx = LocalContext.current
+    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        if (granted && SoundService.state == SoundService.State.RUNNING) SoundService.refreshNotification(ctx)
+    }
+    val playing = SoundEngine.isPlaying
+    LaunchedEffect(playing) {
+        if (playing && !App.settings.askedSoundNotif && !Reminders.canNotify(ctx)) {
+            App.settings.askedSoundNotif = true
+            launcher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
     }
 }
 

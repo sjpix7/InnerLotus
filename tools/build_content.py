@@ -29,6 +29,7 @@ OUT = os.path.join(ROOT, "app", "src", "main", "assets", "i18n")
 LANGS = ["en", "hi", "ru", "ko", "zh", "es", "fr", "it", "ja"]
 
 PLACEHOLDER = re.compile(r"\{([a-z_]+)\}")
+ONE = "__one"  # optional singular variant, used when {n} == 1
 GENDER = re.compile(r"\{([^{}|]*)\|([^{}|]*)\}")
 
 
@@ -97,14 +98,21 @@ def strings_of(v):
 
 def validate(lang, d, en):
     errs = []
-    missing = [k for k in en if k not in d]
-    extra = [k for k in d if k not in en]
+    missing = [k for k in en if k not in d and not k.endswith(ONE)]
+    extra = [k for k in d if k not in en and not (k.endswith(ONE) and k[:-len(ONE)] in en)]
     if missing:
         errs.append(f"missing {len(missing)} keys, e.g. {missing[:8]}")
     if extra:
         errs.append(f"unknown {len(extra)} keys, e.g. {extra[:8]}")
+    for k, v in d.items():
+        if k.endswith(ONE) and k[:-len(ONE)] in en:
+            base = en[k[:-len(ONE)]]
+            bph = set(PLACEHOLDER.findall(" ".join(strings_of(base))))
+            oph = set(PLACEHOLDER.findall(" ".join(strings_of(v))))
+            if not oph <= bph:
+                errs.append(f"{k}: placeholders {sorted(oph)} not in {sorted(bph)}")
     for k, ev in en.items():
-        if k not in d:
+        if k not in d or k.endswith(ONE):
             continue
         v = d[k]
         if isinstance(ev, list) != isinstance(v, list):
@@ -149,8 +157,9 @@ def main():
             print(f"[{lang}] OK  keys={len(d)} strings={n_str}")
         if not check_only:
             # Fall back to English for anything missing so the app never shows raw keys.
-            merged = dict(en)
-            merged.update({k: v for k, v in d.items() if k in en})
+            # Singular "__one" variants are per-language and never copied from English.
+            merged = {k: v for k, v in en.items() if not k.endswith(ONE)}
+            merged.update({k: v for k, v in d.items() if k in en or (k.endswith(ONE) and k[:-len(ONE)] in en)})
             with open(os.path.join(OUT, f"{lang}.json"), "w", encoding="utf-8") as f:
                 json.dump(merged, f, ensure_ascii=False, separators=(",", ":"))
     sys.exit(0 if ok else 1)

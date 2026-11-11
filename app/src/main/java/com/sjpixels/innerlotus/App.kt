@@ -56,24 +56,36 @@ class Navigator {
     val current: Screen get() = stack.last()
     val canGoBack: Boolean get() = stack.size > 1
 
+    /**
+     * Called with each screen that leaves the stack, so the UI can drop its saved state.
+     * Without this, reopening an equal screen (e.g. a second "new journal entry") would
+     * restore the old form contents.
+     */
+    var onPopped: ((Screen) -> Unit)? = null
+
     fun go(s: Screen) {
         if (current != s) stack.add(s)
     }
 
     /** Replace the current screen (e.g. after saving an editor). */
     fun replace(s: Screen) {
-        if (stack.size > 1) stack.removeAt(stack.lastIndex)
+        if (stack.size > 1) pop()
         stack.add(s)
     }
 
     fun back(): Boolean {
         if (stack.size <= 1) return false
-        stack.removeAt(stack.lastIndex)
+        pop()
         return true
     }
 
     fun home() {
-        while (stack.size > 1) stack.removeAt(stack.lastIndex)
+        while (stack.size > 1) pop()
+    }
+
+    private fun pop() {
+        val s = stack.removeAt(stack.lastIndex)
+        if (s !in stack) onPopped?.invoke(s)
     }
 }
 
@@ -117,6 +129,10 @@ object App {
         I18n.load(context, lang)
         Speaker.init(context)
         Reminders.ensureChannels(context)
+        // Alarms are cleared on force-stop / app update; re-arm them on every process start.
+        if (settings.remindAffirm || settings.remindJournal) {
+            try { Reminders.apply(context) } catch (_: Exception) {}
+        }
     }
 
     fun setLanguage(l: Lang) {

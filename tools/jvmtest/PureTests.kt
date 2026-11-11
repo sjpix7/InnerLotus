@@ -58,6 +58,15 @@ fun main(args: Array<String>) {
     check(table.str("p", false).fill("name" to "Asha") == "Hi Asha", "placeholder fill")
     check(table.str("missing", false) == "missing", "missing key falls back to key")
 
+    // ---- Singular variants ("<key>__one" when n == 1, only from the current language)
+    val enP = StringTable.parse("""{"d":"{n} days","d__one":"{n} day"}""")
+    val jaP = StringTable(StringTable.parse("""{"d":"{n}日"}"""), enP)
+    val en1 = StringTable(enP)
+    check(en1.str(en1.pluralKey("d", 1), false).fill("n" to 1) == "1 day", "singular variant used for n=1")
+    check(en1.str(en1.pluralKey("d", 2), false).fill("n" to 2) == "2 days", "plural used for n=2")
+    check(en1.pluralKey("d", 0) == "d" && en1.pluralKey("d", null) == "d", "plural used for 0 / no count")
+    check(jaP.pluralKey("d", 1) == "d", "singular never borrowed from English fallback")
+
     // ---- Prayer
     val pr = Prayer.build("O", "{name}, I bring you", "F", listOf("1", "2", "3", "4"), "C", "Ravi", 2)
     check(pr.startsWith("O") && pr.contains("Ravi, I bring you") && pr.endsWith("C"), "prayer builds with name")

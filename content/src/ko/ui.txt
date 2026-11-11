@@ -7,6 +7,7 @@ ui.common.back = 뒤로
 ui.common.cancel = 취소
 ui.common.change = 변경
 ui.common.clear = 지우기
+ui.common.close = 닫기
 ui.common.copied = 복사했습니다
 ui.common.copy = 복사
 ui.common.delete = 삭제
@@ -31,6 +32,7 @@ ui.common.share = 공유
 ui.common.stop = 정지
 
 ui.home.title = 홈
+ui.nav.sections = 섹션
 ui.home.greet_morning = 좋은 아침이에요
 ui.home.greet_afternoon = 좋은 오후예요
 ui.home.greet_evening = 편안한 저녁이에요

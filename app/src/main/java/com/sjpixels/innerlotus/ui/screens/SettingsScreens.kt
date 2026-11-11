@@ -293,7 +293,7 @@ fun AboutScreen() {
         PageColumn(padding) {
             GlassCard(strong = true) {
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    ChakraSymbol(6, Catalog.chakras[6].color, 90.dp)
+                    AppLogo(84.dp)
                     Text(tr("ui.app_name"), style = MaterialTheme.typography.headlineMedium, color = Lotus.PlumDeep)
                     Text(tr("ui.onboard.tagline"), textAlign = TextAlign.Center, color = Lotus.InkSoft)
                     Text(tr("ui.about.version", "v" to BuildConfig.VERSION_NAME), fontSize = 12.sp, color = Lotus.InkSoft)

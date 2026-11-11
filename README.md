@@ -182,6 +182,8 @@ python3 tools/build_content.py --check   # validate only
 
 The validator checks every language against English: same keys, same list lengths, same `{placeholders}`, and well-formed gender markup.
 
+**Singular forms.** A string with a `{n}` count can have an optional `<key>__one` variant (e.g. `ui.journal.entries_n__one = {n} entry`), used when `n` is 1. Add it only in languages that inflect (en, es, fr, it, hi). It is never borrowed from English, so languages without one always use the main key.
+
 - **Affirmations** are composed as 24 area lines × 6 chakra seed lines × 7 chakras = 1008 per area. Keep each area's 24 lines unique, and keep them unique across areas too; the tests check this.
 - **Gender:** in Hindi, Russian, Spanish, French and Italian, write `{masculine|feminine}` with whole words, e.g. `{grato|grata}` or `{करता|करती}`. The app resolves it from **Settings → Speak to me as** (feminine by default; also asked during onboarding).
 - **Adding a language:** add an entry to `core/Lang.kt` (code, flag, native name, BCP-47 tag, gendered?, Latin script?), add the code to `LANGS` in `tools/build_content.py`, create `content/src/<code>/` by copying `en/`, translate it, and build.

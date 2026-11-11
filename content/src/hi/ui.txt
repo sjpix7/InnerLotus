@@ -7,6 +7,7 @@ ui.common.back = वापस
 ui.common.cancel = रद्द करें
 ui.common.change = बदलें
 ui.common.clear = साफ़ करें
+ui.common.close = बंद करें
 ui.common.copied = कॉपी हो गया
 ui.common.copy = कॉपी करें
 ui.common.delete = डिलीट करें
@@ -31,6 +32,7 @@ ui.common.share = शेयर करें
 ui.common.stop = रोकें
 
 ui.home.title = होम
+ui.nav.sections = अनुभाग
 ui.home.greet_morning = सुप्रभात
 ui.home.greet_afternoon = नमस्कार
 ui.home.greet_evening = शुभ संध्या
@@ -340,3 +342,9 @@ ui.about.version = संस्करण {v}
 ui.about.research = सामग्री के पीछे का शोध
 ui.about.licences = लाइसेंस
 ui.about.licences_text = फ़ॉन्ट: Cormorant Garamond और Dancing Script, SIL Open Font License 1.1। सभी ध्वनियाँ Inner Lotus द्वारा आपके डिवाइस पर बनाई जाती हैं। चक्र कलाकृतियाँ और चित्र मौलिक हैं।
+
+# Singular forms (used when {n} is 1)
+ui.sound.playing_n__one = ध्वनि उपचार · {n} ध्वनि बज रही है
+ui.journal.entries_n__one = {n} प्रविष्टि
+ui.journal.delete_all_confirm__one = डायरी की एकमात्र प्रविष्टि डिलीट करें? इसे पहले जैसा नहीं किया जा सकेगा।
+ui.journal.delete_group_confirm__one = {label} की {n} प्रविष्टि डिलीट करें?

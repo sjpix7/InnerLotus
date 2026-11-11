@@ -7,6 +7,7 @@ ui.common.back = Back
 ui.common.cancel = Cancel
 ui.common.change = Change
 ui.common.clear = Clear
+ui.common.close = Close
 ui.common.copied = Copied
 ui.common.copy = Copy
 ui.common.delete = Delete
@@ -31,6 +32,7 @@ ui.common.share = Share
 ui.common.stop = Stop
 
 ui.home.title = Home
+ui.nav.sections = Sections
 ui.home.greet_morning = Good morning
 ui.home.greet_afternoon = Good afternoon
 ui.home.greet_evening = Good evening
@@ -104,7 +106,7 @@ ui.affirm.bulk_label = My affirmations ({n})
 ui.affirm.bulk_formats = Import accepts .txt (one per line), .csv (with an "affirmation" column) or an Inner Lotus .json export.
 ui.affirm.clear_confirm = Remove all of your own affirmations from this box? Nothing is deleted until you tap Save.
 ui.affirm.data_mine = My affirmations & favourites
-ui.affirm.data_mine_hint = {n} own affirmations · {f} favourites
+ui.affirm.data_mine_hint = Your affirmations: {n} · Favourites: {f}
 ui.affirm.import_hint = Import a .json backup, or a .txt / .csv file. Lines without an area go to the area selected below.
 ui.affirm.data_section = One section
 ui.affirm.data_section_hint = Export the built-in cards of one area (and chakra) as a spreadsheet, in the current language.
@@ -287,7 +289,7 @@ ui.settings.address_hint = Some languages change words for women and men. Choose
 ui.settings.feminine = Feminine
 ui.settings.masculine = Masculine
 ui.settings.voice = Voice (text-to-speech)
-ui.settings.voice_ok = A {lang} voice is installed on this phone.
+ui.settings.voice_ok = A voice for {lang} is installed on this phone.
 ui.settings.voice_missing = No {lang} voice is installed yet. Tap "Install voices".
 ui.settings.rate = Speaking speed
 ui.settings.pitch = Voice pitch
@@ -332,7 +334,7 @@ ui.remind.journal_title = Time for your journal
 ui.remind.journal_text = Take five quiet minutes to write how you feel.
 
 ui.tts.missing_title = Voice not installed
-ui.tts.missing_text = Your phone doesn't have a {lang} voice for read-aloud yet. You can install one for free in the text-to-speech settings, and it will work offline.
+ui.tts.missing_text = Your phone doesn't have a read-aloud voice for {lang} yet. You can install one for free in the text-to-speech settings, and it will work offline.
 ui.tts.install = Install voices
 
 ui.about.title = About Inner Lotus
@@ -340,3 +342,11 @@ ui.about.version = Version {v}
 ui.about.research = Research behind the content
 ui.about.licences = Licences
 ui.about.licences_text = Fonts: Cormorant Garamond and Dancing Script, SIL Open Font License 1.1. All sounds are synthesised on your device by Inner Lotus. Chakra artwork and illustrations are original.
+
+# Singular forms (used when {n} is 1)
+ui.habits.best_streak_now__one = Best current streak: {n} day
+ui.sound.playing_n__one = Sound healing · {n} sound playing
+ui.journal.entries_n__one = {n} entry
+ui.journal.delete_all_confirm__one = Delete your only journal entry? This cannot be undone.
+ui.journal.delete_group_confirm__one = Delete {n} entry from {label}?
+ui.data.imported_n__one = Imported {n} item

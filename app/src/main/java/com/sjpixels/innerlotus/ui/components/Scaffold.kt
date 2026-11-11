@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -71,8 +73,8 @@ import com.sjpixels.innerlotus.ui.theme.Lotus
 import kotlinx.coroutines.delay
 
 /**
- * Standard page frame: top bar (back, title, language flag menu, settings), content, and the
- * "Developed by https://sjpixels.com/" footer that appears on every page.
+ * Standard page frame: the "Developed by https://sjpixels.com/" bar at the very top of every page,
+ * then the top bar (back, title, language flag menu, settings) and the content.
  */
 @Composable
 fun AppScaffold(
@@ -84,7 +86,11 @@ fun AppScaffold(
     Scaffold(
         containerColor = Color.Transparent,
         topBar = {
+          Column {
+            Footer(Modifier.statusBarsPadding())
             TopAppBar(
+                // the developer bar above already takes the status-bar inset
+                windowInsets = WindowInsets(0),
                 title = {
                     Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.titleLarge, color = Lotus.Ink)
                 },
@@ -106,12 +112,11 @@ fun AppScaffold(
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
             )
+          }
         },
         bottomBar = {
-            Column {
-                if (SoundEngine.isPlaying && App.nav.current != Screen.Sound) MiniPlayer()
-                Footer()
-            }
+            if (SoundEngine.isPlaying && App.nav.current != Screen.Sound) MiniPlayer()
+            else Spacer(Modifier.fillMaxWidth().navigationBarsPadding())
         },
     ) { padding -> content(padding) }
 }
@@ -151,14 +156,14 @@ fun LanguageMenu() {
     }
 }
 
+/** "Developed by https://sjpixels.com/" bar; [modifier] supplies any system-bar inset padding. */
 @Composable
-fun Footer() {
+fun Footer(modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
     Surface(color = Color.White.copy(alpha = 0.6f)) {
         Row(
-            Modifier
+            modifier
                 .fillMaxWidth()
-                .navigationBarsPadding()
                 .clickable { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }
                 .padding(vertical = 7.dp),
             horizontalArrangement = Arrangement.Center,
@@ -186,6 +191,7 @@ fun MiniPlayer() {
         Row(
             Modifier
                 .fillMaxWidth()
+                .navigationBarsPadding()
                 .clickable { App.nav.go(Screen.Sound) }
                 .padding(horizontal = 16.dp, vertical = 6.dp),
             verticalAlignment = Alignment.CenterVertically,

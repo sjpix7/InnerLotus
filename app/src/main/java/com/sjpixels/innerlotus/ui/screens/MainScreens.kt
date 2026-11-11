@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -32,18 +33,7 @@ import com.sjpixels.innerlotus.ui.theme.Lotus
 import com.sjpixels.innerlotus.ui.theme.scriptFamily
 import java.time.LocalTime
 
-private data class Tile(val emoji: String, val key: String, val screen: Screen)
-
-private val tiles = listOf(
-    Tile("✨", "affirmations", Screen.Areas()),
-    Tile("👆", "eft", Screen.Eft),
-    Tile("🎶", "sound", Screen.Sound),
-    Tile("🌺", "hoopono", Screen.Hoopono),
-    Tile("📔", "journal", Screen.Journal),
-    Tile("✅", "habits", Screen.Habits),
-    Tile("🌬️", "breath", Screen.Breath),
-    Tile("🧘", "chakras", Screen.ChakraGuide),
-)
+private val tiles = Sections.features
 
 @Composable
 fun HomeScreen() {
@@ -130,7 +120,7 @@ fun MantraMalaCard() {
                 Text("Mantra Mala", style = MaterialTheme.typography.titleMedium, color = Lotus.PlumDeep)
                 Text(tr("mantramala.text"), fontSize = 13.sp, color = Lotus.InkSoft)
             }
-            Icon(Icons.Filled.OpenInNew, contentDescription = null, tint = Lotus.Plum)
+            Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = null, tint = Lotus.Plum)
         }
     }
 }
@@ -138,17 +128,20 @@ fun MantraMalaCard() {
 /** First-launch welcome: language, form of address, privacy promise. */
 @Composable
 fun OnboardingScreen() {
+  Column(Modifier.fillMaxSize()) {
+    Footer(Modifier.statusBarsPadding())
     Column(
         Modifier
-            .fillMaxSize()
-            .systemBarsPadding()
+            .fillMaxWidth()
+            .weight(1f)
+            .navigationBarsPadding()
             .verticalScroll(rememberScrollState())
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         Spacer(Modifier.height(12.dp))
-        ChakraSymbol(6, Catalog.chakras[6].color, 110.dp)
+        AppLogo(104.dp)
         Text(tr("ui.app_name"), style = MaterialTheme.typography.displaySmall, color = Lotus.PlumDeep)
         Text(tr("ui.onboard.tagline"), textAlign = TextAlign.Center, color = Lotus.InkSoft)
         GlassCard(strong = true) {
@@ -197,8 +190,8 @@ fun OnboardingScreen() {
             modifier = Modifier.fillMaxWidth().height(54.dp),
             shape = RoundedCornerShape(18.dp),
         ) { Text(tr("ui.onboard.begin"), fontSize = 17.sp, fontWeight = FontWeight.Bold) }
-        Footer()
     }
+  }
 }
 
 @Composable

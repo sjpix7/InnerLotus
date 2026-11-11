@@ -5,6 +5,7 @@ ui.common.back = Indietro
 ui.common.cancel = Annulla
 ui.common.change = Cambia
 ui.common.clear = Cancella
+ui.common.close = Chiudi
 ui.common.copied = Copiato
 ui.common.copy = Copia
 ui.common.delete = Elimina
@@ -29,6 +30,7 @@ ui.common.share = Condividi
 ui.common.stop = Ferma
 
 ui.home.title = Home
+ui.nav.sections = Sezioni
 ui.home.greet_morning = Buongiorno
 ui.home.greet_afternoon = Buon pomeriggio
 ui.home.greet_evening = Buonasera
@@ -102,7 +104,7 @@ ui.affirm.bulk_label = Le mie affermazioni ({n})
 ui.affirm.bulk_formats = L'importazione accetta .txt (una per riga), .csv (con una colonna "affirmation") o un'esportazione .json di Inner Lotus.
 ui.affirm.clear_confirm = Togliere tutte le tue affermazioni da questo riquadro? Nulla viene eliminato finché non tocchi Salva.
 ui.affirm.data_mine = Le mie affermazioni e preferite
-ui.affirm.data_mine_hint = {n} affermazioni personali · {f} preferite
+ui.affirm.data_mine_hint = Affermazioni personali: {n} · Preferite: {f}
 ui.affirm.import_hint = Importa un backup .json oppure un file .txt / .csv. Le righe senza area vanno nell'area scelta qui sotto.
 ui.affirm.data_section = Una sezione
 ui.affirm.data_section_hint = Esporta le carte di un'area (e di un chakra) come foglio di calcolo, nella lingua attuale.
@@ -338,3 +340,11 @@ ui.about.version = Versione {v}
 ui.about.research = La ricerca dietro i contenuti
 ui.about.licences = Licenze
 ui.about.licences_text = Caratteri: Cormorant Garamond e Dancing Script, SIL Open Font License 1.1. Tutti i suoni sono sintetizzati sul tuo dispositivo da Inner Lotus. Le illustrazioni dei chakra sono originali.
+
+# Singular forms (used when {n} is 1)
+ui.habits.best_streak_now__one = Migliore serie attuale: {n} giorno
+ui.sound.playing_n__one = Guarigione con il suono · {n} suono attivo
+ui.journal.entries_n__one = {n} pagina
+ui.journal.delete_all_confirm__one = Eliminare l'unica pagina del diario? L'azione non si può annullare.
+ui.journal.delete_group_confirm__one = Eliminare {n} pagina di {label}?
+ui.data.imported_n__one = Importato {n} elemento

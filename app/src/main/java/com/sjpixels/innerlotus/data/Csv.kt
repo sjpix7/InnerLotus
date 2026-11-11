@@ -13,7 +13,7 @@ object Csv {
         val cell = StringBuilder()
         var inQuotes = false
         var i = 0
-        val t = text.removePrefix("﻿")
+        val t = text.removePrefix("\uFEFF")
         while (i < t.length) {
             val c = t[i]
             if (inQuotes) {

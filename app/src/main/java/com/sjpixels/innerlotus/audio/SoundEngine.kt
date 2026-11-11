@@ -1,8 +1,12 @@
 package com.sjpixels.innerlotus.audio
 
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.media.AudioAttributes
+import android.media.AudioFocusRequest
+import android.media.AudioManager
 import android.media.AudioFormat
 import android.media.AudioTrack
 import android.os.Handler
@@ -50,6 +54,70 @@ object SoundEngine {
         private set
     var journeyMinutes by mutableStateOf(10)
     private var journeyIndex = 0
+
+    private val attributes: AudioAttributes = AudioAttributes.Builder()
+        .setUsage(AudioAttributes.USAGE_MEDIA)
+        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+        .build()
+
+    // ---- Audio focus: pause for calls / other music, duck for short notifications ----
+    private var focusRequest: AudioFocusRequest? = null
+    private var resumeOnFocusGain = false
+    private val focusListener = AudioManager.OnAudioFocusChangeListener { change ->
+        main.post {
+            when (change) {
+                AudioManager.AUDIOFOCUS_LOSS -> { resumeOnFocusGain = false; pause() }
+                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT -> { resumeOnFocusGain = isPlaying; pause() }
+                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> if (isPlaying) mixer.fadeTo(0.25f, 0.4f)
+                AudioManager.AUDIOFOCUS_GAIN -> {
+                    if (isPlaying) mixer.fadeTo(1f, 0.8f)
+                    else if (resumeOnFocusGain) appContext?.let { resume(it) }
+                    resumeOnFocusGain = false
+                }
+            }
+        }
+    }
+
+    private fun audioManager(): AudioManager? =
+        appContext?.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
+
+    private fun requestFocus(): Boolean {
+        val am = audioManager() ?: return true
+        val req = focusRequest ?: AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+            .setAudioAttributes(attributes)
+            .setOnAudioFocusChangeListener(focusListener, main)
+            .setWillPauseWhenDucked(false)
+            .build().also { focusRequest = it }
+        return am.requestAudioFocus(req) != AudioManager.AUDIOFOCUS_REQUEST_FAILED
+    }
+
+    private fun abandonFocus() {
+        val req = focusRequest ?: return
+        audioManager()?.abandonAudioFocusRequest(req)
+    }
+
+    // ---- Headphones unplugged: pause instead of blasting the loudspeaker ----
+    private var noisyRegistered = false
+    private val noisyReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY) pause()
+        }
+    }
+
+    private fun registerNoisy() {
+        val ctx = appContext ?: return
+        if (noisyRegistered) return
+        ContextCompat.registerReceiver(
+            ctx, noisyReceiver, IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY), ContextCompat.RECEIVER_NOT_EXPORTED,
+        )
+        noisyRegistered = true
+    }
+
+    private fun unregisterNoisy() {
+        if (!noisyRegistered) return
+        try { appContext?.unregisterReceiver(noisyReceiver) } catch (_: Exception) {}
+        noisyRegistered = false
+    }
 
     private val sleepRunnable = Runnable { fadeOutAndStop() }
     private val journeyRunnable = object : Runnable {
@@ -133,7 +201,7 @@ object SoundEngine {
         running = false
         mixer.fadeTo(0f, 0.8f)
         isPlaying = false
-        stopService()
+        onStopped()
     }
 
     fun resume(context: Context) {
@@ -159,12 +227,26 @@ object SoundEngine {
         }
         mixer.clear()
         isPlaying = false
+        onStopped()
+    }
+
+    private fun onStopped() {
+        unregisterNoisy()
+        abandonFocus()
         stopService()
     }
 
     @Synchronized
     private fun start(context: Context) {
         appContext = context.applicationContext
+        if (!isPlaying) {
+            if (!requestFocus()) {
+                // e.g. during a phone call: don't start over it
+                isPlaying = false
+                return
+            }
+            registerNoisy()
+        }
         mixer.fadeTo(1f, 1.2f)
         running = true
         isPlaying = true
@@ -180,12 +262,7 @@ object SoundEngine {
         val minBuf = AudioTrack.getMinBufferSize(SR, AudioFormat.CHANNEL_OUT_STEREO, AudioFormat.ENCODING_PCM_16BIT)
         val track = try {
             AudioTrack.Builder()
-                .setAudioAttributes(
-                    AudioAttributes.Builder()
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .build()
-                )
+                .setAudioAttributes(attributes)
                 .setAudioFormat(
                     AudioFormat.Builder()
                         .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
@@ -197,7 +274,7 @@ object SoundEngine {
                 .setTransferMode(AudioTrack.MODE_STREAM)
                 .build()
         } catch (e: Exception) {
-            main.post { isPlaying = false; stopService() }
+            main.post { isPlaying = false; onStopped() }
             return
         }
         val buf = ShortArray(FRAMES * 2)
@@ -219,17 +296,35 @@ object SoundEngine {
         }
     }
 
+    /**
+     * Starts the foreground service once; while it is already up we only refresh its notification.
+     * Re-sending startForegroundService on every layer change risks the "did not call
+     * startForeground()" crash when a stop races the start.
+     */
     private fun startService(context: Context) {
+        when (SoundService.state) {
+            SoundService.State.RUNNING -> { SoundService.refreshNotification(context); return }
+            SoundService.State.STARTING -> return
+            SoundService.State.STOPPED -> {}
+        }
         try {
+            SoundService.state = SoundService.State.STARTING
             ContextCompat.startForegroundService(context, Intent(context, SoundService::class.java))
         } catch (_: Exception) {
             // Starting a foreground service can be refused in the background; playback still works
             // while the app is visible.
+            SoundService.state = SoundService.State.STOPPED
         }
     }
 
     private fun stopService() {
         val ctx = appContext ?: return
+        // While STARTING, the service stops itself right after calling startForeground (it checks
+        // isPlaying), so we never stop it before it has gone foreground.
+        if (SoundService.state != SoundService.State.RUNNING) return
+        // Mark stopped now so a quick restart issues a fresh startForegroundService
+        // (the system delivers the stop before that new start).
+        SoundService.state = SoundService.State.STOPPED
         try { ctx.stopService(Intent(ctx, SoundService::class.java)) } catch (_: Exception) {}
     }
 }

@@ -225,9 +225,31 @@ object Sharing {
         false
     }
 
+    /** Largest file we import (a backup with years of journal entries is well under this). */
+    private const val MAX_IMPORT_BYTES = 20L * 1024 * 1024
+
+    /** Reads a user-picked text file; null if unreadable or too large (e.g. a video picked by mistake). */
     fun readText(context: Context, uri: Uri): String? = try {
-        context.contentResolver.openInputStream(uri)?.use { it.readBytes().toString(Charsets.UTF_8) }
+        context.contentResolver.openInputStream(uri)?.use { input ->
+            val bytes = input.readNBytesCompat(MAX_IMPORT_BYTES + 1)
+            if (bytes.size > MAX_IMPORT_BYTES) null else bytes.toString(Charsets.UTF_8)
+        }
     } catch (_: Exception) {
         null
+    } catch (_: OutOfMemoryError) {
+        null
+    }
+
+    private fun java.io.InputStream.readNBytesCompat(limit: Long): ByteArray {
+        val out = java.io.ByteArrayOutputStream()
+        val buf = ByteArray(64 * 1024)
+        var total = 0L
+        while (total < limit) {
+            val n = read(buf, 0, minOf(buf.size.toLong(), limit - total).toInt())
+            if (n < 0) break
+            out.write(buf, 0, n)
+            total += n
+        }
+        return out.toByteArray()
     }
 }

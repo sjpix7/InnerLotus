@@ -7,6 +7,7 @@ ui.common.back = 戻る
 ui.common.cancel = キャンセル
 ui.common.change = 変更
 ui.common.clear = クリア
+ui.common.close = 閉じる
 ui.common.copied = コピーしました
 ui.common.copy = コピー
 ui.common.delete = 削除
@@ -31,6 +32,7 @@ ui.common.share = 共有
 ui.common.stop = 停止
 
 ui.home.title = ホーム
+ui.nav.sections = セクション
 ui.home.greet_morning = おはようございます
 ui.home.greet_afternoon = こんにちは
 ui.home.greet_evening = こんばんは

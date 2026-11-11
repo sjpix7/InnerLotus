@@ -7,6 +7,7 @@ ui.common.back = 返回
 ui.common.cancel = 取消
 ui.common.change = 更改
 ui.common.clear = 清空
+ui.common.close = 关闭
 ui.common.copied = 已复制
 ui.common.copy = 复制
 ui.common.delete = 删除
@@ -31,6 +32,7 @@ ui.common.share = 分享
 ui.common.stop = 停止
 
 ui.home.title = 首页
+ui.nav.sections = 栏目
 ui.home.greet_morning = 早上好
 ui.home.greet_afternoon = 下午好
 ui.home.greet_evening = 晚上好

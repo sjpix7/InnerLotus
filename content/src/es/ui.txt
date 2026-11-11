@@ -5,6 +5,7 @@ ui.common.back = Atrás
 ui.common.cancel = Cancelar
 ui.common.change = Cambiar
 ui.common.clear = Borrar
+ui.common.close = Cerrar
 ui.common.copied = Copiado
 ui.common.copy = Copiar
 ui.common.delete = Eliminar
@@ -29,6 +30,7 @@ ui.common.share = Compartir
 ui.common.stop = Detener
 
 ui.home.title = Inicio
+ui.nav.sections = Secciones
 ui.home.greet_morning = Buenos días
 ui.home.greet_afternoon = Buenas tardes
 ui.home.greet_evening = Buenas noches
@@ -102,7 +104,7 @@ ui.affirm.bulk_label = Mis afirmaciones ({n})
 ui.affirm.bulk_formats = Se pueden importar archivos .txt (una por línea), .csv (con una columna "affirmation") o una exportación .json de Inner Lotus.
 ui.affirm.clear_confirm = ¿Quitar todas tus afirmaciones de este cuadro? No se borra nada hasta que pulses Guardar.
 ui.affirm.data_mine = Mis afirmaciones y favoritas
-ui.affirm.data_mine_hint = {n} afirmaciones propias · {f} favoritas
+ui.affirm.data_mine_hint = Afirmaciones propias: {n} · Favoritas: {f}
 ui.affirm.import_hint = Importa una copia .json o un archivo .txt / .csv. Las líneas sin área van al área elegida abajo.
 ui.affirm.data_section = Una sección
 ui.affirm.data_section_hint = Exporta las tarjetas de un área (y un chakra) como hoja de cálculo, en el idioma actual.
@@ -338,3 +340,11 @@ ui.about.version = Versión {v}
 ui.about.research = La investigación detrás del contenido
 ui.about.licences = Licencias
 ui.about.licences_text = Fuentes: Cormorant Garamond y Dancing Script, SIL Open Font License 1.1. Todos los sonidos los sintetiza Inner Lotus en tu dispositivo. Las ilustraciones de chakras son originales.
+
+# Singular forms (used when {n} is 1)
+ui.habits.best_streak_now__one = Mejor racha actual: {n} día
+ui.sound.playing_n__one = Sanación con sonido · {n} sonido
+ui.journal.entries_n__one = {n} entrada
+ui.journal.delete_all_confirm__one = ¿Eliminar la única entrada del diario? No se puede deshacer.
+ui.journal.delete_group_confirm__one = ¿Eliminar {n} entrada de {label}?
+ui.data.imported_n__one = Se importó {n} elemento

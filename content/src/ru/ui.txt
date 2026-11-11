@@ -5,6 +5,7 @@ ui.common.back = Назад
 ui.common.cancel = Отмена
 ui.common.change = Изменить
 ui.common.clear = Очистить
+ui.common.close = Закрыть
 ui.common.copied = Скопировано
 ui.common.copy = Копировать
 ui.common.delete = Удалить
@@ -29,6 +30,7 @@ ui.common.share = Поделиться
 ui.common.stop = Стоп
 
 ui.home.title = Главная
+ui.nav.sections = Разделы
 ui.home.greet_morning = Доброе утро
 ui.home.greet_afternoon = Добрый день
 ui.home.greet_evening = Добрый вечер

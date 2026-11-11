@@ -33,7 +33,10 @@ object I18n {
 
     fun t(key: String): String = table.str(key, feminine)
 
-    fun t(key: String, vararg args: Pair<String, Any?>): String = table.str(key, feminine).fill(*args)
+    fun t(key: String, vararg args: Pair<String, Any?>): String {
+        val n = args.firstOrNull { it.first == "n" }?.second
+        return table.str(table.pluralKey(key, n), feminine).fill(*args)
+    }
 
     fun list(key: String): List<String> = table.list(key, feminine)
 

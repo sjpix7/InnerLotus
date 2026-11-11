@@ -51,6 +51,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.painterResource
+import com.sjpixels.innerlotus.R
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
@@ -336,5 +340,26 @@ fun Stepper(value: Int, range: IntRange, onChange: (Int) -> Unit, label: String)
         TextButton(onClick = { if (value > range.first) onChange(value - 1) }) { Text("−", fontSize = 20.sp) }
         Text("$value", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Lotus.PlumDeep)
         TextButton(onClick = { if (value < range.last) onChange(value + 1) }) { Text("+", fontSize = 20.sp) }
+    }
+}
+
+/**
+ * The Inner Lotus logo, drawn from the launcher icon's own layers so it always matches the app
+ * icon. Shown as a rounded tile with a soft glow, like the icon on the home screen.
+ */
+@Composable
+fun AppLogo(size: Dp, modifier: Modifier = Modifier) {
+    val shape = RoundedCornerShape(size * 0.28f)
+    Box(
+        modifier
+            .size(size)
+            .shadow(size * 0.18f, shape, ambientColor = Lotus.Plum, spotColor = Lotus.Plum)
+            .clip(shape),
+    ) {
+        // Adaptive-icon layers are 108dp with the visible part in the middle 72dp: scale up 1.5x
+        // so the lotus fills the tile the way a launcher shows it.
+        val layer = Modifier.fillMaxSize().graphicsLayer { scaleX = 1.5f; scaleY = 1.5f }
+        Image(painterResource(R.drawable.ic_launcher_background), contentDescription = null, modifier = layer, contentScale = ContentScale.FillBounds)
+        Image(painterResource(R.drawable.ic_launcher_foreground), contentDescription = tr("ui.app_name"), modifier = layer, contentScale = ContentScale.FillBounds)
     }
 }

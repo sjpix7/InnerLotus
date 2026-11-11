@@ -26,7 +26,7 @@ object UsageRepo {
     private const val RESUMED = 1 // UsageEvents.Event.ACTIVITY_RESUMED / MOVE_TO_FOREGROUND
     private const val PAUSED = 2  // UsageEvents.Event.ACTIVITY_PAUSED / MOVE_TO_BACKGROUND
 
-    private val labelCache = HashMap<String, String>()
+    private val labelCache = java.util.concurrent.ConcurrentHashMap<String, String>()
     private val iconCache = HashMap<String, Bitmap?>()
 
     fun hasPermission(context: Context): Boolean {

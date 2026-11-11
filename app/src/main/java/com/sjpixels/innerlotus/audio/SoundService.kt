@@ -20,6 +20,8 @@ import com.sjpixels.innerlotus.core.tr
 /** Keeps Sound Healing playing with the screen off and shows a "Stop" notification. */
 class SoundService : Service() {
 
+    enum class State { STOPPED, STARTING, RUNNING }
+
     private var wakeLock: PowerManager.WakeLock? = null
 
     override fun onBind(intent: Intent?): IBinder? = null
@@ -31,29 +33,18 @@ class SoundService : Service() {
             return START_NOT_STICKY
         }
         ensureChannel(this)
-        val open = PendingIntent.getActivity(
-            this, 0, Intent(this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
-            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
-        )
-        val stop = PendingIntent.getService(
-            this, 1, Intent(this, SoundService::class.java).setAction(ACTION_STOP),
-            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
-        )
-        val n: Notification = NotificationCompat.Builder(this, CHANNEL)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle(tr("ui.sound.notif_title"))
-            .setContentText(SoundEngine.currentMixName.ifEmpty { tr("ui.sound.notif_text") })
-            .setContentIntent(open)
-            .addAction(0, tr("ui.common.stop"), stop)
-            .setOngoing(true)
-            .setSilent(true)
-            .setCategory(NotificationCompat.CATEGORY_SERVICE)
-            .setPriority(NotificationCompat.PRIORITY_LOW)
-            .build()
         val type = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK else 0
         try {
-            ServiceCompat.startForeground(this, NOTIF_ID, n, type)
+            ServiceCompat.startForeground(this, NOTIF_ID, buildNotification(this), type)
         } catch (_: Exception) {
+            state = State.STOPPED
+            stopSelf()
+            return START_NOT_STICKY
+        }
+        state = State.RUNNING
+        if (!SoundEngine.isPlaying) {
+            // Playback was stopped while we were starting up.
+            ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
             stopSelf()
             return START_NOT_STICKY
         }
@@ -68,6 +59,7 @@ class SoundService : Service() {
     }
 
     override fun onDestroy() {
+        state = State.STOPPED
         wakeLock?.let { if (it.isHeld) it.release() }
         wakeLock = null
         super.onDestroy()
@@ -86,6 +78,37 @@ class SoundService : Service() {
         const val CHANNEL = "sound"
         const val NOTIF_ID = 108
         const val ACTION_STOP = "com.sjpixels.innerlotus.STOP_SOUND"
+
+        /** Main-thread only. */
+        @Volatile var state = State.STOPPED
+
+        fun buildNotification(context: Context): Notification {
+            val open = PendingIntent.getActivity(
+                context, 0, Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
+                PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
+            )
+            val stop = PendingIntent.getService(
+                context, 1, Intent(context, SoundService::class.java).setAction(ACTION_STOP),
+                PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
+            )
+            return NotificationCompat.Builder(context, CHANNEL)
+                .setSmallIcon(R.drawable.ic_notification)
+                .setContentTitle(tr("ui.sound.notif_title"))
+                .setContentText(SoundEngine.currentMixName.ifEmpty { tr("ui.sound.notif_text") })
+                .setContentIntent(open)
+                .addAction(0, tr("ui.common.stop"), stop)
+                .setOngoing(true)
+                .setSilent(true)
+                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .build()
+        }
+
+        /** Updates the ongoing notification (e.g. new mix name) without restarting the service. */
+        fun refreshNotification(context: Context) {
+            val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            try { nm.notify(NOTIF_ID, buildNotification(context)) } catch (_: SecurityException) {}
+        }
 
         fun ensureChannel(context: Context) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return

@@ -20,7 +20,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.GraphicsLayerScope
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.zIndex
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -49,7 +52,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.math.absoluteValue
 
 const val FAVORITES_AREA = "__fav"
 
@@ -280,27 +282,27 @@ fun DeckScreen(area: String, chakra: String?) {
                     }
                 }
             } else {
+                // Card-stack swipe: the top card follows the finger, tilts and flies off to the side,
+                // while the next cards wait stacked underneath and rise into place.
                 HorizontalPager(
                     state = pager,
-                    contentPadding = PaddingValues(horizontal = 28.dp),
-                    pageSpacing = 14.dp,
+                    contentPadding = PaddingValues(horizontal = 24.dp),
+                    pageSpacing = 16.dp,
+                    beyondViewportPageCount = 2,
                     modifier = Modifier.weight(1f).fillMaxWidth(),
                     key = { it },
                 ) { page ->
-                    val off = ((pager.currentPage - page) + pager.currentPageOffsetFraction).absoluteValue
+                    // 0 = on top, >0 = waiting in the stack, <0 = swiped away to the left
+                    val p = page - pager.currentPage - pager.currentPageOffsetFraction
                     AffirmationCard(
                         card = cards[page],
                         index = page,
                         total = cards.size,
                         modifier = Modifier
+                            .zIndex(-p)
                             .fillMaxSize()
-                            .padding(vertical = 8.dp)
-                            .graphicsLayer {
-                                val sc = 1f - 0.08f * off.coerceIn(0f, 1f)
-                                scaleX = sc; scaleY = sc
-                                alpha = 1f - 0.35f * off.coerceIn(0f, 1f)
-                                rotationZ = (page - pager.currentPage - pager.currentPageOffsetFraction) * -3f
-                            },
+                            .padding(top = 6.dp, bottom = 22.dp)
+                            .graphicsLayer { deckTransform(p, 16.dp.toPx(), 12.dp.toPx()) },
                     )
                 }
                 val current = cards.getOrNull(pager.currentPage)
@@ -340,6 +342,37 @@ fun DeckScreen(area: String, chakra: String?) {
                 Spacer(Modifier.height(4.dp))
             }
         }
+    }
+}
+
+/**
+ * Places one deck card for stack position [p] (0 = top card, 1, 2 = waiting underneath,
+ * negative = swiped off to the left). [spacing] is the pager's page spacing, [step] the vertical
+ * offset between stacked cards.
+ */
+private fun GraphicsLayerScope.deckTransform(p: Float, spacing: Float, step: Float) {
+    shape = RoundedCornerShape(30.dp)
+    clip = false
+    transformOrigin = TransformOrigin(0.5f, 1.15f) // pivot below the card: it swings in an arc
+    if (p >= 0f) {
+        // Waiting cards: cancel the pager's sideways offset so they sit centred under the top card.
+        val depth = p.coerceAtMost(2.6f)
+        translationX = -p * (size.width + spacing)
+        translationY = depth * step
+        val sc = 1f - 0.06f * depth
+        scaleX = sc; scaleY = sc
+        alpha = (1f - 0.3f * (depth - 1f).coerceAtLeast(0f)).coerceIn(0f, 1f) * if (p > 2.5f) 0f else 1f
+        shadowElevation = (14f - 6f * depth).coerceAtLeast(2f) * density
+        rotationZ = 0f
+    } else {
+        // Leaving / returning card: follows the finger, tilts and is thrown a little further.
+        val t = (-p).coerceAtMost(1.2f)
+        translationX = -t * size.width * 0.18f
+        translationY = -t * step
+        rotationZ = -t * 14f
+        scaleX = 1f; scaleY = 1f
+        alpha = 1f - (t - 0.75f).coerceAtLeast(0f) * 2f
+        shadowElevation = 18f * density
     }
 }
 

@@ -76,6 +76,12 @@ class AppSettings(context: Context) {
     var breathMinutes by prefs.int("breathMinutes", 3)
     var sleepTimerMin by prefs.int("sleepTimerMin", 0)
 
+    /** We ask for notification permission once, the first time sound plays (for the Stop control). */
+    var askedSoundNotif by prefs.bool("askedSoundNotif", false)
+
+    /** How many times the section rail has shown all its labels (first-use hint, max 3). */
+    var railHintsShown by prefs.int("railHintsShown", 0)
+
     fun clearAll() {
         val keepLang = lang
         prefs.edit().clear().apply()

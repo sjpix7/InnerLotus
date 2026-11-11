@@ -5,6 +5,7 @@ ui.common.back = Retour
 ui.common.cancel = Annuler
 ui.common.change = Modifier
 ui.common.clear = Effacer
+ui.common.close = Fermer
 ui.common.copied = Copié
 ui.common.copy = Copier
 ui.common.delete = Supprimer
@@ -29,6 +30,7 @@ ui.common.share = Partager
 ui.common.stop = Arrêter
 
 ui.home.title = Accueil
+ui.nav.sections = Rubriques
 ui.home.greet_morning = Bonjour
 ui.home.greet_afternoon = Bon après-midi
 ui.home.greet_evening = Bonsoir
@@ -102,7 +104,7 @@ ui.affirm.bulk_label = Mes affirmations ({n})
 ui.affirm.bulk_formats = L'import accepte les fichiers .txt (une par ligne), .csv (avec une colonne "affirmation") ou un export .json d'Inner Lotus.
 ui.affirm.clear_confirm = Retirer toutes vos affirmations de ce champ ? Rien n'est supprimé avant d'appuyer sur Enregistrer.
 ui.affirm.data_mine = Mes affirmations et favoris
-ui.affirm.data_mine_hint = {n} affirmations personnelles · {f} favoris
+ui.affirm.data_mine_hint = Affirmations personnelles : {n} · Favoris : {f}
 ui.affirm.import_hint = Importez une sauvegarde .json ou un fichier .txt / .csv. Les lignes sans domaine vont dans le domaine choisi ci-dessous.
 ui.affirm.data_section = Une section
 ui.affirm.data_section_hint = Exportez les cartes d'un domaine (et d'un chakra) sous forme de tableur, dans la langue actuelle.
@@ -338,3 +340,10 @@ ui.about.version = Version {v}
 ui.about.research = Les recherches derrière le contenu
 ui.about.licences = Licences
 ui.about.licences_text = Polices : Cormorant Garamond et Dancing Script, SIL Open Font License 1.1. Tous les sons sont synthétisés sur votre appareil par Inner Lotus. Les illustrations des chakras sont originales.
+
+# Singular forms (used when {n} is 1)
+ui.habits.best_streak_now__one = Meilleure série en cours : {n} jour
+ui.sound.playing_n__one = Guérison par le son · {n} son en cours
+ui.journal.entries_n__one = {n} entrée
+ui.journal.delete_all_confirm__one = Supprimer la seule entrée du journal ? Cette action est irréversible.
+ui.journal.delete_group_confirm__one = Supprimer {n} entrée de {label} ?

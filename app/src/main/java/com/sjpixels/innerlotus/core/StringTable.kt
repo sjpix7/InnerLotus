@@ -37,7 +37,17 @@ class StringTable(
 
     fun has(key: String): Boolean = map.containsKey(key) || fallback.containsKey(key)
 
+    /**
+     * Picks the singular variant `<key>__one` when [n] is 1 and the *current* language defines
+     * one (never borrowed from the English fallback, since e.g. Japanese has no singular form).
+     */
+    fun pluralKey(key: String, n: Any?): String {
+        val one = (n as? Number)?.toLong() == 1L
+        return if (one && map.containsKey(key + ONE)) key + ONE else key
+    }
+
     companion object {
+        const val ONE = "__one"
         fun parse(json: String): Map<String, JsonElement> = Json.parseToJsonElement(json).jsonObject
     }
 }

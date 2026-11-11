@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -128,9 +129,9 @@ private fun FrequencyList() {
 @Composable
 private fun VolumeSlider(id: String) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(Icons.Filled.VolumeDown, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
+        Icon(Icons.AutoMirrored.Filled.VolumeDown, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
         Slider(value = SoundEngine.layers[id] ?: 0.6f, onValueChange = { SoundEngine.setVolume(id, it) }, modifier = Modifier.weight(1f))
-        Icon(Icons.Filled.VolumeUp, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
+        Icon(Icons.AutoMirrored.Filled.VolumeUp, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
     }
 }
 
