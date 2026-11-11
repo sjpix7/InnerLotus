@@ -1,37 +1,97 @@
+<div align="center">
+
+<img src="docs/store/icon-512.png" alt="Inner Lotus icon" width="128" height="128" />
+
 # Inner Lotus
 
-An offline healing and self-care app for Android, by [sjpixels](https://sjpixels.com/).
-It covers affirmations, EFT tapping, sound healing, Ho'oponopono, journaling, a habit tracker, breathwork and a chakra guide, in 9 languages.
+**An offline healing and self-care app for Android**
 
-- **Package:** `com.sjpixels.innerlotus`
-- **Stack:** Kotlin 2.2 · Jetpack Compose (BOM 2025.12) · Material 3 · AGP 8.13 · Gradle 8.14
-- **SDK:** compileSdk / targetSdk 36 · minSdk 26 (Android 8.0+)
-- **Privacy:** no internet permission, servers, accounts, ads or analytics. Everything stays on the device.
+Affirmations · EFT tapping · Sound healing · Ho'oponopono · Journal · Habits · Breathwork · Chakras, in 9 languages
+
+<a href="https://play.google.com/store/apps/details?id=com.sjpixels.innerlotus"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80" /></a>
+
+[![Website](https://img.shields.io/badge/Website-sjpixels.com-8E44AD?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sjpixels.com/)
+[![Privacy Policy](https://img.shields.io/badge/Privacy-Policy-2E7D32?style=for-the-badge&logo=shieldsdotio&logoColor=white)](PRIVACY_POLICY.md)
+[![Mantra Mala](https://img.shields.io/badge/Also_by_sjpixels-Mantra_Mala-E67E22?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.sjpixels.mantramala)
+
+![Platform](https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white)
+![Min SDK](https://img.shields.io/badge/minSdk-26_(Android_8.0%2B)-3DDC84?logo=android&logoColor=white)
+![Target SDK](https://img.shields.io/badge/targetSdk-36-3DDC84?logo=android&logoColor=white)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-7F52FF?logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-BOM_2025.12-4285F4?logo=jetpackcompose&logoColor=white)
+![Material 3](https://img.shields.io/badge/Material-3-757575?logo=materialdesign&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-8.14-02303A?logo=gradle&logoColor=white)
+![AGP](https://img.shields.io/badge/AGP-8.13-3DDC84?logo=android&logoColor=white)
+
+![Offline](https://img.shields.io/badge/100%25-offline-success)
+![No internet permission](https://img.shields.io/badge/INTERNET_permission-none-success)
+![No ads](https://img.shields.io/badge/ads-none-success)
+![No analytics](https://img.shields.io/badge/analytics-none-success)
+![Languages](https://img.shields.io/badge/languages-9-orange)
+![Affirmations](https://img.shields.io/badge/affirmations-33%2C264_per_language-ff69b4)
+![JVM tests](https://img.shields.io/badge/JVM_tests-105_passing-brightgreen)
+![License](https://img.shields.io/badge/license-All_rights_reserved-lightgrey)
+
+<img src="docs/store/feature-graphic-1024x500.png" alt="Inner Lotus feature graphic" width="100%" />
+
+</div>
 
 ---
 
-## Features
+## 📖 About
+
+Inner Lotus is an offline healing and self-care app for Android, by [sjpixels](https://sjpixels.com/).
+It covers affirmations, EFT tapping, sound healing, Ho'oponopono, journaling, a habit tracker, breathwork and a chakra guide, in 9 languages.
+
+| | |
+|---|---|
+| 📦 **Package** | `com.sjpixels.innerlotus` |
+| 🛠️ **Stack** | Kotlin 2.2 · Jetpack Compose (BOM 2025.12) · Material 3 · AGP 8.13 · Gradle 8.14 |
+| 📱 **SDK** | compileSdk / targetSdk 36 · minSdk 26 (Android 8.0+) |
+| 🔒 **Privacy** | No internet permission, servers, accounts, ads or analytics. Everything stays on the device. |
+
+## 📑 Contents
+
+- [Features](#-features)
+- [Languages](#-languages)
+- [Open, build and run](#-open-build-and-run)
+- [Project structure](#-project-structure)
+- [Editing content and translations](#️-editing-content-and-translations)
+- [Tests](#-tests)
+- [Permissions (and why)](#-permissions-and-why)
+- [Publishing](#-publishing)
+- [Credits and licences](#-credits-and-licences)
+
+---
+
+## ✨ Features
 
 | Section | What it does |
 |---|---|
-| **Affirmations** | 33 life areas × 1008 unique affirmations each (33,264 per language). Swipe cards, chakra picker (Root → Crown, "I AM … I KNOW"), or all 7 chakras at random. Favourites, copy, share as an image, save to Pictures/InnerLotus. Read aloud with the phone's own TTS in 4 modes: tap, auto-play with auto-swipe, repeat, or ×N count. Bulk edit your own lines per area. Import/export as JSON, CSV or TXT, for the whole library or one section. |
-| **Learn** | Research-backed explainers for affirmations, EFT, Ho'oponopono, journaling, sound, breath and chakras, each with a Listen button. |
-| **EFT Tapping** | 12 guided topics × 4 techniques (Basic, Full with 9 Gamut, Gentle touch & breathe, Positive round). Includes a SUD rating before and after, a drawn tapping-point figure, and optional voice guidance. |
-| **Sound Healing** | 17 frequencies (Solfeggio, 432 Hz, OM 136.1 Hz, Schumann and binaural delta to gamma) plus 22 nature sounds, instruments and noise textures. All of them are synthesised live, with no audio files. Mix any number of layers at their own volumes, save mixes, use 8 presets, play an endless autoplay "journey", set a sleep timer, and keep playing in the background with a notification. |
-| **Ho'oponopono** | 15 topics, one of them a specific person you name. The prayer is editable and can be read once, autoplayed in a continuous loop, or repeated a set number of times. |
-| **Journal** | Free, Gratitude and Prompt modes (30 prompts), moods, and grouping by day, week or month. Includes search, a 30-day mood summary, JSON/TXT export, import, delete by entry, group or all, and an optional PIN lock (salted SHA-256). |
-| **Habit Tracker** | Manual habits with 20 suggestions, emoji, colour, times per day and weekdays. Shows streaks, a 12-week heatmap, a weekday rhythm and per-habit stats. **App usage** shows screen time for today, 7 days and 30 days from Android's UsageStatsManager, after the user grants Usage access. |
-| **Breathwork** | Box, 4-7-8, Coherent, Cyclic sighing, Nadi Shodhana, Bhramari and Calming breath. An animated circle guides each one, with optional spoken cues. |
-| **Chakra Guide** | Each chakra's location, element, bija mantra, themes, balanced and imbalanced signs and practices, with its tone. |
-| **Calm now (SOS)** | Breathing circle, 5-4-3-2-1 grounding, tapping for anxiety, a calm-rain mix and crisis helplines (Tele-MANAS 14416, findahelpline.com). |
-| **Mantra chanting** | Links to the separate [Mantra Mala](https://play.google.com/store/apps/details?id=com.sjpixels.mantramala) app. This app intentionally has no mantra counter. |
-| **Everywhere** | Flag + language dropdown in the top-right corner. "Developed by https://sjpixels.com/" footer on every page. Background either rotates every N seconds (default 15) through 18 images or stays fixed. Daily reminders. Masculine/feminine form of address for gendered languages. |
+| 💬 **Affirmations** | 33 life areas × 1008 unique affirmations each (33,264 per language). Swipe cards, chakra picker (Root → Crown, "I AM … I KNOW"), or all 7 chakras at random. Favourites, copy, share as an image, save to Pictures/InnerLotus. Read aloud with the phone's own TTS in 4 modes: tap, auto-play with auto-swipe, repeat, or ×N count. Bulk edit your own lines per area. Import/export as JSON, CSV or TXT, for the whole library or one section. |
+| 📚 **Learn** | Research-backed explainers for affirmations, EFT, Ho'oponopono, journaling, sound, breath and chakras, each with a Listen button. |
+| 👆 **EFT Tapping** | 12 guided topics × 4 techniques (Basic, Full with 9 Gamut, Gentle touch & breathe, Positive round). Includes a SUD rating before and after, a drawn tapping-point figure, and optional voice guidance. |
+| 🎵 **Sound Healing** | 17 frequencies (Solfeggio, 432 Hz, OM 136.1 Hz, Schumann and binaural delta to gamma) plus 22 nature sounds, instruments and noise textures. All of them are synthesised live, with no audio files. Mix any number of layers at their own volumes, save mixes, use 8 presets, play an endless autoplay "journey", set a sleep timer, and keep playing in the background with a notification. |
+| 🙏 **Ho'oponopono** | 15 topics, one of them a specific person you name. The prayer is editable and can be read once, autoplayed in a continuous loop, or repeated a set number of times. |
+| 📓 **Journal** | Free, Gratitude and Prompt modes (30 prompts), moods, and grouping by day, week or month. Includes search, a 30-day mood summary, JSON/TXT export, import, delete by entry, group or all, and an optional PIN lock (salted SHA-256). |
+| ✅ **Habit Tracker** | Manual habits with 20 suggestions, emoji, colour, times per day and weekdays. Shows streaks, a 12-week heatmap, a weekday rhythm and per-habit stats. **App usage** shows screen time for today, 7 days and 30 days from Android's UsageStatsManager, after the user grants Usage access. |
+| 🌬️ **Breathwork** | Box, 4-7-8, Coherent, Cyclic sighing, Nadi Shodhana, Bhramari and Calming breath. An animated circle guides each one, with optional spoken cues. |
+| 🪷 **Chakra Guide** | Each chakra's location, element, bija mantra, themes, balanced and imbalanced signs and practices, with its tone. |
+| 🆘 **Calm now (SOS)** | Breathing circle, 5-4-3-2-1 grounding, tapping for anxiety, a calm-rain mix and crisis helplines (Tele-MANAS 14416, findahelpline.com). |
+| 📿 **Mantra chanting** | Links to the separate [Mantra Mala](https://play.google.com/store/apps/details?id=com.sjpixels.mantramala) app. This app intentionally has no mantra counter. |
+| 🌐 **Everywhere** | Flag + language dropdown in the top-right corner. "Developed by https://sjpixels.com/" footer on every page. Background either rotates every N seconds (default 15) through 18 images or stays fixed. Daily reminders. Masculine/feminine form of address for gendered languages. |
 
-**Languages:** English, Hindi, Russian, Korean, Chinese (Simplified), Spanish, French, Italian, Japanese.
+## 🌍 Languages
+
+| 🇬🇧 **English** | 🇮🇳 **हिन्दी** (Hindi) | 🇷🇺 **Русский** (Russian) |
+|---|---|---|
+| 🇰🇷 **한국어** (Korean) | 🇨🇳 **简体中文** (Chinese, Simplified) | 🇪🇸 **Español** (Spanish) |
+| 🇫🇷 **Français** (French) | 🇮🇹 **Italiano** (Italian) | 🇯🇵 **日本語** (Japanese) |
 
 ---
 
-## Open, build and run
+## 🚀 Open, build and run
 
 1. Install a current **Android Studio** (Narwhal 2025.1.3 or newer). It bundles a JDK 17+ and the Android SDK.
 2. **File → Open…** and choose this folder. Let Gradle sync; it downloads Gradle 8.14.3 and all dependencies.
@@ -46,7 +106,7 @@ From a terminal:
 
 > **First build note.** This project was written in an environment without the Android SDK. The pure-Kotlin parts (content composer, stores, analytics, CSV, all 39 synthesised sounds) compile and pass 105 JVM tests. Every source file passes a full Kotlin syntax check. The Android/Compose layer has not yet been compiled against the real SDK. If the first sync reports a small API mismatch, apply Studio's quick-fix or the suggested replacement; the code uses only stable APIs from the pinned versions.
 
-### Release signing
+### 🔑 Release signing
 
 Create `keystore.properties` in the project root (it is git-ignored):
 
@@ -67,7 +127,7 @@ Use **Play App Signing** in Play Console. Your keystore then serves as the *uplo
 
 ---
 
-## Project structure
+## 🗂️ Project structure
 
 ```
 app/src/main/
@@ -98,7 +158,7 @@ docs/                              ← Play Console guide, privacy policy, store
 
 ---
 
-## Editing content and translations
+## ✏️ Editing content and translations
 
 All text lives in `content/src/<lang>/` as plain text files: `areas.txt`, `chakras.txt`, `learn.txt`, `eft.txt`, `practices.txt`, `ui.txt`.
 
@@ -129,7 +189,7 @@ The validator checks every language against English: same keys, same list length
 
 ---
 
-## Tests
+## 🧪 Tests
 
 ```bash
 tools/jvmtest/run.sh            # needs a Kotlin compiler + kotlinx-serialization/coroutines jars (see script header)
@@ -146,7 +206,7 @@ In Android Studio you can also move `PureTests.kt` into `app/src/test/` as a nor
 
 ---
 
-## Permissions (and why)
+## 🔐 Permissions (and why)
 
 | Permission | Why |
 |---|---|
@@ -160,15 +220,23 @@ There is **no** `INTERNET` permission. Backups are disabled (`allowBackup=false`
 
 ---
 
-## Publishing
+## 📤 Publishing
 
 See **[docs/PLAY_STORE.md](docs/PLAY_STORE.md)** for the store listing in 9 languages, Data safety answers, Health apps declaration, foreground-service declaration, content rating and release checklist. Host **[PRIVACY_POLICY.md](PRIVACY_POLICY.md)** (or `docs/privacy-policy.html`) on sjpixels.com and paste its URL into Play Console.
 
 ---
 
-## Credits and licences
+## 📜 Credits and licences
 
 - Code, content, chakra artwork and synthesised sounds: © sjpixels. All rights reserved.
 - Fonts: Cormorant Garamond and Dancing Script under the SIL Open Font License 1.1 (`docs/licenses/`).
 - Background photos come from the supplied `theme-bg.zip`. Make sure you hold the rights to publish them.
 - The wellness content is educational and is not medical advice; see the in-app disclaimer.
+
+---
+
+<div align="center">
+
+Made with 🪷 by [sjpixels](https://sjpixels.com/)
+
+</div>
