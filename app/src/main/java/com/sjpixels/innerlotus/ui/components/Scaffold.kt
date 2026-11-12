@@ -207,8 +207,8 @@ fun Footer(modifier: Modifier = Modifier) {
         ) { append(Catalog.DEVELOPER_NAME) }
         append(parts.getOrElse(1) { "" })
     }
-    Box(modifier.fillMaxWidth().padding(top = 2.dp, bottom = 0.dp), contentAlignment = Alignment.Center) {
-        Text(text, style = LotusType.micro.copy(fontSize = 10.sp, letterSpacing = 0.04.em), textAlign = TextAlign.Center)
+    Box(modifier.fillMaxWidth().padding(top = 4.dp, bottom = 2.dp), contentAlignment = Alignment.Center) {
+        Text(text, style = LotusType.micro.copy(fontSize = 12.5.sp, lineHeight = 17.sp, letterSpacing = 0.04.em), textAlign = TextAlign.Center)
     }
 }
 
