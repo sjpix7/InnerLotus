@@ -26,68 +26,72 @@ This guide covers everything Play Console asks for, in order. Items marked **☐
 | Category | **Health & Fitness** |
 | Tags (pick up to 5) | Meditation, Mental wellness, Sleep, Habit tracker, Journal |
 | Icon | `docs/store/icon-512.png` (512×512, 32-bit PNG) |
-| Feature graphic | `docs/store/feature-graphic-1024x500.png` |
-| Phone screenshots | ☐ 4–8 screenshots, 1080×1920 or 1080×2400, from a real device or emulator |
+| Feature graphic | `docs/store/feature-graphic-1024x500.png`: glass lotus at dawn, logo, "Come as you *are*." |
+| Phone screenshots | `docs/store/screenshots/01–08`, 1080×1920, framed with captions. Upload them in this order. |
 | Website | https://sjpixels.com/ |
 
-**Suggested screenshots and captions:**
+**Screenshots (ready in `docs/store/screenshots/`):**
 
-1. Home: "Heal, breathe and bloom"
-2. Chakra picker: "Choose a chakra to heal"
-3. Affirmation card: "33 life areas · 1008 affirmations each"
-4. EFT session: "Guided EFT tapping, step by step"
-5. Sound mixer: "Mix healing sounds, play all night"
-6. Journal: "A private journal that never leaves your phone"
-7. Habits + analytics: "Build gentle habits"
-8. Language menu: "9 languages"
+1. `01-home.png`: "Come back to *calm*." (a calm, private companion)
+2. `02-affirmations.png`: "Affirmations for *every* part of life." (33 life areas · 1008 each)
+3. `03-chakras.png`: "Begin where you *need* it most." (guided by the seven chakras)
+4. `04-cards.png`: "Words to grow *into*." (swipe · listen · repeat)
+5. `05-eft.png`: "Tapping, gently, step by *step*." (guided EFT tapping)
+6. `06-sound.png`: "Sounds that help you *rest*." (frequencies · nature · mixes)
+7. `07-journal.png`: "A journal only *you* can read." (private · offline · no account)
+8. `08-calm-now.png`: "Calm, in *one* tap." (breathing & grounding)
 
-### Full description (English, ~2,600 characters)
+To regenerate them after UI changes, capture new emulator screens and re-run the compositing script. Captions are English only; localized screenshots are optional.
+
+### Full description (English, ~2,700 characters)
 
 ```
-Inner Lotus is a calm, private companion for everyday healing — affirmations, EFT tapping, sound healing, Ho'oponopono, journaling, habits and breathwork in one beautiful app.
+Come as you are.
+
+Inner Lotus is a calm, private companion for everyday self-care: affirmations, EFT tapping, sound, Ho'oponopono, journaling, habits and breathwork in one quiet, beautifully simple app.
 
 Everything works offline. No account, no ads, no tracking. What you write stays on your phone.
 
-✿ AFFIRMATIONS FOR 33 AREAS OF LIFE
-Wealth, health, love, family, career, self-love, confidence, sleep, forgiveness, purpose and many more. Each area has 1008 unique affirmations, built around the seven chakras — from Root ("I am safe, centred and grounded") to Crown ("I am divine").
-• Swipe through beautiful cards
-• Choose a chakra to focus on, or receive all seven
-• Listen with your phone's own voice: tap to play, auto-play, repeat or count
+— AFFIRMATIONS FOR 33 AREAS OF LIFE
+Wealth, health, love, family, career, self-love, confidence, sleep, forgiveness, purpose and many more. Each area has 1008 unique affirmations, guided by the seven chakras, from Root ("I am safe, centred and grounded") to Crown ("I am divine").
+• Swipe through soft, card-style affirmations
+• Begin with one chakra, or let all seven guide you
+• Listen in your phone's own voice: tap to play, auto-play, repeat or count
 • Save favourites, copy, share or download a card as an image
 • Add your own affirmations, and import or export them
 
-✿ EFT TAPPING
-Guided sessions for anxiety, stress, anger, sadness, fear, money worries, sleep, cravings, procrastination, pain and more. Rate your feeling, follow each tapping point with spoken guidance, and see how much calmer you feel.
+— EFT TAPPING
+Gentle guided sessions for anxiety, stress, anger, sadness, fear, money worries, sleep, cravings, procrastination, pain and more. Rate how you feel, follow each tapping point with spoken guidance, and notice how much calmer you feel afterwards.
 
-✿ SOUND HEALING
-Solfeggio and 432 Hz tones, OM, Schumann and binaural beats, rain, ocean, forest stream, birdsong, bamboo flute, temple bell, singing bowls, tanpura and more. Layer any sounds into your own mix, save it, and let it play continuously with a sleep timer.
+— SOUND
+Solfeggio and 432 Hz tones, OM, Schumann and binaural beats, rain, ocean, forest stream, birdsong, bamboo flute, temple bell, singing bowls, tanpura and more. Layer sounds into your own mix, save it, and let it play with the screen off, with a sleep timer.
 
-✿ HO'OPONOPONO
+— HO'OPONOPONO
 Create a personal prayer of forgiveness for yourself, a partner, family, work, money, health or anyone you name. Edit every word and let it play on a gentle loop.
 
-✿ PRIVATE JOURNAL
-Free writing, gratitude and 30 reflective prompts. Track your mood, browse by day, week or month, search, lock with a PIN, and export or import whenever you like.
+— A PRIVATE JOURNAL
+Free writing, gratitude and 30 reflective prompts. Note your mood, browse by day, week or month, search, lock with a PIN, and export or import whenever you like.
 
-✿ HABIT TRACKER
-Simple daily habits with streaks, a 12-week heatmap and weekly insights — plus optional screen-time insights from Android's app usage.
+— GENTLE HABITS
+Simple daily habits with streaks, a 12-week heatmap and weekly insights, plus optional screen-time insights from Android's app usage.
 
-✿ BREATHWORK & CALM NOW
-Box breathing, 4-7-8, coherent breathing, cyclic sighing, alternate-nostril and bee breath. A one-tap "Calm now" space with grounding and soothing sounds.
+— BREATHWORK & CALM NOW
+Box breathing, 4-7-8, coherent breathing, cyclic sighing, alternate-nostril and bee breath. A one-tap "Calm now" space with a breathing circle and 5-4-3-2-1 grounding.
 
-✿ LEARN
-Short, research-informed guides to affirmations, EFT, sound, journaling, breath and the chakras — each one can be read aloud.
+— LEARN
+Short, research-informed guides to affirmations, EFT, sound, journaling, breath and the chakras. Each one can be read aloud.
 
-✿ MADE FOR YOU
+— DESIGNED TO FEEL CALM
+• A soft glass design over a glass lotus at dawn
 • 9 languages: English, हिन्दी, Русский, 한국어, 中文, Español, Français, Italiano, 日本語
 • Masculine or feminine form of address in languages that need it
-• Rotating nature backgrounds or a fixed favourite
 • Daily reminders
 
 For mantra chanting with a 108-bead counter, try our companion app Mantra Mala.
 
-Inner Lotus is a wellness and self-care app. It does not provide medical advice and is not a substitute for professional care.
+Inner Lotus is a wellness and self-care app. It does not provide medical, psychological or financial advice and is not a substitute for professional care.
 
-Developed by sjpixels — https://sjpixels.com/
+Developed with love by Sj Pixels: https://sjpixels.com/
 ```
 
 > Keep claims modest. Play's policies forbid misleading health claims, so phrases like "cures", "treats" or "heals disease" must not appear. The text above uses wellness language only.
