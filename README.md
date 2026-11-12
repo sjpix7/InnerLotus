@@ -89,20 +89,73 @@ Inner Lotus is an offline self-care app for Android by [Sj Pixels](https://sjpix
 <a id="features"></a>
 ## <img src="docs/readme/icons/features.svg" width="24" height="24" alt="" /> Features
 
-| Section | What it does |
-|---|---|
-| <img src="docs/readme/icons/affirmations.svg" width="22" height="22" alt="" />&nbsp;**Affirmations** | 33 life areas × 1008 unique affirmations each (33,264 per language). Swipe through a stack of cards, start from one chakra (Root → Crown, "I AM … I KNOW") or let all 7 guide you. Favourites, copy, share as an image, save to Pictures/InnerLotus. Read aloud with the phone's own voice in 4 modes: tap, auto-play with auto-swipe, repeat, or ×N count. Bulk-edit your own lines per area. Import/export as JSON, CSV or TXT, for the whole library or one section. |
-| <img src="docs/readme/icons/learn.svg" width="22" height="22" alt="" />&nbsp;**Learn** | Short, research-informed guides to affirmations, EFT, Ho'oponopono, journaling, sound, breath and chakras, each with a Listen button. |
-| <img src="docs/readme/icons/eft.svg" width="22" height="22" alt="" />&nbsp;**EFT Tapping** | 12 guided topics × 4 techniques (Basic, Full with 9 Gamut, Gentle touch & breathe, Positive round). Includes a 0–10 rating before and after, a drawn tapping-point figure and optional voice guidance. |
-| <img src="docs/readme/icons/sound.svg" width="22" height="22" alt="" />&nbsp;**Sound** | 17 frequencies (Solfeggio, 432 Hz, OM 136.1 Hz, Schumann and binaural delta to gamma) plus 22 nature sounds, instruments and noise textures, all synthesised live with no audio files. Mix any number of layers at their own volumes, save mixes, use 8 presets, play an endless "journey", set a sleep timer and keep playing in the background. A floating mini player follows you around the app. |
-| <img src="docs/readme/icons/hoopono.svg" width="22" height="22" alt="" />&nbsp;**Ho'oponopono** | 15 topics, one of them a person you name. The prayer is editable and can be read once, looped, or repeated a set number of times. |
-| <img src="docs/readme/icons/journal.svg" width="22" height="22" alt="" />&nbsp;**Journal** | Free, Gratitude and Prompt modes (30 prompts), moods shown as gentle weather (sun, lotus, cloud, umbrella, waves, storm), grouping by day, week or month, search, a 30-day mood summary, JSON/TXT export and import, delete by entry, group or all, and an optional PIN lock (salted SHA-256). |
-| <img src="docs/readme/icons/habits.svg" width="22" height="22" alt="" />&nbsp;**Habit Tracker** | Simple daily habits with 24 line icons, colours, times per day and weekdays. Streaks, a 12-week heatmap, a weekday rhythm and per-habit stats. **App usage** shows screen time for today, 7 days and 30 days from Android's UsageStatsManager, after the user grants Usage access. |
-| <img src="docs/readme/icons/breath.svg" width="22" height="22" alt="" />&nbsp;**Breathwork** | Box, 4-7-8, Coherent, Cyclic sighing, Nadi Shodhana, Bhramari and Calming breath, guided by a glowing breathing orb with optional spoken cues. |
-| <img src="docs/readme/icons/chakras.svg" width="22" height="22" alt="" />&nbsp;**Chakra Guide** | Each chakra's location, element, bija mantra, themes, balanced and imbalanced signs and practices, with its tone. |
-| <img src="docs/readme/icons/calm.svg" width="22" height="22" alt="" />&nbsp;**Calm now** | A one-tap calm space: breathing circle, 5-4-3-2-1 grounding, tapping for anxiety, a calm-rain mix and crisis helplines (Tele-MANAS 14416, findahelpline.com). |
-| <img src="docs/readme/icons/mantra.svg" width="22" height="22" alt="" />&nbsp;**Mantra chanting** | Links to the companion [Mantra Mala](https://play.google.com/store/apps/details?id=com.sjpixels.mantramala) app. This app intentionally has no mantra counter. |
-| <img src="docs/readme/icons/everywhere.svg" width="22" height="22" alt="" />&nbsp;**Everywhere** | A glass sidebar on the left edge jumps to any section (with tooltips). Language chip ("EN") and settings in the top bar. "Developed with Love by Sj Pixels" credit at the top of every page. Background is the glass lotus at dawn by default, or rotates every N seconds through 19 images. Daily reminders. Masculine/feminine form of address for gendered languages. |
+<table>
+  <tr>
+    <th width="44"></th>
+    <th align="left">Section</th>
+    <th align="left">What it does</th>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/affirmations.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Affirmations</b></td>
+    <td valign="middle">33 life areas × 1008 unique affirmations each (33,264 per language). Swipe through a stack of cards, start from one chakra (Root → Crown, "I AM … I KNOW") or let all 7 guide you. Favourites, copy, share as an image, save to Pictures/InnerLotus. Read aloud with the phone's own voice in 4 modes: tap, auto-play with auto-swipe, repeat, or ×N count. Bulk-edit your own lines per area. Import/export as JSON, CSV or TXT, for the whole library or one section.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/learn.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Learn</b></td>
+    <td valign="middle">Short, research-informed guides to affirmations, EFT, Ho'oponopono, journaling, sound, breath and chakras, each with a Listen button.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/eft.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>EFT&nbsp;Tapping</b></td>
+    <td valign="middle">12 guided topics × 4 techniques (Basic, Full with 9 Gamut, Gentle touch & breathe, Positive round). Includes a 0–10 rating before and after, a drawn tapping-point figure and optional voice guidance.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/sound.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Sound</b></td>
+    <td valign="middle">17 frequencies (Solfeggio, 432 Hz, OM 136.1 Hz, Schumann and binaural delta to gamma) plus 22 nature sounds, instruments and noise textures, all synthesised live with no audio files. Mix any number of layers at their own volumes, save mixes, use 8 presets, play an endless "journey", set a sleep timer and keep playing in the background. A floating mini player follows you around the app.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/hoopono.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Ho'oponopono</b></td>
+    <td valign="middle">15 topics, one of them a person you name. The prayer is editable and can be read once, looped, or repeated a set number of times.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/journal.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Journal</b></td>
+    <td valign="middle">Free, Gratitude and Prompt modes (30 prompts), moods shown as gentle weather (sun, lotus, cloud, umbrella, waves, storm), grouping by day, week or month, search, a 30-day mood summary, JSON/TXT export and import, delete by entry, group or all, and an optional PIN lock (salted SHA-256).</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/habits.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Habit&nbsp;Tracker</b></td>
+    <td valign="middle">Simple daily habits with 24 line icons, colours, times per day and weekdays. Streaks, a 12-week heatmap, a weekday rhythm and per-habit stats. <b>App usage</b> shows screen time for today, 7 days and 30 days from Android's UsageStatsManager, after the user grants Usage access.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/breath.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Breathwork</b></td>
+    <td valign="middle">Box, 4-7-8, Coherent, Cyclic sighing, Nadi Shodhana, Bhramari and Calming breath, guided by a glowing breathing orb with optional spoken cues.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/chakras.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Chakra&nbsp;Guide</b></td>
+    <td valign="middle">Each chakra's location, element, bija mantra, themes, balanced and imbalanced signs and practices, with its tone.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/calm.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Calm&nbsp;now</b></td>
+    <td valign="middle">A one-tap calm space: breathing circle, 5-4-3-2-1 grounding, tapping for anxiety, a calm-rain mix and crisis helplines (Tele-MANAS 14416, findahelpline.com).</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/mantra.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Mantra&nbsp;chanting</b></td>
+    <td valign="middle">Links to the companion <a href="https://play.google.com/store/apps/details?id=com.sjpixels.mantramala">Mantra Mala</a> app. This app intentionally has no mantra counter.</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="docs/readme/icons/everywhere.svg" width="26" height="26" alt="" /></td>
+    <td valign="middle"><b>Everywhere</b></td>
+    <td valign="middle">A glass sidebar on the left edge jumps to any section (with tooltips). Language chip ("EN") and settings in the top bar. "Developed with Love by Sj Pixels" credit at the top of every page. Background is the glass lotus at dawn by default, or rotates every N seconds through 19 images. Daily reminders. Masculine/feminine form of address for gendered languages.</td>
+  </tr>
+</table>
 
 ---
 
