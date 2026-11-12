@@ -3,27 +3,71 @@ package com.sjpixels.innerlotus.ui.screens
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.DeleteForever
+import androidx.compose.material.icons.outlined.DeleteOutline
+import androidx.compose.material.icons.outlined.Description
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Draw
+import androidx.compose.material.icons.outlined.Lightbulb
+import androidx.compose.material.icons.outlined.Lock
+import androidx.compose.material.icons.outlined.LockOpen
+import androidx.compose.material.icons.outlined.MoreHoriz
+import androidx.compose.material.icons.outlined.SearchOff
+import androidx.compose.material.icons.outlined.Shuffle
+import androidx.compose.material.icons.outlined.Upload
+import androidx.compose.material.icons.outlined.VolunteerActivism
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.em
 import com.sjpixels.innerlotus.App
 import com.sjpixels.innerlotus.Screen
 import com.sjpixels.innerlotus.core.Catalog
@@ -32,7 +76,9 @@ import com.sjpixels.innerlotus.core.tr
 import com.sjpixels.innerlotus.data.JournalEntry
 import com.sjpixels.innerlotus.share.Sharing
 import com.sjpixels.innerlotus.ui.components.*
+import com.sjpixels.innerlotus.ui.icons.LotusIcons
 import com.sjpixels.innerlotus.ui.theme.Lotus
+import com.sjpixels.innerlotus.ui.theme.LotusType
 import java.security.MessageDigest
 import java.time.DayOfWeek
 import java.time.Instant
@@ -82,8 +128,31 @@ object Dates {
     fun toMillis(dt: LocalDateTime): Long = dt.atZone(zone).toInstant().toEpochMilli()
 }
 
-private fun moodEmoji(id: String) = Catalog.moods.firstOrNull { it.first == id }?.second ?: ""
-private fun modeEmoji(mode: String) = when (mode) { "gratitude" -> "🙏"; "prompt" -> "💭"; else -> "✍️" }
+/** Line icon for a journal mode. */
+private fun journalModeIcon(mode: String): ImageVector = when (mode) {
+    "gratitude" -> Icons.Outlined.VolunteerActivism
+    "prompt" -> Icons.Outlined.Lightbulb
+    else -> Icons.Outlined.Draw
+}
+
+/** Translated mode name; unknown (imported) modes read as free writing. */
+private fun journalModeLabel(mode: String): String =
+    tr("ui.journal.mode_" + if (mode == "gratitude" || mode == "prompt") mode else "free")
+
+/** "Three good things from today, big or small:" without its closing colon, for headlines and captions. */
+private fun journalGratitudeIntro(): String = tr("ui.journal.gratitude_hint").trimEnd(':', '：', ' ', ' ', ' ')
+
+/**
+ * The question shown on the overview's prompt card. The prompt editor opened from that card starts
+ * with it (instead of drawing another random prompt), then clears it.
+ */
+private var journalPromptHandoff: String? = null
+
+private fun takeJournalPromptHandoff(prompts: List<String>): String? {
+    val p = journalPromptHandoff
+    journalPromptHandoff = null
+    return p?.takeIf { it in prompts }
+}
 
 @Composable
 fun JournalScreen() {
@@ -94,6 +163,8 @@ fun JournalScreen() {
     var query by rememberSaveable { mutableStateOf("") }
     var confirm by remember { mutableStateOf<Pair<String, () -> Unit>?>(null) }
     var menu by remember { mutableStateOf(false) }
+    val prompts = I18n.list("journal.prompts")
+    val teaser = rememberSaveable(I18n.lang) { prompts.randomOrNull().orEmpty() }
     val jsonExporter = rememberExporter("application/json")
     val txtExporter = rememberExporter("text/plain")
     val importer = rememberImporter { text ->
@@ -101,51 +172,65 @@ fun JournalScreen() {
         Sharing.toast(ctx, if (n < 0) tr("ui.data.import_failed") else tr("ui.data.imported_n", "n" to n))
     }
     AppScaffold(title = tr("ui.section.journal"), actions = {
-        IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, null, tint = Lotus.Ink) }
-        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-            DropdownMenuItem(text = { Text(tr("ui.journal.export_json")) }, leadingIcon = { Icon(Icons.Filled.Download, null) }, onClick = {
-                menu = false; jsonExporter("inner_lotus_journal.json") { App.journal.exportJson() }
-            })
-            DropdownMenuItem(text = { Text(tr("ui.journal.export_txt")) }, leadingIcon = { Icon(Icons.Filled.Description, null) }, onClick = {
-                menu = false
-                txtExporter("inner_lotus_journal.txt") {
-                    App.journal.exportText(App.journal.entries.value, { Dates.stamp(it) }, { m -> moodEmoji(m) + " " + tr("journal.mood.$m") })
+        Box {
+            CircleIconButton(Icons.Outlined.MoreHoriz, tr("ui.settings.data"), { menu = true })
+            DropdownMenu(
+                expanded = menu,
+                onDismissRequest = { menu = false },
+                shape = RoundedCornerShape(22.dp),
+                containerColor = Lotus.Sheet,
+            ) {
+                JournalMenuItem(tr("ui.journal.export_json"), Icons.Outlined.Download) {
+                    menu = false; jsonExporter("inner_lotus_journal.json") { App.journal.exportJson() }
                 }
-            })
-            DropdownMenuItem(text = { Text(tr("ui.data.import")) }, leadingIcon = { Icon(Icons.Filled.Upload, null) }, onClick = { menu = false; importer() })
-            DropdownMenuItem(text = { Text(tr("ui.journal.lock")) }, leadingIcon = { Icon(Icons.Filled.Lock, null) }, onClick = { menu = false; App.nav.go(Screen.Settings) })
-            DropdownMenuItem(text = { Text(tr("ui.journal.delete_all"), color = Lotus.Danger) }, leadingIcon = { Icon(Icons.Filled.DeleteForever, null, tint = Lotus.Danger) }, onClick = {
-                menu = false
-                confirm = tr("ui.journal.delete_all_confirm", "n" to entries.size) to { App.journal.deleteAll() }
-            })
+                JournalMenuItem(tr("ui.journal.export_txt"), Icons.Outlined.Description) {
+                    menu = false
+                    txtExporter("inner_lotus_journal.txt") {
+                        // The plain-text file keeps its original "symbol + mood name" format.
+                        App.journal.exportText(App.journal.entries.value, { Dates.stamp(it) }, { m ->
+                            Catalog.moods.firstOrNull { it.first == m }?.second.orEmpty() + " " + tr("journal.mood.$m")
+                        })
+                    }
+                }
+                JournalMenuItem(tr("ui.data.import"), Icons.Outlined.Upload) { menu = false; importer() }
+                JournalMenuItem(tr("ui.journal.lock"), Icons.Outlined.Lock) { menu = false; App.nav.go(Screen.Settings) }
+                JournalMenuItem(tr("ui.journal.delete_all"), Icons.Outlined.DeleteForever, color = Lotus.Danger) {
+                    menu = false
+                    confirm = tr("ui.journal.delete_all_confirm", "n" to entries.size) to { App.journal.deleteAll() }
+                }
+            }
         }
     }) { padding ->
         PageColumn(padding) {
-            LearnCard("journal", "📔")
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                listOf("free" to "✍️", "gratitude" to "🙏", "prompt" to "💭").forEach { (mode, emoji) ->
-                    GlassCard(modifier = Modifier.weight(1f), padding = 10.dp, strong = true, onClick = { App.nav.go(Screen.JournalEdit(null, mode)) }) {
-                        Text(emoji, fontSize = 26.sp, modifier = Modifier.align(Alignment.CenterHorizontally))
-                        Text(tr("ui.journal.mode_$mode"), fontSize = 13.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(), maxLines = 2, minLines = 2)
-                    }
-                }
+            ScreenHeader(
+                title = tr("ui.hero.journal.title"),
+                kicker = tr("ui.hero.journal.kicker"),
+                subtitle = tr("ui.hero.journal.sub"),
+            )
+            LearnCard("journal")
+            TileGrid(listOf("free", "gratitude")) { mode, i, m ->
+                PracticeTile(
+                    icon = journalModeIcon(mode),
+                    title = tr("ui.journal.mode_$mode"),
+                    subtitle = if (mode == "gratitude") journalGratitudeIntro() else tr("ui.journal.placeholder"),
+                    tone = toneFor(i),
+                    modifier = m,
+                    onClick = { App.nav.go(Screen.JournalEdit(null, mode)) },
+                )
+            }
+            JournalPromptCard(teaser) {
+                journalPromptHandoff = teaser.ifBlank { null }
+                App.nav.go(Screen.JournalEdit(null, "prompt"))
             }
             MoodSummary(entries)
-            OutlinedTextField(
-                value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth(), singleLine = true,
-                leadingIcon = { Icon(Icons.Filled.Search, null) }, placeholder = { Text(tr("ui.journal.search")) },
-                shape = RoundedCornerShape(16.dp),
-                colors = OutlinedTextFieldDefaults.colors(unfocusedContainerColor = Color.White.copy(alpha = 0.6f), focusedContainerColor = Color.White.copy(alpha = 0.85f)),
-            )
+            SearchField(query, { query = it }, tr("ui.journal.search"))
             Segmented(
                 options = listOf("day" to tr("ui.journal.by_day"), "week" to tr("ui.journal.by_week"), "month" to tr("ui.journal.by_month")),
                 selected = group, onSelect = { group = it },
             )
             val q = query.trim().lowercase()
             val filtered = entries.filter { q.isEmpty() || it.text.lowercase().contains(q) || it.prompt.lowercase().contains(q) }
-            if (filtered.isEmpty()) {
-                GlassCard { Text(if (entries.isEmpty()) tr("ui.journal.empty") else tr("ui.journal.no_match"), textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(), color = Lotus.InkSoft) }
-            }
+            if (filtered.isEmpty()) JournalEmptyCard(searching = entries.isNotEmpty())
             val groups = filtered.groupBy { e ->
                 val d = Dates.date(e.created)
                 when (group) { "week" -> Dates.weekStart(d); "month" -> d.withDayOfMonth(1); else -> d }
@@ -156,16 +241,15 @@ fun JournalScreen() {
                     "month" -> Dates.month(key)
                     else -> Dates.full(key)
                 }
-                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 4.dp)) {
-                    Text(label, style = MaterialTheme.typography.titleMedium, color = Lotus.PlumDeep, modifier = Modifier.weight(1f))
-                    Text(tr("ui.journal.entries_n", "n" to list.size), fontSize = 12.sp, color = Lotus.InkSoft)
-                    IconButton(onClick = {
-                        val ids = list.map { it.id }.toSet()
-                        confirm = tr("ui.journal.delete_group_confirm", "n" to list.size, "label" to label) to { App.journal.deleteWhere { it.id in ids }; Unit }
-                    }) { Icon(Icons.Filled.DeleteOutline, tr("ui.common.delete"), tint = Lotus.InkSoft) }
+                JournalGroupHeader(label, list.size, onDelete = {
+                    val ids = list.map { it.id }.toSet()
+                    confirm = tr("ui.journal.delete_group_confirm", "n" to list.size, "label" to label) to { App.journal.deleteWhere { it.id in ids }; Unit }
+                })
+                list.forEach { e ->
+                    EntryRow(e, timeOnly = group == "day", onDelete = { confirm = tr("ui.journal.delete_one_confirm") to { App.journal.delete(e.id) } })
                 }
-                list.forEach { e -> EntryRow(e, onDelete = { confirm = tr("ui.journal.delete_one_confirm") to { App.journal.delete(e.id) } }) }
             }
+            QuietNote(tr("ui.quiet.private"), icon = Icons.Outlined.Lock)
         }
     }
     confirm?.let { (msg, action) ->
@@ -173,18 +257,111 @@ fun JournalScreen() {
     }
 }
 
+/** Overflow-menu row: outlined accent icon + label ([color] tints both, e.g. for delete). */
 @Composable
-private fun EntryRow(e: JournalEntry, onDelete: () -> Unit) {
-    GlassCard(padding = 12.dp, onClick = { App.nav.go(Screen.JournalEdit(e.id, e.mode)) }) {
-        Row(verticalAlignment = Alignment.Top) {
-            Text(moodEmoji(e.mood).ifEmpty { modeEmoji(e.mode) }, fontSize = 24.sp)
-            Spacer(Modifier.width(10.dp))
-            Column(Modifier.weight(1f)) {
-                Text(Dates.stamp(e.created), fontSize = 12.sp, color = Lotus.InkSoft)
-                if (e.prompt.isNotBlank()) Text(e.prompt, fontSize = 13.sp, color = Lotus.Plum, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Text(e.text.trim().replace("\n", " · "), maxLines = 3, overflow = TextOverflow.Ellipsis, color = Lotus.Ink)
+private fun JournalMenuItem(text: String, icon: ImageVector, color: Color = Lotus.Ink, onClick: () -> Unit) {
+    DropdownMenuItem(
+        text = { Text(text, style = LotusType.itemTitle.copy(color = color)) },
+        leadingIcon = { Icon(icon, contentDescription = null, tint = if (color == Lotus.Ink) Lotus.Accent else color, modifier = Modifier.size(20.dp)) },
+        onClick = onClick,
+    )
+}
+
+/** Wide blush card: a question to write about, opening the prompt editor with it. */
+@Composable
+private fun JournalPromptCard(question: String, onClick: () -> Unit) {
+    GlassCard(tone = Tone.Blush, onClick = onClick) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(journalModeIcon("prompt"), contentDescription = null, tint = Lotus.Accent, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(8.dp))
+            Kicker(tr("ui.journal.mode_prompt"))
+        }
+        if (question.isNotBlank()) {
+            Spacer(Modifier.height(10.dp))
+            Text(question, style = LotusType.cardTitle)
+        }
+        Spacer(Modifier.height(6.dp))
+        TextLink(tr("ui.learn.go_journal"), onClick, Modifier.offset(x = (-6).dp))
+    }
+}
+
+/** Calm card shown when the journal is empty, or when a search finds nothing. */
+@Composable
+private fun JournalEmptyCard(searching: Boolean) {
+    GlassCard(padding = 22.dp) {
+        Icon(
+            if (searching) Icons.Outlined.SearchOff else LotusIcons.Journal,
+            contentDescription = null,
+            tint = Lotus.Accent,
+            modifier = Modifier.size(26.dp).align(Alignment.CenterHorizontally),
+        )
+        Spacer(Modifier.height(10.dp))
+        Text(
+            if (searching) tr("ui.journal.no_match") else tr("ui.journal.empty"),
+            style = LotusType.small,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+/** Serif date heading for a day / week / month, its entry count, and a quiet delete. */
+@Composable
+private fun JournalGroupHeader(label: String, count: Int, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Text(label, style = LotusType.section)
+            Text(tr("ui.journal.entries_n", "n" to count), style = LotusType.itemSub)
+        }
+        IconButton(onClick = onDelete, modifier = Modifier.offset(x = 14.dp)) {
+            Icon(Icons.Outlined.DeleteOutline, tr("ui.common.delete"), tint = Lotus.InkSoft, modifier = Modifier.size(20.dp))
+        }
+    }
+}
+
+@Composable
+private fun EntryRow(e: JournalEntry, timeOnly: Boolean, onDelete: () -> Unit) {
+    val open: () -> Unit = { App.nav.go(Screen.JournalEdit(e.id, e.mode)) }
+    val lines = remember(e.text) { e.text.lines().map { it.trim() }.filter { it.isNotEmpty() } }
+    // Prompt entries lead with their question; others with their first line.
+    val title = e.prompt.trim().ifEmpty { lines.firstOrNull().orEmpty() }
+    val excerpt = (if (e.prompt.isNotBlank()) lines else lines.drop(1)).joinToString(" · ")
+    GlassCard(onClick = open) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(journalModeIcon(e.mode), contentDescription = journalModeLabel(e.mode), tint = Lotus.Accent, modifier = Modifier.size(16.dp))
+            Spacer(Modifier.width(8.dp))
+            Kicker(if (timeOnly) Dates.time(e.created) else Dates.stamp(e.created), Modifier.weight(1f))
+            if (Catalog.moods.any { it.first == e.mood }) {
+                Spacer(Modifier.width(8.dp))
+                JournalMoodTag(e.mood)
             }
-            IconButton(onClick = onDelete) { Icon(Icons.Filled.Close, tr("ui.common.delete"), tint = Lotus.InkSoft, modifier = Modifier.size(18.dp)) }
+        }
+        if (title.isNotEmpty()) {
+            Spacer(Modifier.height(10.dp))
+            Text(title, style = LotusType.cardTitle, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        }
+        if (excerpt.isNotEmpty()) {
+            Spacer(Modifier.height(4.dp))
+            Text(excerpt, style = LotusType.small, maxLines = 3, overflow = TextOverflow.Ellipsis)
+        }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TextLink(tr("ui.common.edit"), open, Modifier.offset(x = (-6).dp))
+            Spacer(Modifier.weight(1f))
+            IconButton(onClick = onDelete, modifier = Modifier.offset(x = 14.dp)) {
+                Icon(Icons.Outlined.DeleteOutline, tr("ui.common.delete"), tint = Lotus.InkSoft, modifier = Modifier.size(20.dp))
+            }
+        }
+    }
+}
+
+/** Small glass pill: mood icon + name. */
+@Composable
+private fun JournalMoodTag(id: String) {
+    GlassSurface(shape = PillShape, material = Glass.Pill) {
+        Row(Modifier.padding(horizontal = 11.dp, vertical = 5.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(LotusIcons.mood(id), contentDescription = null, tint = Lotus.Accent, modifier = Modifier.size(15.dp))
+            Spacer(Modifier.width(6.dp))
+            Text(tr("journal.mood.$id"), style = LotusType.pill.copy(color = Lotus.Ink), maxLines = 1)
         }
     }
 }
@@ -194,17 +371,60 @@ private fun MoodSummary(entries: List<JournalEntry>) {
     val since = System.currentTimeMillis() - 30L * 86_400_000L
     val recent = entries.filter { it.created >= since && it.mood.isNotEmpty() }
     if (recent.isEmpty()) return
-    val counts = Catalog.moods.map { (id, emoji) -> Triple(id, emoji, recent.count { it.mood == id }) }
-    val max = counts.maxOf { it.third }.coerceAtLeast(1)
-    GlassCard(padding = 12.dp) {
-        Text(tr("ui.journal.mood_30"), style = MaterialTheme.typography.titleSmall)
-        Spacer(Modifier.height(6.dp))
-        counts.forEach { (id, emoji, n) ->
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 2.dp)) {
-                Text(emoji, modifier = Modifier.width(28.dp))
-                Text(tr("journal.mood.$id"), fontSize = 12.sp, modifier = Modifier.width(76.dp), maxLines = 1)
-                Box(Modifier.weight(1f)) { HBar(n.toFloat() / max, Lotus.Teal) }
-                Text(" $n", fontSize = 12.sp, modifier = Modifier.width(30.dp))
+    val counts = Catalog.moods.map { (id, _) -> id to recent.count { it.mood == id } }
+    val max = counts.maxOf { it.second }.coerceAtLeast(1)
+    GlassCard {
+        Kicker(tr("ui.journal.mood_30"))
+        Spacer(Modifier.height(14.dp))
+        JournalMoodCells(counts.map { tr("journal.mood.${it.first}") }) { i, m, cell ->
+            val (id, n) = counts[i]
+            val top = n == max
+            val disc = (cell - 8.dp).coerceAtMost(40.dp)
+            Column(m.padding(horizontal = 2.dp).semantics(mergeDescendants = true) {}, horizontalAlignment = Alignment.CenterHorizontally) {
+                val glyph = @Composable {
+                    Icon(LotusIcons.mood(id), contentDescription = null, tint = if (n > 0) Lotus.Ink else Lotus.InkSoft, modifier = Modifier.size(disc * 0.5f))
+                }
+                // Most frequent mood(s): the blush "selected" disc of the mood picker; others: plain glass.
+                if (top) {
+                    Box(
+                        Modifier
+                            .size(disc)
+                            .clip(CircleShape)
+                            .background(Lotus.Blush.copy(alpha = 0.6f))
+                            .border(1.dp, Lotus.Mauve.copy(alpha = 0.55f), CircleShape),
+                        contentAlignment = Alignment.Center,
+                    ) { glyph() }
+                } else {
+                    GlassSurface(Modifier.size(disc), shape = CircleShape, material = Glass.Pill, contentAlignment = Alignment.Center) { glyph() }
+                }
+                Spacer(Modifier.height(6.dp))
+                Text("$n", style = LotusType.cardTitle.copy(color = if (n > 0) Lotus.Ink else Lotus.InkSoft))
+                Text(tr("journal.mood.$id"), style = LotusType.micro, maxLines = 1, overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
+            }
+        }
+    }
+}
+
+/**
+ * One cell per mood: a single row when every label fits its column, otherwise rows of three, so
+ * longer mood names (Russian, Italian…) are never cut off on narrow phones.
+ */
+@Composable
+private fun JournalMoodCells(labels: List<String>, cell: @Composable (index: Int, modifier: Modifier, width: Dp) -> Unit) {
+    val measurer = rememberTextMeasurer()
+    val style = LotusType.micro
+    val slack = with(LocalDensity.current) { 8.dp.roundToPx() }
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+        val count = labels.size.coerceAtLeast(1)
+        val widest = remember(labels, style) { labels.maxOfOrNull { measurer.measure(it, style).size.width } ?: 0 }
+        val perRow = if (widest + slack <= constraints.maxWidth / count) count else (count + 1) / 2
+        val cellWidth = maxWidth / perRow
+        Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            labels.indices.chunked(perRow).forEach { row ->
+                Row(Modifier.fillMaxWidth()) {
+                    row.forEach { i -> cell(i, Modifier.weight(1f), cellWidth) }
+                    repeat(perRow - row.size) { Spacer(Modifier.weight(1f)) }
+                }
             }
         }
     }
@@ -218,7 +438,9 @@ fun JournalEditScreen(id: String?, mode: String) {
     val entryMode = existing?.mode ?: mode
     val prompts = I18n.list("journal.prompts")
     var created by rememberSaveable { mutableStateOf(existing?.created ?: System.currentTimeMillis()) }
-    var prompt by rememberSaveable { mutableStateOf(existing?.prompt ?: if (entryMode == "prompt") prompts.randomOrNull().orEmpty() else "") }
+    var prompt by rememberSaveable {
+        mutableStateOf(existing?.prompt ?: if (entryMode == "prompt") (takeJournalPromptHandoff(prompts) ?: prompts.randomOrNull()).orEmpty() else "")
+    }
     var mood by rememberSaveable { mutableStateOf(existing?.mood ?: "") }
     val initialLines = existing?.text?.split("\n").orEmpty()
     var text by rememberSaveable { mutableStateOf(existing?.text ?: "") }
@@ -227,87 +449,95 @@ fun JournalEditScreen(id: String?, mode: String) {
     var g3 by rememberSaveable { mutableStateOf(initialLines.drop(2).joinToString("\n")) }
     var confirmDelete by remember { mutableStateOf(false) }
     val body = if (entryMode == "gratitude") listOf(g1, g2, g3).joinToString("\n") else text
-    val fieldColors = OutlinedTextFieldDefaults.colors(unfocusedContainerColor = Color.White.copy(alpha = 0.75f), focusedContainerColor = Color.White.copy(alpha = 0.92f))
+    val pickDate: () -> Unit = {
+        val dt = Dates.dateTime(created)
+        DatePickerDialog(ctx, { _, y, m, d ->
+            TimePickerDialog(ctx, { _, h, min ->
+                created = Dates.toMillis(LocalDateTime.of(y, m + 1, d, h, min))
+            }, dt.hour, dt.minute, android.text.format.DateFormat.is24HourFormat(ctx)).show()
+        }, dt.year, dt.monthValue - 1, dt.dayOfMonth).show()
+    }
 
     AppScaffold(title = tr("ui.journal.mode_$entryMode")) { padding ->
         PageColumn(padding) {
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.clickable {
-                val dt = Dates.dateTime(created)
-                DatePickerDialog(ctx, { _, y, m, d ->
-                    TimePickerDialog(ctx, { _, h, min ->
-                        created = Dates.toMillis(LocalDateTime.of(y, m + 1, d, h, min))
-                    }, dt.hour, dt.minute, android.text.format.DateFormat.is24HourFormat(ctx)).show()
-                }, dt.year, dt.monthValue - 1, dt.dayOfMonth).show()
-            }) {
-                Icon(Icons.Filled.Event, null, tint = Lotus.Plum)
-                Spacer(Modifier.width(8.dp))
-                Text(Dates.stamp(created), color = Lotus.PlumDeep, fontWeight = FontWeight.SemiBold)
-                Spacer(Modifier.width(6.dp))
-                Icon(Icons.Filled.Edit, tr("ui.journal.change_date"), tint = Lotus.InkSoft, modifier = Modifier.size(16.dp))
-            }
-            if (entryMode == "prompt") {
-                GlassCard(strong = true, padding = 12.dp) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("💭  $prompt", style = MaterialTheme.typography.titleMedium, color = Lotus.PlumDeep, modifier = Modifier.weight(1f))
-                        IconButton(onClick = { prompt = prompts.filter { it != prompt }.randomOrNull() ?: prompt }) { Icon(Icons.Filled.Shuffle, tr("ui.journal.new_prompt")) }
+            Column(Modifier.fillMaxWidth()) {
+                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                    Kicker(Dates.stamp(created), Modifier.weight(1f))
+                    TextLink(tr("ui.journal.change_date"), pickDate, Modifier.offset(x = 6.dp), icon = Icons.Outlined.CalendarMonth)
+                }
+                when (entryMode) {
+                    "prompt" -> {
+                        if (prompt.isNotBlank()) {
+                            Text(prompt, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(top = 4.dp))
+                        }
+                        TextLink(
+                            tr("ui.journal.new_prompt"),
+                            { prompt = prompts.filter { it != prompt }.randomOrNull() ?: prompt },
+                            Modifier.offset(x = (-6).dp),
+                            icon = Icons.Outlined.Shuffle,
+                        )
                     }
+                    "gratitude" -> ScreenHeader(title = journalGratitudeIntro(), subtitle = tr("ui.hero.journal.sub"))
+                    else -> ScreenHeader(title = tr("ui.hero.journal.title"), subtitle = tr("ui.hero.journal.sub"))
                 }
             }
             if (entryMode == "gratitude") {
-                Text(tr("ui.journal.gratitude_hint"), color = Lotus.InkSoft)
-                OutlinedTextField(g1, { g1 = it }, label = { Text("1.") }, modifier = Modifier.fillMaxWidth(), colors = fieldColors)
-                OutlinedTextField(g2, { g2 = it }, label = { Text("2.") }, modifier = Modifier.fillMaxWidth(), colors = fieldColors)
-                OutlinedTextField(g3, { g3 = it }, label = { Text("3.") }, modifier = Modifier.fillMaxWidth(), colors = fieldColors)
+                JournalNumberedField(1, g1) { g1 = it }
+                JournalNumberedField(2, g2) { g2 = it }
+                JournalNumberedField(3, g3) { g3 = it }
             } else {
-                OutlinedTextField(
-                    value = text, onValueChange = { text = it },
-                    modifier = Modifier.fillMaxWidth().heightIn(min = 260.dp), minLines = 10,
-                    placeholder = { Text(tr("ui.journal.placeholder")) },
-                    shape = RoundedCornerShape(16.dp), colors = fieldColors,
+                LotusTextField(text, { text = it }, tr("ui.journal.placeholder"), minLines = 10)
+            }
+            SectionHeading(tr("ui.journal.how_feel"))
+            val moodIds = Catalog.moods.map { it.first }
+            JournalMoodCells(moodIds.map { tr("journal.mood.$it") }) { i, m, cell ->
+                val mid = moodIds[i]
+                ChoiceIcon(
+                    icon = LotusIcons.mood(mid),
+                    label = tr("journal.mood.$mid"),
+                    selected = mood == mid,
+                    onClick = { mood = if (mood == mid) "" else mid },
+                    modifier = m,
+                    size = (cell - 8.dp).coerceAtMost(54.dp),
                 )
             }
-            Text(tr("ui.journal.how_feel"), style = MaterialTheme.typography.titleSmall)
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Catalog.moods.forEach { (mid, emoji) ->
-                    Column(
-                        Modifier
-                            .clip(RoundedCornerShape(14.dp))
-                            .background(if (mood == mid) Lotus.Plum.copy(alpha = 0.18f) else Color.Transparent)
-                            .clickable { mood = if (mood == mid) "" else mid }
-                            .padding(6.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                    ) {
-                        Text(emoji, fontSize = 26.sp)
-                        Text(tr("journal.mood.$mid"), fontSize = 10.sp, maxLines = 1)
-                    }
-                }
-            }
-            Button(
+            PrimaryButton(
+                tr("ui.common.save"),
                 onClick = {
-                    if (body.isBlank()) { Sharing.toast(ctx, tr("ui.journal.empty_entry")); return@Button }
-                    App.journal.upsert(
-                        (existing ?: JournalEntry(mode = entryMode)).copy(created = created, prompt = prompt, text = body.trimEnd(), mood = mood)
-                    )
-                    Sharing.toast(ctx, tr("ui.common.saved"))
-                    App.nav.back()
+                    if (body.isBlank()) {
+                        Sharing.toast(ctx, tr("ui.journal.empty_entry"))
+                    } else {
+                        App.journal.upsert(
+                            (existing ?: JournalEntry(mode = entryMode)).copy(created = created, prompt = prompt, text = body.trimEnd(), mood = mood)
+                        )
+                        Sharing.toast(ctx, tr("ui.common.saved"))
+                        App.nav.back()
+                    }
                 },
-                modifier = Modifier.fillMaxWidth().height(50.dp),
-            ) { Icon(Icons.Filled.Check, null); Spacer(Modifier.width(8.dp)); Text(tr("ui.common.save")) }
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                trailingIcon = Icons.Outlined.Check,
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
                 ListenButton("journal_entry", { (if (prompt.isNotBlank()) "$prompt. " else "") + body })
                 if (existing != null) {
-                    OutlinedButton(onClick = { confirmDelete = true }) {
-                        Icon(Icons.Filled.Delete, null, tint = Lotus.Danger); Spacer(Modifier.width(4.dp)); Text(tr("ui.common.delete"), color = Lotus.Danger)
-                    }
+                    PillButton(tr("ui.common.delete"), { confirmDelete = true }, icon = Icons.Outlined.DeleteOutline, color = Lotus.Danger)
                 }
             }
-            Text("🔒 " + tr("ui.journal.private_note"), fontSize = 12.sp, color = Lotus.InkSoft)
+            QuietNote(tr("ui.journal.private_note"), icon = Icons.Outlined.Lock)
         }
     }
     if (confirmDelete && existing != null) {
         ConfirmDialog(tr("ui.common.delete"), tr("ui.journal.delete_one_confirm"), tr("ui.common.delete"), {
             App.journal.delete(existing.id); App.nav.back()
         }, { confirmDelete = false }, danger = true)
+    }
+}
+
+/** Gratitude line: "01" kicker over a glass field. */
+@Composable
+private fun JournalNumberedField(n: Int, value: String, onValueChange: (String) -> Unit) {
+    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Kicker(n.toString().padStart(2, '0'), Modifier.padding(start = 4.dp))
+        LotusTextField(value, onValueChange, placeholder = "", minLines = 2)
     }
 }
 
@@ -319,26 +549,61 @@ fun PinGate() {
     var forgot by remember { mutableStateOf(false) }
     AppScaffold(title = tr("ui.section.journal")) { padding ->
         PageColumn(padding) {
-            Spacer(Modifier.height(30.dp))
-            GlassCard(strong = true) {
-                Text("🔒", fontSize = 44.sp, modifier = Modifier.align(Alignment.CenterHorizontally))
-                Text(tr("ui.pin.enter"), style = MaterialTheme.typography.titleMedium, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
-                Spacer(Modifier.height(10.dp))
-                OutlinedTextField(
-                    value = pin, onValueChange = { if (it.length <= 8 && it.all(Char::isDigit)) { pin = it; error = false } },
-                    singleLine = true, isError = error, modifier = Modifier.fillMaxWidth(),
-                    visualTransformation = PasswordVisualTransformation(),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
-                    supportingText = { if (error) Text(tr("ui.pin.wrong")) },
-                )
-                Button(onClick = { if (PinLock.check(pin)) App.journalUnlocked = true else error = true }, modifier = Modifier.fillMaxWidth()) { Text(tr("ui.pin.unlock")) }
-                TextButton(onClick = { forgot = true }, modifier = Modifier.align(Alignment.CenterHorizontally)) { Text(tr("ui.pin.forgot")) }
+            Spacer(Modifier.height(24.dp))
+            GlassSurface(
+                Modifier.size(88.dp).align(Alignment.CenterHorizontally),
+                shape = CircleShape,
+                material = Glass.Strong,
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(Icons.Outlined.Lock, contentDescription = null, tint = Lotus.Accent, modifier = Modifier.size(34.dp))
             }
+            ScreenHeader(title = tr("ui.pin.enter"), kicker = tr("ui.hero.journal.kicker"), center = true)
+            JournalPinField(pin, error) { if (it.length <= 8 && it.all(Char::isDigit)) { pin = it; error = false } }
+            if (error) {
+                Text(tr("ui.pin.wrong"), style = LotusType.small.copy(color = Lotus.Danger), textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+            }
+            PrimaryButton(
+                tr("ui.pin.unlock"),
+                onClick = { if (PinLock.check(pin)) App.journalUnlocked = true else error = true },
+                trailingIcon = Icons.Outlined.LockOpen,
+            )
+            TextLink(tr("ui.pin.forgot"), { forgot = true }, Modifier.align(Alignment.CenterHorizontally), icon = null)
         }
     }
     if (forgot) {
         ConfirmDialog(tr("ui.pin.forgot"), tr("ui.pin.reset_confirm"), tr("ui.pin.reset"), {
             App.journal.deleteAll(); PinLock.clear(); App.journalUnlocked = true
         }, { forgot = false }, danger = true)
+    }
+}
+
+/** Glass PIN field: digits masked as large centred dots; a soft danger edge after a wrong PIN. */
+@Composable
+private fun JournalPinField(value: String, error: Boolean, onValueChange: (String) -> Unit) {
+    val shape = RoundedCornerShape(18.dp)
+    val label = tr("ui.pin.enter")
+    GlassSurface(
+        Modifier
+            .fillMaxWidth()
+            .heightIn(min = 58.dp)
+            .then(if (error) Modifier.border(1.dp, Lotus.Danger.copy(alpha = 0.6f), shape) else Modifier),
+        shape = shape,
+        material = Glass.Field,
+        contentAlignment = Alignment.Center,
+    ) {
+        BasicTextField(
+            value = value,
+            onValueChange = onValueChange,
+            singleLine = true,
+            visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
+            textStyle = LotusType.cardTitle.copy(textAlign = TextAlign.Center, letterSpacing = 0.3.em),
+            cursorBrush = SolidColor(Lotus.Accent),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp, vertical = 14.dp)
+                .semantics { contentDescription = label },
+        )
     }
 }

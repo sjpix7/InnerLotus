@@ -69,6 +69,9 @@ import com.sjpixels.innerlotus.ui.theme.Lotus
 
 /** One app section: home-grid tile and side-rail shortcut share this list. */
 data class Section(val emoji: String, val key: String, val screen: Screen) {
+    /** Thin outlined icon for this section (the [emoji] field is legacy and no longer shown). */
+    val icon: androidx.compose.ui.graphics.vector.ImageVector get() = com.sjpixels.innerlotus.ui.icons.LotusIcons.section(key)
+
     val label: String
         @Composable get() = when (key) {
             "home" -> tr("ui.home.title")
@@ -176,7 +179,7 @@ fun BoxScope.SectionRail() {
                 .padding(vertical = 18.dp),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(Icons.Filled.ChevronRight, contentDescription = null, tint = Lotus.Plum, modifier = Modifier.size(20.dp))
+            Icon(Icons.Filled.ChevronRight, contentDescription = null, tint = Lotus.Ink, modifier = Modifier.size(20.dp))
         }
     }
 
@@ -185,7 +188,7 @@ fun BoxScope.SectionRail() {
         Box(
             Modifier
                 .fillMaxSize()
-                .background(Lotus.PlumDeep.copy(alpha = 0.18f))
+                .background(Lotus.Ink.copy(alpha = 0.16f))
                 .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) { open = false }
         )
     }
@@ -222,7 +225,7 @@ fun BoxScope.SectionRail() {
                     .clickable(role = Role.Button) { open = false },
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(Icons.Filled.ChevronLeft, contentDescription = tr("ui.common.close"), tint = Lotus.Plum)
+                Icon(Icons.Filled.ChevronLeft, contentDescription = tr("ui.common.close"), tint = Lotus.Ink)
             }
             RailItem(Sections.home, current, hint) { open = false }
             RailDivider()
@@ -250,8 +253,7 @@ private fun RailItem(section: Section, current: String, showHint: Boolean, onDon
         Modifier
             .size(46.dp)
             .clip(CircleShape)
-            .background(if (selected) Lotus.Plum.copy(alpha = 0.16f) else Color.Transparent)
-            .then(if (selected) Modifier.border(1.dp, Lotus.Plum.copy(alpha = 0.35f), CircleShape) else Modifier)
+            .background(if (selected) Lotus.Ink else Color.Transparent)
             .hoverable(interaction)
             .clickable(interactionSource = interaction, indication = ripple(), role = Role.Button) {
                 onDone()
@@ -263,7 +265,7 @@ private fun RailItem(section: Section, current: String, showHint: Boolean, onDon
             },
         contentAlignment = Alignment.Center,
     ) {
-        Text(section.emoji, fontSize = 22.sp)
+        Icon(section.icon, contentDescription = null, tint = if (selected) Color.White else Lotus.Ink.copy(alpha = 0.82f), modifier = Modifier.size(22.dp))
         RailLabel(label, visible = hovered || pressed || showHint)
     }
 }
@@ -289,7 +291,7 @@ private fun RailLabel(text: String, visible: Boolean) {
                 .graphicsLayer { this.alpha = alpha; translationX = (1f - alpha) * -12.dp.toPx() }
                 .shadow(6.dp, RoundedCornerShape(12.dp))
                 .clip(RoundedCornerShape(12.dp))
-                .background(Lotus.PlumDeep.copy(alpha = 0.92f))
+                .background(Lotus.Ink.copy(alpha = 0.92f))
                 .padding(horizontal = 12.dp, vertical = 7.dp),
         )
     }

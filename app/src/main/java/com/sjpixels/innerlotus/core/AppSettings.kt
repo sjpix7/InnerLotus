@@ -45,8 +45,8 @@ class AppSettings(context: Context) {
     var feminine by prefs.bool("feminine", true)
 
     /** "rotate" (every [rotateSeconds]) or "fixed" ([bgFixed]). */
-    var bgMode by prefs.string("bgMode", "rotate")
-    var bgFixed by prefs.string("bgFixed", "lotus")
+    var bgMode by prefs.string("bgMode", "fixed")
+    var bgFixed by prefs.string("bgFixed", Catalog.SIGNATURE_BG)
     var rotateSeconds by prefs.int("rotateSeconds", 15)
 
     /** Affirmation card background: "area", "chakra", "app" or a background id. */

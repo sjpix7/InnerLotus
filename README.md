@@ -31,7 +31,7 @@ Affirmations · EFT tapping · Sound healing · Ho'oponopono · Journal · Habit
 ![Languages](https://img.shields.io/badge/languages-9-orange)
 ![Affirmations](https://img.shields.io/badge/affirmations-33%2C264_per_language-ff69b4)
 ![JVM tests](https://img.shields.io/badge/JVM_tests-105_passing-brightgreen)
-![License](https://img.shields.io/badge/license-All_rights_reserved-lightgrey)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?logo=gnu&logoColor=white)](LICENSE)
 
 <img src="docs/store/feature-graphic-1024x500.png" alt="Inner Lotus feature graphic" width="100%" />
 
@@ -230,7 +230,7 @@ See **[docs/PLAY_STORE.md](docs/PLAY_STORE.md)** for the store listing in 9 lang
 
 ## 📜 Credits and licences
 
-- Code, content, chakra artwork and synthesised sounds: © sjpixels. All rights reserved.
+- Code, content, chakra artwork and synthesised sounds: © 2026 sjpixels, licensed under the **[GNU General Public License v3.0](LICENSE)**. You may use, study, share and modify this project, but any distributed version, modified or not, must also be released under GPLv3 together with its source code.
 - Fonts: Cormorant Garamond and Dancing Script under the SIL Open Font License 1.1 (`docs/licenses/`).
 - Background photos come from the supplied `theme-bg.zip`. Make sure you hold the rights to publish them.
 - The wellness content is educational and is not medical advice; see the in-app disclaimer.

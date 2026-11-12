@@ -3,22 +3,51 @@
 package com.sjpixels.innerlotus.ui.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.automirrored.filled.*
-import androidx.compose.material3.*
+import androidx.compose.material.icons.automirrored.outlined.VolumeDown
+import androidx.compose.material.icons.automirrored.outlined.VolumeUp
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Bedtime
+import androidx.compose.material.icons.outlined.BookmarkAdd
+import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.DeleteOutline
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.outlined.GraphicEq
+import androidx.compose.material.icons.outlined.Landscape
+import androidx.compose.material.icons.outlined.LibraryMusic
+import androidx.compose.material.icons.outlined.Loop
+import androidx.compose.material.icons.outlined.PlayArrow
+import androidx.compose.material.icons.outlined.Psychology
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Repeat
+import androidx.compose.material.icons.outlined.Share
+import androidx.compose.material.icons.outlined.Stop
+import androidx.compose.material.icons.outlined.WbTwilight
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -34,10 +63,12 @@ import com.sjpixels.innerlotus.data.Mix
 import com.sjpixels.innerlotus.share.Sharing
 import com.sjpixels.innerlotus.tts.Speaker
 import com.sjpixels.innerlotus.ui.components.*
+import com.sjpixels.innerlotus.ui.icons.LotusIcons
 import com.sjpixels.innerlotus.ui.theme.Lotus
-import com.sjpixels.innerlotus.ui.theme.displayFamily
+import com.sjpixels.innerlotus.ui.theme.LotusType
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+import java.text.NumberFormat
 
 fun layerName(id: String): String {
     val (kind, key) = id.substringBefore(':') to id.substringAfter(':')
@@ -60,147 +91,292 @@ private fun presets(): List<Mix> = listOf(
     Mix("p_ground", tr("ui.sound.preset_grounding"), mapOf("lib:drum" to 0.5f, "lib:fire" to 0.5f, "freq:f396" to 0.25f)),
 )
 
+/** Line icon for a layer id ("lib:rain", "freq:alpha", "hz:432"). */
+private fun layerIcon(id: String): ImageVector {
+    val key = id.substringAfter(':')
+    return when (id.substringBefore(':')) {
+        "lib" -> LotusIcons.sound(key)
+        "freq" -> LotusIcons.frequency(VoiceFactory.frequencies.firstOrNull { it.id == key }?.binaural == true)
+        else -> LotusIcons.frequency(false)
+    }
+}
+
+/** Badge for a mix: a fitting picture for the ready-made ones, otherwise its first sound. */
+private fun mixIcon(m: Mix): ImageVector = when (m.id) {
+    "p_rain_temple" -> LotusIcons.sound("rain")
+    "p_himalaya" -> Icons.Outlined.Landscape
+    "p_sleep" -> Icons.Outlined.Bedtime
+    "p_ocean" -> LotusIcons.sound("ocean")
+    "p_evening" -> Icons.Outlined.WbTwilight
+    "p_focus" -> Icons.Outlined.Psychology
+    "p_heart" -> Icons.Outlined.FavoriteBorder
+    "p_ground" -> LotusIcons.sound("fire")
+    else -> (m.layers.keys.firstOrNull { it.startsWith("lib:") } ?: m.layers.keys.firstOrNull())?.let(::layerIcon) ?: LotusIcons.Sound
+}
+
+/** Rounded highlight behind a playing row inside a list group. */
+private val RowShape = RoundedCornerShape(18.dp)
+
 @Composable
 fun SoundScreen() {
-    val ctx = LocalContext.current
     var tab by rememberSaveable { mutableStateOf("freq") }
     var saveDialog by remember { mutableStateOf(false) }
     AppScaffold(title = tr("ui.section.sound")) { padding ->
         Column(Modifier.fillMaxSize().padding(padding)) {
             Box(Modifier.weight(1f)) {
                 PageColumn(PaddingValues(0.dp)) {
-                    LearnCard("sound", "🎶")
+                    ScreenHeader(title = tr("ui.hero.sound.title"), subtitle = tr("ui.hero.sound.sub"))
+                    LearnCard("sound")
                     Segmented(
                         options = listOf("freq" to tr("ui.sound.tab_freq"), "mix" to tr("ui.sound.tab_mix"), "saved" to tr("ui.sound.tab_saved")),
                         selected = tab, onSelect = { tab = it },
                     )
                     when (tab) {
                         "freq" -> FrequencyList()
-                        "mix" -> SoundLibrary()
-                        else -> SavedMixes()
+                        "mix" -> SoundLibrary(onSave = { saveDialog = true })
+                        else -> SavedMixes(onCreate = { tab = "mix" })
                     }
-                    Text(tr("ui.sound.safety"), fontSize = 12.sp, color = Lotus.InkSoft, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
-                    Spacer(Modifier.height(8.dp))
+                    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                        QuietNote(tr("ui.quiet.sound"), icon = Icons.AutoMirrored.Outlined.VolumeDown)
+                        Text(
+                            tr("ui.sound.safety"), style = LotusType.micro, textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+                        )
+                    }
                 }
             }
             if (SoundEngine.layers.isNotEmpty()) NowPlayingPanel(onSave = { saveDialog = true })
         }
     }
-    if (saveDialog) {
-        var name by remember { mutableStateOf("") }
-        AlertDialog(
-            onDismissRequest = { saveDialog = false },
-            title = { Text(tr("ui.sound.save_mix")) },
-            text = { OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text(tr("ui.sound.mix_name")) }, singleLine = true) },
-            confirmButton = {
-                TextButton(onClick = {
-                    App.mixes.save(name.ifBlank { tr("ui.sound.my_mix") }, SoundEngine.layers.toMap())
-                    SoundEngine.currentMixName = name
-                    saveDialog = false
-                    Sharing.toast(ctx, tr("ui.common.saved"))
-                }) { Text(tr("ui.common.save")) }
-            },
-            dismissButton = { TextButton(onClick = { saveDialog = false }) { Text(tr("ui.common.cancel")) } },
+    if (saveDialog) SaveMixDialog(onDismiss = { saveDialog = false })
+}
+
+@Composable
+private fun SaveMixDialog(onDismiss: () -> Unit) {
+    val ctx = LocalContext.current
+    var name by remember { mutableStateOf("") }
+    LotusDialog(
+        onDismiss = onDismiss,
+        title = tr("ui.sound.save_mix"),
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Kicker(tr("ui.sound.mix_name"))
+                LotusTextField(
+                    value = name, onValueChange = { name = it },
+                    placeholder = tr("ui.sound.my_mix"), singleLine = true,
+                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+                )
+            }
+        },
+        confirm = {
+            TextButton(onClick = {
+                App.mixes.save(name.ifBlank { tr("ui.sound.my_mix") }, SoundEngine.layers.toMap())
+                SoundEngine.currentMixName = name
+                onDismiss()
+                Sharing.toast(ctx, tr("ui.common.saved"))
+            }) { Text(tr("ui.common.save"), style = LotusType.button.copy(color = Lotus.Accent)) }
+        },
+        dismiss = {
+            TextButton(onClick = onDismiss) { Text(tr("ui.common.cancel"), style = LotusType.button.copy(color = Lotus.Ink)) }
+        },
+    )
+}
+
+// ------------------------------------------------------------------------------------------------
+// Frequencies
+// ------------------------------------------------------------------------------------------------
+
+@Composable
+private fun FrequencyList() {
+    val ctx = LocalContext.current
+    val list = VoiceFactory.frequencies
+    ListGroup {
+        Spacer(Modifier.height(6.dp))
+        list.forEachIndexed { i, f ->
+            val id = "freq:${f.id}"
+            val on = SoundEngine.isOn(id)
+            if (i > 0) {
+                // No hairline next to a highlighted (playing) row; keep the 1dp so nothing jumps.
+                val quiet = on || SoundEngine.isOn("freq:${list[i - 1].id}")
+                Box(Modifier.padding(horizontal = 10.dp)) { if (quiet) Spacer(Modifier.height(1.dp)) else RowDivider() }
+            }
+            FrequencyRow(f, on) { SoundEngine.toggle(ctx, id, 0.6f) }
+        }
+        Spacer(Modifier.height(6.dp))
+    }
+}
+
+/**
+ * One healing-frequency row: line badge (headphones = binaural beat), name, the full description
+ * and a round play / stop button. While it plays the row is tinted and shows its own volume.
+ */
+@Composable
+private fun FrequencyRow(f: VoiceFactory.FreqSpec, on: Boolean, onToggle: () -> Unit) {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .clip(RowShape)
+            .background(if (on) Lotus.Lavender.copy(alpha = 0.75f) else Color.Transparent),
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .clickable(role = Role.Button, onClick = onToggle)
+                .padding(horizontal = 10.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            StateBadge(LotusIcons.frequency(f.binaural), on)
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text(tr("sound.freq.${f.id}.name"), style = LotusType.itemTitle)
+                Spacer(Modifier.height(2.dp))
+                Text(tr("sound.freq.${f.id}.desc"), style = LotusType.itemSub)
+            }
+            Spacer(Modifier.width(10.dp))
+            PlayCircle(playing = on, contentDescription = tr(if (on) "ui.common.stop" else "ui.common.play"))
+        }
+        if (on) VolumeSlider("freq:${f.id}", Modifier.padding(start = 12.dp, end = 12.dp, bottom = 6.dp))
+    }
+}
+
+/** Icon badge that turns violet with a white glyph while its sound plays. */
+@Composable
+private fun StateBadge(icon: ImageVector, on: Boolean) {
+    IconBadge(icon, tint = if (on) Color.White else Lotus.BadgeInk, background = if (on) Lotus.AccentSoft else Lotus.BadgeBg)
+}
+
+/** Round play affordance at the end of a row: white with an ink glyph, ink when active. */
+@Composable
+private fun PlayCircle(playing: Boolean, contentDescription: String?, playingIcon: ImageVector = Icons.Outlined.Stop) {
+    Box(
+        Modifier.size(42.dp).clip(CircleShape).background(if (playing) Lotus.Ink else Color.White.copy(alpha = 0.85f)),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            if (playing) playingIcon else Icons.Outlined.PlayArrow, contentDescription,
+            tint = if (playing) Color.White else Lotus.Ink, modifier = Modifier.size(20.dp),
         )
     }
 }
 
 @Composable
-private fun FrequencyList() {
-    val ctx = LocalContext.current
-    VoiceFactory.frequencies.forEach { f ->
-        val id = "freq:${f.id}"
-        val on = SoundEngine.isOn(id)
-        GlassCard(strong = on, padding = 12.dp, modifier = if (on) Modifier.border(2.dp, Lotus.Plum, RoundedCornerShape(22.dp)) else Modifier) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f)) {
-                    Text((if (f.binaural) "🎧 " else "〰️ ") + tr("sound.freq.${f.id}.name"), style = MaterialTheme.typography.titleMedium)
-                    Text(tr("sound.freq.${f.id}.desc"), fontSize = 13.sp, color = Lotus.InkSoft)
-                }
-                FilledIconToggleButton(checked = on, onCheckedChange = { SoundEngine.toggle(ctx, id, 0.6f) }) {
-                    Icon(if (on) Icons.Filled.Stop else Icons.Filled.PlayArrow, tr("ui.common.listen"))
-                }
-            }
-            if (on) VolumeSlider(id)
-        }
+private fun VolumeSlider(id: String, modifier: Modifier = Modifier) {
+    Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Icon(Icons.AutoMirrored.Outlined.VolumeDown, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
+        Spacer(Modifier.width(6.dp))
+        LotusSlider(value = SoundEngine.layers[id] ?: 0.6f, onValueChange = { SoundEngine.setVolume(id, it) }, modifier = Modifier.weight(1f))
+        Spacer(Modifier.width(6.dp))
+        Icon(Icons.AutoMirrored.Outlined.VolumeUp, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
     }
 }
 
-@Composable
-private fun VolumeSlider(id: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(Icons.AutoMirrored.Filled.VolumeDown, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
-        Slider(value = SoundEngine.layers[id] ?: 0.6f, onValueChange = { SoundEngine.setVolume(id, it) }, modifier = Modifier.weight(1f))
-        Icon(Icons.AutoMirrored.Filled.VolumeUp, null, tint = Lotus.InkSoft, modifier = Modifier.size(18.dp))
-    }
-}
+// ------------------------------------------------------------------------------------------------
+// Soundscapes
+// ------------------------------------------------------------------------------------------------
 
 @Composable
-private fun SoundLibrary() {
+private fun SoundLibrary(onSave: () -> Unit) {
     val ctx = LocalContext.current
-    Text(tr("ui.sound.mix_hint"), color = Lotus.InkSoft, fontSize = 13.sp)
+    Text(tr("ui.sound.mix_hint"), style = LotusType.small)
     VoiceFactory.library.forEach { (cat, ids) ->
-        SectionTitle(tr("ui.sound.cat_$cat"))
-        ids.chunked(3).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                row.forEach { key ->
-                    val id = "lib:$key"
-                    val on = SoundEngine.isOn(id)
-                    Column(
-                        Modifier
-                            .weight(1f)
-                            .clip(RoundedCornerShape(18.dp))
-                            .background(if (on) Lotus.Plum.copy(alpha = 0.85f) else Color.White.copy(alpha = 0.7f))
-                            .clickable { SoundEngine.toggle(ctx, id, 0.7f) }
-                            .padding(vertical = 12.dp, horizontal = 6.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                    ) {
-                        Text(VoiceFactory.libraryEmoji[key] ?: "🎵", fontSize = 28.sp)
-                        Text(tr("sound.lib.$key.name"), fontSize = 12.sp, color = if (on) Color.White else Lotus.Ink, textAlign = TextAlign.Center, maxLines = 2, minLines = 2)
-                    }
-                }
-                repeat(3 - row.size) { Spacer(Modifier.weight(1f)) }
-            }
+        SectionHeading(tr("ui.sound.cat_$cat"))
+        TileGrid(ids) { key, i, m ->
+            val id = "lib:$key"
+            val on = SoundEngine.isOn(id)
+            // The caption swaps like the prototype: the sound's description, or "Now mixing" while it
+            // plays (accent note). Both fit the default tile height, so a row keeps one height.
+            PracticeTile(
+                icon = LotusIcons.sound(key),
+                title = tr("sound.lib.$key.name"),
+                modifier = m.semantics { selected = on },
+                subtitle = if (on) null else tr("sound.lib.$key.desc"),
+                footnote = if (on) tr("ui.sound.now_mixing") else null,
+                tone = toneFor(i),
+                selected = on,
+                onClick = { SoundEngine.toggle(ctx, id, 0.7f) },
+            )
         }
     }
-    if (SoundEngine.layers.isNotEmpty()) {
-        SectionTitle(tr("ui.sound.now_mixing"))
-        GlassCard(strong = true, padding = 12.dp) {
-            SoundEngine.layers.keys.toList().forEach { id ->
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(layerName(id), modifier = Modifier.width(110.dp), maxLines = 1, overflow = TextOverflow.Ellipsis, fontSize = 13.sp)
-                    Slider(value = SoundEngine.layers[id] ?: 0.6f, onValueChange = { SoundEngine.setVolume(id, it) }, modifier = Modifier.weight(1f))
-                    IconButton(onClick = { SoundEngine.remove(id) }) { Icon(Icons.Filled.Close, tr("ui.common.remove")) }
-                }
+    val active = SoundEngine.layers.keys.toList()
+    if (active.isNotEmpty()) {
+        SectionHeading(tr("ui.sound.now_mixing"))
+        GlassCard(strong = true, padding = 16.dp) {
+            active.forEachIndexed { i, id ->
+                if (i > 0) Box(Modifier.padding(vertical = 6.dp)) { RowDivider() }
+                LayerVolume(id)
             }
         }
+        PrimaryButton(tr("ui.sound.save_mix"), onClick = onSave, trailingIcon = Icons.Outlined.BookmarkAdd)
     }
 }
 
+/** One active layer: icon, name, volume in percent, remove; then its volume slider. */
 @Composable
-private fun SavedMixes() {
+private fun LayerVolume(id: String) {
+    val volume = SoundEngine.layers[id] ?: 0.6f
+    val percent = remember(I18n.lang) { NumberFormat.getPercentInstance(I18n.lang.locale) }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(layerIcon(id), null, tint = Lotus.Accent, modifier = Modifier.size(20.dp))
+        Spacer(Modifier.width(10.dp))
+        Text(layerName(id), style = LotusType.itemTitle, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f))
+        Spacer(Modifier.width(8.dp))
+        Text(percent.format(volume.toDouble()), style = LotusType.micro)
+        Spacer(Modifier.width(8.dp))
+        CircleIconButton(Icons.Outlined.Close, tr("ui.common.remove"), { SoundEngine.remove(id) }, size = 40.dp, iconSize = 17.dp, tint = Lotus.InkSoft)
+    }
+    LotusSlider(value = volume, onValueChange = { SoundEngine.setVolume(id, it) })
+}
+
+// ------------------------------------------------------------------------------------------------
+// Mixes
+// ------------------------------------------------------------------------------------------------
+
+@Composable
+private fun SavedMixes(onCreate: () -> Unit) {
     val ctx = LocalContext.current
     val mine by App.mixes.mixes.collectAsState()
     var journeyMin by rememberSaveable { mutableIntStateOf(10) }
-    SectionTitle(tr("ui.sound.my_mixes"))
-    if (mine.isEmpty()) Text(tr("ui.sound.no_mixes"), color = Lotus.InkSoft)
-    mine.forEach { m -> MixRow(m, onDelete = { App.mixes.delete(m.id) }) }
-    SectionTitle(tr("ui.sound.presets"))
-    presets().forEach { m -> MixRow(m, onDelete = null) }
-    GlassCard(strong = true) {
-        Text("🔁  " + tr("ui.sound.journey"), style = MaterialTheme.typography.titleMedium)
-        Text(tr("ui.sound.journey_hint"), fontSize = 13.sp, color = Lotus.InkSoft)
+    SectionHeading(tr("ui.sound.my_mixes"))
+    if (mine.isEmpty()) {
+        GlassCard {
+            Icon(Icons.Outlined.LibraryMusic, null, tint = Lotus.Accent, modifier = Modifier.size(26.dp))
+            Spacer(Modifier.height(12.dp))
+            Text(tr("ui.sound.no_mixes"), style = LotusType.small)
+            Spacer(Modifier.height(14.dp))
+            PillButton(tr("ui.sound.tab_mix"), onCreate, icon = Icons.Outlined.Add)
+        }
+    } else {
+        ListGroup {
+            mine.forEachIndexed { i, m ->
+                if (i > 0) RowDivider()
+                MixRow(m, onDelete = { App.mixes.delete(m.id) })
+            }
+        }
+    }
+    SectionHeading(tr("ui.sound.presets"))
+    ListGroup {
+        presets().forEachIndexed { i, m ->
+            if (i > 0) RowDivider()
+            MixRow(m, onDelete = null)
+        }
+    }
+    GlassCard(tone = Tone.Lavender) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Outlined.Loop, null, tint = Lotus.Accent, modifier = Modifier.size(22.dp))
+            Spacer(Modifier.width(10.dp))
+            Text(tr("ui.sound.journey"), style = LotusType.cardTitle, modifier = Modifier.weight(1f))
+        }
         Spacer(Modifier.height(6.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(tr("ui.sound.journey_hint"), style = LotusType.small)
+        Spacer(Modifier.height(14.dp))
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             listOf(5, 10, 15, 30).forEach { m -> Pill(tr("ui.common.minutes_n", "n" to m), journeyMin == m, { journeyMin = m }) }
         }
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(16.dp))
         if (SoundEngine.journey.isNotEmpty()) {
-            OutlinedButton(onClick = { SoundEngine.stopJourney() }, modifier = Modifier.fillMaxWidth()) { Text(tr("ui.sound.journey_stop")) }
+            SecondaryButton(tr("ui.sound.journey_stop"), onClick = { SoundEngine.stopJourney() }, trailingIcon = Icons.Outlined.Stop)
         } else {
-            Button(onClick = { SoundEngine.startJourney(ctx, mine.ifEmpty { presets() }, journeyMin) }, modifier = Modifier.fillMaxWidth()) {
-                Text(tr("ui.sound.journey_start"))
-            }
+            PrimaryButton(tr("ui.sound.journey_start"), onClick = { SoundEngine.startJourney(ctx, mine.ifEmpty { presets() }, journeyMin) })
         }
     }
 }
@@ -208,18 +384,27 @@ private fun SavedMixes() {
 @Composable
 private fun MixRow(m: Mix, onDelete: (() -> Unit)?) {
     val ctx = LocalContext.current
-    GlassCard(padding = 12.dp, onClick = { SoundEngine.loadMix(m, ctx) }) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(Icons.Filled.PlayCircle, null, tint = Lotus.Plum, modifier = Modifier.size(34.dp))
-            Spacer(Modifier.width(10.dp))
-            Column(Modifier.weight(1f)) {
-                Text(m.name, style = MaterialTheme.typography.titleMedium)
-                Text(m.layers.keys.joinToString(" · ") { layerName(it) }, fontSize = 12.sp, color = Lotus.InkSoft, maxLines = 2, overflow = TextOverflow.Ellipsis)
+    val current = SoundEngine.isPlaying && SoundEngine.currentMixName == m.name
+    ListRow(
+        title = m.name,
+        subtitle = m.layers.keys.joinToString(" · ") { layerName(it) },
+        leading = { StateBadge(mixIcon(m), current) },
+        trailing = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (onDelete != null) {
+                    CircleIconButton(Icons.Outlined.DeleteOutline, tr("ui.common.delete"), onDelete, size = 40.dp, iconSize = 18.dp, tint = Lotus.InkSoft)
+                    Spacer(Modifier.width(8.dp))
+                }
+                PlayCircle(playing = current, contentDescription = tr("ui.common.play"), playingIcon = Icons.Outlined.GraphicEq)
             }
-            if (onDelete != null) IconButton(onClick = onDelete) { Icon(Icons.Filled.Delete, tr("ui.common.delete"), tint = Lotus.InkSoft) }
-        }
-    }
+        },
+        onClick = { SoundEngine.loadMix(m, ctx) },
+    )
 }
+
+// ------------------------------------------------------------------------------------------------
+// Now playing
+// ------------------------------------------------------------------------------------------------
 
 @Composable
 private fun NowPlayingPanel(onSave: () -> Unit) {
@@ -229,40 +414,64 @@ private fun NowPlayingPanel(onSave: () -> Unit) {
     LaunchedEffect(SoundEngine.sleepEndsAt) {
         while (isActive && SoundEngine.sleepEndsAt > 0) { now = System.currentTimeMillis(); delay(1000) }
     }
-    Surface(color = Lotus.PlumDeep.copy(alpha = 0.95f), shape = RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp)) {
-        Column(Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 8.dp)) {
-            Text(
-                SoundEngine.currentMixName.ifEmpty { SoundEngine.layers.keys.joinToString(" + ") { layerName(it) } },
-                color = Color.White, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis,
+    val timerOn = SoundEngine.sleepEndsAt > 0
+    val named = SoundEngine.currentMixName.isNotEmpty()
+    val title = if (named) SoundEngine.currentMixName else SoundEngine.layers.keys.joinToString(" + ") { layerName(it) }
+    val caption = when {
+        timerOn -> {
+            val left = ((SoundEngine.sleepEndsAt - now) / 60000L).coerceAtLeast(0L) + 1
+            tr("ui.sound.sleep_timer") + " · " + tr("ui.common.minutes_n", "n" to left)
+        }
+        named -> SoundEngine.layers.keys.joinToString(" · ") { layerName(it) }
+        else -> null
+    }
+    GlassSurface(
+        Modifier.fillMaxWidth().padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 10.dp),
+        shape = RoundedCornerShape(30.dp),
+        material = Glass.Strong,
+    ) {
+        Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
+            PlayButton(
+                playing = SoundEngine.isPlaying,
+                onClick = { if (SoundEngine.isPlaying) SoundEngine.pause() else SoundEngine.resume(ctx) },
+                size = 50.dp,
+                contentDescription = tr("ui.common.play"),
             )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = { if (SoundEngine.isPlaying) SoundEngine.pause() else SoundEngine.resume(ctx) }) {
-                    Icon(if (SoundEngine.isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow, tr("ui.common.play"), tint = Color.White)
-                }
-                IconButton(onClick = { SoundEngine.stopAll() }) { Icon(Icons.Filled.Stop, tr("ui.common.stop"), tint = Color.White) }
-                Box {
-                    TextButton(onClick = { timerMenu = true }) {
-                        Icon(Icons.Filled.Bedtime, null, tint = Color.White)
-                        Spacer(Modifier.width(4.dp))
-                        val left = ((SoundEngine.sleepEndsAt - now) / 60000L).coerceAtLeast(0L) + if (SoundEngine.sleepEndsAt > 0) 1 else 0
-                        Text(if (SoundEngine.sleepEndsAt > 0) tr("ui.common.minutes_n", "n" to left) else tr("ui.sound.sleep_timer"), color = Color.White)
-                    }
-                    DropdownMenu(expanded = timerMenu, onDismissRequest = { timerMenu = false }) {
-                        listOf(0, 15, 30, 45, 60, 90, 120).forEach { m ->
-                            DropdownMenuItem(
-                                text = { Text(if (m == 0) tr("ui.common.off") else tr("ui.common.minutes_n", "n" to m)) },
-                                onClick = { timerMenu = false; SoundEngine.setSleepTimer(m) },
-                            )
-                        }
-                    }
-                }
-                Spacer(Modifier.weight(1f))
-                TextButton(onClick = onSave) {
-                    Icon(Icons.Filled.BookmarkAdd, null, tint = Color.White)
-                    Spacer(Modifier.width(4.dp))
-                    Text(tr("ui.common.save"), color = Color.White)
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text(title, style = LotusType.itemTitle, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                if (caption != null) {
+                    Text(
+                        caption, style = LotusType.itemSub.copy(color = if (timerOn) Lotus.Accent else Lotus.InkSoft),
+                        maxLines = 1, overflow = TextOverflow.Ellipsis,
+                    )
                 }
             }
+            Spacer(Modifier.width(8.dp))
+            Box {
+                CircleIconButton(
+                    Icons.Outlined.Bedtime, tr("ui.sound.sleep_timer"), { timerMenu = true },
+                    tint = if (timerOn) Lotus.Accent else Lotus.Ink,
+                )
+                DropdownMenu(
+                    expanded = timerMenu,
+                    onDismissRequest = { timerMenu = false },
+                    shape = RoundedCornerShape(22.dp),
+                    containerColor = Lotus.Sheet,
+                ) {
+                    Kicker(tr("ui.sound.sleep_timer"), Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+                    listOf(0, 15, 30, 45, 60, 90, 120).forEach { m ->
+                        DropdownMenuItem(
+                            text = { Text(if (m == 0) tr("ui.common.off") else tr("ui.common.minutes_n", "n" to m), style = LotusType.itemTitle) },
+                            onClick = { timerMenu = false; SoundEngine.setSleepTimer(m) },
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.width(6.dp))
+            CircleIconButton(Icons.Outlined.BookmarkAdd, tr("ui.sound.save_mix"), onSave)
+            Spacer(Modifier.width(6.dp))
+            CircleIconButton(Icons.Outlined.Stop, tr("ui.common.stop"), { SoundEngine.stopAll() })
         }
     }
 }
@@ -304,45 +513,74 @@ fun HooponoScreen() {
 
     AppScaffold(title = tr("ui.section.hoopono")) { padding ->
         PageColumn(padding) {
-            LearnCard("hooponopono", "🌺")
-            GlassCard(strong = true) {
-                Text(tr("hoopono.p1") + "  " + tr("hoopono.p2"), fontFamily = displayFamily(), fontSize = 20.sp, color = Lotus.PlumDeep, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
-                Text(tr("hoopono.p3") + "  " + tr("hoopono.p4"), fontFamily = displayFamily(), fontSize = 20.sp, color = Lotus.Rose, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+            ScreenHeader(title = tr("ui.hero.hoopono.title"), kicker = tr("ui.section.hoopono"))
+            // The four phrases: a quiet serif quote, the last two in italic.
+            GlassCard(tone = Tone.Lavender, padding = 24.dp) {
+                Text(
+                    tr("hoopono.p1") + " " + tr("hoopono.p2"),
+                    style = LotusType.quote, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(),
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    tr("hoopono.p3") + " " + tr("hoopono.p4"),
+                    style = LotusType.quote.copy(fontStyle = FontStyle.Italic), textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(),
+                )
             }
-            SectionTitle(tr("ui.hoopono.choose_topic"))
+            LearnCard("hooponopono")
+            SectionHeading(tr("ui.hoopono.choose_topic"))
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Catalog.hooponoTopics.forEach { t -> Pill(tr("hoopono.topic.$t.name"), topic == t, { looping = false; topic = t }) }
             }
             if (topic == "person") {
-                OutlinedTextField(
+                LotusTextField(
                     value = name, onValueChange = { name = it },
-                    label = { Text(tr("ui.hoopono.name_label")) }, singleLine = true, modifier = Modifier.fillMaxWidth(),
-                    colors = OutlinedTextFieldDefaults.colors(unfocusedContainerColor = Color.White.copy(alpha = 0.7f), focusedContainerColor = Color.White.copy(alpha = 0.9f)),
+                    placeholder = tr("ui.hoopono.name_label"), singleLine = true,
+                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Words),
                 )
             }
-            Stepper(rounds, 1..21, { rounds = it }, tr("ui.hoopono.rounds"))
-            SectionTitle(tr("ui.hoopono.your_prayer"))
-            OutlinedTextField(
-                value = text, onValueChange = { text = it },
-                modifier = Modifier.fillMaxWidth(), minLines = 8,
-                textStyle = MaterialTheme.typography.bodyLarge.copy(fontFamily = displayFamily(), fontSize = 18.sp),
-                shape = RoundedCornerShape(16.dp),
-                colors = OutlinedTextFieldDefaults.colors(unfocusedContainerColor = Color.White.copy(alpha = 0.75f), focusedContainerColor = Color.White.copy(alpha = 0.92f)),
-                supportingText = { Text(tr("ui.hoopono.edit_hint")) },
-            )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(onClick = { looping = !looping; if (!looping) Speaker.stop() }, modifier = Modifier.weight(1f)) {
-                    Icon(if (looping) Icons.Filled.Stop else Icons.Filled.Repeat, null)
-                    Spacer(Modifier.width(6.dp))
-                    Text(if (looping) tr("ui.common.stop") else tr("ui.hoopono.autoplay"))
-                }
-                ListenButton("hoopono_once", { text }, modifier = Modifier.weight(1f))
+            GlassCard(padding = 16.dp) {
+                Stepper(rounds, 1..21, { rounds = it }, tr("ui.hoopono.rounds"))
             }
-            if (looping || count > 0) Text(tr("ui.hoopono.repetitions", "n" to count), color = Lotus.Plum, fontWeight = FontWeight.SemiBold)
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedButton(onClick = { Sharing.copy(ctx, text) }, modifier = Modifier.weight(1f)) { Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(4.dp)); Text(tr("ui.common.copy")) }
-                OutlinedButton(onClick = { Sharing.shareText(ctx, text) }, modifier = Modifier.weight(1f)) { Icon(Icons.Filled.Share, null); Spacer(Modifier.width(4.dp)); Text(tr("ui.common.share")) }
-                OutlinedButton(onClick = { text = build() }, modifier = Modifier.weight(1f)) { Icon(Icons.Filled.Refresh, null); Spacer(Modifier.width(4.dp)); Text(tr("ui.common.reset")) }
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                SectionHeading(tr("ui.hoopono.your_prayer"))
+                Row(verticalAlignment = Alignment.Top) {
+                    Icon(Icons.Outlined.Edit, null, tint = Lotus.InkSoft, modifier = Modifier.padding(top = 3.dp).size(15.dp))
+                    Spacer(Modifier.width(8.dp))
+                    Text(tr("ui.hoopono.edit_hint"), style = LotusType.small)
+                }
+            }
+            LotusTextField(
+                value = text, onValueChange = { text = it },
+                placeholder = tr("ui.hoopono.your_prayer"),
+                minLines = 8,
+                textStyle = LotusType.quote.copy(fontSize = 20.sp, lineHeight = 30.sp),
+            )
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                    PrimaryButton(
+                        text = if (looping) tr("ui.common.stop") else tr("ui.hoopono.autoplay"),
+                        onClick = { looping = !looping; if (!looping) Speaker.stop() },
+                        modifier = Modifier.weight(1f),
+                        trailingIcon = if (looping) Icons.Outlined.Stop else Icons.Outlined.Repeat,
+                    )
+                    ListenButton("hoopono_once", { text }, modifier = Modifier.heightIn(min = 54.dp))
+                }
+                if (looping || count > 0) {
+                    Text(
+                        tr("ui.hoopono.repetitions", "n" to count),
+                        style = LotusType.itemTitle.copy(color = Lotus.Accent), textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+            }
+            FlowRow(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                PillButton(tr("ui.common.copy"), { Sharing.copy(ctx, text) }, icon = Icons.Outlined.ContentCopy)
+                PillButton(tr("ui.common.share"), { Sharing.shareText(ctx, text) }, icon = Icons.Outlined.Share)
+                PillButton(tr("ui.common.reset"), { text = build() }, icon = Icons.Outlined.Refresh)
             }
         }
     }

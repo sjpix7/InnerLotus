@@ -16,7 +16,8 @@ import java.util.UUID
 data class Habit(
     val id: String = UUID.randomUUID().toString(),
     val name: String,
-    val emoji: String = "✨",
+    /** Icon key (see LotusIcons.habitKeys); older data may hold an emoji, which still maps to an icon. */
+    val emoji: String = "sparkle",
     val color: Long = 0xFF8A5CD6,
     /** times per day; 1 = simple check-off */
     val target: Int = 1,
@@ -48,7 +49,7 @@ class HabitStore(private val file: File) {
             Habit(
                 id = h.str("id").ifEmpty { UUID.randomUUID().toString() },
                 name = h.str("name").ifEmpty { return@mapNotNull null },
-                emoji = h.str("emoji", "✨"),
+                emoji = h.str("emoji", "sparkle"),
                 color = h.long("color", 0xFF8A5CD6),
                 target = h.int("target", 1).coerceIn(1, 99),
                 days = h.arr("days").strings().mapNotNull { it.toIntOrNull() }.filter { it in 1..7 }.toSet(),

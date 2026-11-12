@@ -2,7 +2,6 @@
 
 package com.sjpixels.innerlotus.ui.components
 
-import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -14,7 +13,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,13 +22,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.MusicNote
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -38,11 +29,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -76,17 +64,36 @@ import com.sjpixels.innerlotus.core.Lang
 import com.sjpixels.innerlotus.core.tr
 import com.sjpixels.innerlotus.share.Sharing
 import com.sjpixels.innerlotus.ui.theme.Lotus
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
+import com.sjpixels.innerlotus.ui.theme.LotusType
+import androidx.compose.ui.unit.em
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.height
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.GraphicEq
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.ui.graphics.graphicsLayer
+import com.sjpixels.innerlotus.ui.glass.BackdropImage
+import com.sjpixels.innerlotus.ui.glass.Backdrop
 import kotlinx.coroutines.delay
 
 /**
- * Standard page frame: the "Developed by https://sjpixels.com/" bar at the very top of every page,
- * then the top bar (back, title, language flag menu, settings) and the content.
+ * Standard page frame, after the reference design:
+ *  - a quiet "Developed with Love by Sj Pixels" line under the status bar,
+ *  - a top bar with a round glass back button, a centred serif title, and round glass buttons for
+ *    language (short code) and settings. Home shows the logo + wordmark instead of back + title.
  */
 @Composable
 fun AppScaffold(
     title: String,
     showBack: Boolean = true,
-    /** Show the app logo before the title (used on Home). */
+    /** Home: logo + wordmark on the left instead of a back button and centred title. */
     showLogo: Boolean = false,
     actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit,
@@ -94,39 +101,42 @@ fun AppScaffold(
     Scaffold(
         containerColor = Color.Transparent,
         topBar = {
-          Column {
-            Footer(Modifier.statusBarsPadding())
-            TopAppBar(
-                // the developer bar above already takes the status-bar inset
-                windowInsets = WindowInsets(0),
-                title = {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.statusBarsPadding()) {
+                Footer()
+                // Measure both side clusters so the centred title never runs under them.
+                val density = LocalDensity.current
+                var leftW by remember { mutableIntStateOf(0) }
+                var rightW by remember { mutableIntStateOf(0) }
+                val inset = with(density) { maxOf(leftW, rightW).toDp() } + 10.dp
+                Box(Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 16.dp)) {
+                    Row(Modifier.align(Alignment.CenterStart).onSizeChanged { leftW = it.width }, verticalAlignment = Alignment.CenterVertically) {
                         if (showLogo) {
-                            AppLogo(34.dp)
+                            AppLogo(38.dp)
                             Spacer(Modifier.width(10.dp))
-                        }
-                        Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.titleLarge, color = Lotus.Ink)
-                    }
-                },
-                navigationIcon = {
-                    if (showBack && App.nav.canGoBack) {
-                        IconButton(onClick = { App.nav.back() }) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = tr("ui.common.back"), tint = Lotus.Ink)
+                            Text(title, style = LotusType.barTitle.copy(fontSize = 25.sp, fontWeight = FontWeight.Medium), maxLines = 1)
+                        } else if (showBack && App.nav.canGoBack) {
+                            CircleIconButton(Icons.AutoMirrored.Outlined.ArrowBack, tr("ui.common.back"), { App.nav.back() })
                         }
                     }
-                },
-                actions = {
-                    actions()
-                    LanguageMenu()
-                    if (App.nav.current != Screen.Settings) {
-                        IconButton(onClick = { App.nav.go(Screen.Settings) }) {
-                            Icon(Icons.Filled.Settings, contentDescription = tr("ui.settings.title"), tint = Lotus.Ink)
+                    if (!showLogo) {
+                        Text(
+                            title,
+                            style = LotusType.barTitle,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.align(Alignment.Center).padding(horizontal = inset),
+                        )
+                    }
+                    Row(Modifier.align(Alignment.CenterEnd).onSizeChanged { rightW = it.width }, horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                        actions()
+                        LanguageMenu()
+                        if (App.nav.current != Screen.Settings) {
+                            CircleIconButton(Icons.Outlined.Settings, tr("ui.settings.title"), { App.nav.go(Screen.Settings) })
                         }
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
-            )
-          }
+                }
+            }
         },
         bottomBar = {
             if (SoundEngine.isPlaying && App.nav.current != Screen.Sound) MiniPlayer()
@@ -135,30 +145,38 @@ fun AppScaffold(
     ) { padding -> content(padding) }
 }
 
-/** Flag button in the top-right corner with a dropdown of the nine languages. */
+/** Round glass button showing the language code; opens the nine languages. */
 @Composable
 fun LanguageMenu() {
     var open by remember { mutableStateOf(false) }
     Box {
-        TextButton(onClick = { open = true }, contentPadding = PaddingValues(horizontal = 6.dp)) {
-            Text(I18n.lang.flag, fontSize = 22.sp)
-            Icon(Icons.Filled.ArrowDropDown, contentDescription = tr("ui.common.language"), tint = Lotus.Ink)
+        GlassSurface(Modifier.size(42.dp), shape = CircleShape, material = Glass.Pill, onClick = { open = true }, contentAlignment = Alignment.Center) {
+            Text(
+                I18n.lang.code.uppercase(),
+                style = LotusType.kicker.copy(color = Lotus.Ink, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 0.08.em),
+                modifier = Modifier.semantics { contentDescription = tr("ui.common.language") },
+            )
         }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+        DropdownMenu(
+            expanded = open,
+            onDismissRequest = { open = false },
+            shape = RoundedCornerShape(22.dp),
+            containerColor = Lotus.Sheet,
+        ) {
             Lang.entries.forEach { l ->
                 DropdownMenuItem(
                     text = {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(l.flag, fontSize = 20.sp)
-                            Spacer(Modifier.width(10.dp))
+                            Text(l.flag, fontSize = 16.sp)
+                            Spacer(Modifier.width(12.dp))
                             Column {
-                                Text(l.nativeName, fontWeight = FontWeight.SemiBold)
-                                if (l.nativeName != l.englishName) Text(l.englishName, fontSize = 12.sp, color = Lotus.InkSoft)
+                                Text(l.nativeName, style = LotusType.itemTitle)
+                                if (l.nativeName != l.englishName) Text(l.englishName, style = LotusType.itemSub)
                             }
                         }
                     },
                     trailingIcon = {
-                        if (l == I18n.lang) Icon(Icons.Filled.Check, contentDescription = null, tint = Lotus.Plum)
+                        if (l == I18n.lang) Icon(Icons.Outlined.Check, contentDescription = null, tint = Lotus.Accent)
                     },
                     onClick = {
                         open = false
@@ -171,7 +189,7 @@ fun LanguageMenu() {
 }
 
 /**
- * "Developed with Love by Sj Pixels" bar; only the name is a link (to sjpixels.com).
+ * "Developed with Love by Sj Pixels" — a quiet line at the very top; only the name is a link.
  * [modifier] supplies any system-bar inset padding.
  */
 @Composable
@@ -184,43 +202,31 @@ fun Footer(modifier: Modifier = Modifier) {
         withLink(
             LinkAnnotation.Clickable(
                 tag = "developer",
-                styles = TextLinkStyles(
-                    SpanStyle(color = Lotus.Plum, fontWeight = FontWeight.SemiBold, textDecoration = TextDecoration.Underline)
-                ),
+                styles = TextLinkStyles(SpanStyle(color = Lotus.Accent, fontWeight = FontWeight.Medium, textDecoration = TextDecoration.Underline)),
             ) { Sharing.openUrl(ctx, Catalog.DEVELOPER_URL) }
         ) { append(Catalog.DEVELOPER_NAME) }
         append(parts.getOrElse(1) { "" })
     }
-    Surface(color = Color.White.copy(alpha = 0.6f)) {
-        Box(modifier.fillMaxWidth().padding(vertical = 4.dp), contentAlignment = Alignment.Center) {
-            Text(text, fontSize = 10.sp, color = Lotus.InkSoft, textAlign = TextAlign.Center)
-        }
+    Box(modifier.fillMaxWidth().padding(top = 2.dp, bottom = 0.dp), contentAlignment = Alignment.Center) {
+        Text(text, style = LotusType.micro.copy(fontSize = 10.sp, letterSpacing = 0.04.em), textAlign = TextAlign.Center)
     }
 }
 
-/** Shown on other pages while Sound Healing keeps playing in the background. */
+/** Floating ink-glass pill shown on other pages while Sound Healing keeps playing. */
 @Composable
 fun MiniPlayer() {
-    Surface(
-        color = Lotus.PlumDeep.copy(alpha = 0.92f),
-        shape = RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp),
-    ) {
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .navigationBarsPadding()
-                .clickable { App.nav.go(Screen.Sound) }
-                .padding(horizontal = 16.dp, vertical = 6.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Icon(Icons.Filled.MusicNote, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
-            Spacer(Modifier.width(8.dp))
-            Text(
-                SoundEngine.currentMixName.ifEmpty { tr("ui.sound.playing_n", "n" to SoundEngine.layers.size) },
-                color = Color.White, fontSize = 13.sp, modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis,
-            )
-            IconButton(onClick = { SoundEngine.stopAll() }, modifier = Modifier.size(32.dp)) {
-                Icon(Icons.Filled.Close, contentDescription = tr("ui.common.stop"), tint = Color.White)
+    Box(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 14.dp, vertical = 8.dp)) {
+        GlassSurface(Modifier.fillMaxWidth(), shape = RoundedCornerShape(28.dp), material = Glass.Ink, onClick = { App.nav.go(Screen.Sound) }) {
+            Row(Modifier.padding(start = 18.dp, end = 8.dp, top = 8.dp, bottom = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Outlined.GraphicEq, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
+                Spacer(Modifier.width(12.dp))
+                Text(
+                    SoundEngine.currentMixName.ifEmpty { tr("ui.sound.playing_n", "n" to SoundEngine.layers.size) },
+                    style = LotusType.itemTitle.copy(color = Color.White), modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis,
+                )
+                IconButton(onClick = { SoundEngine.stopAll() }) {
+                    Icon(Icons.Outlined.Close, contentDescription = tr("ui.common.stop"), tint = Color.White)
+                }
             }
         }
     }
@@ -241,24 +247,27 @@ fun AppBackground() {
             }
         }
     }
-    val current = if (rotate) ids[index] else s.bgFixed
+    // The welcome screen always shows the signature glass-lotus image.
+    val current = when {
+        !s.onboarded -> Catalog.SIGNATURE_BG
+        rotate -> ids[index]
+        else -> s.bgFixed
+    }
     Box(Modifier.fillMaxSize().background(Color(0xFFF6F1FA))) {
-        Crossfade(targetState = current, animationSpec = tween(2200), label = "bg") { id ->
+        BackdropImage(current) { id, alpha ->
             Image(
                 painter = painterResource(Sharing.bgRes(id)),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxSize().graphicsLayer { this.alpha = alpha() },
             )
         }
-        Box(Modifier.fillMaxSize().background(Lotus.Veil))
+        Box(Modifier.fillMaxSize().background(Backdrop.veil))
     }
 }
 
-/** Home button for deep screens. */
+/** Home button for deep screens (round glass). */
 @Composable
 fun HomeAction() {
-    IconButton(onClick = { App.nav.home() }) {
-        Icon(Icons.Filled.Home, contentDescription = tr("ui.home.title"), tint = Lotus.Ink)
-    }
+    CircleIconButton(Icons.Outlined.Home, tr("ui.home.title"), { App.nav.home() })
 }

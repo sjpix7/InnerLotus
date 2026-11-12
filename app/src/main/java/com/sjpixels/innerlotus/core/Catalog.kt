@@ -46,42 +46,44 @@ object Catalog {
 
     fun area(id: String): Area = areas.firstOrNull { it.id == id } ?: areas.first()
 
-    /** Chakras from root (index 0) to crown (index 6). Colours follow the classic rainbow chart. */
+    /**
+     * Chakras from root (index 0) to crown (index 6). Colours follow the classic rainbow order,
+     * softened to the app's pastel palette (dusty rose → terracotta → honey → sage → mist → periwinkle → mauve).
+     */
     data class Chakra(
         val id: String,
         val index: Int,
-        val color: Long,      // vivid colour for symbols
-        val ink: Long,        // darker, readable text colour
+        val color: Long,      // soft symbol colour
+        val ink: Long,        // deeper, readable text colour
         val toneHz: Float,    // Solfeggio tone used in the Chakra Guide
         val bg: String,
     )
 
     val chakras: List<Chakra> = listOf(
-        Chakra("root", 0, 0xFFE53935, 0xFFC62828, 396f, "autumn"),
-        Chakra("sacral", 1, 0xFFFB8C00, 0xFFE65100, 417f, "dune"),
-        Chakra("solar", 2, 0xFFFDD835, 0xFFA67C00, 528f, "meadow"),
-        Chakra("heart", 3, 0xFF43A047, 0xFF2E7D32, 639f, "botanical"),
-        Chakra("throat", 4, 0xFF26C6DA, 0xFF00838F, 741f, "lagoon"),
-        Chakra("thirdeye", 5, 0xFF3949AB, 0xFF283593, 852f, "lake"),
-        Chakra("crown", 6, 0xFF8E24AA, 0xFF6A1B9A, 963f, "lavender"),
+        Chakra("root", 0, 0xFFC68891, 0xFF9C5562, 396f, "autumn"),
+        Chakra("sacral", 1, 0xFFD59E7E, 0xFFA56645, 417f, "dune"),
+        Chakra("solar", 2, 0xFFD2B36F, 0xFF8E6F25, 528f, "meadow"),
+        Chakra("heart", 3, 0xFF8FAE97, 0xFF557E61, 639f, "botanical"),
+        Chakra("throat", 4, 0xFF88B6C4, 0xFF477F91, 741f, "lagoon"),
+        Chakra("thirdeye", 5, 0xFF8990C3, 0xFF555C9A, 852f, "lake"),
+        Chakra("crown", 6, 0xFFAB8DBB, 0xFF7A5890, 963f, "lavender"),
     )
 
     fun chakra(id: String?): Chakra? = chakras.firstOrNull { it.id == id }
 
-    /** Background images bundled from theme-bg.zip (res/drawable-nodpi/bg_<id>.webp). */
+    /**
+     * Background images (res/drawable-nodpi/bg_<id>.webp). "dawn" — a glass lotus on still water at
+     * dawn — is the signature image: default background and welcome-screen art.
+     */
+    const val SIGNATURE_BG = "dawn"
     val backgrounds: List<String> = listOf(
-        "lotus", "lavender", "cherry", "lake", "woodland", "stream", "mountains", "ocean", "bamboo",
+        "dawn", "lotus", "lavender", "cherry", "lake", "woodland", "stream", "mountains", "ocean", "bamboo",
         "wave", "clouds", "garden", "autumn", "botanical", "lagoon", "meadow", "snow", "dune",
     )
 
     val eftTopics = listOf(
         "anxiety", "stress", "anger", "sadness", "fear", "selfworth",
         "money", "sleep", "cravings", "procrastination", "pain", "hurt",
-    )
-    val eftTopicEmoji = mapOf(
-        "anxiety" to "😟", "stress" to "🌀", "anger" to "😤", "sadness" to "😢", "fear" to "😨",
-        "selfworth" to "🌟", "money" to "💸", "sleep" to "🌙", "cravings" to "🍫",
-        "procrastination" to "⏳", "pain" to "🤕", "hurt" to "💔",
     )
     val eftTechniques = listOf("basic", "full", "gentle", "positive")
 

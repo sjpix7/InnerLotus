@@ -45,12 +45,28 @@ object ChakraPainter {
                 c.drawCircle(cx + dx, cy + dy, rr, fill)
             }
         }
-        fill.shader = RadialGradient(
-            cx, cy, r * 0.84f,
-            intArrayOf(withAlpha(lighten(color, 0.25f), 235), withAlpha(color, 215), withAlpha(color, 0)),
-            floatArrayOf(0f, 0.8f, 1f), Shader.TileMode.CLAMP,
-        )
-        c.drawCircle(cx, cy, r * 0.84f, fill)
+        if (watercolor) {
+            fill.shader = RadialGradient(
+                cx, cy, r * 0.84f,
+                intArrayOf(withAlpha(lighten(color, 0.25f), 235), withAlpha(color, 215), withAlpha(color, 0)),
+                floatArrayOf(0f, 0.8f, 1f), Shader.TileMode.CLAMP,
+            )
+            c.drawCircle(cx, cy, r * 0.84f, fill)
+        } else {
+            // soft halo, then a disc lit from the upper left (glass-like), no hard edge
+            fill.shader = RadialGradient(
+                cx, cy, r,
+                intArrayOf(withAlpha(color, 70), withAlpha(color, 0)),
+                floatArrayOf(0.7f, 1f), Shader.TileMode.CLAMP,
+            )
+            c.drawCircle(cx, cy, r, fill)
+            fill.shader = RadialGradient(
+                cx - r * 0.28f, cy - r * 0.32f, r * 1.25f,
+                intArrayOf(lighten(color, 0.42f), color, withAlpha(color, 240)),
+                floatArrayOf(0f, 0.62f, 1f), Shader.TileMode.CLAMP,
+            )
+            c.drawCircle(cx, cy, r * 0.8f, fill)
+        }
 
         val stroke = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             style = Paint.Style.STROKE

@@ -23,11 +23,11 @@ import android.text.StaticLayout
 import android.text.TextPaint
 import android.widget.Toast
 import androidx.core.content.FileProvider
-import androidx.core.content.res.ResourcesCompat
 import com.sjpixels.innerlotus.R
 import com.sjpixels.innerlotus.core.Catalog
 import com.sjpixels.innerlotus.core.tr
 import com.sjpixels.innerlotus.ui.art.ChakraPainter
+import com.sjpixels.innerlotus.ui.theme.CanvasFonts
 import java.io.File
 import java.io.FileOutputStream
 
@@ -60,16 +60,21 @@ object Sharing {
             }
         } catch (_: OutOfMemoryError) {
         }
+        // Frosted panel: soft white glass with a bright hairline edge (matches the app's cards).
         val panel = RectF(64f, 140f, w - 64f, h - 150f)
-        c.drawRoundRect(panel, 64f, 64f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.argb(150, 255, 255, 255) })
+        c.drawRoundRect(panel, 64f, 64f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.argb(158, 255, 255, 255) })
+        c.drawRoundRect(panel, 64f, 64f, Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE; strokeWidth = 3f; color = Color.argb(225, 255, 255, 255) })
 
-        val serifBold = font(context, R.font.cormorant_bold) ?: Typeface.SERIF
-        val serif = font(context, R.font.cormorant_semibold) ?: Typeface.SERIF
-        val script = if (s.scriptFont) font(context, R.font.dancing_script) else font(context, R.font.cormorant_italic)
+        // Latin/Cyrillic use the bundled Cormorant Garamond + Jost; other scripts the system serif/sans.
+        val bundled = s.scriptFont || s.main.any { it in '\u0400'..'\u04FF' }
+        val serifBold = if (bundled) CanvasFonts.get(context, R.font.cormorant_garamond, 600) else Typeface.create(Typeface.SERIF, Typeface.BOLD)
+        val serif = if (bundled) CanvasFonts.get(context, R.font.cormorant_garamond, 500) else Typeface.SERIF
+        val script: Typeface? = if (bundled) CanvasFonts.get(context, R.font.cormorant_garamond_italic, 500) else Typeface.create(Typeface.SERIF, Typeface.ITALIC)
+        val sans = if (bundled) CanvasFonts.get(context, R.font.jost, 500) else Typeface.DEFAULT
 
         var y = panel.top + 70f
         if (s.chakraIndex != null) {
-            ChakraPainter.draw(c, w / 2f, y + 110f, 120f, s.chakraIndex, s.chakraColor)
+            ChakraPainter.draw(c, w / 2f, y + 110f, 120f, s.chakraIndex, s.chakraColor, watercolor = false)
             y += 250f
         }
         val innerW = (panel.width() - 120f).toInt()
@@ -80,7 +85,7 @@ object Sharing {
         val bottomReserve = (if (s.sub.isNullOrBlank()) 0f else 170f) + 110f
         val avail = panel.bottom - bottomReserve - y
         var size = 70f
-        val mainPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = serif; color = Color.rgb(43, 34, 64) }
+        val mainPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = serif; color = Color.rgb(43, 34, 64); fontFeatureSettings = "lnum" }
         while (size > 34f) {
             mainPaint.textSize = size
             if (layout(s.main, mainPaint, innerW).height <= avail) break
@@ -88,17 +93,16 @@ object Sharing {
         }
         y += drawText(c, s.main, mainPaint, innerW, w / 2f, y, 8) + 30f
         if (!s.sub.isNullOrBlank()) {
-            val p = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = script ?: Typeface.SERIF; textSize = if (s.scriptFont) 54f else 48f; color = s.ink }
+            val p = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = script ?: Typeface.SERIF; textSize = 52f; color = s.ink }
             drawText(c, s.sub, p, innerW, w / 2f, y, 3)
         }
-        val labelPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = serifBold; textSize = 34f; color = Color.argb(170, 60, 50, 90); letterSpacing = 0.12f }
+        val labelPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = sans; textSize = 28f; color = Color.argb(190, 110, 102, 128); letterSpacing = 0.16f }
         drawText(c, s.label.uppercase(), labelPaint, innerW, w / 2f, panel.bottom - 80f, 1)
-        val foot = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 30f; color = Color.argb(200, 70, 60, 100) }
+        val foot = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = sans; textSize = 28f; color = Color.argb(200, 70, 60, 100); letterSpacing = 0.04f }
         drawText(c, "Inner Lotus  ·  sjpixels.com", foot, w - 100, w / 2f, h - 100f, 1)
         return bmp
     }
 
-    private fun font(context: Context, id: Int): Typeface? = try { ResourcesCompat.getFont(context, id) } catch (_: Exception) { null }
 
     private fun layout(text: String, p: TextPaint, width: Int, maxLines: Int = 12): StaticLayout =
         StaticLayout.Builder.obtain(text, 0, text.length, p, width)
@@ -119,6 +123,7 @@ object Sharing {
     }
 
     fun bgRes(id: String): Int = when (id) {
+        "dawn" -> R.drawable.bg_dawn
         "lavender" -> R.drawable.bg_lavender
         "cherry" -> R.drawable.bg_cherry
         "lake" -> R.drawable.bg_lake

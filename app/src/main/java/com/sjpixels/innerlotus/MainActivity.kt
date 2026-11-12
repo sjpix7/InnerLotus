@@ -23,7 +23,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -34,6 +33,9 @@ import com.sjpixels.innerlotus.core.tr
 import com.sjpixels.innerlotus.reminders.Reminders
 import com.sjpixels.innerlotus.tts.Speaker
 import com.sjpixels.innerlotus.ui.components.AppBackground
+import com.sjpixels.innerlotus.ui.theme.LotusType
+import com.sjpixels.innerlotus.ui.theme.Lotus
+import com.sjpixels.innerlotus.ui.components.LotusDialog
 import com.sjpixels.innerlotus.ui.components.SectionRail
 import com.sjpixels.innerlotus.ui.components.SectionRailState
 import androidx.compose.animation.core.animateDpAsState
@@ -180,13 +182,17 @@ private fun SoundNotificationPermission() {
 private fun TtsMissingDialog() {
     val lang = App.ttsMissing ?: return
     val ctx = LocalContext.current
-    AlertDialog(
-        onDismissRequest = { App.ttsMissing = null },
-        title = { Text(tr("ui.tts.missing_title")) },
-        text = { Text(tr("ui.tts.missing_text", "lang" to lang.nativeName)) },
-        confirmButton = {
-            TextButton(onClick = { App.ttsMissing = null; Speaker.openInstallVoices(ctx) }) { Text(tr("ui.tts.install")) }
+    LotusDialog(
+        onDismiss = { App.ttsMissing = null },
+        title = tr("ui.tts.missing_title"),
+        text = { Text(tr("ui.tts.missing_text", "lang" to lang.nativeName), style = LotusType.small) },
+        confirm = {
+            TextButton(onClick = { App.ttsMissing = null; Speaker.openInstallVoices(ctx) }) {
+                Text(tr("ui.tts.install"), style = LotusType.button.copy(color = Lotus.Accent))
+            }
         },
-        dismissButton = { TextButton(onClick = { App.ttsMissing = null }) { Text(tr("ui.common.later")) } },
+        dismiss = {
+            TextButton(onClick = { App.ttsMissing = null }) { Text(tr("ui.common.later"), style = LotusType.button.copy(color = Lotus.Ink)) }
+        },
     )
 }

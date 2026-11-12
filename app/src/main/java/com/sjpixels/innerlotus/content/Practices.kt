@@ -26,11 +26,6 @@ object Breath {
         "calm" to listOf(Phase("inhale", 4f, Kind.IN), Phase("exhale", 6f, Kind.OUT)),
     )
 
-    val emoji = mapOf(
-        "box" to "⬜", "478" to "🌙", "coherent" to "💓", "sigh" to "🌬️",
-        "nadi" to "👃", "bhramari" to "🐝", "calm" to "🍃",
-    )
-
     fun cycleSeconds(id: String): Float = patterns[id]?.sumOf { it.seconds.toDouble() }?.toFloat() ?: 10f
 }
 

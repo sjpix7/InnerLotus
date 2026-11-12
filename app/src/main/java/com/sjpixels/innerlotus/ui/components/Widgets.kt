@@ -31,8 +31,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -77,6 +75,14 @@ import com.sjpixels.innerlotus.share.Sharing
 import com.sjpixels.innerlotus.tts.Speaker
 import com.sjpixels.innerlotus.ui.art.ChakraPainter
 import com.sjpixels.innerlotus.ui.theme.Lotus
+import com.sjpixels.innerlotus.ui.theme.LotusType
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material.icons.outlined.Remove
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Stop
+import androidx.compose.material.icons.outlined.PlayArrow
+import com.sjpixels.innerlotus.ui.glass.glass
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -90,42 +96,37 @@ fun PageColumn(padding: PaddingValues, content: @Composable ColumnScope.() -> Un
             .padding(padding)
             .imePadding()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+            .padding(start = 20.dp, end = 20.dp, top = 6.dp, bottom = 28.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
         content = content,
     )
 }
 
-/** Translucent "frosted" card used everywhere on the pastel backgrounds. */
+/** Frosted glass card used everywhere (padding 18dp, radius 24dp). [tone] tints it. */
 @Composable
 fun GlassCard(
     modifier: Modifier = Modifier,
     onClick: (() -> Unit)? = null,
     strong: Boolean = false,
-    padding: Dp = 16.dp,
+    padding: Dp = 18.dp,
+    tone: Tone = Tone.Plain,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    val m = modifier.fillMaxWidth()
-    val colors = CardDefaults.cardColors(containerColor = if (strong) Lotus.GlassStrong else Lotus.Glass)
-    if (onClick != null) {
-        Card(onClick = onClick, modifier = m, shape = RoundedCornerShape(22.dp), colors = colors) {
-            Column(Modifier.padding(padding), content = content)
-        }
-    } else {
-        Card(modifier = m, shape = RoundedCornerShape(22.dp), colors = colors) {
-            Column(Modifier.padding(padding), content = content)
-        }
+    val t = if (strong && tone == Tone.Plain) Tone.Strong else tone
+    GlassSurface(modifier.fillMaxWidth(), material = t.material(), onClick = onClick) {
+        Column(Modifier.padding(padding), content = content)
     }
 }
 
 @Composable
-fun SectionTitle(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text,
-        modifier = modifier.padding(top = 6.dp, start = 4.dp),
-        style = MaterialTheme.typography.titleLarge,
-        color = Lotus.PlumDeep,
-    )
+fun SectionTitle(text: String, modifier: Modifier = Modifier, icon: ImageVector? = null) {
+    Row(modifier.padding(top = 12.dp, bottom = 2.dp, start = 2.dp), verticalAlignment = Alignment.CenterVertically) {
+        if (icon != null) {
+            Icon(icon, null, tint = Lotus.Accent, modifier = Modifier.size(20.dp))
+            Spacer(Modifier.width(10.dp))
+        }
+        Text(styledTitle(text), style = LotusType.section)
+    }
 }
 
 @Composable
@@ -133,102 +134,80 @@ fun BodyText(text: String, modifier: Modifier = Modifier, color: Color = Lotus.I
     Text(text, modifier = modifier, style = MaterialTheme.typography.bodyLarge, color = color)
 }
 
-/** Play / stop button that reads [text] aloud with the device's text-to-speech. */
+/** Play / stop pill that reads [text] aloud with the device's text-to-speech. */
 @Composable
 fun ListenButton(tag: String, text: () -> String, label: Boolean = true, modifier: Modifier = Modifier) {
     val scope = rememberCoroutineScope()
     val speaking = Speaker.speakingTag == tag
-    FilledTonalButton(
-        onClick = {
-            if (speaking) Speaker.stop() else scope.launch { Speaker.speak(text(), tag) }
-        },
-        modifier = modifier,
-        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
-    ) {
-        Icon(if (speaking) Icons.Filled.Stop else Icons.Filled.PlayArrow, contentDescription = null, modifier = Modifier.size(20.dp))
-        if (label) {
-            Spacer(Modifier.width(6.dp))
-            Text(if (speaking) tr("ui.common.stop") else tr("ui.common.listen"))
-        }
-    }
+    val onClick = { if (speaking) Speaker.stop() else { scope.launch { Speaker.speak(text(), tag) }; Unit } }
+    val icon = if (speaking) Icons.Outlined.Stop else Icons.Outlined.PlayArrow
+    val desc = if (speaking) tr("ui.common.stop") else tr("ui.common.listen")
+    if (label) PillButton(desc, onClick, modifier, icon = icon, selected = speaking)
+    else CircleIconButton(icon, desc, onClick, modifier)
     DisposableEffect(tag) { onDispose { if (Speaker.speakingTag == tag) Speaker.stop() } }
 }
 
-/** Compact "learn about this" card linking to the full knowledge page. */
+/** "A moment to understand" card linking to the full knowledge page. */
 @Composable
-fun LearnCard(topic: String, emoji: String = "📖") {
+fun LearnCard(topic: String, @Suppress("UNUSED_PARAMETER") emoji: String = "") {
     val title = tr("learn.$topic.title")
     val body = tr("learn.$topic.body")
-    GlassCard(onClick = { App.nav.go(Screen.Learn(topic)) }) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(emoji, fontSize = 26.sp)
-            Spacer(Modifier.width(10.dp))
-            Text(title, style = MaterialTheme.typography.titleMedium, color = Lotus.PlumDeep, modifier = Modifier.weight(1f))
-        }
-        Spacer(Modifier.height(6.dp))
-        Text(body, maxLines = 3, overflow = TextOverflow.Ellipsis, color = Lotus.InkSoft, style = MaterialTheme.typography.bodyMedium)
+    GlassCard {
+        Kicker(tr("ui.common.moment_to_understand"))
         Spacer(Modifier.height(8.dp))
+        Text(title, style = LotusType.cardTitle)
+        Spacer(Modifier.height(6.dp))
+        Text(body, maxLines = 3, overflow = TextOverflow.Ellipsis, style = LotusType.small)
+        Spacer(Modifier.height(12.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             ListenButton("learn:$topic", { "$title. $body" })
-            Spacer(Modifier.width(8.dp))
-            TextButton(onClick = { App.nav.go(Screen.Learn(topic)) }) { Text(tr("ui.common.read_more")) }
+            Spacer(Modifier.weight(1f))
+            TextLink(tr("ui.common.explore_guide"), { App.nav.go(Screen.Learn(topic)) })
         }
     }
 }
 
-/** Watercolour chakra mandala. [index] 0 = root .. 6 = crown. */
+/** Chakra mandala: a soft disc in the chakra's (muted) colour with a fine white line symbol. */
 @Composable
 fun ChakraSymbol(index: Int, color: Long, size: Dp, modifier: Modifier = Modifier) {
     Canvas(modifier.size(size)) {
         drawIntoCanvas { c ->
-            ChakraPainter.draw(c.nativeCanvas, this.size.width / 2f, this.size.height / 2f, this.size.minDimension / 2f, index, Color(color).toArgb())
+            ChakraPainter.draw(c.nativeCanvas, this.size.width / 2f, this.size.height / 2f, this.size.minDimension / 2f, index, Color(color).toArgb(), watercolor = false)
         }
     }
 }
 
-/** A row of selectable pills (used instead of tabs). */
+/** Segmented control: glass track, selected option as an ink pill. */
 @Composable
 fun Segmented(options: List<Pair<String, String>>, selected: String, onSelect: (String) -> Unit, modifier: Modifier = Modifier) {
-    Row(
-        modifier
-            .fillMaxWidth()
-            .horizontalScroll(androidx.compose.foundation.rememberScrollState())
-            .clip(RoundedCornerShape(50))
-            .background(Color.White.copy(alpha = 0.55f))
-            .padding(4.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        for ((id, label) in options) {
-            val on = id == selected
-            Box(
-                Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(if (on) Lotus.Plum else Color.Transparent)
-                    .clickable { onSelect(id) }
-                    .padding(horizontal = 14.dp, vertical = 8.dp),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(label, color = if (on) Color.White else Lotus.Ink, fontWeight = if (on) FontWeight.SemiBold else FontWeight.Normal, fontSize = 14.sp)
+    GlassSurface(modifier.fillMaxWidth(), shape = PillShape, material = Glass.Segments) {
+        Row(Modifier.fillMaxWidth().padding(4.dp), horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+            for ((id, label) in options) {
+                val on = id == selected
+                Box(
+                    Modifier
+                        .weight(1f)
+                        .heightIn(min = 40.dp)
+                        .clip(PillShape)
+                        .background(if (on) Lotus.Ink else Color.Transparent)
+                        .clickable { onSelect(id) }
+                        .padding(horizontal = 8.dp, vertical = 9.dp),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(label, style = LotusType.pill.copy(color = if (on) Color.White else Lotus.Ink), maxLines = 1, overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
+                }
             }
         }
     }
 }
 
-/** Small selectable chip. */
+/** Small selectable chip (selected = ink pill). */
 @Composable
 fun Pill(text: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
-    Box(
-        modifier
-            .clip(RoundedCornerShape(50))
-            .background(if (selected) Lotus.Plum else Color.White.copy(alpha = 0.7f))
-            .border(1.dp, if (selected) Lotus.Plum else Lotus.Plum.copy(alpha = 0.25f), RoundedCornerShape(50))
-            .clickable(onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 7.dp),
-    ) {
-        Text(text, color = if (selected) Color.White else Lotus.Ink, fontSize = 13.sp, textAlign = TextAlign.Center)
-    }
+    PillButton(text, onClick, modifier, selected = selected)
 }
 
+/** Legacy: round glass badge (screens now use IconBadge with an outlined icon). */
 @Composable
 fun EmojiCircle(emoji: String, size: Dp = 44.dp, bg: Color = Color.White.copy(alpha = 0.8f)) {
     Box(Modifier.size(size).clip(CircleShape).background(bg), contentAlignment = Alignment.Center) {
@@ -238,16 +217,16 @@ fun EmojiCircle(emoji: String, size: Dp = 44.dp, bg: Color = Color.White.copy(al
 
 @Composable
 fun ConfirmDialog(title: String, text: String, confirm: String, onConfirm: () -> Unit, onDismiss: () -> Unit, danger: Boolean = false) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = { Text(text) },
-        confirmButton = {
+    LotusDialog(
+        onDismiss = onDismiss,
+        title = title,
+        text = { Text(text, style = LotusType.small) },
+        confirm = {
             TextButton(onClick = { onConfirm(); onDismiss() }) {
-                Text(confirm, color = if (danger) Lotus.Danger else Lotus.Plum, fontWeight = FontWeight.SemiBold)
+                Text(confirm, style = LotusType.button.copy(color = if (danger) Lotus.Danger else Lotus.Accent))
             }
         },
-        dismissButton = { TextButton(onClick = onDismiss) { Text(tr("ui.common.cancel")) } },
+        dismiss = { TextButton(onClick = onDismiss) { Text(tr("ui.common.cancel"), style = LotusType.button.copy(color = Lotus.Ink)) } },
     )
 }
 
@@ -332,14 +311,14 @@ fun rememberImporter(onText: (String) -> Unit): () -> Unit {
     return { launcher.launch(arrayOf("application/json", "text/plain", "text/csv", "text/comma-separated-values", "application/octet-stream", "*/*")) }
 }
 
-/** Short helper: a labelled numeric stepper. */
+/** Labelled numeric stepper: "Label   (−)  3  (+)". */
 @Composable
 fun Stepper(value: Int, range: IntRange, onChange: (Int) -> Unit, label: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(label, modifier = Modifier.weight(1f), color = Lotus.Ink)
-        TextButton(onClick = { if (value > range.first) onChange(value - 1) }) { Text("−", fontSize = 20.sp) }
-        Text("$value", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Lotus.PlumDeep)
-        TextButton(onClick = { if (value < range.last) onChange(value + 1) }) { Text("+", fontSize = 20.sp) }
+    Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(label, modifier = Modifier.weight(1f), style = LotusType.itemTitle)
+        CircleIconButton(Icons.Outlined.Remove, "−", { if (value > range.first) onChange(value - 1) }, size = 38.dp, iconSize = 18.dp)
+        Text("$value", style = LotusType.stat.copy(fontSize = 26.sp), textAlign = TextAlign.Center, modifier = Modifier.width(48.dp))
+        CircleIconButton(Icons.Outlined.Add, "+", { if (value < range.last) onChange(value + 1) }, size = 38.dp, iconSize = 18.dp)
     }
 }
 

@@ -5,7 +5,7 @@ import java.util.Locale
 /**
  * The nine supported languages. [gendered] languages use `{masc|fem}` markup in content
  * (resolved by the "form of address" setting). [scriptFont] tells the UI whether the
- * Dancing Script face can render this language (Latin only).
+ * bundled Latin faces (Cormorant Garamond, Jost) suit this language.
  */
 enum class Lang(
     val code: String,

@@ -24,13 +24,6 @@ object VoiceFactory {
         "noise" to listOf("white", "pink", "brown"),
     )
 
-    val libraryEmoji: Map<String, String> = mapOf(
-        "rain" to "🌧️", "thunder" to "⛈️", "ocean" to "🌊", "stream" to "🏞️", "wind" to "🍃", "fire" to "🔥",
-        "birds" to "🐦", "crickets" to "🦗", "flute" to "🎶", "bamboo" to "🎋", "chimes" to "🎐", "bell" to "🔔",
-        "bowl" to "🥣", "crystal" to "💎", "tanpura" to "🎼", "kalimba" to "🎹", "om" to "🕉️", "drum" to "🥁",
-        "heartbeat" to "💓", "white" to "⚪", "pink" to "🌸", "brown" to "🟤",
-    )
-
     private val trims = mapOf(
         "birds" to 2.2f, "crickets" to 1.8f, "bowl" to 2.0f, "kalimba" to 1.7f, "chimes" to 1.6f,
         "bamboo" to 1.7f, "stream" to 1.3f, "wind" to 1.5f, "heartbeat" to 0.6f, "bell" to 1.3f,
