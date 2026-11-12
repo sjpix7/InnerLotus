@@ -1,4 +1,4 @@
-// Renders docs/store/icon-512.png and feature-graphic-1024x500.png with headless Chromium.
+// Renders docs/store/icon-512.png (and the older flat feature graphic; the current one comes from compose_store_art.py) with headless Chromium.
 // Usage: npm i playwright && node tools/store/render_store_assets.js  (run from anywhere inside the repo)
 const { chromium } = require('playwright');
 const path = require('path');
